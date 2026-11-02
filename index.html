@@ -317,6 +317,7 @@ audio{width:100%;height:38px}
       <div class="seg" role="group" aria-label="Nguồn âm thanh">
         <button type="button" id="d-mode-tts" aria-pressed="true">Giọng đọc máy</button>
         <button type="button" id="d-mode-file" aria-pressed="false">File âm thanh của bà</button>
+        <button type="button" id="d-mode-rec" aria-pressed="false" hidden>Giọng thu sẵn</button>
       </div>
 
       <div class="player" id="d-tts">
@@ -343,6 +344,12 @@ audio{width:100%;height:38px}
           <label><input type="checkbox" id="d-twice" checked> Mỗi đoạn đọc hai lần</label>
         </div>
         <div class="warn" id="d-tts-warn" hidden></div>
+      </div>
+
+      <div class="player" id="d-rec" hidden>
+        <div class="mini" style="margin:0">Bản đọc giọng người thật thu sẵn cho bài này. Dùng nút tua và lặp A–B ở chế độ File âm thanh nếu cần.</div>
+        <audio id="d-rec-audio" controls preload="none"></audio>
+        <div class="row"><label class="field" style="min-width:140px">Tốc độ<select id="d-rec-rate"><option value="0.75">0.75×</option><option value="0.85">0.85×</option><option value="1" selected>1×</option></select></label></div>
       </div>
 
       <div class="player" id="d-file" hidden>
@@ -1739,11 +1746,15 @@ const synth = window.speechSynthesis;
 let frVoices=[];
 function loadVoices(){
   if(!synth) return;
-  frVoices = synth.getVoices().filter(v=>/^fr/i.test(v.lang));
-  const sel=$("#d-voice"); const saved=lsGet("veilleuse.voice","");
-  sel.innerHTML = frVoices.length ? frVoices.map(v=>`<option value="${esc(v.name)}" ${v.name===saved?"selected":""}>${esc(v.name)} (${esc(v.lang)})</option>`).join("") : `<option value="">Giọng mặc định</option>`;
+  const score=v=>{const n=v.name.toLowerCase();let k=0;if(/natural|neural|online/.test(n))k+=6;if(/premium|enhanced|améliorée|siri/.test(n))k+=4;if(/google/.test(n))k+=3;if(/^fr-fr/i.test(v.lang))k+=1;if(/compact|espeak/.test(n))k-=3;return k};
+  frVoices = synth.getVoices().filter(v=>/^fr/i.test(v.lang)).sort((a,b)=>score(b)-score(a));
+  const sel=$("#d-voice"); let saved=lsGet("veilleuse.voice","");
+  if(!frVoices.some(v=>v.name===saved)) saved=frVoices[0]?.name||"";
+  const best=frVoices[0]?score(frVoices[0]):0;
+  sel.innerHTML = frVoices.length ? frVoices.map(v=>`<option value="${esc(v.name)}" ${v.name===saved?"selected":""}>${esc(v.name)} (${esc(v.lang)})${score(v)>=6&&score(v)===best?" · tự nhiên nhất":""}</option>`).join("") : `<option value="">Giọng mặc định</option>`;
   const w=$("#d-tts-warn");
-  if(!frVoices.length){w.hidden=false;w.textContent="Trình duyệt này chưa có giọng tiếng Pháp riêng nên có thể đọc sai âm. Chrome hoặc Edge trên máy tính thường có sẵn giọng Pháp."}
+  if(!frVoices.length){w.hidden=false;w.textContent="Trình duyệt này chưa có giọng tiếng Pháp riêng nên có thể đọc sai âm. Mở bằng Microsoft Edge trên máy tính sẽ có giọng Pháp tự nhiên (Denise, Henri, Vivienne…)."}
+  else if(best<6){w.hidden=false;w.textContent="Giọng hiện có còn hơi máy. Mở trang bằng Microsoft Edge sẽ có giọng Pháp tự nhiên miễn phí; trên iPhone, Mac vào Cài đặt, Trợ năng, Nội dung được đọc để tải giọng Pháp bản nâng cao."}
   else w.hidden=true;
 }
 if(synth){ loadVoices(); synth.onvoiceschanged=loadVoices }
@@ -1799,8 +1810,20 @@ function selectDLesson(id){
   $$("#d-rail .lesson").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.id===id)));
   renderDLesson();
 }
+let AUDIO_IDS=new Set();
+async function loadAudioIndex(){ try{ const r=await fetch("audio/index.json",{cache:"no-store"}); if(!r.ok) return; const j=await r.json(); AUDIO_IDS=new Set(j.ids||[]); renderDLesson(); }catch{} }
+function audioSrc(l){ if(l.audio) return l.audio; return AUDIO_IDS.has(l.id)?`audio/${l.id}.mp3`:null }
+function setDMode(m){
+  D.mode=m; stopAll();
+  $("#d-tts").hidden=m!=="tts"; $("#d-file").hidden=m!=="file"; $("#d-rec").hidden=m!=="rec";
+  setPressed([$("#d-mode-tts"),$("#d-mode-file"),$("#d-mode-rec")],b=>b.id==="d-mode-"+m);
+}
 function renderDLesson(){
   const l=lessonById(D.lessonId); if(!l) return;
+  const as=audioSrc(l), recBtn=$("#d-mode-rec"), ra=$("#d-rec-audio");
+  recBtn.hidden=!as;
+  if(as){ if(ra.getAttribute("src")!==as){ ra.pause(); ra.setAttribute("src",as); ra.playbackRate=+$("#d-rec-rate").value } if(D.mode!=="file" && D.mode!=="rec" && lsGet("veilleuse.preferrec",true)) setDMode("rec") }
+  else if(D.mode==="rec") setDMode("tts");
   $("#d-title").textContent=l.title;
   const src = (l.srcname||l.url ? `${esc(l.srcname||"Nguồn")}${l.url?` · <a href="${esc(l.url)}" target="_blank" rel="noopener">mở bài gốc</a>`:""}` : (l.id.startsWith("b-")?"Bài mẫu do Claude soạn":"")) + (l.news?` · Claude soạn từ tin ngày ${fmtDate(l.date)}`:"");
   $("#d-src").innerHTML = `${src}${src?" · ":""}${frTextOf(l).split(/\s+/).length} từ`;
@@ -1812,7 +1835,7 @@ function updateCounter(){
   D.idx=Math.min(D.idx,u.length-1);
   $("#d-counter").innerHTML = D.read==="full" ? `Đọc liền cả bài, <b>${u[0].split(/\s+/).length}</b> từ` : `${name} <b>${D.idx+1}</b> / ${u.length}`;
 }
-function stopAll(){ D.token++; D.playing=false; if(synth) synth.cancel(); $("#d-play").textContent="Đọc"; const a=$("#d-audio"); if(a&&!a.paused)a.pause(); }
+function stopAll(){ D.token++; D.playing=false; if(synth) synth.cancel(); $("#d-play").textContent="Đọc"; const a=$("#d-audio"); if(a&&!a.paused)a.pause(); const ra=$("#d-rec-audio"); if(ra&&!ra.paused)ra.pause(); }
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 async function playFrom(i, single=false){
   if(!synth){toast("Trình duyệt không hỗ trợ giọng đọc");return}
@@ -1837,8 +1860,10 @@ async function playFrom(i, single=false){
 }
 function initDictee(){
   buildKeys($("#d-keys"), $("#d-input"));
-  $("#d-mode-tts").onclick=()=>{D.mode="tts";stopAll();$("#d-tts").hidden=false;$("#d-file").hidden=true;setPressed([$("#d-mode-tts"),$("#d-mode-file")],b=>b.id==="d-mode-tts")};
-  $("#d-mode-file").onclick=()=>{D.mode="file";stopAll();$("#d-tts").hidden=true;$("#d-file").hidden=false;setPressed([$("#d-mode-tts"),$("#d-mode-file")],b=>b.id==="d-mode-file")};
+  $("#d-mode-tts").onclick=()=>{setDMode("tts");lsSet("veilleuse.preferrec",false)};
+  $("#d-mode-file").onclick=()=>setDMode("file");
+  $("#d-mode-rec").onclick=()=>{setDMode("rec");lsSet("veilleuse.preferrec",true)};
+  $("#d-rec-rate").onchange=e=>{$("#d-rec-audio").playbackRate=+e.target.value};
   $$("[data-rm]").forEach(b=>b.onclick=()=>{stopAll();D.read=b.dataset.rm;D.idx=0;setPressed($$("[data-rm]"),x=>x===b);updateCounter()});
   $("#d-play").onclick=()=>{ if(D.playing){stopAll();return} playFrom(D.idx, D.read!=="dictee") };
   $("#d-repeat").onclick=()=>playFrom(D.idx,true);
@@ -1865,7 +1890,7 @@ function initDictee(){
   const input=$("#d-input");
   let dt; input.oninput=()=>{clearTimeout(dt);dt=setTimeout(()=>lsSet("veilleuse.ddraft."+D.lessonId,input.value),400)};
   input.addEventListener("keydown",e=>{
-    if(e.ctrlKey && e.code==="Space"){e.preventDefault(); if(D.mode==="file"){ if(audio.src){audio.paused?audio.play():audio.pause()} } else playFrom(D.idx,true)}
+    if(e.ctrlKey && e.code==="Space"){e.preventDefault(); if(D.mode==="file"){ if(audio.src){audio.paused?audio.play():audio.pause()} } else if(D.mode==="rec"){ const ra=$("#d-rec-audio"); ra.paused?ra.play():ra.pause() } else playFrom(D.idx,true)}
     if(e.ctrlKey && e.key==="Enter"){e.preventDefault();checkD()}
   });
   $("#d-check").onclick=checkD;
@@ -2353,6 +2378,7 @@ route();
 $("#d-input").value = lsGet("veilleuse.ddraft."+D.lessonId,"");
 initStore();
 loadNews();
+loadAudioIndex();
 
 /* ---------- night sky over Lyon and the meadow ---------- */
 const cv=$("#sky"), cx=cv.getContext("2d");
