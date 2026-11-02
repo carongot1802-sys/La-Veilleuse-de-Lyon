@@ -35,6 +35,7 @@
   --coral:#ffa476;
   --lime:#c6dd76;
   --cyan:#8fd6ea;
+  --sand:#e6c79c;
   --f-display:"Playfair Display", "Iowan Old Style", Georgia, serif;
   --f-body:"Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
   --f-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
@@ -84,7 +85,7 @@ section.view{display:flex;flex-direction:column;gap:20px}
 .chip:hover{border-color:var(--muted);color:var(--ink)}
 .chip[aria-pressed="true"]{background:var(--panel-2);color:var(--ink);border-color:var(--ink-2)}
 .dot{width:8px;height:8px;border-radius:50%;flex:none;background:var(--muted)}
-.d-politique{--dc:var(--lamp)} .d-societe{--dc:var(--meadow)} .d-arts{--dc:var(--violet)} .d-medias{--dc:var(--blue)} .d-diplomatie{--dc:var(--pink)} .d-economie{--dc:var(--teal)} .d-securite{--dc:var(--coral)} .d-environnement{--dc:var(--lime)} .d-religion{--dc:var(--cyan)}
+.d-politique{--dc:var(--lamp)} .d-societe{--dc:var(--meadow)} .d-arts{--dc:var(--violet)} .d-medias{--dc:var(--blue)} .d-diplomatie{--dc:var(--pink)} .d-economie{--dc:var(--teal)} .d-securite{--dc:var(--coral)} .d-environnement{--dc:var(--lime)} .d-religion{--dc:var(--cyan)} .d-droit{--dc:var(--sand)}
 .dot[class*="d-"]{background:var(--dc)}
 .btn{border:1px solid var(--line);background:var(--panel-2);border-radius:9px;padding:8px 14px;cursor:pointer;font-weight:500;font-size:14px;display:inline-flex;align-items:center;gap:8px;line-height:1.2}
 .btn:hover{border-color:var(--ink-2)}
@@ -277,7 +278,7 @@ audio{width:100%;height:38px}
   <div class="wrap">
     <div class="eyebrow">Atelier de traduction · Pháp ⇄ Việt</div>
     <h1>La <b>Veilleuse</b> de Lyon</h1>
-    <p class="lede">Góc tự luyện nghe, chép chính tả và biên dịch Pháp Việt cho truyền thông, chính trị, xã hội, nghệ thuật, cùng ngoại giao, kinh tế, an ninh, môi trường và tôn giáo.</p>
+    <p class="lede">Góc tự luyện nghe, chép chính tả và biên dịch Pháp Việt cho truyền thông, chính trị, xã hội, nghệ thuật, cùng ngoại giao, kinh tế, an ninh, môi trường, tôn giáo và luật quốc tế.</p>
     <div class="stats" id="stats"></div>
   </div>
 </header>
@@ -597,7 +598,8 @@ const DOMAINS = {
   economie:{vi:"Kinh tế", fr:"Économie"},
   securite:{vi:"An ninh", fr:"Sécurité"},
   environnement:{vi:"Môi trường", fr:"Environnement"},
-  religion:{vi:"Tôn giáo", fr:"Religions"}
+  religion:{vi:"Tôn giáo", fr:"Religions"},
+  droit:{vi:"Luật quốc tế", fr:"Droit international"}
 };
 const TYPE_LABEL = {"dictee":"Chép chính tả","fr-vi":"Pháp → Việt","vi-fr":"Việt → Pháp"};
 
@@ -881,6 +883,28 @@ const EXTRA_LESSONS = [].concat(
 ]
 ).map(l=>({...l,id:"b-"+l.id}));
 BASE_LESSONS.push(...EXTRA_LESSONS);
+BASE_LESSONS.push(...([
+ {id:"dr-d1", type:"dictee", domain:"droit", title:"Les zones maritimes",
+  text:"La Convention des Nations unies sur le droit de la mer distingue plusieurs espaces. À partir de la ligne de base, l'État côtier exerce sa souveraineté sur une mer territoriale de douze milles marins. Au-delà, la zone économique exclusive s'étend jusqu'à deux cents milles : l'État n'y détient pas la souveraineté, mais des droits souverains sur l'exploitation des ressources. Plus loin encore commence la haute mer, ouverte à tous."},
+ {id:"dr-d2", type:"dictee", domain:"droit", title:"La Cour internationale de justice",
+  text:"Organe judiciaire principal des Nations unies, la Cour internationale de justice siège à La Haye. Elle règle les différends entre États, à condition que ceux-ci aient accepté sa compétence, et rend des avis consultatifs à la demande des organes de l'ONU. Ses arrêts sont définitifs et obligatoires pour les parties, mais la Cour ne dispose d'aucun moyen propre pour les faire exécuter."},
+ {id:"dr-fv1", type:"fr-vi", domain:"droit", title:"Un diplomate déclaré persona non grata",
+  text:"Le ministère des Affaires étrangères a déclaré persona non grata un diplomate en poste dans la capitale, lui reprochant des activités incompatibles avec son statut. Conformément à la Convention de Vienne sur les relations diplomatiques, l'intéressé bénéficie de l'immunité et ne peut être poursuivi, mais il dispose de soixante-douze heures pour quitter le territoire. Le pays concerné a annoncé qu'il prendrait des mesures de réciprocité.",
+  ref:"Bộ Ngoại giao đã tuyên bố một nhà ngoại giao đang công tác tại thủ đô là người không được hoan nghênh, với lý do người này có những hoạt động không phù hợp với tư cách ngoại giao. Theo Công ước Viên về quan hệ ngoại giao, người này được hưởng quyền miễn trừ và không thể bị truy tố, song phải rời khỏi lãnh thổ trong vòng 72 giờ. Nước có liên quan tuyên bố sẽ áp dụng biện pháp đáp trả có đi có lại.",
+  notes:[["en poste","Đang công tác, đang nhiệm chức."],["incompatibles avec son statut","Không phù hợp với tư cách, địa vị ngoại giao. Cách nói ngoại giao để chỉ hoạt động tình báo."],["l'intéressé","Người này, đương sự. Tránh lặp le diplomate."],["mesures de réciprocité","Biện pháp có đi có lại, biện pháp đáp trả."]]},
+ {id:"dr-fv2", type:"fr-vi", domain:"droit", title:"Le climat devant les juges",
+  text:"Dans un avis consultatif rendu en 2024, le Tribunal international du droit de la mer a estimé que les émissions de gaz à effet de serre constituaient une pollution du milieu marin au sens de la Convention. Les États parties ont donc l'obligation de prendre toutes les mesures nécessaires pour les réduire. Sans être contraignant, cet avis renforce les arguments des petits États insulaires, particulièrement exposés à la montée des eaux.",
+  ref:"Trong ý kiến tư vấn đưa ra năm 2024, Tòa án Quốc tế về Luật Biển nhận định khí thải nhà kính là một dạng ô nhiễm môi trường biển theo nghĩa của Công ước. Do đó, các quốc gia thành viên có nghĩa vụ áp dụng mọi biện pháp cần thiết để cắt giảm lượng khí thải này. Dù không có tính ràng buộc, ý kiến tư vấn này củng cố lập luận của các quốc đảo nhỏ, vốn đặc biệt dễ bị tổn thương trước tình trạng nước biển dâng.",
+  notes:[["rendre un avis","Đưa ra ý kiến (tư vấn), ra phán quyết."],["au sens de la Convention","Theo nghĩa, theo định nghĩa của Công ước."],["sans être contraignant","Dù không có tính ràng buộc."],["petits États insulaires","Các quốc đảo nhỏ."]]},
+ {id:"dr-vf1", type:"vi-fr", domain:"droit", title:"Việt Nam và Công ước Luật Biển 1982",
+  text:"Việt Nam là thành viên của Công ước Liên hợp quốc về Luật Biển năm 1982 và đã phê chuẩn Công ước từ năm 1994. Việt Nam nhất quán chủ trương giải quyết các tranh chấp bằng biện pháp hòa bình, trên cơ sở luật pháp quốc tế, đặc biệt là UNCLOS, đồng thời ủng hộ việc sớm hoàn tất một Bộ Quy tắc ứng xử ở Biển Đông thực chất, hiệu lực, hiệu quả.",
+  ref:"Le Vietnam est partie à la Convention des Nations unies sur le droit de la mer de 1982, qu'il a ratifiée dès 1994. Il prône de manière constante le règlement des différends par des moyens pacifiques, sur la base du droit international, notamment de la CNUDM, et soutient la conclusion rapide d'un code de conduite en mer de Chine méridionale substantiel, efficace et effectif.",
+  notes:[["là thành viên của Công ước","Être partie à la Convention."],["nhất quán chủ trương","Prôner de manière constante."],["thực chất, hiệu lực, hiệu quả","Substantiel, efficace et effectif. Công thức quen dùng."],["Biển Đông","Văn bản tiếng Pháp chính thức của Việt Nam thường viết mer Orientale; báo chí quốc tế dùng mer de Chine méridionale."]]},
+ {id:"dr-vf2", type:"vi-fr", domain:"droit", title:"Luật Biển Việt Nam",
+  text:"Luật Biển Việt Nam được Quốc hội thông qua năm 2012, quy định về đường cơ sở, nội thủy, lãnh hải, vùng tiếp giáp lãnh hải, vùng đặc quyền kinh tế, thềm lục địa và các đảo, quần đảo. Luật khẳng định tàu thuyền của các quốc gia được hưởng quyền qua lại không gây hại trong lãnh hải Việt Nam, phù hợp với quy định của Công ước.",
+  ref:"Adoptée par l'Assemblée nationale en 2012, la loi sur la mer du Vietnam régit les lignes de base, les eaux intérieures, la mer territoriale, la zone contiguë, la zone économique exclusive, le plateau continental ainsi que les îles et les archipels. Elle reconnaît aux navires de tous les États le droit de passage inoffensif dans la mer territoriale vietnamienne, conformément aux dispositions de la Convention.",
+  notes:[["quy định về","Régir, hoặc fixer le régime de."],["vùng tiếp giáp lãnh hải","La zone contiguë."],["quyền qua lại không gây hại","Le droit de passage inoffensif."],["phù hợp với quy định của","Conformément aux dispositions de."]]}
+]).map(l=>({...l,id:"b-"+l.id})));
 BASE_LESSONS.push(...([
  {id:"rl-d1", type:"dictee", domain:"religion", title:"La laïcité à la française",
   text:"Inscrite dans la loi de 1905, la laïcité repose sur deux principes : la liberté de conscience et la séparation des Églises et de l'État. La République ne reconnaît, ne salarie ni ne subventionne aucun culte, mais elle garantit le libre exercice de toutes les religions. Ce principe reste pourtant au cœur de nombreux débats, notamment sur le port de signes religieux à l'école."},
@@ -1382,6 +1406,74 @@ l'antisémitisme, l'islamophobie | bài Do Thái, bài Hồi giáo | religion |
 les lieux saints | các thánh địa | religion | 
 le patrimoine religieux | di sản tôn giáo | religion | `.split("\n").filter(l=>l.split("|").length>=4).map((l,i)=>{const p=l.split("|").map(x=>x.trim());return {id:"rt"+i,kind:"term",fr:p[0],vi:p[1],domain:p[2],note:p[3],base:true}});
 BASE_TERMS.push(...RELIGION_TERMS);
+const DROIT_TERMS = `la Convention des Nations unies sur le droit de la mer (CNUDM) | Công ước Liên hợp quốc về Luật Biển (UNCLOS) | droit | ký tại Montego Bay năm 1982, có hiệu lực năm 1994
+le mille marin | hải lý | droit | 1 hải lý = 1 852 m
+la ligne de base | đường cơ sở | droit | đường cơ sở thông thường theo ngấn nước triều thấp nhất (laisse de basse mer)
+les lignes de base droites | đường cơ sở thẳng | droit | 
+les eaux intérieures | nội thủy | droit | phía trong đường cơ sở
+la mer territoriale | lãnh hải | droit | tối đa 12 hải lý tính từ đường cơ sở
+la zone contiguë | vùng tiếp giáp lãnh hải | droit | tối đa 24 hải lý tính từ đường cơ sở
+la zone économique exclusive (ZEE) | vùng đặc quyền kinh tế (EEZ) | droit | tối đa 200 hải lý tính từ đường cơ sở
+le plateau continental | thềm lục địa | droit | ít nhất 200 hải lý, có thể mở rộng tới 350 hải lý
+le plateau continental étendu | thềm lục địa mở rộng | droit | hồ sơ nộp Ủy ban Ranh giới thềm lục địa
+la Commission des limites du plateau continental | Ủy ban Ranh giới thềm lục địa | droit | 
+la haute mer | biển cả | droit | vùng nằm ngoài vùng đặc quyền kinh tế
+la Zone, patrimoine commun de l'humanité | Vùng (đáy biển quốc tế), di sản chung của nhân loại | droit | 
+l'Autorité internationale des fonds marins | Cơ quan quyền lực đáy đại dương quốc tế | droit | trụ sở Kingston, Jamaica
+la souveraineté | chủ quyền | droit | 
+les droits souverains | quyền chủ quyền | droit | áp dụng ở vùng đặc quyền kinh tế và thềm lục địa
+la juridiction | quyền tài phán | droit | 
+l'État côtier | quốc gia ven biển | droit | 
+l'État du pavillon | quốc gia mà tàu mang cờ | droit | 
+le droit de passage inoffensif | quyền qua lại không gây hại | droit | trong lãnh hải
+le droit de passage en transit | quyền quá cảnh | droit | qua eo biển quốc tế
+la liberté de navigation et de survol | tự do hàng hải và tự do hàng không | droit | 
+l'île, le rocher | đảo, đá | droit | điều 121 UNCLOS: đá không có vùng đặc quyền kinh tế, thềm lục địa
+le haut-fond découvrant | bãi cạn lúc chìm lúc nổi | droit | 
+l'État archipel | quốc gia quần đảo | droit | l'archipel: quần đảo
+la délimitation maritime | phân định biển | droit | 
+la ligne d'équidistance | đường cách đều | droit | 
+les zones de chevauchement | vùng chồng lấn | droit | 
+les revendications | yêu sách | droit | revendications excessives: yêu sách quá mức
+les droits historiques | quyền lịch sử | droit | 
+la Déclaration sur la conduite des parties en mer de Chine méridionale (DOC) | Tuyên bố về ứng xử của các bên ở Biển Đông (DOC) | droit | ký năm 2002
+le code de conduite (COC) | Bộ Quy tắc ứng xử ở Biển Đông (COC) | droit | un COC efficace, substantiel, conforme au droit international
+la loi sur la mer du Vietnam | Luật Biển Việt Nam | droit | thông qua năm 2012
+la Cour internationale de justice (CIJ) | Tòa án Công lý Quốc tế (ICJ) | droit | La Haye
+le Tribunal international du droit de la mer (TIDM) | Tòa án Quốc tế về Luật Biển (ITLOS) | droit | Hambourg
+la Cour permanente d'arbitrage (CPA) | Tòa Trọng tài Thường trực (PCA) | droit | La Haye
+la Cour pénale internationale (CPI) | Tòa án Hình sự Quốc tế (ICC) | droit | thành lập theo Quy chế Rome
+une sentence arbitrale | phán quyết trọng tài | droit | un arrêt: phán quyết của tòa án
+un avis consultatif | ý kiến tư vấn | droit | 
+saisir la Cour | đưa vụ việc ra tòa | droit | la saisine: việc khởi kiện
+la compétence, la recevabilité | thẩm quyền, khả năng thụ lý | droit | 
+le règlement pacifique des différends | giải quyết hòa bình các tranh chấp | droit | 
+la Convention de Vienne sur le droit des traités | Công ước Viên về Luật Điều ước quốc tế | droit | năm 1969
+un traité, un accord, une convention | điều ước, hiệp định, công ước | droit | 
+signer, ratifier, adhérer à | ký, phê chuẩn, gia nhập | droit | 
+une réserve | bảo lưu | droit | émettre une réserve
+l'État partie, l'État signataire | quốc gia thành viên, quốc gia ký kết | droit | 
+le dépositaire | cơ quan lưu chiểu | droit | 
+pacta sunt servanda | nguyên tắc tận tâm, thiện chí thực hiện cam kết | droit | 
+le jus cogens | quy phạm mệnh lệnh (bắt buộc chung) | droit | 
+la coutume internationale | tập quán quốc tế | droit | 
+la Convention de Vienne sur les relations diplomatiques | Công ước Viên về quan hệ ngoại giao | droit | năm 1961; quan hệ lãnh sự: năm 1963
+l'immunité diplomatique | quyền miễn trừ ngoại giao | droit | 
+l'inviolabilité des locaux diplomatiques | quyền bất khả xâm phạm trụ sở cơ quan đại diện | droit | 
+la valise diplomatique | túi ngoại giao | droit | 
+déclarer persona non grata | tuyên bố là người không được hoan nghênh | droit | 
+l'agrément | sự chấp thuận (cử đại sứ) | droit | 
+l'exequatur | giấy chấp nhận lãnh sự | droit | 
+la Charte des Nations unies | Hiến chương Liên hợp quốc | droit | 
+l'interdiction du recours à la force | cấm sử dụng vũ lực | droit | điều 2 khoản 4 Hiến chương
+la légitime défense | quyền tự vệ chính đáng | droit | điều 51 Hiến chương
+la non-ingérence dans les affaires intérieures | không can thiệp vào công việc nội bộ | droit | 
+l'intégrité territoriale | toàn vẹn lãnh thổ | droit | 
+le droit international humanitaire | luật nhân đạo quốc tế | droit | les Conventions de Genève
+les crimes de guerre, le génocide, les crimes contre l'humanité | tội ác chiến tranh, tội diệt chủng, tội ác chống nhân loại | droit | 
+la responsabilité internationale de l'État | trách nhiệm pháp lý quốc tế của quốc gia | droit | 
+l'État de droit international | pháp quyền quốc tế | droit | `.split("\n").filter(l=>l.split("|").length>=4).map((l,i)=>{const p=l.split("|").map(x=>x.trim());return {id:"lt"+i,kind:"term",fr:p[0],vi:p[1],domain:p[2],note:p[3],base:true}});
+BASE_TERMS.push(...DROIT_TERMS);
 
 const METHODS = [
  {id:"m-theorie", tag:"Nền tảng", title:"Dịch là chuyển nghĩa, không phải chuyển chữ",
@@ -1579,6 +1671,26 @@ const DRILLS = [
  {t:"mcq",th:"religion",q:"«Prosélytisme» mang sắc thái gì trong tiếng Pháp?",o:["Trung tính, chỉ việc giảng đạo","Tiêu cực, lôi kéo người khác theo đạo","Tích cực, việc làm từ thiện"],c:1,e:"Vì vậy truyền đạo trong văn bản chính thức Việt Nam thường dịch là propager sa religion."},
  {t:"mcq",th:"religion",q:"Khi chỉ tôn giáo, «islam» trong tiếng Pháp viết thế nào?",o:["Islam, luôn viết hoa","islam, viết thường","Islâm"],c:1,e:"L'islam viết thường khi chỉ tôn giáo; l'Islam viết hoa khi chỉ thế giới, nền văn minh Hồi giáo."},
  {t:"mcq",th:"religion",q:"«Thờ cúng tổ tiên»",o:["la prière des aïeux","le culte des ancêtres","l'adoration familiale"],c:1,e:"Le culte des ancêtres là cách dịch chuẩn."}
+
+,
+ {t:"tr",th:"droit",d:"vi-fr",src:"Lãnh hải rộng 12 hải lý tính từ đường cơ sở.",ans:["La mer territoriale s'étend sur douze milles marins à partir des lignes de base."],key:"S'étendre sur… à partir des lignes de base."},
+ {t:"tr",th:"droit",d:"vi-fr",src:"Trong vùng đặc quyền kinh tế, quốc gia ven biển có quyền chủ quyền đối với việc thăm dò và khai thác tài nguyên.",ans:["Dans la zone économique exclusive, l'État côtier a des droits souverains aux fins d'exploration et d'exploitation des ressources."],key:"Quyền chủ quyền: droits souverains (khác souveraineté)."},
+ {t:"tr",th:"droit",d:"vi-fr",src:"Các bên cần kiềm chế, không có hành động làm phức tạp thêm tình hình.",ans:["Les parties doivent faire preuve de retenue et s'abstenir de toute action susceptible de compliquer la situation."],key:"Kiềm chế: faire preuve de retenue. Không có hành động: s'abstenir de."},
+ {t:"tr",th:"droit",d:"vi-fr",src:"Việt Nam đã nộp hồ sơ xác định ranh giới ngoài thềm lục địa lên Ủy ban Ranh giới thềm lục địa.",ans:["Le Vietnam a soumis à la Commission des limites du plateau continental un dossier relatif à la limite extérieure de son plateau continental."],key:"Nộp hồ sơ: soumettre un dossier à."},
+ {t:"tr",th:"droit",d:"vi-fr",src:"Quốc hội đã phê chuẩn hiệp định, không kèm theo bảo lưu.",ans:["L'Assemblée nationale a ratifié l'accord sans émettre de réserve."],key:"Bảo lưu: une réserve; émettre, formuler une réserve."},
+ {t:"tr",th:"droit",d:"vi-fr",src:"Hai bên nhất trí tôn trọng độc lập, chủ quyền, toàn vẹn lãnh thổ và không can thiệp vào công việc nội bộ của nhau.",ans:["Les deux parties se sont engagées à respecter mutuellement leur indépendance, leur souveraineté et leur intégrité territoriale, ainsi que le principe de non-ingérence dans leurs affaires intérieures."],key:"Công thức các nguyên tắc cơ bản của luật quốc tế."},
+ {t:"tr",th:"droit",d:"fr-vi",src:"Ses arrêts sont définitifs et obligatoires pour les parties.",ans:["Phán quyết của Tòa là chung thẩm và có giá trị ràng buộc đối với các bên."],key:"Définitif: chung thẩm, không thể kháng cáo."},
+ {t:"tr",th:"droit",d:"fr-vi",src:"Le navire étranger jouit du droit de passage inoffensif, à condition de ne pas porter atteinte à la paix, au bon ordre ou à la sécurité de l'État côtier.",ans:["Tàu nước ngoài được hưởng quyền qua lại không gây hại, với điều kiện không làm phương hại đến hòa bình, trật tự hay an ninh của quốc gia ven biển."],key:"Porter atteinte à: làm phương hại, xâm phạm."},
+ {t:"tr",th:"droit",d:"fr-vi",src:"L'État accréditaire peut, à tout moment et sans avoir à motiver sa décision, informer l'État accréditant qu'un membre de sa mission est persona non grata.",ans:["Nước tiếp nhận có thể, vào bất cứ lúc nào và không cần nêu lý do, thông báo cho nước cử đại diện rằng một thành viên cơ quan đại diện là người không được hoan nghênh."],key:"Accréditaire: nước tiếp nhận; accréditant: nước cử."},
+ {t:"tr",th:"droit",d:"fr-vi",src:"La Chine n'a pas participé à la procédure et rejette la sentence arbitrale rendue en 2016.",ans:["Trung Quốc không tham gia tố tụng và bác bỏ phán quyết trọng tài được đưa ra năm 2016."],key:"La procédure: quá trình tố tụng. Sentence arbitrale: phán quyết trọng tài."},
+ {t:"mcq",th:"droit",q:"1 hải lý (mille marin) bằng bao nhiêu mét?",o:["1 609 m","1 852 m","1 000 m"],c:1,e:"1 609 m là dặm Anh trên đất liền."},
+ {t:"mcq",th:"droit",q:"Vùng tiếp giáp lãnh hải tối đa bao nhiêu hải lý tính từ đường cơ sở?",o:["12","24","200"],c:1,e:"Lãnh hải 12, vùng tiếp giáp 24, vùng đặc quyền kinh tế 200 hải lý."},
+ {t:"mcq",th:"droit",q:"Ở vùng đặc quyền kinh tế, quốc gia ven biển có",o:["chủ quyền (souveraineté)","quyền chủ quyền và quyền tài phán (droits souverains, juridiction)","không có quyền gì"],c:1,e:"Chủ quyền đầy đủ chỉ áp dụng với nội thủy và lãnh hải."},
+ {t:"mcq",th:"droit",q:"Theo điều 121 UNCLOS, đá không thích hợp cho con người sinh sống hoặc đời sống kinh tế riêng",o:["có vùng đặc quyền kinh tế 200 hải lý","không có vùng đặc quyền kinh tế và thềm lục địa","không có cả lãnh hải"],c:1,e:"Đá vẫn có lãnh hải 12 hải lý."},
+ {t:"mcq",th:"droit",q:"Tòa án Quốc tế về Luật Biển (TIDM) đặt ở đâu?",o:["La Haye","Hambourg","Genève"],c:1,e:"CIJ và CPA ở La Haye."},
+ {t:"mcq",th:"droit",q:"«Pacta sunt servanda» nghĩa là",o:["điều ước phải được tận tâm thực hiện","điều ước chỉ ràng buộc khi được phê chuẩn","không có điều ước nào là vĩnh viễn"],c:0,e:"Điều 26 Công ước Viên năm 1969."},
+ {t:"mcq",th:"droit",q:"Quyền tự vệ chính đáng được ghi nhận ở điều nào của Hiến chương LHQ?",o:["Điều 2 khoản 4","Điều 51","Điều 103"],c:1,e:"Điều 2 khoản 4 là nguyên tắc cấm sử dụng vũ lực."},
+ {t:"mcq",th:"droit",q:"«Agrément» trong luật ngoại giao là",o:["thỏa thuận thương mại","sự chấp thuận của nước tiếp nhận đối với người được cử làm đại sứ","giấy chấp nhận lãnh sự"],c:1,e:"Giấy chấp nhận lãnh sự là exequatur."}
 
 ].map((d,i)=>({...d,id:"dr"+i}));
 
