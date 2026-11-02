@@ -34,6 +34,7 @@
   --teal:#7fd3c4;
   --coral:#ffa476;
   --lime:#c6dd76;
+  --cyan:#8fd6ea;
   --f-display:"Playfair Display", "Iowan Old Style", Georgia, serif;
   --f-body:"Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
   --f-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
@@ -83,7 +84,7 @@ section.view{display:flex;flex-direction:column;gap:20px}
 .chip:hover{border-color:var(--muted);color:var(--ink)}
 .chip[aria-pressed="true"]{background:var(--panel-2);color:var(--ink);border-color:var(--ink-2)}
 .dot{width:8px;height:8px;border-radius:50%;flex:none;background:var(--muted)}
-.d-politique{--dc:var(--lamp)} .d-societe{--dc:var(--meadow)} .d-arts{--dc:var(--violet)} .d-medias{--dc:var(--blue)} .d-diplomatie{--dc:var(--pink)} .d-economie{--dc:var(--teal)} .d-securite{--dc:var(--coral)} .d-environnement{--dc:var(--lime)}
+.d-politique{--dc:var(--lamp)} .d-societe{--dc:var(--meadow)} .d-arts{--dc:var(--violet)} .d-medias{--dc:var(--blue)} .d-diplomatie{--dc:var(--pink)} .d-economie{--dc:var(--teal)} .d-securite{--dc:var(--coral)} .d-environnement{--dc:var(--lime)} .d-religion{--dc:var(--cyan)}
 .dot[class*="d-"]{background:var(--dc)}
 .btn{border:1px solid var(--line);background:var(--panel-2);border-radius:9px;padding:8px 14px;cursor:pointer;font-weight:500;font-size:14px;display:inline-flex;align-items:center;gap:8px;line-height:1.2}
 .btn:hover{border-color:var(--ink-2)}
@@ -107,6 +108,8 @@ section.view{display:flex;flex-direction:column;gap:20px}
 .lesson .meta{display:flex;align-items:center;gap:7px;font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .lesson .t{font-weight:600;font-size:14.5px;line-height:1.35}
 .lesson .last{margin-top:auto;font-family:var(--f-mono);font-size:11.5px;color:var(--ink-2)}
+.badge-new{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;background:var(--lamp);color:var(--lamp-ink);border-radius:999px;padding:1px 7px;margin-left:auto}
+.lesson.is-new{border-color:color-mix(in srgb,var(--lamp) 55%,var(--line))}
 .empty-note{color:var(--muted);font-size:14px;padding:14px;border:1px dashed var(--line);border-radius:var(--r)}
 
 /* desks */
@@ -274,7 +277,7 @@ audio{width:100%;height:38px}
   <div class="wrap">
     <div class="eyebrow">Atelier de traduction · Pháp ⇄ Việt</div>
     <h1>La <b>Veilleuse</b> de Lyon</h1>
-    <p class="lede">Góc tự luyện nghe, chép chính tả và biên dịch Pháp Việt cho truyền thông, chính trị, xã hội, nghệ thuật, cùng ngoại giao, kinh tế, an ninh và môi trường.</p>
+    <p class="lede">Góc tự luyện nghe, chép chính tả và biên dịch Pháp Việt cho truyền thông, chính trị, xã hội, nghệ thuật, cùng ngoại giao, kinh tế, an ninh, môi trường và tôn giáo.</p>
     <div class="stats" id="stats"></div>
   </div>
 </header>
@@ -299,8 +302,9 @@ audio{width:100%;height:38px}
       <h2>Nghe bên trái, <em>chép</em> bên phải</h2>
       <p>Chọn bài, nghe bằng giọng đọc máy hoặc file âm thanh bà tải từ bản tin, gõ lại rồi bấm kiểm tra để thấy lỗi sai từng từ.</p>
     </div>
-    <div class="chips" id="d-domains"></div>
+    <div class="row"><button class="btn" type="button" data-rand="dictee">Ngẫu nhiên</button><button class="btn" type="button" data-gen="dictee">Soạn bài mới</button></div>
   </div>
+  <div class="chips" id="d-domains"></div>
   <div class="rail" id="d-rail"></div>
 
   <div class="desk">
@@ -399,6 +403,8 @@ audio{width:100%;height:38px}
         <button type="button" data-dir="fr-vi" aria-pressed="true">Pháp → Việt</button>
         <button type="button" data-dir="vi-fr" aria-pressed="false">Việt → Pháp</button>
       </div>
+      <button class="btn" type="button" data-rand="trad">Ngẫu nhiên</button>
+      <button class="btn" type="button" data-gen="trad">Soạn bài mới</button>
     </div>
   </div>
   <div class="chips" id="t-domains"></div>
@@ -583,7 +589,8 @@ const DOMAINS = {
   diplomatie:{vi:"Ngoại giao", fr:"Diplomatie"},
   economie:{vi:"Kinh tế", fr:"Économie"},
   securite:{vi:"An ninh", fr:"Sécurité"},
-  environnement:{vi:"Môi trường", fr:"Environnement"}
+  environnement:{vi:"Môi trường", fr:"Environnement"},
+  religion:{vi:"Tôn giáo", fr:"Religions"}
 };
 const TYPE_LABEL = {"dictee":"Chép chính tả","fr-vi":"Pháp → Việt","vi-fr":"Việt → Pháp"};
 
@@ -867,6 +874,28 @@ const EXTRA_LESSONS = [].concat(
 ]
 ).map(l=>({...l,id:"b-"+l.id}));
 BASE_LESSONS.push(...EXTRA_LESSONS);
+BASE_LESSONS.push(...([
+ {id:"rl-d1", type:"dictee", domain:"religion", title:"La laïcité à la française",
+  text:"Inscrite dans la loi de 1905, la laïcité repose sur deux principes : la liberté de conscience et la séparation des Églises et de l'État. La République ne reconnaît, ne salarie ni ne subventionne aucun culte, mais elle garantit le libre exercice de toutes les religions. Ce principe reste pourtant au cœur de nombreux débats, notamment sur le port de signes religieux à l'école."},
+ {id:"rl-d2", type:"dictee", domain:"religion", title:"Le ramadan en France",
+  text:"Pour des millions de musulmans de France, le mois de ramadan a commencé ce week-end. Du lever au coucher du soleil, les fidèles s'abstiennent de manger et de boire. Le soir, la rupture du jeûne est souvent l'occasion de partager un repas en famille ou à la mosquée. Dans plusieurs villes, des associations organisent aussi des dîners ouverts aux voisins, quelle que soit leur confession."},
+ {id:"rl-fv1", type:"fr-vi", domain:"religion", title:"Le dialogue interreligieux",
+  text:"Réunis pendant deux jours, des responsables chrétiens, musulmans, juifs et bouddhistes ont appelé à faire du dialogue interreligieux un rempart contre l'intolérance. Ils ont rappelé que les religions, souvent instrumentalisées dans les conflits, peuvent aussi contribuer à la paix et à la cohésion sociale. La déclaration finale invite les États à garantir la liberté de culte et à lutter contre toutes les formes de haine.",
+  ref:"Trong hai ngày gặp gỡ, các chức sắc Kitô giáo, Hồi giáo, Do Thái giáo và Phật giáo đã kêu gọi biến đối thoại liên tôn thành bức tường ngăn chặn sự bất khoan dung. Họ nhắc lại rằng tôn giáo, vốn thường bị lợi dụng trong các cuộc xung đột, cũng có thể góp phần vào hòa bình và gắn kết xã hội. Tuyên bố chung kêu gọi các nhà nước bảo đảm tự do tôn giáo và đấu tranh chống mọi hình thức thù hận.",
+  notes:[["un rempart contre","Bức tường thành, lá chắn chống lại."],["instrumentaliser","Lợi dụng, công cụ hóa."],["la cohésion sociale","Sự gắn kết xã hội."],["la liberté de culte","Tự do tôn giáo, tự do thờ phụng."]]},
+ {id:"rl-fv2", type:"fr-vi", domain:"religion", title:"Restaurer le patrimoine religieux",
+  text:"En France, des milliers d'églises rurales sont menacées faute d'entretien. Propriétés des communes depuis la loi de 1905, elles pèsent lourdement sur le budget des petites collectivités. Une fondation a lancé une souscription nationale pour sauver les édifices les plus fragiles, rappelant que ce patrimoine appartient à tous, croyants ou non.",
+  ref:"Tại Pháp, hàng nghìn nhà thờ ở nông thôn đang bị đe dọa vì thiếu kinh phí bảo dưỡng. Thuộc sở hữu của các xã từ khi có luật năm 1905, những công trình này trở thành gánh nặng lớn cho ngân sách của các địa phương nhỏ. Một quỹ đã phát động chiến dịch quyên góp toàn quốc để cứu những công trình xuống cấp nhất, đồng thời nhấn mạnh rằng di sản này thuộc về tất cả mọi người, dù có theo đạo hay không.",
+  notes:[["faute de","Vì thiếu."],["peser sur le budget","Đè nặng lên ngân sách."],["une souscription nationale","Chiến dịch quyên góp toàn quốc."],["croyants ou non","Dù có theo đạo hay không."]]},
+ {id:"rl-vf1", type:"vi-fr", domain:"religion", title:"Đại lễ Phật đản Liên hợp quốc",
+  text:"Đại lễ Phật đản Liên hợp quốc đã khai mạc với sự tham dự của hàng nghìn chức sắc, tăng ni, phật tử đến từ hàng chục quốc gia và vùng lãnh thổ. Phát biểu khai mạc, đại diện Giáo hội Phật giáo Việt Nam nhấn mạnh thông điệp đoàn kết, khoan dung và hòa bình, đồng thời khẳng định Đại lễ là dịp để giới thiệu chính sách tôn trọng tự do tín ngưỡng, tôn giáo của Việt Nam tới bạn bè quốc tế.",
+  ref:"La fête du Vesak des Nations unies s'est ouverte en présence de milliers de dignitaires, de moines, de nonnes et de fidèles bouddhistes venus de dizaines de pays et territoires. Dans son discours d'ouverture, le représentant de l'Église bouddhique du Vietnam a mis en avant un message d'unité, de tolérance et de paix, tout en affirmant que l'événement était l'occasion de présenter aux amis étrangers la politique de respect de la liberté de croyance et de religion du Vietnam.",
+  notes:[["tăng ni, phật tử","Moines, nonnes et fidèles bouddhistes."],["phát biểu khai mạc","Dans son discours d'ouverture."],["thông điệp","Un message de… ; mettre en avant: nhấn mạnh."],["tự do tín ngưỡng, tôn giáo","La liberté de croyance et de religion."]]},
+ {id:"rl-vf2", type:"vi-fr", domain:"religion", title:"Chúc mừng Giáng sinh",
+  text:"Nhân dịp Lễ Giáng sinh, đại diện lãnh đạo thành phố đã đến thăm, chúc mừng Tòa Tổng Giám mục Hà Nội. Lãnh đạo thành phố ghi nhận những đóng góp của đồng bào Công giáo trong phong trào xây dựng đời sống văn hóa, an sinh xã hội, đồng thời mong bà con tiếp tục sống «tốt đời, đẹp đạo», đồng hành cùng dân tộc.",
+  ref:"À l'occasion de Noël, des représentants des autorités municipales se sont rendus à l'Archevêché de Hanoï pour présenter leurs vœux. Ils ont salué la contribution des catholiques au développement de la vie culturelle et aux actions de protection sociale, tout en souhaitant que les fidèles continuent de concilier leur foi et leur engagement citoyen, aux côtés de la nation.",
+  notes:[["thăm, chúc mừng","Se rendre à… pour présenter leurs vœux."],["Tòa Tổng Giám mục","L'Archevêché."],["tốt đời, đẹp đạo","Dịch theo ý: concilier sa foi et son engagement citoyen."],["đồng hành cùng dân tộc","Aux côtés de la nation."]]}
+]).map(l=>({...l,id:"b-"+l.id})));
 BASE_LESSONS.push(...([
  {id:"dp-d1", type:"dictee", domain:"diplomatie", title:"La gastro-diplomatie",
   text:"Allier gastronomie et diplomatie n'a rien de nouveau. Dès le seizième siècle, les dirigeants recevaient leurs adversaires autour de tables somptueuses pour faciliter les négociations. Aujourd'hui, de nombreuses ambassades organisent des dîners réunissant des personnalités du monde politique, des médias et de la société civile. La cuisine devient ainsi un instrument de soft power, au service de l'image du pays."},
@@ -1295,6 +1324,57 @@ le Sommet de la Francophonie | Hội nghị Thượng đỉnh Pháp ngữ | poli
 l'Hexagone | nước Pháp (cách gọi tránh lặp) | politique |
 `.split("\n").filter(l=>l.split("|").length>=4).map((l,i)=>{const p=l.split("|").map(x=>x.trim());return {id:"ct"+i,kind:"term",fr:p[0],vi:p[1],domain:p[2],note:p[3],base:true,course:true}});
 BASE_TERMS.push(...COURSE_TERMS);
+const RELIGION_TERMS = `la laïcité | nguyên tắc thế tục, tách tôn giáo khỏi nhà nước | religion | luật năm 1905 về tách Giáo hội khỏi Nhà nước
+la loi de 1905 de séparation des Églises et de l'État | luật năm 1905 tách Giáo hội và Nhà nước | religion | 
+la neutralité religieuse de l'État | tính trung lập tôn giáo của nhà nước | religion | 
+le port de signes religieux ostensibles | mang biểu tượng tôn giáo dễ thấy | religion | bị cấm ở trường công từ luật năm 2004
+la liberté de conscience | tự do tư tưởng, tự do lương tâm | religion | 
+la liberté de croyance et de religion | tự do tín ngưỡng, tôn giáo | religion | cách diễn đạt trong văn bản Việt Nam
+la loi sur la croyance et la religion | Luật Tín ngưỡng, tôn giáo | religion | thông qua năm 2016, hiệu lực từ 2018
+le ministère des Ethnies et des Religions | Bộ Dân tộc và Tôn giáo | religion | thành lập năm 2025
+le Comité gouvernemental des affaires religieuses | Ban Tôn giáo Chính phủ | religion | 
+une organisation religieuse reconnue | tổ chức tôn giáo được công nhận | religion | 
+les dignitaires religieux | chức sắc tôn giáo | religion | dignitaires, religieux, fidèles: chức sắc, nhà tu hành, tín đồ
+les fidèles | tín đồ, giáo dân | religion | 
+le lieu de culte | cơ sở thờ tự | religion | 
+le pèlerinage | cuộc hành hương | religion | 
+les croyances populaires | tín ngưỡng dân gian | religion | 
+le culte des ancêtres | thờ cúng tổ tiên | religion | 
+le culte des rois Hùng | tín ngưỡng thờ cúng Hùng Vương | religion | di sản phi vật thể UNESCO năm 2012
+le culte des Déesses Mères | tín ngưỡng thờ Mẫu Tam phủ | religion | di sản phi vật thể UNESCO năm 2016
+le bouddhisme | Phật giáo | religion | bouddhiste (adj, n)
+l'Église bouddhique du Vietnam | Giáo hội Phật giáo Việt Nam | religion | 
+la pagode | chùa | religion | le temple: đền, miếu
+le moine bouddhiste, la nonne | nhà sư, ni cô | religion | le bonze: nhà sư (cách gọi cũ)
+le Vesak des Nations unies | Đại lễ Phật đản Liên hợp quốc | religion | Việt Nam đã nhiều lần đăng cai
+le catholicisme | Công giáo | religion | catholique
+le Saint-Siège | Tòa Thánh Vatican | religion | le pape: Giáo hoàng
+le représentant pontifical résident | Đại diện thường trú của Tòa Thánh | religion | 
+la Conférence des évêques du Vietnam | Hội đồng Giám mục Việt Nam | religion | 
+l'archidiocèse, le diocèse, la paroisse | tổng giáo phận, giáo phận, giáo xứ | religion | 
+la cathédrale, l'église | nhà thờ chính tòa, nhà thờ | religion | 
+la messe de minuit | thánh lễ đêm Giáng sinh | religion | 
+le protestantisme | đạo Tin Lành | religion | protestant; l'Église évangélique: Hội thánh Tin Lành
+l'orthodoxie | Chính thống giáo | religion | 
+l'islam | Hồi giáo | religion | islam viết thường khi chỉ tôn giáo; les musulmans: người Hồi giáo
+la mosquée, l'imam | thánh đường Hồi giáo, imam | religion | 
+le ramadan, l'Aïd el-Fitr | tháng chay Ramadan, lễ Eid al-Fitr | religion | 
+la communauté cham musulmane | cộng đồng người Chăm theo Hồi giáo | religion | Chăm Bani và Chăm Islam
+le judaïsme | Do Thái giáo | religion | la synagogue: giáo đường Do Thái
+l'hindouisme | Ấn Độ giáo | religion | le brahmanisme des Cham: đạo Bà La Môn của người Chăm
+le sikhisme | đạo Sikh | religion | 
+le caodaïsme | đạo Cao Đài | religion | le Saint-Siège de Tây Ninh: Tòa Thánh Tây Ninh
+le bouddhisme Hòa Hảo | Phật giáo Hòa Hảo | religion | 
+le dialogue interreligieux | đối thoại liên tôn | religion | 
+la coexistence harmonieuse des religions | chung sống hài hòa giữa các tôn giáo | religion | 
+« vivre une vie bonne, laïque et religieuse » | «sống tốt đời, đẹp đạo» | religion | phương châm thường dịch theo ý: concilier la foi et la vie citoyenne
+la sécularisation | quá trình thế tục hóa | religion | 
+le prosélytisme | truyền đạo, lôi kéo theo đạo | religion | sắc thái tiêu cực trong tiếng Pháp
+l'intégrisme, le fondamentalisme | trào lưu chính thống cực đoan | religion | 
+l'antisémitisme, l'islamophobie | bài Do Thái, bài Hồi giáo | religion | 
+les lieux saints | các thánh địa | religion | 
+le patrimoine religieux | di sản tôn giáo | religion | `.split("\n").filter(l=>l.split("|").length>=4).map((l,i)=>{const p=l.split("|").map(x=>x.trim());return {id:"rt"+i,kind:"term",fr:p[0],vi:p[1],domain:p[2],note:p[3],base:true}});
+BASE_TERMS.push(...RELIGION_TERMS);
 
 const METHODS = [
  {id:"m-theorie", tag:"Nền tảng", title:"Dịch là chuyển nghĩa, không phải chuyển chữ",
@@ -1478,6 +1558,21 @@ const DRILLS = [
  {t:"mcq",th:"politique",q:"Tiền thân của OIF ra đời ngày 20/3/1970 tại Niamey dưới tên",o:["Agence de coopération culturelle et technique (ACCT)","Alliance française","Conférence des ministres francophones"],c:0,e:"Ngày 20/3 là Ngày Quốc tế Pháp ngữ. Việt Nam là thành viên từ 1970."},
  {t:"mcq",th:"politique",q:"Hội nghị Thượng đỉnh Pháp ngữ lần thứ VII diễn ra ở đâu năm 1997?",o:["Hà Nội","Québec","Dakar"],c:0,e:"Đây là thượng đỉnh Pháp ngữ đầu tiên tổ chức tại châu Á."},
  {t:"mcq",th:"politique",q:"Chủ tịch Hội đồng EU luân phiên giữa các nước thành viên theo chu kỳ",o:["3 tháng","6 tháng","1 năm"],c:1,e:"Không nhầm với Chủ tịch Hội đồng châu Âu, nhiệm kỳ 2 năm rưỡi."}
+,
+ {t:"tr",th:"religion",d:"vi-fr",src:"Việt Nam là quốc gia đa tín ngưỡng, đa tôn giáo, nơi các tôn giáo chung sống hài hòa.",ans:["Le Vietnam est un pays où coexistent de multiples croyances et religions, dans une harmonie qui fait sa singularité.","Le Vietnam est un pays multiconfessionnel où les religions coexistent harmonieusement."],key:"Đa tôn giáo: multiconfessionnel. Chung sống hài hòa: coexister harmonieusement."},
+ {t:"tr",th:"religion",d:"vi-fr",src:"Nhà nước tôn trọng và bảo đảm quyền tự do tín ngưỡng, tôn giáo của mọi người.",ans:["L'État respecte et garantit le droit de chacun à la liberté de croyance et de religion."],key:"Mọi người: chacun. Tự do tín ngưỡng, tôn giáo: la liberté de croyance et de religion."},
+ {t:"tr",th:"religion",d:"vi-fr",src:"Các chức sắc, chức việc và tín đồ đã tích cực tham gia các hoạt động từ thiện, nhân đạo.",ans:["Les dignitaires, les responsables religieux et les fidèles ont activement participé aux actions caritatives et humanitaires."],key:"Chức sắc: dignitaires. Tín đồ: fidèles. Từ thiện: caritatif."},
+ {t:"tr",th:"religion",d:"vi-fr",src:"Tín ngưỡng thờ Mẫu Tam phủ của người Việt đã được UNESCO ghi danh là di sản văn hóa phi vật thể đại diện của nhân loại.",ans:["Les pratiques liées au culte des Déesses Mères des Trois Royaumes ont été inscrites par l'UNESCO sur la Liste représentative du patrimoine culturel immatériel de l'humanité."],key:"Inscrire sur la Liste représentative…"},
+ {t:"tr",th:"religion",d:"fr-vi",src:"La République ne reconnaît, ne salarie ni ne subventionne aucun culte.",ans:["Nhà nước Cộng hòa không công nhận, không trả lương và không trợ cấp cho bất kỳ tôn giáo nào."],key:"Câu trích Điều 2 luật năm 1905. Ne… ni… ni: không… cũng không."},
+ {t:"tr",th:"religion",d:"fr-vi",src:"La laïcité n'est pas l'hostilité envers les religions, mais la garantie que chacun puisse croire ou ne pas croire.",ans:["Thế tục không phải là thù địch với tôn giáo, mà là sự bảo đảm để mỗi người được tự do theo hay không theo một tín ngưỡng nào."],key:"Croire ou ne pas croire: tự do có hay không có tín ngưỡng."},
+ {t:"tr",th:"religion",d:"fr-vi",src:"Les religions, souvent instrumentalisées dans les conflits, peuvent aussi être un facteur de paix.",ans:["Tôn giáo, vốn thường bị lợi dụng trong các cuộc xung đột, cũng có thể là nhân tố thúc đẩy hòa bình."],key:"Instrumentaliser: lợi dụng, công cụ hóa."},
+ {t:"tr",th:"religion",d:"fr-vi",src:"Le Saint-Siège et le Vietnam ont franchi une nouvelle étape avec l'installation d'un représentant pontifical résident à Hanoï.",ans:["Tòa Thánh và Việt Nam đã bước thêm một bước mới với việc Đại diện thường trú của Tòa Thánh chính thức làm việc tại Hà Nội."],key:"Franchir une étape: bước sang giai đoạn mới."},
+ {t:"mcq",th:"religion",q:"Luật nào đặt nền móng cho nguyên tắc laïcité ở Pháp?",o:["Luật năm 1789","Luật năm 1905","Luật năm 1958"],c:1,e:"Loi du 9 décembre 1905 concernant la séparation des Églises et de l'État."},
+ {t:"mcq",th:"religion",q:"«Chức sắc tôn giáo» dịch là",o:["les fonctionnaires religieux","les dignitaires religieux","les élites de culte"],c:1,e:"Dignitaires: chức sắc; fidèles: tín đồ."},
+ {t:"mcq",th:"religion",q:"«Prosélytisme» mang sắc thái gì trong tiếng Pháp?",o:["Trung tính, chỉ việc giảng đạo","Tiêu cực, lôi kéo người khác theo đạo","Tích cực, việc làm từ thiện"],c:1,e:"Vì vậy truyền đạo trong văn bản chính thức Việt Nam thường dịch là propager sa religion."},
+ {t:"mcq",th:"religion",q:"Khi chỉ tôn giáo, «islam» trong tiếng Pháp viết thế nào?",o:["Islam, luôn viết hoa","islam, viết thường","Islâm"],c:1,e:"L'islam viết thường khi chỉ tôn giáo; l'Islam viết hoa khi chỉ thế giới, nền văn minh Hồi giáo."},
+ {t:"mcq",th:"religion",q:"«Thờ cúng tổ tiên»",o:["la prière des aïeux","le culte des ancêtres","l'adoration familiale"],c:1,e:"Le culte des ancêtres là cách dịch chuẩn."}
+
 ].map((d,i)=>({...d,id:"dr"+i}));
 
 
@@ -1537,7 +1632,19 @@ async function initStore(){
 }
 
 /* ---------- lessons ---------- */
-function allLessons(){ return BASE_LESSONS.concat(itemsOf("lesson").sort((a,b)=>(b.created||0)-(a.created||0))) }
+let NEWS_LESSONS=[], NEWS_UPDATED=null;
+function allLessons(){ return NEWS_LESSONS.concat(itemsOf("lesson").sort((a,b)=>(b.created||0)-(a.created||0)), BASE_LESSONS) }
+function fmtDate(iso){ try{ const d=new Date(iso+"T00:00:00"); return `${String(d.getDate()).padStart(2,"0")}/${String(d.getMonth()+1).padStart(2,"0")}` }catch{ return iso } }
+function isFresh(l){ if(!l.date) return false; return (Date.now()-new Date(l.date+"T00:00:00").getTime()) < 3*864e5 }
+async function loadNews(){
+  try{
+    const r=await fetch("news.json",{cache:"no-store"}); if(!r.ok) return;
+    const j=await r.json(); NEWS_UPDATED=j.updated||null;
+    NEWS_LESSONS=(j.lessons||[]).filter(l=>l&&l.id&&l.text&&DOMAINS[l.domain]&&TYPE_LABEL[l.type]).map(l=>({...l,id:"n-"+l.id,news:true,notes:l.notes||[]})).sort((a,b)=>(b.date||"").localeCompare(a.date||""));
+    (j.terms||[]).forEach((t,i)=>{ if(t&&t.fr&&t.vi&&DOMAINS[t.domain]) BASE_TERMS.unshift({id:"nt"+i+"_"+(t.fr||"").slice(0,12),kind:"term",fr:t.fr,vi:t.vi,domain:t.domain,note:t.note||"",base:true,news:true}) });
+    changed();
+  }catch{}
+}
 function lessonById(id){ return allLessons().find(l=>l.id===id) }
 function lastAttempt(lessonId, mode){
   const a = itemsOf("attempt").filter(x=>x.lessonId===lessonId && x.mode===mode).sort((a,b)=>b.at-a.at)[0];
@@ -1557,6 +1664,7 @@ function renderStats(){
     `<span><b>${BASE_TERMS.length+terms}</b> thuật ngữ, <b>${terms}</b> của bà</span>`+
     `<span><b>${lessons}</b> bài tự thêm</span>`+
     `<span><b>${itemsOf("drillres").filter(x=>x.ok).length}</b>/${DRILLS.length} câu luyện đã đạt</span>`+
+    (NEWS_UPDATED?`<span>tin mới cập nhật <b>${fmtDate(NEWS_UPDATED)}</b></span>`:"")+
     `<span class="store-pill ${store.mode==="db"?"on":""}"><i></i>${store.mode==="db"?"Lưu vào tài khoản":"Lưu trên trình duyệt này"}</span>`;
 }
 
@@ -1678,8 +1786,8 @@ function renderDRail(){
   if(!ls.find(l=>l.id===D.lessonId) && ls[0]) D.lessonId=ls[0].id;
   $("#d-rail").innerHTML = ls.map(l=>{
     const a=lastAttempt(l.id,"dictee");
-    return `<button type="button" class="lesson" data-id="${l.id}" aria-pressed="${l.id===D.lessonId}">
-      <span class="meta"><span class="dot d-${l.domain}"></span>${DOMAINS[l.domain].vi}${l.type==="fr-vi"?" · từ bài dịch":""}${l.base?"":(l.id.startsWith("b-")?"":" · của bà")}</span>
+    return `<button type="button" class="lesson${l.news&&isFresh(l)?" is-new":""}" data-id="${l.id}" aria-pressed="${l.id===D.lessonId}">
+      <span class="meta"><span class="dot d-${l.domain}"></span>${DOMAINS[l.domain].vi}${l.type==="fr-vi"?" · từ bài dịch":""}${l.news?" · "+fmtDate(l.date):(l.id.startsWith("b-")?"":" · của bà")}${l.news&&isFresh(l)?`<span class="badge-new">mới</span>`:""}</span>
       <span class="t">${esc(l.title)}</span>
       <span class="last">${a?`Lần gần nhất ${a.score}%`:"Chưa làm"}</span></button>`}).join("") || `<div class="empty-note">Chưa có bài nào ở mảng này.</div>`;
   $$("#d-rail .lesson").forEach(b=>b.onclick=()=>{selectDLesson(b.dataset.id)});
@@ -1694,7 +1802,7 @@ function selectDLesson(id){
 function renderDLesson(){
   const l=lessonById(D.lessonId); if(!l) return;
   $("#d-title").textContent=l.title;
-  const src = l.srcname||l.url ? `${esc(l.srcname||"Nguồn")}${l.url?` · <a href="${esc(l.url)}" target="_blank" rel="noopener">mở bài gốc</a>`:""}` : (l.id.startsWith("b-")?"Bài mẫu do Claude soạn":"");
+  const src = (l.srcname||l.url ? `${esc(l.srcname||"Nguồn")}${l.url?` · <a href="${esc(l.url)}" target="_blank" rel="noopener">mở bài gốc</a>`:""}` : (l.id.startsWith("b-")?"Bài mẫu do Claude soạn":"")) + (l.news?` · Claude soạn từ tin ngày ${fmtDate(l.date)}`:"");
   $("#d-src").innerHTML = `${src}${src?" · ":""}${frTextOf(l).split(/\s+/).length} từ`;
   updateCounter();
 }
@@ -1808,8 +1916,8 @@ function renderTRail(){
   const saved=lsGet("veilleuse.tlesson."+T.dir,null);
   if(!T.lessonId || !ls.find(l=>l.id===T.lessonId)) T.lessonId = (ls.find(l=>l.id===saved)||ls[0]||{}).id||null;
   $("#t-rail").innerHTML = ls.map(l=>{const a=lastAttempt(l.id,"trad");
-    return `<button type="button" class="lesson" data-id="${l.id}" aria-pressed="${l.id===T.lessonId}">
-    <span class="meta"><span class="dot d-${l.domain}"></span>${DOMAINS[l.domain].vi}${l.id.startsWith("b-")?"":" · của bà"}</span>
+    return `<button type="button" class="lesson${l.news&&isFresh(l)?" is-new":""}" data-id="${l.id}" aria-pressed="${l.id===T.lessonId}">
+    <span class="meta"><span class="dot d-${l.domain}"></span>${DOMAINS[l.domain].vi}${l.news?" · "+fmtDate(l.date):(l.id.startsWith("b-")?"":" · của bà")}${l.news&&isFresh(l)?`<span class="badge-new">mới</span>`:""}</span>
     <span class="t">${esc(l.title)}</span><span class="last">${a?(a.score!=null?`Claude chấm ${a.score}/10`:"Đã đối chiếu"):"Chưa làm"}</span></button>`}).join("") || `<div class="empty-note">Chưa có bài ${TYPE_LABEL[T.dir]} ở mảng này. Thêm bài ở tab Thêm bài.</div>`;
   $$("#t-rail .lesson").forEach(b=>b.onclick=()=>selectT(b.dataset.id));
   renderT();
@@ -1823,7 +1931,7 @@ function renderT(){
   $("#t-keys").hidden = fr;
   if(!l){ $("#t-title").textContent=""; $("#t-text").textContent=""; $("#t-src").textContent=""; $("#t-wc").textContent=""; return }
   $("#t-title").textContent=l.title;
-  $("#t-src").innerHTML = l.srcname||l.url ? `${esc(l.srcname||"Nguồn")}${l.url?` · <a href="${esc(l.url)}" target="_blank" rel="noopener">mở bài gốc</a>`:""}` : (l.id.startsWith("b-")?"Bài mẫu do Claude soạn":"");
+  $("#t-src").innerHTML = (l.srcname||l.url ? `${esc(l.srcname||"Nguồn")}${l.url?` · <a href="${esc(l.url)}" target="_blank" rel="noopener">mở bài gốc</a>`:""}` : (l.id.startsWith("b-")?"Bài mẫu do Claude soạn":"")) + (l.news?` · Claude soạn từ tin ngày ${fmtDate(l.date)}`:"");
   const tx=$("#t-text"); tx.textContent=l.text; tx.className="src-text"+(fr?"":" vi");
   $("#t-wc").textContent = `${l.text.split(/\s+/).length} từ`;
   $("#t-input").value = lsGet("veilleuse.tdraft."+l.id,"");
@@ -2051,6 +2159,70 @@ function initAdd(){
   };
 }
 
+/* ---------- random pick ---------- */
+function pickRandom(list, mode){
+  // favour lessons never done, then new ones, then the rest
+  const w=list.map(l=>{ const a=lastAttempt(l.id,mode); let k=a?1:4; if(l.news&&isFresh(l)) k+=3; if(a&&mode==="dictee"&&a.score<70) k+=1; return [l,k] });
+  let tot=w.reduce((s,x)=>s+x[1],0), r=Math.random()*tot;
+  for(const [l,k] of w){ if((r-=k)<=0) return l }
+  return list[0];
+}
+function randomLesson(kind){
+  if(kind==="dictee"){
+    const pool=allLessons().filter(l=>l.type==="dictee"||l.type==="fr-vi"); if(!pool.length) return;
+    let l=pickRandom(pool.filter(x=>x.id!==D.lessonId),"dictee")||pool[0];
+    D.domain="all"; renderDRail(); selectDLesson(l.id);
+    toast(`${DOMAINS[l.domain].vi} · ${l.title}`);
+  } else {
+    const pool=allLessons().filter(l=>l.type==="fr-vi"||l.type==="vi-fr"); if(!pool.length) return;
+    let l=pickRandom(pool.filter(x=>x.id!==T.lessonId),"trad")||pool[0];
+    saveTDraft(); T.dir=l.type; T.domain="all"; setPressed($$("[data-dir]"),x=>x.dataset.dir===l.type);
+    T.lessonId=l.id; lsSet("veilleuse.tlesson."+T.dir,l.id); T.ai=null; T.terms=null; $("#t-out").hidden=true; renderTRail();
+    toast(`${TYPE_LABEL[l.type]} · ${DOMAINS[l.domain].vi}`);
+  }
+  const rail=$(kind==="dictee"?"#d-rail":"#t-rail"); const card=rail&&rail.querySelector('[aria-pressed="true"]'); if(card&&card.scrollIntoView) card.scrollIntoView({block:"nearest",inline:"nearest"});
+}
+$$("[data-rand]").forEach(b=>b.onclick=()=>randomLesson(b.dataset.rand));
+
+/* ---------- generate a lesson on demand ---------- */
+function openGenModal(kind){
+  const dirNow = kind==="dictee" ? "dictee" : T.dir;
+  const typeOpts = [["dictee","Chép chính tả"],["fr-vi","Dịch Pháp → Việt"],["vi-fr","Dịch Việt → Pháp"]];
+  $("#modal-root").innerHTML=`<div class="modal" id="g-bg"><form class="box" id="g-form"><h4>Soạn bài mới</h4>
+    <label class="field">Loại bài<select id="g-type">${typeOpts.map(([k,v])=>`<option value="${k}" ${k===dirNow?"selected":""}>${v}</option>`).join("")}</select></label>
+    <label class="field">Mảng<select id="g-dom">${Object.entries(DOMAINS).map(([k,v])=>`<option value="${k}">${v.vi}</option>`).join("")}</select></label>
+    <label class="field">Đề tài cụ thể (không bắt buộc)<input type="text" id="g-topic" placeholder="Ví dụ: thượng đỉnh Pháp ngữ, xuất khẩu nông sản, Algeria…"></label>
+    <label class="field">Độ khó<select id="g-lvl"><option value="B2">B2, câu vừa phải</option><option value="C1" selected>C1, văn phong báo chí chuẩn</option><option value="C1+">C1+, câu dài, nhiều thuật ngữ</option></select></label>
+    <div class="row"><button class="btn primary" type="submit">Soạn bài</button><button class="btn ghost" type="button" id="g-cancel">Hủy</button><span class="mini" id="g-msg"></span></div>
+    <div id="g-out"></div></form></div>`;
+  $("#g-cancel").onclick=closeModal; $("#g-bg").onclick=e=>{if(e.target.id==="g-bg")closeModal()};
+  $("#g-form").onsubmit=async e=>{
+    e.preventDefault();
+    const type=$("#g-type").value, dom=$("#g-dom").value, topic=$("#g-topic").value.trim(), lvl=$("#g-lvl").value;
+    const srcLang = type==="vi-fr" ? "tiếng Việt" : "tiếng Pháp";
+    const prompt = `Soạn một bài luyện ${TYPE_LABEL[type].toLowerCase()} cho sinh viên năm cuối ngành Truyền thông quốc tế, Học viện Ngoại giao, trình độ tiếng Pháp ${lvl}. Mảng: ${DOMAINS[dom].vi}${topic?`, đề tài: ${topic}`:""}.
+Viết một đoạn ${srcLang} 70 đến 110 từ theo văn phong bản tin${type==="vi-fr"?" của báo chí đối ngoại Việt Nam":" của báo Pháp"}, nội dung tự viết, không chép bài báo có thật, không bịa phát ngôn của nhân vật có thật. Dùng nhiều collocation và cấu trúc đáng học: số liệu kiểu Pháp, conditionnel cho dự báo, khung câu ngoại giao, tránh lặp bằng ce dernier hoặc hoán dụ.
+${type==="dictee"?"Không cần bản dịch.":"Kèm bản dịch tham khảo tự nhiên, đúng văn phong, và 3 đến 4 ghi chú bẫy dịch bằng tiếng Việt (không dùng gạch ngang dài)."}
+Trả về JSON: {"title":"tiêu đề ngắn","text":"đoạn văn gốc","ref":"bản dịch hoặc chuỗi rỗng","notes":[["cụm từ","giải thích"]]}`;
+    const s=await getSample();
+    if(!s){
+      $("#g-out").innerHTML=`<p class="warn" style="margin:8px 0">Trang đang mở ngoài claude.ai nên chưa soạn trực tiếp được. Bấm chép lời nhờ, dán vào Claude, rồi dán kết quả vào tab Thêm bài.</p><button class="btn small primary" type="button" id="g-copy">Chép lời nhờ Claude</button>`;
+      $("#g-copy").onclick=async()=>{try{await navigator.clipboard.writeText(prompt);toast("Đã chép")}catch{openTextModal("Lời nhờ Claude",prompt)}};
+      return;
+    }
+    $("#g-msg").innerHTML=`<span class="loading">Claude đang soạn…</span>`;
+    try{
+      const r=await s.json(prompt,{modelTier:"default"});
+      if(!r||!r.text) throw {code:"empty"};
+      const l={id:uid("ls_"),kind:"lesson",type,domain:dom,title:r.title||"Bài Claude soạn",srcname:"Claude soạn theo yêu cầu",url:"",text:r.text,ref:type==="dictee"?"":(r.ref||""),notes:Array.isArray(r.notes)?r.notes.filter(n=>Array.isArray(n)&&n.length>=2):[],created:Date.now()};
+      await put(l); closeModal(); toast("Đã thêm bài mới");
+      if(type==="dictee"){ D.domain="all"; selectDLesson(l.id); location.hash="#dictee" }
+      else { T.dir=type; T.domain="all"; setPressed($$("[data-dir]"),x=>x.dataset.dir===type); T.lessonId=l.id; renderTRail(); location.hash="#traduction" }
+    }catch(err){ $("#g-msg").textContent = err&&err.code==="not_granted" ? "Cần cho phép Claude trên trang này." : "Chưa soạn được, thử lại sau." }
+  };
+}
+$$("[data-gen]").forEach(b=>b.onclick=()=>openGenModal(b.dataset.gen));
+
 /* ---------- backup ---------- */
 $("#b-export").onclick=async()=>{
   const data=JSON.stringify({app:"veilleuse",v:1,at:new Date().toISOString(),items:[...store.items.values()]},null,1);
@@ -2180,6 +2352,7 @@ let drillsSeeded=false; store.listeners.push(()=>{ if(!drillsSeeded && store.mod
 route();
 $("#d-input").value = lsGet("veilleuse.ddraft."+D.lessonId,"");
 initStore();
+loadNews();
 
 /* ---------- night sky over Lyon and the meadow ---------- */
 const cv=$("#sky"), cx=cv.getContext("2d");
