@@ -35,9 +35,9 @@
   --lime:#c6dd76;
   --cyan:#8fd6ea;
   --sand:#e6c79c;
-  --f-display:"Playfair Display", "Iowan Old Style", Georgia, serif;
+  --f-display:"Playfair Display", "Noto Serif", "Times New Roman", serif;
   --f-body:"Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
-  --f-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --f-mono:"IBM Plex Mono", Consolas, "Courier New", monospace;
   --r:12px;
 }
 *{box-sizing:border-box}
@@ -274,6 +274,7 @@ audio{width:100%;height:38px}
 
 /* C1 */
 /* C1 v2 */
+.c1booknote{background:#fbf4e2;color:#5a4613;border:1px solid #ead9a8;border-radius:10px;padding:12px 14px;margin:0;font-size:15px}
 .xpaper .c1doc{background:#fff;border-color:#d9d3c4;color:#1f1d1a}
 .xpaper .c1doc .c1doct{font-size:15.5px}
 .xpaper .c1doc .c1doct .c1h{color:#9a3b2f}
@@ -345,7 +346,7 @@ html.x-open{overflow:hidden}
 .xbody{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
 .xpaper-wrap,.xsheet{overflow:auto;-webkit-overflow-scrolling:touch}
 .xpaper-wrap{padding:28px clamp(12px,3vw,40px);background:radial-gradient(ellipse at top,rgba(255,220,150,.06),transparent 60%)}
-.xpaper{--pp:#f7f2e6;--pi:#22201b;--pm:#6b6457;max-width:720px;margin:0 auto;background:var(--pp);color:var(--pi);border-radius:4px;padding:clamp(22px,4vw,48px);box-shadow:0 18px 50px rgba(0,0,0,.45),0 0 0 1px rgba(0,0,0,.08);font-family:"Noto Serif",Georgia,serif;font-size:17px;line-height:1.72;hyphens:auto}
+.xpaper{--pp:#f7f2e6;--pi:#22201b;--pm:#6b6457;max-width:720px;margin:0 auto;background:var(--pp);color:var(--pi);border-radius:4px;padding:clamp(22px,4vw,48px);box-shadow:0 18px 50px rgba(0,0,0,.45),0 0 0 1px rgba(0,0,0,.08);font-family:"Noto Serif","Times New Roman",serif;font-size:17px;line-height:1.72;hyphens:auto}
 .xpaper .kicker{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9a3b2f;border-bottom:2px solid var(--pi);padding-bottom:8px;margin:0 0 14px}
 .xpaper .kicker:not(:first-child){margin-top:34px}
 .xpaper h1{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,3.4vw,36px);line-height:1.15;margin:0 0 14px;color:var(--pi);text-wrap:balance}
@@ -387,11 +388,11 @@ html.x-open{overflow:hidden}
 .xjust{display:flex;align-items:baseline;gap:6px;margin:10px 0 0 36px;font-size:14.5px;color:#4a453c;font-style:italic}
 .xjust input{flex:1;min-width:0;border:0;border-bottom:1.5px dotted #8a8273;background:transparent;font:inherit;font-style:normal;color:#1f1d1a;padding:3px 2px}
 .xjust input:focus,.xlines:focus{outline:none;border-color:#1f2a44}
-.xlines{display:block;width:calc(100% - 36px);margin:10px 0 0 36px;border:0;resize:vertical;background:transparent repeating-linear-gradient(transparent 0 29px,#b9b09d 29px 30px);line-height:30px;font:inherit;font-size:15.5px;line-height:30px;color:#1f2a44;padding:0 2px;font-family:"Noto Serif",Georgia,serif}
+.xlines{display:block;width:calc(100% - 36px);margin:10px 0 0 36px;border:0;resize:vertical;background:transparent repeating-linear-gradient(transparent 0 29px,#b9b09d 29px 30px);line-height:30px;font:inherit;font-size:15.5px;line-height:30px;color:#1f2a44;padding:0 2px;font-family:"Noto Serif","Times New Roman",serif}
 .xq.ok{background:#eef6ec}.xq.half{background:#fbf4e2}.xq.no{background:#fbecea}
 .xq.ok .xn{background:#3d7a4a}.xq.half .xn{background:#b07d1f}.xq.no .xn{background:#a84236}
 .xfb{display:grid;gap:4px;margin:10px 0 0 36px;font-size:14px;color:#4a453c}
-.xmodel{font-family:"Noto Serif",Georgia,serif;color:#1f2a44;border-left:3px solid #1f2a44;padding-left:10px}
+.xmodel{font-family:"Noto Serif","Times New Roman",serif;color:#1f2a44;border-left:3px solid #1f2a44;padding-left:10px}
 .xfoot{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:18px 20px}
 .xfoot .mini{color:#4a453c}
 @media (max-width:860px){
@@ -2765,7 +2766,7 @@ const C1_WEEKS = [
  {n:7, theme:"Révision croisée I", dom:"politique",
   vocab:[["d'ores et déjà","ngay từ bây giờ"],["force est de constater que","phải thừa nhận rằng"],["il n'en demeure pas moins que","dù vậy vẫn phải nói rằng"],["à plus forte raison","càng có lý do hơn"],["sous prétexte que","với cớ là"],["quand bien même","dù cho (+ conditionnel)"],["en l'occurrence","trong trường hợp này"],["somme toute","xét cho cùng"],["prendre du recul","nhìn nhận khách quan"],["une piste de réflexion","hướng suy nghĩ"],["mettre l'accent sur","nhấn mạnh"],["à l'aune de","dưới góc nhìn"]],
   days:[
-   {ce:"Frenchpill C1 (CE) - Manuel", co:"Frenchpill C1 CO - Manuel", g:"conn", pe:{k:"syn", src:"MPC", t:"Synthèse bấm giờ 1h30 trên một dossier bà chưa làm trong sách Objectif DALF C1."}, po:{t:"Exposé bấm giờ 1h préparation: sujet tiré au sort dans Production orale DALF C1 (Wattier)."}},
+   {ce:"Frenchpill C1 (CE) - Manuel", co:"Frenchpill C1 CO - Manuel", g:"conn", pe:{k:"syn", src:"Les mots pour convaincre", t:"Synthèse bấm giờ 1h30 trên một dossier bà chưa làm trong sách Objectif DALF C1."}, po:{t:"Exposé bấm giờ 1h préparation: sujet tiré au sort dans Production orale DALF C1 (Wattier)."}},
    {ce:"100 - Textes authentiques - DALF C1", co:"REUSSIR LE NOUVEAU DALF C1 EDITIONS TEGOS", g:"subj", pe:{k:"ess", t:"Essai bấm giờ 1h: chủ đề tự chọn trong Production écrite DALF C1 (Wattier)."}, po:{t:"Débat: rejouer le sujet d'exposé raté nhất trong tuần trước."}},
    {ce:"Frenchpill C1 (CE) - Manuel", co:"Frenchpill C1 CO - Manuel", g:"hyp", pe:{k:"syn", t:"Viết lại bài synthèse điểm thấp nhất từ đầu lộ trình, so sánh với bản cũ."}, po:{t:"Exposé: sujet de Préparer le DALF C1 et C2 (Debeuckelaere)."}},
    {ce:"100 - Textes authentiques - DALF C1", co:"REUSSIR LE NOUVEAU DALF C1 EDITIONS TEGOS", g:"relief", pe:{k:"ess", t:"Viết lại bài essai điểm thấp nhất, áp dụng các lỗi Claude đã chỉ."}, po:{t:"Débat libre với Claude, 15 phút."}},
@@ -2782,10 +2783,10 @@ const C1_WEEKS = [
   ], sat:"Examen blanc final: sujet complet bấm giờ đúng như ngày thi"}
 ];
 
-const C1_BOOKSRC = {GPF:["grammaire-progressive-du-franais-niveau-perfectionnement","Grammaire progressive du français, niveau perfectionnement"], MPC:["Les mots pour convaincre","Les mots pour convaincre"]};
+const C1_BOOKSRC = {GPF:["grammaire-progressive-du-franais-niveau-perfectionnement","Grammaire progressive du français, niveau perfectionnement"], "Les mots pour convaincre":["Les mots pour convaincre","Les mots pour convaincre"]};
 const c1BookLink = k => { const b=C1_BOOKSRC[C1_BOOKS[k]]; return b?`<a class="drv" href="${driveLink(b[0])}" target="_blank" rel="noopener">${esc(b[1])}</a>`:"" };
 const C1_BOOKS = {
- conn:"GPF", nomi:"GPF", rel:"GPF", subj:"GPF", conc:"GPF", relief:"GPF", pass:"GPF", hyp:"GPF", modal:"MPC", part:"GPF", ppa:"GPF", reg:null, fig:"MPC", neg:"GPF"
+ conn:"GPF", nomi:"GPF", rel:"GPF", subj:"GPF", conc:"GPF", relief:"GPF", pass:"GPF", hyp:"GPF", modal:"Les mots pour convaincre", part:"GPF", ppa:"GPF", reg:null, fig:"Les mots pour convaincre", neg:"GPF"
 };
 
 const C1_SAT = {EXAM1:"EXAM1", EXAM2:"EXAM2", EXAM3:"EXAM3"};
@@ -2822,7 +2823,7 @@ const C1_METHODS = [
 /* ---------- C1 view ---------- */
 const C1_DAYNAMES = ["Thứ Hai","Thứ Ba","Thứ Tư","Thứ Năm","Thứ Sáu","Thứ Bảy","Chủ Nhật"];
 function driveLink(title){ return `https://drive.google.com/drive/search?q=${encodeURIComponent(title)}` }
-function srcLink(title, label){ if(!title) return ""; const audio=/\.mp3$|Audio|audio/.test(title); return `<a class="drv" href="${driveLink(title)}" target="_blank" rel="noopener">${esc(label||title)}</a>${audio?"":` <button type="button" class="btn small ghost c1read" data-read="${esc(title)}">Đọc tại đây</button>`}` }
+function srcLink(title, label){ if(!title) return ""; const audio=/\.mp3$|Audio|audio/.test(title)||C1_BOOKRE.test(title); return `<a class="drv" href="${driveLink(title)}" target="_blank" rel="noopener">${esc(label||title)}</a>${audio?"":` <button type="button" class="btn small ghost c1read" data-read="${esc(title)}">Đọc tại đây</button>`}` }
 let C1MCP=null;
 (async()=>{ try{ const m = window.claude?.use ? await window.claude.use("mcp") : null; if(m){ C1MCP=m; document.documentElement.classList.add("has-mcp"); if(C1.open!==null&&typeof renderC1==="function") renderC1() } }catch{} })();
 async function c1Drive(title){
@@ -2940,6 +2941,7 @@ async function exRead(id){
   const r=await C1MCP.callTool("Google Drive","read_file_content",{fileId:id},{cache:{staleTime:864e5,gcTime:6048e5}});
   const p=r.payload; return String((typeof p==="string"?p:(p&&(p.fileContent||p.content)))||"");
 }
+const C1_BOOKRE = /Frenchpill|TEGOS|100% r[ée]ussite|Textes authentiques|Les Mots Info/i;
 const exIsAudio = f => /audio|video/.test(f.mimeType||"");
 const exIsFolder = f => /folder/.test(f.mimeType||"");
 async function exLoad(title, kind){
@@ -2951,14 +2953,19 @@ async function exLoad(title, kind){
   const rank=f=>((f.title||"").toLowerCase().startsWith(low)?2:0)+(exIsFolder(f)&&kind==="co"?3:0);
   files.sort((a,b)=>rank(b)-rank(a));
   let docs=files.filter(f=>!exIsFolder(f)&&!exIsAudio(f)), audio=files.filter(exIsAudio);
-  const folder=kind==="co"?files.find(exIsFolder):null;
+  if(C1_BOOKRE.test(title)) throw {code:"book"};
+  let folder=kind==="co"?files.find(exIsFolder):null;
+  if(!folder&&!docs.length) folder=files.find(exIsFolder);
   if(folder){ const ch=await exSearch("parentId = '"+folder.id+"' and trashed = false",30); docs=ch.filter(f=>!exIsFolder(f)&&!exIsAudio(f)); audio=ch.filter(exIsAudio).concat(audio) }
   audio.sort((a,b)=>(/mpeg|mp3/.test(b.mimeType)?1:0)-(/mpeg|mp3/.test(a.mimeType)?1:0));
   const isScript=f=>/script|transcri/i.test(f.title||"");
-  const qdoc=kind==="co"?docs.find(f=>!isScript(f)):docs[0];
+  const qdoc=kind==="co"?docs.find(f=>!isScript(f)):(docs.find(f=>/_ex|exerc/i.test(f.title||""))||docs[0]);
   const sdoc=kind==="co"?docs.find(isScript):null;
   if(!qdoc&&!sdoc) throw {code:"not_found"};
-  const text=qdoc?await exRead(qdoc.id):"";
+  if(qdoc&&(/pdf/.test(qdoc.mimeType||"")&&+qdoc.fileSize>2500000||/zip/.test(qdoc.mimeType||""))) throw {code:"book"};
+  let text=qdoc?await exRead(qdoc.id):"";
+  if(kind==="ce"&&folder){ const more=docs.filter(f=>f!==qdoc&&!/zip/.test(f.mimeType||"")&&!(+f.fileSize>2500000)).slice(0,2); if(more.length){ const parts=[]; for(const f of more) parts.push(await exRead(f.id)); parts.push(text); text=parts.map((t,k)=>"Document "+(k+1)+"\n\n"+t).join("\n\n") } }
+  if(kind==="co"&&!audio.length){ const kw=c1Clean(title).replace(/[’'?:;,.]/g," ").split(/\s+/).filter(w=>w.length>4).slice(0,2); if(kw.length){ const af=await exSearch("("+kw.map(w=>"title contains '"+w+"'").join(" and ")+") and (mimeType contains 'audio' or mimeType contains 'video') and trashed = false",5); audio=af.sort((a,b)=>(/mpeg|mp3/.test(b.mimeType)?1:0)-(/mpeg|mp3/.test(a.mimeType)?1:0)) } }
   const script=sdoc?await exRead(sdoc.id):"";
   return {kind,title,docTitle:(qdoc||sdoc).title,text,script,audio:audio[0]||null,url:(qdoc||sdoc).viewUrl||""};
 }
@@ -3084,6 +3091,7 @@ async function exMount(box, title, kind, sid){
     $("#x-sheet").innerHTML=exSheetHTML(Q); exBindSheet(Q);
     if(kind==="co"&&d.script){ const t=document.createElement("details"); t.className="xscript xpaper"; t.innerHTML=`<summary>Transcription (mở sau khi nộp bài)</summary><div>${exPaperHTML(d.script)}</div>`; box.appendChild(t) }
   }catch(e){
+    if(e&&e.code==="book"){ box.innerHTML=`<p class="c1booknote">Hôm nay là một bài trong sách: bà mở sách trong Drive, làm bài tiếp theo chưa làm, rồi tự chấm điểm ở dưới. Sách dài quá nên trang không dựng thành phiếu được.</p>`; const nm=$(".c1nomcp"); if(nm) nm.hidden=false; return }
     const msg=e&&e.code==="not_found"?"Không tìm thấy tài liệu này trong Drive của bà.":e&&e.code==="no_ai"?"Phần soạn phiếu trả lời cần Claude, chỉ chạy trên bản claude.ai.":e&&e.code==="no_questions"?"Claude chưa tách được câu hỏi từ tài liệu này. Bà mở trong Drive giúp tui nhé.":e&&(e.code==="not_in_manifest"||e.code==="consent_required"||e.code==="not_granted")?"Trang chưa được phép đọc Drive. Tải lại trang để claude.ai hỏi quyền.":e&&e.code==="server_not_connected"?"Google Drive chưa được kết nối trong claude.ai.":"Chưa mở được ("+esc(e&&e.code||"lỗi")+").";
     box.innerHTML=`<p class="warn">${msg} ${srcLink(title,"Mở trong Drive")}</p>`;
     const nm=$(".c1nomcp"); if(nm) nm.hidden=false;
@@ -3098,7 +3106,7 @@ const C1_PLAN = (()=>{
   const seen={co:new Set(),ce:new Set(),pe:new Set(),po:new Set(),gram:new Set()};
   const L={co:[],ce:[],pe:[],po:[],gram:[]};
   C1_WEEKS.forEach((W,wi)=>W.days.forEach(D=>{
-    const add=(sk,val,key)=>{ if(!val||seen[sk].has(key)) return; seen[sk].add(key); L[sk].push({sk,wk:wi,D,key}) };
+    const add=(sk,val,key)=>{ if(!val||seen[sk].has(key)||/^(Ôn lại|Nghe lại)/.test(typeof val==="string"?val:"")) return; seen[sk].add(key); L[sk].push({sk,wk:wi,D,key}) };
     add("co",D.co,D.co); add("ce",D.ce,D.ce); add("pe",D.pe,D.pe&&D.pe.t); add("po",D.po,D.po&&D.po.t); add("gram",D.g,D.g);
   }));
   let items=[];
@@ -3116,7 +3124,8 @@ const C1_PLAN = (()=>{
     const W=C1_WEEKS[x.wk];
     const mins={co:40,ce:50,pe:x.D&&x.D.pe&&x.D.pe.k==="syn"?90:60,po:60,gram:45,mock:{co:40,ce:50,pe:150,po:90}[x.part]}[x.sk];
     let title;
-    if(x.sk==="co") title=c1Clean(x.D.co); else if(x.sk==="ce") title=c1Clean(x.D.ce);
+    const bk=t=>C1_BOOKRE.test(t)?"Một bài trong sách "+c1Clean(t).replace(/\s*-\s*Manuel$/i,"").replace(/\s*-\s*Audio$/i," (audio)"):c1Clean(t);
+    if(x.sk==="co") title=bk(x.D.co); else if(x.sk==="ce") title=bk(x.D.ce);
     else if(x.sk==="pe"){ const t=x.D.pe.t.replace(/^(Essai|Synthèse)[^:]*:\s*/i,""); title=(x.D.pe.k==="syn"?"Synthèse":"Essai")+" · "+(x.D.pe.src?c1Clean(x.D.pe.src):(t.length>70?t.slice(0,68).replace(/\s\S*$/,"")+"…":t)); }
     else if(x.sk==="po") title=x.D.po.t.replace(/^Exposé\s*:\s*/i,"");
     else if(x.sk==="gram") title=C1_GRAM[x.key].split(" (")[0];
