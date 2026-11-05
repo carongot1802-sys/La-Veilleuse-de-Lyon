@@ -2964,6 +2964,14 @@ async function exLoad(title, kind){
   if(!qdoc&&!sdoc) throw {code:"not_found"};
   if(qdoc&&(/pdf/.test(qdoc.mimeType||"")&&+qdoc.fileSize>2500000||/zip/.test(qdoc.mimeType||""))) throw {code:"book"};
   let text=qdoc?await exRead(qdoc.id):"";
+  if(kind==="ce"&&!folder&&qdoc){
+    const isEx=f=>/[_\s-](ex|exercices?|exo)\b|exercice/i.test((f.title||"").replace(/\.\w+$/,""));
+    const base=c1Clean(qdoc.title.replace(/\.\w+$/,"")).replace(/^(CE|PE|PO|CO)[\s.-]+/i,"").trim();
+    if(base.length>8){ const sib=(await exSearch("title contains '"+base.replace(/\\/g,"\\\\").replace(/'/g,"\\'")+"' and trashed = false",10)).filter(f=>f.id!==qdoc.id&&!exIsFolder(f)&&!exIsAudio(f)&&!/zip/.test(f.mimeType||"")&&!(+f.fileSize>2500000));
+      const art=isEx(qdoc)?sib.find(f=>!isEx(f)):null, ex=!isEx(qdoc)?sib.find(isEx):null;
+      if(art) text=(await exRead(art.id))+"\n\nQuestions\n\n"+text;
+      else if(ex) text=text+"\n\nQuestions\n\n"+(await exRead(ex.id)); }
+  }
   if(kind==="ce"&&folder){ const more=docs.filter(f=>f!==qdoc&&!/zip/.test(f.mimeType||"")&&!(+f.fileSize>2500000)).slice(0,2); if(more.length){ const parts=[]; for(const f of more) parts.push(await exRead(f.id)); parts.push(text); text=parts.map((t,k)=>"Document "+(k+1)+"\n\n"+t).join("\n\n") } }
   if(kind==="co"&&!audio.length){ const kw=c1Clean(title).replace(/[’'?:;,.]/g," ").split(/\s+/).filter(w=>w.length>4).slice(0,2); if(kw.length){ const af=await exSearch("("+kw.map(w=>"title contains '"+w+"'").join(" and ")+") and (mimeType contains 'audio' or mimeType contains 'video') and trashed = false",5); audio=af.sort((a,b)=>(/mpeg|mp3/.test(b.mimeType)?1:0)-(/mpeg|mp3/.test(a.mimeType)?1:0)) } }
   const script=sdoc?await exRead(sdoc.id):"";
