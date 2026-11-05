@@ -475,6 +475,7 @@ audio{width:100%;height:38px}
     <div class="seg" role="group" aria-label="Nguồn">
       <button type="button" data-gs="all" aria-pressed="true">Tất cả</button>
       <button type="button" data-gs="mine" aria-pressed="false">Của tui</button>
+      <button type="button" data-gs="news" aria-pressed="false">Từ tin mới</button>
       <button type="button" data-gs="base" aria-pressed="false">Có sẵn</button>
     </div>
   </div>
@@ -1760,7 +1761,7 @@ async function loadNews(){
     const r=await fetch("news.json",{cache:"no-store"}); if(!r.ok) return;
     const j=await r.json(); NEWS_UPDATED=j.updated||null;
     NEWS_LESSONS=(j.lessons||[]).filter(l=>l&&l.id&&l.text&&DOMAINS[l.domain]&&TYPE_LABEL[l.type]).map(l=>({...l,id:"n-"+l.id,news:true,notes:l.notes||[]})).sort((a,b)=>(b.date||"").localeCompare(a.date||""));
-    (j.terms||[]).forEach((t,i)=>{ if(t&&t.fr&&t.vi&&DOMAINS[t.domain]) BASE_TERMS.unshift({id:"nt"+i+"_"+(t.fr||"").slice(0,12),kind:"term",fr:t.fr,vi:t.vi,domain:t.domain,note:t.note||"",base:true,news:true}) });
+    (j.terms||[]).forEach((t,i)=>{ if(t&&t.fr&&t.vi&&DOMAINS[t.domain]) BASE_TERMS.unshift({id:"nt"+i+"_"+(t.fr||"").slice(0,12),kind:"term",fr:t.fr,vi:t.vi,domain:t.domain,note:t.note||"",base:true,news:true,date:t.date||j.updated||""}) });
     changed();
   }catch{}
 }
@@ -2172,13 +2173,13 @@ const G = { q:"", domain:"all", src:"all", reviewing:false, dir:"fr", queue:[], 
 function allTerms(){ return BASE_TERMS.concat(itemsOf("term").sort((a,b)=>(b.created||0)-(a.created||0))) }
 function filteredTerms(){
   const q=strip(G.q.toLowerCase());
-  return allTerms().filter(t=>(G.domain==="all"||t.domain===G.domain)&&(G.src==="all"||(G.src==="mine"?!t.base:t.base))&&(!q||strip((t.fr+" "+t.vi+" "+(t.note||"")).toLowerCase()).includes(q)));
+  return allTerms().filter(t=>(G.domain==="all"||t.domain===G.domain)&&(G.src==="all"||(G.src==="mine"?!t.base:G.src==="news"?!!t.news:t.base))&&(!q||strip((t.fr+" "+t.vi+" "+(t.note||"")).toLowerCase()).includes(q)));
 }
 function renderGloss(){
   domainChips($("#g-domains"), G.domain, v=>{G.domain=v;renderGloss()});
   const ts=filteredTerms();
   $("#g-list").innerHTML = ts.length ? ts.map(t=>`<div class="gl-row"><span class="dot d-${t.domain}" title="${DOMAINS[t.domain]?.vi||""}"></span>
-    <span class="fr">${esc(t.fr)}${t.course?`<span class="crs">giáo trình</span>`:t.base?"":`<span class="own">của bà</span>`}</span><span class="vi">${esc(t.vi)}</span><span class="nt">${esc(t.note||"")}</span>
+    <span class="fr">${esc(t.fr)}${t.news?`<span class="crs" style="color:var(--teal)">tin ${esc(fmtDate(t.date||""))}</span>`:t.course?`<span class="crs">giáo trình</span>`:t.base?"":`<span class="own">của bà</span>`}</span><span class="vi">${esc(t.vi)}</span><span class="nt">${esc(t.note||"")}</span>
     <span class="act">${t.base?"":`<button class="icon-btn" type="button" data-del="${t.id}" title="Xóa">Xóa</button>`}</span></div>`).join("")
     : `<div class="empty-note" style="border:0">Không có cụm nào khớp. ${G.src==="mine"?"Bà lưu cụm từ khi luyện dịch hoặc bấm Thêm cụm từ.":""}</div>`;
   $$("[data-del]").forEach(b=>b.onclick=()=>{ if(b.dataset.confirm){del(b.dataset.del)} else {b.dataset.confirm="1";b.textContent="Chắc chưa?";setTimeout(()=>{if(b.isConnected){delete b.dataset.confirm;b.textContent="Xóa"}},2500)} });

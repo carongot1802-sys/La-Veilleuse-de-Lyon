@@ -10,11 +10,26 @@
       "text": "Nhân chuyến thăm chính thức Cộng hòa Pháp của Tổng Bí thư, Chủ tịch nước Tô Lâm, Bộ trưởng Ngoại giao Lê Hoài Trung đã hội đàm với Bộ trưởng Châu Âu và Ngoại giao Pháp Jean-Noël Barrot tại Paris. Hai bên nhất trí tiếp tục làm sâu sắc quan hệ Đối tác chiến lược toàn diện, đồng thời thúc đẩy các bộ, ngành triển khai hiệu quả Tuyên bố chung và Chương trình hành động giai đoạn 2026-2028. Hai Bộ trưởng cũng trao đổi về các vấn đề quốc tế và khu vực cùng quan tâm, khẳng định tầm quan trọng của việc tôn trọng luật pháp quốc tế.",
       "ref": "En marge de la visite officielle en France du Secrétaire général et Président Tô Lâm, le ministre des Affaires étrangères Lê Hoài Trung s'est entretenu à Paris avec le ministre de l'Europe et des Affaires étrangères Jean-Noël Barrot. Les deux parties sont convenues de continuer à approfondir le partenariat stratégique global, tout en incitant les ministères et organismes concernés à mettre en œuvre efficacement la Déclaration conjointe et le Plan d'action pour la période 2026-2028. Les deux ministres ont également échangé sur les questions internationales et régionales d'intérêt commun, réaffirmant l'importance du respect du droit international.",
       "notes": [
-        ["Nhân chuyến thăm chính thức", "En marge de la visite officielle, khi cuộc gặp diễn ra bên lề chuyến thăm. Dùng à l'occasion de nếu chuyến thăm chính là sự kiện."],
-        ["hội đàm với", "S'entretenir avec. Danh từ: un entretien."],
-        ["Đối tác chiến lược toàn diện", "Partenariat stratégique global, cách gọi chính thức của Pháp cho cấp quan hệ này."],
-        ["Hai bên nhất trí", "Les deux parties sont convenues de (chia với être, hòa hợp giống cái)."],
-        ["các vấn đề cùng quan tâm", "Les questions d'intérêt commun."]
+        [
+          "Nhân chuyến thăm chính thức",
+          "En marge de la visite officielle, khi cuộc gặp diễn ra bên lề chuyến thăm. Dùng à l'occasion de nếu chuyến thăm chính là sự kiện."
+        ],
+        [
+          "hội đàm với",
+          "S'entretenir avec. Danh từ: un entretien."
+        ],
+        [
+          "Đối tác chiến lược toàn diện",
+          "Partenariat stratégique global, cách gọi chính thức của Pháp cho cấp quan hệ này."
+        ],
+        [
+          "Hai bên nhất trí",
+          "Les deux parties sont convenues de (chia với être, hòa hợp giống cái)."
+        ],
+        [
+          "các vấn đề cùng quan tâm",
+          "Les questions d'intérêt commun."
+        ]
       ],
       "srcname": "Việt Nam News",
       "url": "https://vietnamnews.vn/politics-laws/1799402/viet-nam-france-seek-to-deepen-comprehensive-strategic-partnership.html"
@@ -38,20 +53,111 @@
       "text": "Selon le dernier rapport de l'Organisation internationale de la Francophonie, le français compte environ 396 millions de locuteurs, ce qui en fait la quatrième langue la plus parlée au monde, derrière l'anglais, le mandarin et l'espagnol. Près des deux tiers des francophones vivent en Afrique, du Maghreb à l'Afrique subsaharienne. Le rapport recense par ailleurs quelque 170 millions d'apprenants, signe que la langue conserve son attrait bien au-delà de l'espace francophone.",
       "ref": "Theo báo cáo mới nhất của Tổ chức Quốc tế Pháp ngữ, tiếng Pháp hiện có khoảng 396 triệu người sử dụng, trở thành ngôn ngữ được nói nhiều thứ tư thế giới, sau tiếng Anh, tiếng Quan Thoại và tiếng Tây Ban Nha. Gần hai phần ba số người nói tiếng Pháp sống ở châu Phi, từ khu vực Maghreb đến châu Phi cận Sahara. Báo cáo cũng ghi nhận khoảng 170 triệu người đang học tiếng Pháp, cho thấy ngôn ngữ này vẫn giữ được sức hút vượt xa phạm vi các nước Pháp ngữ.",
       "notes": [
-        ["ce qui en fait", "Khiến nó trở thành. Mệnh đề hệ quả rất hay gặp, dịch gọn là trở thành."],
-        ["locuteurs, apprenants", "Người sử dụng (người nói), người học."],
-        ["recenser", "Thống kê, ghi nhận. Quelque trước số là khoảng chừng."],
-        ["l'espace francophone", "Cộng đồng, không gian Pháp ngữ, tức các nước và vùng nói tiếng Pháp."]
+        [
+          "ce qui en fait",
+          "Khiến nó trở thành. Mệnh đề hệ quả rất hay gặp, dịch gọn là trở thành."
+        ],
+        [
+          "locuteurs, apprenants",
+          "Người sử dụng (người nói), người học."
+        ],
+        [
+          "recenser",
+          "Thống kê, ghi nhận. Quelque trước số là khoảng chừng."
+        ],
+        [
+          "l'espace francophone",
+          "Cộng đồng, không gian Pháp ngữ, tức các nước và vùng nói tiếng Pháp."
+        ]
       ],
       "srcname": "Bộ Châu Âu và Ngoại giao Pháp",
       "url": "https://www.diplomatie.gouv.fr/fr/presse-et-ressources/decouvrir-et-informer/actualites/journee-internationale-de-la-francophonie-2026-le-francais-devient-la-4eme-langue-la-plus-parlee-au"
     }
   ],
   "terms": [
-    {"fr": "le partenariat stratégique global", "vi": "quan hệ Đối tác chiến lược toàn diện", "domain": "diplomatie", "note": "cấp quan hệ Việt Nam - Pháp từ năm 2024"},
-    {"fr": "le Plan d'action 2026-2028", "vi": "Chương trình hành động giai đoạn 2026-2028", "domain": "diplomatie", "note": ""},
-    {"fr": "présider les négociations", "vi": "chủ trì các cuộc đàm phán", "domain": "environnement", "note": "COP31: Türkiye đăng cai, Australia chủ trì đàm phán"},
-    {"fr": "le financement de l'adaptation", "vi": "tài chính cho thích ứng", "domain": "environnement", "note": ""},
-    {"fr": "un locuteur, un apprenant", "vi": "người nói (người sử dụng), người học", "domain": "societe", "note": ""}
+    {
+      "fr": "le ministre délégué auprès du ministre de la Défense nationale",
+      "vi": "Bộ trưởng ủy nhiệm bên cạnh Bộ trưởng Quốc phòng",
+      "domain": "diplomatie",
+      "note": "chức danh ở Algeria; Tổng thống Algeria đồng thời giữ cương vị Bộ trưởng Quốc phòng",
+      "date": "2026-11-06"
+    },
+    {
+      "fr": "le chef d'état-major de l'Armée nationale populaire (ANP)",
+      "vi": "Tổng Tham mưu trưởng Quân đội Nhân dân Algeria",
+      "domain": "diplomatie",
+      "note": "thường đi liền: ministre délégué auprès du ministre de la Défense nationale, chef d'état-major de l'ANP",
+      "date": "2026-11-06"
+    },
+    {
+      "fr": "le ministère de la Défense nationale (MDN)",
+      "vi": "Bộ Quốc phòng (Algeria)",
+      "domain": "diplomatie",
+      "note": "Việt Nam: le ministère de la Défense",
+      "date": "2026-11-06"
+    },
+    {
+      "fr": "le ministre délégué",
+      "vi": "Bộ trưởng ủy nhiệm, Bộ trưởng phụ trách (thuộc một bộ lớn)",
+      "domain": "diplomatie",
+      "note": "Pháp: ministre délégué chargé de la Francophonie, auprès du ministre de l'Europe et des Affaires étrangères",
+      "date": "2026-11-06"
+    },
+    {
+      "fr": "le secrétaire d'État",
+      "vi": "Quốc vụ khanh",
+      "domain": "diplomatie",
+      "note": "cấp dưới ministre délégué trong chính phủ Pháp",
+      "date": "2026-11-06"
+    },
+    {
+      "fr": "le chargé d'affaires a.i.",
+      "vi": "Đại biện lâm thời",
+      "domain": "diplomatie",
+      "note": "a.i. = ad interim",
+      "date": "2026-11-06"
+    },
+    {
+      "fr": "l'attaché de défense",
+      "vi": "Tùy viên Quốc phòng",
+      "domain": "diplomatie",
+      "note": "",
+      "date": "2026-11-06"
+    },
+    {
+      "fr": "le partenariat stratégique global",
+      "vi": "quan hệ Đối tác chiến lược toàn diện",
+      "domain": "diplomatie",
+      "note": "cấp quan hệ Việt Nam - Pháp từ năm 2024",
+      "date": "2026-11-06"
+    },
+    {
+      "fr": "le Plan d'action 2026-2028",
+      "vi": "Chương trình hành động giai đoạn 2026-2028",
+      "domain": "diplomatie",
+      "note": "",
+      "date": "2026-11-06"
+    },
+    {
+      "fr": "présider les négociations",
+      "vi": "chủ trì các cuộc đàm phán",
+      "domain": "environnement",
+      "note": "COP31: Türkiye đăng cai, Australia chủ trì đàm phán",
+      "date": "2026-11-06"
+    },
+    {
+      "fr": "le financement de l'adaptation",
+      "vi": "tài chính cho thích ứng",
+      "domain": "environnement",
+      "note": "",
+      "date": "2026-11-06"
+    },
+    {
+      "fr": "un locuteur, un apprenant",
+      "vi": "người nói (người sử dụng), người học",
+      "domain": "societe",
+      "note": "",
+      "date": "2026-11-06"
+    }
   ]
 }
