@@ -266,6 +266,53 @@ audio{width:100%;height:38px}
 .method p b{color:var(--lamp);font-weight:600}
 .method p.eg{font-family:var(--f-display);font-style:italic;color:var(--ink-2);border-left:3px solid var(--lamp);padding:4px 0 4px 14px}
 @media (max-width:860px){.bk{grid-template-columns:minmax(0,1fr)}.bk-toc{position:static;flex-direction:row;flex-wrap:wrap;max-height:none}.bk-toc a{border:1px solid var(--line);border-radius:999px;padding:4px 10px}.bk-toc a small{display:none}}
+
+/* C1 */
+.c1days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.c1day{position:relative;overflow:hidden;border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:9px 6px 12px;cursor:pointer;font-size:13px;color:var(--ink-2);text-align:center}
+.c1day[aria-pressed="true"]{border-color:var(--lamp);color:var(--ink);background:var(--panel-2)}
+.c1day i{position:absolute;left:0;bottom:0;height:3px;background:var(--meadow)}
+.c1day.full span::after{content:" ✓";color:var(--meadow)}
+@media (max-width:560px){.c1days{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.c1title{font-family:var(--f-display);font-weight:500;font-size:clamp(22px,2.6vw,28px);margin:4px 0 8px}
+.c1bar{height:6px;border-radius:99px;background:var(--panel-2);overflow:hidden;max-width:420px}
+.c1bar i{display:block;height:100%;background:linear-gradient(90deg,var(--meadow),var(--lamp))}
+.c1list{display:flex;flex-direction:column;gap:12px}
+.c1b{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+.c1b.is-done{border-color:color-mix(in srgb,var(--meadow) 50%,var(--line))}
+.c1b.is-done .c1in{opacity:.75}
+.c1b header{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.c1chk{display:flex;align-items:center;gap:9px;font-weight:600;font-size:15.5px;flex:1;min-width:220px;cursor:pointer}
+.c1chk input{width:18px;height:18px;accent-color:var(--meadow)}
+.c1min{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+[data-tm].on{background:var(--lamp);color:var(--lamp-ink);border-color:var(--lamp);font-variant-numeric:tabular-nums}
+.c1in{display:flex;flex-direction:column;gap:10px;min-width:0}
+.c1in p{margin:0;max-width:75ch}
+.c1task{font-family:var(--f-display);font-size:17px;line-height:1.6;border-left:3px solid var(--lamp);padding-left:12px}
+a.drv{color:var(--lamp);text-decoration:none;border-bottom:1px dashed var(--lamp)}
+a.drv::before{content:"Drive · ";font-family:var(--f-mono);font-size:11px;color:var(--muted)}
+.c1voc{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:4px 16px}
+.c1voc li{display:flex;flex-direction:column;padding:5px 0;border-top:1px solid var(--line)}
+.c1voc b{font-family:var(--f-display);font-style:italic;font-weight:500}
+.c1voc span{font-size:13px;color:var(--ink-2)}
+.c1score{flex-direction:row;align-items:center;gap:8px}
+.c1score input{width:90px}
+.c1eval{display:flex;flex-direction:column;gap:10px}
+.c1crit{display:flex;flex-wrap:wrap;gap:6px}
+.c1eval .fix,.c1g .fix{color:var(--meadow)}
+b.fix{color:var(--meadow);font-weight:700}
+.c1g{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.c1msg{padding:10px 12px;border-radius:10px;background:var(--sky);border:1px solid var(--line);margin-bottom:6px}
+.c1msg.user{border-color:color-mix(in srgb,var(--lamp) 40%,var(--line))}
+.c1msg b{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.c1msg p{margin:4px 0 0;white-space:pre-wrap}
+.c1reply{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:end}
+.c1mock{gap:10px}
+.c1tot{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px}
+.c1tot .ok{color:var(--meadow)} .c1tot .no{color:var(--amber)}
+.c1errs{list-style:none;margin:0;padding:0}
+.c1errs li{display:grid;grid-template-columns:90px minmax(0,1fr);gap:10px;padding:6px 0;border-top:1px solid var(--line)}
+.c1errs span{white-space:pre-wrap}
 .foot{color:var(--muted);font-size:12.5px;border-top:1px solid var(--line);padding-top:16px;margin-top:10px}
 @media (prefers-reduced-motion:reduce){.loading::before{animation:none}}
 </style>
@@ -288,6 +335,7 @@ audio{width:100%;height:38px}
     <a href="#dictee" data-tab="dictee">Chép chính tả<small>Dictée</small></a>
     <a href="#traduction" data-tab="traduction">Biên dịch<small>Traduction</small></a>
     <a href="#phrases" data-tab="phrases">Luyện câu<small>Phrases</small></a>
+    <a href="#c1" data-tab="c1">Luyện DALF C1<small>C1</small></a>
     <a href="#glossaire" data-tab="glossaire">Sổ thuật ngữ<small>Glossaire</small></a>
     <a href="#methode" data-tab="methode">Bí kíp<small>Méthode</small></a>
     <a href="#ajouter" data-tab="ajouter">Thêm bài<small>Ajouter</small></a>
@@ -504,6 +552,21 @@ audio{width:100%;height:38px}
   </div>
   <div class="chips" id="p-domains"></div>
   <div class="pane drill" id="p-card"></div>
+</section>
+
+<!-- C1 -->
+<section class="view" id="v-c1" hidden>
+  <div class="view-head">
+    <div>
+      <h2>Lộ trình <em>DALF C1</em>, mỗi ngày một buổi</h2>
+      <p>Tám tuần, mỗi ngày 2 đến 3 tiếng đủ bốn kỹ năng, bám theo dossier và đề thi trong Drive của bà. Thứ Bảy thi thử bấm giờ, Chủ Nhật xem lại lỗi. Tài liệu mở bằng đường dẫn tìm trong Drive, chỉ tài khoản của bà xem được.</p>
+    </div>
+    <button class="btn primary" type="button" id="c1-today">Tới buổi học tiếp theo</button>
+  </div>
+  <div class="chips" id="c1-weeks"></div>
+  <div class="c1days" id="c1-days"></div>
+  <div id="c1-head"></div>
+  <div class="c1list" id="c1-body"></div>
 </section>
 
 <!-- METHODE -->
@@ -2271,7 +2334,7 @@ function renderGloss(){
   domainChips($("#g-domains"), G.domain, v=>{G.domain=v;renderGloss()});
   const ts=filteredTerms();
   $("#g-list").innerHTML = ts.length ? ts.map(t=>`<div class="gl-row"><span class="dot d-${t.domain}" title="${DOMAINS[t.domain]?.vi||""}"></span>
-    <span class="fr">${esc(t.fr)}${t.news?`<span class="crs" style="color:var(--teal)">tin ${esc(fmtDate(t.date||""))}</span>`:t.book==="ae"?`<span class="crs" style="color:var(--violet)">Affaires étr.</span>`:t.course?`<span class="crs">giáo trình</span>`:t.base?"":`<span class="own">của bà</span>`}</span><span class="vi">${esc(t.vi)}</span><span class="nt">${esc(t.note||"")}</span>
+    <span class="fr">${esc(t.fr)}${t.news?`<span class="crs" style="color:var(--teal)">tin ${esc(fmtDate(t.date||""))}</span>`:t.book==="c1"?`<span class="crs" style="color:var(--pink)">DALF C1</span>`:t.book==="ae"?`<span class="crs" style="color:var(--violet)">Affaires étr.</span>`:t.course?`<span class="crs">giáo trình</span>`:t.base?"":`<span class="own">của bà</span>`}</span><span class="vi">${esc(t.vi)}</span><span class="nt">${esc(t.note||"")}</span>
     <span class="act">${t.base?"":`<button class="icon-btn" type="button" data-del="${t.id}" title="Xóa">Xóa</button>`}</span></div>`).join("")
     : `<div class="empty-note" style="border:0">Không có cụm nào khớp. ${G.src==="mine"?"Bà lưu cụm từ khi luyện dịch hoặc bấm Thêm cụm từ.":""}</div>`;
   $$("[data-del]").forEach(b=>b.onclick=()=>{ if(b.dataset.confirm){del(b.dataset.del)} else {b.dataset.confirm="1";b.textContent="Chắc chưa?";setTimeout(()=>{if(b.isConnected){delete b.dataset.confirm;b.textContent="Xóa"}},2500)} });
@@ -2468,6 +2531,330 @@ $("#b-import").onchange=async e=>{
 };
 
 
+/* ---------- C1 data ---------- */
+const C1_GRAM = {
+ subj:"Subjonctif sau động từ ý chí, cảm xúc, nghi ngờ và sau liên từ (bien que, pour que, à condition que, à moins que… ne)",
+ conc:"Phối thì và lời nói gián tiếp ở quá khứ (il a affirmé que… serait…, la veille, le lendemain)",
+ nomi:"Danh từ hóa để viết synthèse gọn (la hausse de, la mise en place de, le recours à)",
+ conn:"Liên từ logic: nguyên nhân, hệ quả, đối lập, nhượng bộ, mục đích (dans la mesure où, si bien que, alors que, quand bien même)",
+ rel:"Đại từ quan hệ ghép (auquel, duquel, dont, ce à quoi, ce dont) và câu phức nhiều tầng",
+ relief:"Nhấn mạnh và mise en relief (c'est… qui, ce qui frappe, c'est que…, si… c'est parce que)",
+ pass:"Bị động, cấu trúc phi ngôi và động từ đại từ mang nghĩa bị động (il est à noter que, se voir + inf)",
+ hyp:"Giả định và điều kiện (si + plus-que-parfait, au cas où + conditionnel, pour peu que, à supposer que + subj)",
+ modal:"Tình thái và thận trọng: conditionnel báo chí, il semblerait que, sans doute, vraisemblablement",
+ part:"Participe présent, gérondif và adjectif verbal (convainquant/convaincant, négligeant/négligent)",
+ ppa:"Hòa hợp phân từ quá khứ khó (với avoir khi COD đứng trước, động từ đại từ, fait + inf)",
+ reg:"Tầng ngữ vực: từ thân mật sang chuẩn mực, tránh từ ngữ quá nói (truc, ça, plein de)",
+ fig:"Tu từ trong lập luận: câu hỏi tu từ, litote, euphémisme, phép đối, thành ngữ có giá trị",
+ neg:"Ne explétif, phủ định nâng cao (ne… guère, nul… ne, sans que + subj)"
+};
+
+const C1_WEEKS = [
+ {n:1, theme:"Éducation et vie scolaire", dom:"societe",
+  vocab:[["l'estime de soi","lòng tự trọng, sự tự tin"],["le système de notation","hệ thống chấm điểm"],["le décrochage scolaire","bỏ học giữa chừng"],["la réussite scolaire","thành tích học tập"],["les pratiques pédagogiques","phương pháp sư phạm"],["l'auto-évaluation","tự đánh giá"],["la dévalorisation des diplômes","sự mất giá của bằng cấp"],["l'égalité des chances","bình đẳng về cơ hội"],["entraver la progression","cản trở sự tiến bộ"],["s'épanouir, l'épanouissement","phát triển toàn diện"],["l'enseignement à distance","học từ xa"],["les apprenants","người học"]],
+  days:[
+   {ce:"CE - L’école française - mauvaise élève pour l’estime de soi_Ex", co:"Frenchpill C1 CO - Manuel", g:"conn", pe:{k:"syn", src:"CE - PE - La synthèse - Enseignement en ligne", t:"Synthèse 220 mots sur l'enseignement en ligne, à partir du dossier du cours."}, po:{src:"01. PO - Peut-on apprendre avec les jeux (vidéo)", t:"Exposé: Peut-on vraiment apprendre en jouant ?"}},
+   {ce:"Réussite scolaire et estime de soi_Exercice", co:"Frenchpill C1 CO - Manuel", g:"nomi", pe:{k:"ess", t:"Dans le courrier des lecteurs d'un magazine éducatif, vous répondez à un parent qui juge les notes indispensables. Vous défendez un système d'évaluation qui valorise les progrès plutôt que les erreurs. (250 mots minimum)"}, po:{src:"01. PO - Peut-on apprendre avec les jeux (vidéo)", t:"Débat: le jeu vidéo a-t-il sa place à l'école ?"}},
+   {ce:"CE - Edu. Les parents peuvent-ils reinventer l'ecole - Exercice", co:"REUSSIR LE NOUVEAU DALF C1 EDITIONS TEGOS", g:"rel", pe:{k:"syn", src:"Réussite scolaire et estime de soi_Exercice", t:"Synthèse 220 mots: l'estime de soi des élèves, à partir des deux textes de la semaine."}, po:{t:"Exposé: L'école doit-elle préparer à un métier ou former des citoyens ?"}},
+   {ce:"La dévalorisation des diplômes_Exercices", co:"REUSSIR LE NOUVEAU DALF C1 EDITIONS TEGOS", g:"subj", pe:{k:"ess", t:"Sur un forum étudiant, un internaute affirme que « les diplômes ne valent plus rien ». Vous réagissez en nuançant son propos et en proposant des pistes pour redonner de la valeur aux études. (250 mots minimum)"}, po:{src:"La dévalorisation des diplômes", t:"Exposé: La course aux diplômes a-t-elle encore un sens ?"}},
+   {ce:"Fiche de lecture (1)", co:"Frenchpill C1 CO - Manuel", g:"reg", pe:{k:"syn", src:"La dévalorisation des diplômes", t:"Synthèse 220 mots: la dévalorisation des diplômes."}, po:{t:"Débat libre avec l'examinateur: les réformes de l'école au Vietnam."}}
+  ], sat:"EXAM1"},
+ {n:2, theme:"Travail et vie professionnelle", dom:"economie",
+  vocab:[["le droit à la déconnexion","quyền ngắt kết nối"],["le télétravail","làm việc từ xa"],["l'épuisement professionnel","kiệt sức vì công việc"],["la frontière entre vie privée et vie professionnelle","ranh giới công việc và đời tư"],["la semaine de quatre jours","tuần làm việc bốn ngày"],["la fidélisation des salariés","giữ chân nhân viên"],["la discrimination à l'embauche","phân biệt đối xử khi tuyển dụng"],["le CV anonyme","hồ sơ ẩn danh"],["les partisans, les détracteurs","người ủng hộ, người phản đối"],["la charge de travail","khối lượng công việc"],["le code du travail","Bộ luật Lao động"],["à l'instar de","giống như, theo gương"]],
+  days:[
+   {ce:"CE - Travail. Semaine de 4 jours - pour ou contre_exercice (1)", co:"CO. Le Débat de l’hebdo : pour ou contre la semaine de 4 jours ?", g:"conn", pe:{k:"ess", t:"Le directeur de votre entreprise envisage de passer à la semaine de quatre jours. Vous lui écrivez une lettre argumentée pour lui faire part de votre position. (250 mots minimum)"}, po:{t:"Exposé: La semaine de quatre jours, progrès social ou fausse bonne idée ?"}},
+   {ce:"Textes - Droit à la déconnexion", co:"Frenchpill C1 CO - Manuel", g:"pass", pe:{k:"syn", src:"Textes - Droit à la déconnexion", t:"Synthèse 220 mots: le droit à la déconnexion (aspects juridique, salariés, entreprises)."}, po:{src:"Télétravail (1)", t:"Exposé: Le télétravail, liberté ou nouvel asservissement ?"}},
+   {ce:"CE - Quand les conditions de travail se dégradent_EX", co:"CO. Discrimination à l'embauche; le bonheur au travail", g:"subj", pe:{k:"ess", t:"Dans la tribune d'un journal, vous expliquez pourquoi le bonheur au travail devrait être une priorité pour les entreprises. (250 mots minimum)"}, po:{src:"Discriminations au travail  (1)", t:"Exposé: Comment lutter efficacement contre les discriminations à l'embauche ?"}},
+   {ce:"Dossier 01 - Le surpoids et l’embauche", co:"REUSSIR LE NOUVEAU DALF C1 EDITIONS TEGOS", g:"modal", pe:{k:"syn", src:"Dossier de synthèse- Activités des seniors_Ex (1)", t:"Synthèse 220 mots: l'activité des seniors."}, po:{t:"Débat: Faut-il imposer le CV anonyme ?"}},
+   {ce:"Révision - Travail : Intelligence artificielle vs travail", co:"Frenchpill C1 CO - Manuel", g:"hyp", pe:{k:"ess", t:"Un magazine économique lance un débat: « L'intelligence artificielle va-t-elle détruire plus d'emplois qu'elle n'en crée ? » Vous rédigez un article argumenté. (250 mots minimum)"}, po:{src:"Révision - Travail : Intelligence artificielle vs travail", t:"Exposé: L'IA au travail, menace ou alliée ?"}}
+  ], sat:"EXAM2"},
+ {n:3, theme:"Société et vie sociale", dom:"societe",
+  vocab:[["la tourismophobie","sự bài xích du lịch đại trà"],["la précarité","tình trạng bấp bênh"],["l'habitat participatif","nhà ở cộng đồng tự quản"],["mutualiser","dùng chung, góp chung"],["la flambée des prix de l'immobilier","giá nhà đất tăng vọt"],["le congé paternité","nghỉ phép thai sản cho cha"],["la glottophobie","phân biệt đối xử vì giọng nói, phương ngữ"],["la gratuité","sự miễn phí"],["l'engagement citoyen","sự dấn thân công dân"],["le lien social","gắn kết xã hội"],["la solitude des seniors","sự cô đơn của người cao tuổi"],["remédier à","khắc phục"]],
+  days:[
+   {ce:"CE  - Société - Tourismophobie", co:"CO - Société - La vieillesse et le couple", g:"relief", pe:{k:"syn", src:"PE - Synthese et essai - Glottophobie", t:"Synthèse 220 mots: la glottophobie."}, po:{src:"Société. Habitat participatif WORD (1)", t:"Exposé: L'habitat participatif, une réponse à la crise du logement ?"}},
+   {ce:"CE - Face à la pauvreté -citoyens - débrouillez-vous", co:"Exercices - Intempéries et assurances", g:"conc", pe:{k:"ess", src:"PE - Synthese et essai - Glottophobie", t:"Essai du dossier Glottophobie: rédigez l'essai demandé dans le sujet. (250 mots minimum)"}, po:{src:"PO Société. Congé paternité", t:"Exposé: Faut-il rendre le congé paternité obligatoire ?"}},
+   {ce:"Au plus près - les jeunes et la citoyenneté_Exercice", co:"Frenchpill C1 CO - Manuel", g:"part", pe:{k:"syn", src:"PE_C1_01_La-gratuite-a-quel-prix", t:"Synthèse 220 mots: la gratuité, à quel prix ?"}, po:{t:"Débat: Les jeunes se désintéressent-ils vraiment de la politique ?"}},
+   {ce:"Dossier 2 - Une web radio française", co:"REUSSIR LE NOUVEAU DALF C1 EDITIONS TEGOS", g:"neg", pe:{k:"ess", src:"PE_C1_01_La-gratuite-a-quel-prix", t:"Essai du dossier La gratuité: rédigez l'essai demandé dans le sujet. (250 mots minimum)"}, po:{t:"Exposé: La solidarité entre générations est-elle en danger ?"}},
+   {ce:"DALF-C1-Sujet-1-CE", co:"Frenchpill C1 CO - Manuel", g:"ppa", pe:{k:"syn", src:"CE  - Société - Tourismophobie", t:"Synthèse 220 mots à partir des textes Tourismophobie de la semaine."}, po:{t:"Débat libre: Hà Nội et le tourisme de masse."}}
+  ], sat:"EXAM3"},
+ {n:4, theme:"Environnement et économie", dom:"environnement",
+  vocab:[["l'agriculture urbaine","nông nghiệp đô thị"],["les circuits courts","chuỗi cung ứng ngắn"],["le locavore","người ăn thực phẩm địa phương"],["l'éco-anxiété","lo âu sinh thái"],["la gestion des déchets","quản lý rác thải"],["l'économie circulaire","kinh tế tuần hoàn"],["un barrage hydroélectrique","đập thủy điện"],["en amont, en aval","thượng nguồn, hạ nguồn"],["l'empreinte carbone","dấu chân carbon"],["taxer les ultra-riches","đánh thuế người siêu giàu"],["l'évasion fiscale","trốn thuế"],["les inégalités de patrimoine","bất bình đẳng tài sản"]],
+  days:[
+   {ce:"04 - Les villes du futur et l’agriculture urbaine (1)", co:"Frenchpill C1 CO - Manuel", g:"nomi", pe:{k:"ess", t:"Votre mairie hésite à transformer un terrain vague en ferme urbaine. Dans le bulletin municipal, vous défendez ce projet tout en reconnaissant ses limites. (250 mots minimum)"}, po:{src:"DALF-C1-Consommer-local (1)", t:"Exposé: Faut-il privilégier la consommation locale ?"}},
+   {ce:"05 CE - Ma vie de poubelle - Ex", co:"REUSSIR LE NOUVEAU DALF C1 EDITIONS TEGOS", g:"conn", pe:{k:"syn", src:"CE. PE. L’éco-anxiété - Ex", t:"Synthèse 220 mots: l'éco-anxiété."}, po:{src:"Barrages-hydroélectriques-énergies-propres", t:"Exposé: Les barrages hydrauliques sont-ils vraiment une énergie verte ?"}},
+   {ce:"CE. PE. L’éco-anxiété - Ex", co:"Frenchpill C1 CO - Manuel", g:"subj", pe:{k:"ess", src:"CE. PE. L’éco-anxiété - Ex", t:"Essai du dossier Éco-anxiété: rédigez l'essai demandé dans le sujet. (250 mots minimum)"}, po:{src:"Economie. Taxer les super riches", t:"Exposé: Faut-il taxer davantage les ultra-riches ?"}},
+   {ce:"100 - Textes authentiques - DALF C1", co:"REUSSIR LE NOUVEAU DALF C1 EDITIONS TEGOS", g:"modal", pe:{k:"syn", src:"DALF-C1-Consommer-local (1)", t:"Synthèse 220 mots: consommer local."}, po:{t:"Débat: La croissance économique est-elle compatible avec l'écologie ?"}},
+   {ce:"100 - Textes authentiques - DALF C1", co:"Frenchpill C1 CO - Manuel", g:"hyp", pe:{k:"ess", t:"Un journal lance l'appel « Moins consommer pour mieux vivre ». Vous envoyez une contribution argumentée. (250 mots minimum)"}, po:{t:"Débat libre: la transition énergétique au Vietnam."}}
+  ], sat:"Réussir le nouveau DALF C1 (Tegos), sujet complet n°1"},
+ {n:5, theme:"Technologies et santé", dom:"medias",
+  vocab:[["la surexposition aux écrans","tiếp xúc màn hình quá mức"],["être accro à","nghiện"],["l'internet des objets","Internet vạn vật"],["les données personnelles","dữ liệu cá nhân"],["la robotisation","robot hóa"],["l'intelligence artificielle générative","trí tuệ nhân tạo tạo sinh"],["la chirurgie esthétique","phẫu thuật thẩm mỹ"],["l'identité numérique","danh tính số"],["les standards de beauté","chuẩn mực cái đẹp"],["la santé mentale","sức khỏe tinh thần"],["faire preuve de","thể hiện"],["dans la mesure où","trong chừng mực, bởi vì"]],
+  days:[
+   {ce:"CE - Les enfants et les écrans_Ex", co:"Chat-GPT- Nouveau psy PO et CO", g:"part", pe:{k:"syn", src:"PE - Synthese - Faut-il craindre des robots", t:"Synthèse 220 mots: faut-il craindre les robots ?"}, po:{src:"Santé.-Les-ecrans-sont-toxiques-pour-les-enfants", t:"Exposé: Les écrans sont-ils toxiques pour les enfants ?"}},
+   {ce:"Technologies. Internet des objets", co:"EXO SUP CO", g:"pass", pe:{k:"ess", t:"Robots dans notre société: faut-il les embrasser ou les craindre ? Rédigez un essai argumenté qui examine si les avantages de la robotisation l'emportent sur ses risques. (250 à 300 mots)"}, po:{src:"Chat-GPT- Nouveau psy PO et CO", t:"Exposé: ChatGPT peut-il devenir notre nouveau psy ?"}},
+   {ce:"100 - Textes authentiques - DALF C1", co:"Frenchpill C1 CO - Manuel", g:"rel", pe:{k:"syn", src:"Santé.-Les-ecrans-sont-toxiques-pour-les-enfants", t:"Synthèse 220 mots: les écrans et les enfants."}, po:{src:"PO. Santé. Chirurgie esthétique", t:"Exposé: Pourquoi les jeunes se ruent-ils vers la chirurgie esthétique ?"}},
+   {ce:"100 - Textes authentiques - DALF C1", co:"REUSSIR LE NOUVEAU DALF C1 EDITIONS TEGOS", g:"fig", pe:{k:"ess", t:"Sur le site d'une association de parents, vous rédigez un article: à quel âge confier un smartphone à un enfant ? (250 mots minimum)"}, po:{t:"Débat: Faut-il interdire les réseaux sociaux aux moins de 15 ans ?"}},
+   {ce:"Frenchpill C1 (CE) - Manuel", co:"Frenchpill C1 CO - Manuel", g:"reg", pe:{k:"syn", src:"Technologies. Internet des objets", t:"Synthèse 220 mots: l'internet des objets."}, po:{t:"Débat libre: l'IA dans les études universitaires."}}
+  ], sat:"DALF-C1-Sujet-1-CE + Réussir le nouveau DALF C1 (Tegos), sujet n°2"},
+ {n:6, theme:"Culture, médias et tourisme", dom:"arts",
+  vocab:[["le surtourisme","du lịch quá tải"],["les riverains","cư dân sở tại"],["la marchandisation de la culture","thương mại hóa văn hóa"],["la conversation en péril","nghệ thuật trò chuyện bị đe dọa"],["la publicité ciblée","quảng cáo nhắm mục tiêu"],["influençable, malléable","dễ bị tác động"],["le chantage affectif","gây sức ép bằng tình cảm"],["l'exception culturelle","ngoại lệ văn hóa"],["une web radio","đài phát thanh trên mạng"],["l'offre culturelle","sản phẩm, dịch vụ văn hóa"],["démocratiser l'accès à","phổ cập quyền tiếp cận"],["le revers de la médaille","mặt trái của vấn đề"]],
+  days:[
+   {ce:"CE - Avec les smartphones, la conversation en péril_Ex", co:"Frenchpill C1 CO - Manuel", g:"conc", pe:{k:"syn", src:"PE - Synthèse - Le surtourisme_exercice (1)", t:"Synthèse 220 mots: le surtourisme."}, po:{src:"PO. Faut-il interdire la publité pour les enfants", t:"Exposé: Faut-il interdire la publicité destinée aux enfants ?"}},
+   {ce:"Tourisme", co:"REUSSIR LE NOUVEAU DALF C1 EDITIONS TEGOS", g:"nomi", pe:{k:"ess", src:"PE - Synthèse - Le surtourisme_exercice (1)", t:"Essai du dossier Surtourisme: rédigez l'essai demandé dans le sujet. (250 mots minimum)"}, po:{t:"Exposé: Les musées doivent-ils être gratuits ?"}},
+   {ce:"100 - Textes authentiques - DALF C1", co:"Frenchpill C1 CO - Manuel", g:"subj", pe:{k:"syn", src:"Dossier 2 - Une web radio française", t:"Synthèse 220 mots à partir du dossier Web radio."}, po:{t:"Débat: Les plateformes de streaming menacent-elles le cinéma ?"}},
+   {ce:"Les Mots Info C1 - C2", co:"REUSSIR LE NOUVEAU DALF C1 EDITIONS TEGOS", g:"fig", pe:{k:"ess", t:"Le ministère de la Culture de votre pays consulte les citoyens: faut-il imposer des quotas de films nationaux à la télévision ? Vous envoyez votre contribution. (250 mots minimum)"}, po:{t:"Exposé: Le tourisme peut-il préserver le patrimoine au lieu de l'abîmer ?"}},
+   {ce:"100 - Textes authentiques - DALF C1", co:"Frenchpill C1 CO - Manuel", g:"ppa", pe:{k:"syn", src:"CE - Avec les smartphones, la conversation en péril_Ex", t:"Synthèse 220 mots: smartphones et conversation."}, po:{t:"Débat libre: la diplomatie culturelle du Vietnam."}}
+  ], sat:"DALF C1 100% réussite, sujet blanc n°1"},
+ {n:7, theme:"Révision croisée I", dom:"politique",
+  vocab:[["d'ores et déjà","ngay từ bây giờ"],["force est de constater que","phải thừa nhận rằng"],["il n'en demeure pas moins que","dù vậy vẫn phải nói rằng"],["à plus forte raison","càng có lý do hơn"],["sous prétexte que","với cớ là"],["quand bien même","dù cho (+ conditionnel)"],["en l'occurrence","trong trường hợp này"],["somme toute","xét cho cùng"],["prendre du recul","nhìn nhận khách quan"],["une piste de réflexion","hướng suy nghĩ"],["mettre l'accent sur","nhấn mạnh"],["à l'aune de","dưới góc nhìn"]],
+  days:[
+   {ce:"Frenchpill C1 (CE) - Manuel", co:"Frenchpill C1 CO - Manuel", g:"conn", pe:{k:"syn", src:"Les mots pour convaincre", t:"Synthèse bấm giờ 1h30 trên một dossier bà chưa làm trong sách Objectif DALF C1."}, po:{t:"Exposé bấm giờ 1h préparation: sujet tiré au sort dans Production orale DALF C1 (Wattier)."}},
+   {ce:"100 - Textes authentiques - DALF C1", co:"REUSSIR LE NOUVEAU DALF C1 EDITIONS TEGOS", g:"subj", pe:{k:"ess", t:"Essai bấm giờ 1h: chủ đề tự chọn trong Production écrite DALF C1 (Wattier)."}, po:{t:"Débat: rejouer le sujet d'exposé raté nhất trong tuần trước."}},
+   {ce:"Frenchpill C1 (CE) - Manuel", co:"Frenchpill C1 CO - Manuel", g:"hyp", pe:{k:"syn", t:"Viết lại bài synthèse điểm thấp nhất từ đầu lộ trình, so sánh với bản cũ."}, po:{t:"Exposé: sujet de Préparer le DALF C1 et C2 (Debeuckelaere)."}},
+   {ce:"100 - Textes authentiques - DALF C1", co:"REUSSIR LE NOUVEAU DALF C1 EDITIONS TEGOS", g:"relief", pe:{k:"ess", t:"Viết lại bài essai điểm thấp nhất, áp dụng các lỗi Claude đã chỉ."}, po:{t:"Débat libre với Claude, 15 phút."}},
+   {ce:"Frenchpill C1 (CE) - Manuel", co:"Frenchpill C1 CO - Manuel", g:"reg", pe:{k:"syn", t:"Synthèse 220 mots: dossier trong Production écrite C1/C2 (Causa, Mègre)."}, po:{t:"Exposé: sujet tiré au sort dans DALF JPF C1 (Tegos)."}}
+  ], sat:"DALF JPF C1 (Tegos), sujet blanc complet"},
+ {n:8, theme:"Révision croisée II et examen blanc", dom:"politique",
+  vocab:[["au demeurant","vả lại"],["a fortiori","huống hồ"],["en dernier ressort","rốt cuộc"],["sans pour autant","mà không vì thế"],["il va sans dire que","khỏi phải nói rằng"],["à double tranchant","hai lưỡi"],["sur le plan de","về phương diện"],["un enjeu de taille","vấn đề hệ trọng"],["faire la part des choses","phân định rạch ròi"],["susciter la polémique","gây tranh cãi"],["tirer la sonnette d'alarme","báo động"],["ouvrir des perspectives","mở ra triển vọng"]],
+  days:[
+   {ce:"DALF C1- 100% reussite", co:"Dalf C1- 100% reussite - Audio", g:"conc", pe:{k:"syn", t:"Synthèse bấm giờ: sujet de DALF C1 100% réussite."}, po:{t:"Exposé bấm giờ: sujet de DALF C1 100% réussite."}},
+   {ce:"Frenchpill C1 (CE) - Manuel", co:"Frenchpill C1 CO - Manuel", g:"modal", pe:{k:"ess", t:"Essai bấm giờ: sujet de DALF C1 100% réussite."}, po:{t:"Débat: luyện phần hỏi đáp với giám khảo."}},
+   {ce:"DALF C1- 100% reussite", co:"Dalf C1- 100% reussite - Audio", g:"neg", pe:{k:"syn", t:"Synthèse bấm giờ: sujet de Réussir le nouveau DALF C1, chưa làm."}, po:{t:"Exposé bấm giờ: sujet chưa làm."}},
+   {ce:"Frenchpill C1 (CE) - Manuel", co:"Frenchpill C1 CO - Manuel", g:"ppa", pe:{k:"ess", t:"Essai bấm giờ: sujet chưa làm."}, po:{t:"Débat libre với Claude."}},
+   {ce:"Ôn lại các lỗi đã đánh dấu", co:"Nghe lại EXAM1, EXAM2, EXAM3 ở tốc độ bình thường", g:"reg", pe:{k:"ess", t:"Viết lại một đoạn introduction và một đoạn conclusion mẫu cho mỗi chủ đề."}, po:{t:"Exposé tổng duyệt: sujet tự chọn."}}
+  ], sat:"Examen blanc final: sujet complet bấm giờ đúng như ngày thi"}
+];
+
+const C1_BOOKS = {
+ conn:"Grammaire progressive du français, niveau perfectionnement", nomi:"Grammaire progressive du français, niveau perfectionnement", rel:"Grammaire progressive du français, niveau perfectionnement", subj:"Grammaire progressive du français, niveau perfectionnement", conc:"Grammaire progressive du français, niveau perfectionnement", relief:"Grammaire progressive du français, niveau perfectionnement", pass:"Grammaire progressive du français, niveau perfectionnement", hyp:"Grammaire progressive du français, niveau perfectionnement", modal:"Les mots pour convaincre", part:"Grammaire progressive du français, niveau perfectionnement", ppa:"Grammaire progressive du français, niveau perfectionnement", reg:"Vocabulaire progressif du français, niveau perfectionnement", fig:"Les mots pour convaincre", neg:"Grammaire progressive du français, niveau perfectionnement"
+};
+
+const C1_SAT = {EXAM1:"EXAM1", EXAM2:"EXAM2", EXAM3:"EXAM3"};
+
+const C1_METHODS = [
+ {id:"c1-structure", tag:"DALF C1 · Tổng quan", title:"Bốn bài thi và thời lượng",
+  body:`<p>DALF C1 gồm bốn phần, mỗi phần 25 điểm, tổng 100. Muốn đỗ cần đạt 50 trên 100 và không phần nào dưới 5. <b>Compréhension de l'oral</b> khoảng 40 phút: một bài nghe dài nghe hai lần và vài bài ngắn nghe một lần. <b>Compréhension des écrits</b> 50 phút: một văn bản dài khoảng 1 500 đến 2 000 từ. <b>Production écrite</b> 2 giờ 30: synthèse 220 từ (từ 200 đến 240) dựa trên hai văn bản, rồi essai argumenté tối thiểu 250 từ. <b>Production orale</b>: 1 giờ chuẩn bị, rồi khoảng 30 phút thi gồm exposé 8 đến 10 phút và trao đổi với giám khảo.</p>
+  <p>Chủ đề trải đều bảy mảng: giáo dục, lao động, xã hội, văn hóa, kinh tế và tiêu dùng, y tế, công nghệ, cộng thêm môi trường.</p>`},
+ {id:"c1-ce", tag:"DALF C1 · Đọc", title:"Phương pháp đọc hiểu",
+  body:`<p>Đọc lướt toàn văn và tiêu đề để xác định chức năng văn bản: informer, convaincre hay dénoncer. Rồi xác định kiểu cấu trúc. Loại thứ nhất đi theo trục bối cảnh, vấn đề, nguyên nhân, hệ quả, giải pháp. Loại thứ hai đi theo trục bối cảnh, vấn đề gây tranh cãi, quan điểm, lập luận và phản lập luận.</p>
+  <p>Câu hỏi đi theo thứ tự của văn bản. Với câu Vrai/Faux luôn phải trích dẫn ngắn để chứng minh. Với câu hỏi tự luận, trả lời bằng lời của mình, không chép nguyên câu. Ghi lại từ vựng méliorative và péjorative để nhận ra giọng điệu và lập trường của tác giả, câu hỏi «optimiste ou pessimiste» gần như luôn xuất hiện.</p>`},
+ {id:"c1-co", tag:"DALF C1 · Nghe", title:"Năm bước nghe hiểu",
+  body:`<p>Bước một, đọc kỹ câu hỏi trong thời gian cho phép và đoán tình huống. Bước hai, nghe toàn bài để nắm ý chung. Bước ba, nghe chi tiết để trả lời. Bước bốn, nghe lại kèm transcription để học từ. Bước năm, nghe thụ động ở nhà nhiều lần.</p>
+  <p>Khi ghi chép, viết tắt và dùng ký hiệu (↑ hausse, ↓ baisse, ≠ opposition, → conséquence), chỉ ghi danh từ và số liệu. Bài ngắn chỉ nghe một lần, nên đọc câu hỏi thật kỹ trước.</p>`},
+ {id:"c1-syn", tag:"DALF C1 · Viết", title:"Synthèse: những điều bắt buộc và cấm kỵ",
+  body:`<p><b>Bắt buộc</b>: xác định vấn đề chung của hai văn bản, lập bảng đặc điểm (nguyên nhân, hệ quả, giải pháp, ưu nhược điểm, nghịch lý), viết 3 đến 4 đoạn kèm phần mở và phần kết, đặt một tiêu đề.</p>
+  <p><b>Cấm</b>: dưới 200 hoặc quá 240 từ; đưa ý kiến cá nhân; thêm thông tin ngoài văn bản; chép nguyên câu; viết hai bản tóm tắt nối đuôi nhau; nói «le texte 1 dit que».</p>
+  <p>Hai kiểu dàn ý của cô: với dossier một văn bản thông tin và một văn bản lập luận thì đi theo bối cảnh, vấn đề, nguyên nhân và hệ quả, giải pháp. Với dossier hai văn bản lập luận thì đi theo bối cảnh, problématique, quan điểm ủng hộ, quan điểm phản đối, đề xuất.</p>
+  <p class="eg">Deux articles nous présentent les causes et les conséquences du manque de sommeil dans la société française.</p>`},
+ {id:"c1-ess", tag:"DALF C1 · Viết", title:"Essai argumenté: viết để thuyết phục",
+  body:`<p>Đọc kỹ consigne để biết vai, người nhận và hình thức (thư, bài forum, tribune, contribution). Mở đầu bằng lời gọi phù hợp, ví dụ À l'attention des lecteurs du forum. Kết bằng formule de politesse nếu là thư.</p>
+  <p>Mỗi đoạn lập luận có bốn tầng: nêu ý chính, giải thích lập luận, đưa bằng chứng và ví dụ cụ thể, rồi chốt hoặc mở rộng. Lấy lập luận từ nhiều phương diện (xã hội, văn hóa, giáo dục, kinh tế, y tế, môi trường, pháp lý, công nghệ) và đổi vai các bên liên quan (người dân, doanh nghiệp, nhà nước, chính bà). Biến hóa thì, thức và cấu trúc câu, dùng connecteurs và một vài thành ngữ có giá trị, tránh lặp từ trong cùng một đoạn.</p>
+  <p>Lưới chấm của cô có năm tiêu chí, mỗi tiêu chí 2,5 điểm: réalisation de la tâche, cohérence et cohésion, adéquation sociolinguistique, lexique, morphosyntaxe.</p>`},
+ {id:"c1-intro", tag:"DALF C1 · Viết và nói", title:"Mở bài, chuyển ý, kết bài",
+  body:`<p>Mở bài có ba phần. Câu dẫn gắn chủ đề với thời sự, ví dụ Aujourd'hui, la consommation locale attire de plus en plus d'adeptes. Tiếp theo là problématique dưới dạng một câu hỏi, ví dụ Dans quelle mesure est-il pertinent de privilégier cette forme de consommation ?. Cuối cùng là annonce du plan: Nous analyserons d'abord…, puis…, avant de proposer enfin….</p>
+  <p>Chuyển ý: Ces avantages semblent bien intéressants mais, comme toute chose, il y a le revers de la médaille; Nombreux sont les avantages, mais nous ne pouvons négliger les limites; Cela étant, …</p>
+  <p>Kết bài: tóm lại các điểm chính, trả lời có sắc thái cho problématique, rồi mở rộng hoặc đưa khuyến nghị.</p>`},
+ {id:"c1-po", tag:"DALF C1 · Nói", title:"Exposé và trao đổi với giám khảo",
+  body:`<p>Tài liệu chỉ là nguồn ý, không được đọc lại thành bản tóm tắt. Exposé phải là suy nghĩ cá nhân có dẫn chứng. Dàn ý chọn theo kiểu văn bản: văn bản có lập luận ủng hộ và phản đối thì dùng plan dialectique (thèse, antithèse, synthèse). Văn bản là khảo sát hay báo cáo thì dùng plan analytique (tình hình, nguyên nhân, hệ quả, giải pháp).</p>
+  <p>Trình tự: chào, nêu sujet, problématique tự đặt lại bằng lời mình, công bố dàn ý (bắt buộc), 3 đến 4 phần có chuyển ý rõ, kết bài trả lời problématique. Mỗi phần cần lập luận, lập luận phụ, giải thích và ví dụ, có cả ví dụ từ Việt Nam.</p>
+  <p>Phần trao đổi: không nhắc lại nguyên văn những gì đã nói trong exposé, giám khảo muốn thấy bà tự xoay xở, biết bảo vệ ý, biết nhượng bộ và đẩy cuộc tranh luận đi tiếp.</p>`}
+];
+
+/* ---------- C1 view ---------- */
+const C1_DAYNAMES = ["Thứ Hai","Thứ Ba","Thứ Tư","Thứ Năm","Thứ Sáu","Thứ Bảy","Chủ Nhật"];
+const C1 = { w:0, d:0, timer:null, tEnd:0, tKey:"", chat:[] };
+function driveLink(title){ return `https://drive.google.com/drive/search?q=${encodeURIComponent(title)}` }
+function srcLink(title, label){ if(!title) return ""; return `<a class="drv" href="${driveLink(title)}" target="_blank" rel="noopener">${esc(label||title)}</a>` }
+function c1Key(w,d){ return "c1_"+(w+1)+"_"+(d+1) }
+function c1Get(w,d){ return store.items.get(c1Key(w,d)) || {id:c1Key(w,d), kind:"c1", done:{}, scores:{}, notes:"", pe:"", po:"", srcs:""} }
+function c1Save(w,d,patch){ const cur=c1Get(w,d); const nx={...cur,...patch, done:{...cur.done,...(patch.done||{})}, scores:{...cur.scores,...(patch.scores||{})}, at:Date.now()}; put(nx); return nx }
+function c1Blocks(w,d){ return d<5 ? ["warm","gram","co","ce","pe","po","mem"] : d===5 ? ["mock_co","mock_ce","mock_pe","mock_po"] : ["rev_err","rev_redo","rev_vocab"] }
+function c1DayDone(w,d){ const r=c1Get(w,d); const b=c1Blocks(w,d); return b.filter(k=>r.done[k]).length/b.length }
+function c1FirstOpen(){ for(let w=0;w<C1_WEEKS.length;w++) for(let d=0;d<7;d++) if(c1DayDone(w,d)<1) return [w,d]; return [C1_WEEKS.length-1,6] }
+
+function c1Timer(key, mins){
+  clearInterval(C1.timer);
+  if(C1.tKey===key){ C1.tKey=""; renderC1Timers(); return }
+  C1.tKey=key; C1.tEnd=Date.now()+mins*60000;
+  C1.timer=setInterval(renderC1Timers,1000); renderC1Timers();
+}
+function renderC1Timers(){
+  $$("[data-tm]").forEach(b=>{
+    const on=b.dataset.tm===C1.tKey;
+    if(!on){ b.textContent=`Bấm giờ ${b.dataset.min}'`; b.classList.remove("on"); return }
+    const left=Math.max(0,C1.tEnd-Date.now()); const m=Math.floor(left/60000), s=Math.floor(left/1000)%60;
+    b.textContent=left>0?`${m}:${String(s).padStart(2,"0")} · dừng`:"Hết giờ"; b.classList.add("on");
+    if(left<=0){ clearInterval(C1.timer); toast("Hết giờ") }
+  });
+}
+const wc = t => (t.trim().match(/[\p{L}\p{N}]+(?:['’-][\p{L}\p{N}]+)*/gu)||[]).length;
+
+function c1Block(key, title, mins, inner){
+  const r=c1Get(C1.w,C1.d);
+  return `<article class="c1b ${r.done[key]?"is-done":""}" data-b="${key}">
+    <header><label class="c1chk"><input type="checkbox" data-done="${key}" ${r.done[key]?"checked":""}><span>${esc(title)}</span></label>
+    <span class="c1min">${mins}'</span><button type="button" class="btn small ghost" data-tm="${key}" data-min="${mins}">Bấm giờ ${mins}'</button></header>
+    <div class="c1in">${inner}</div></article>`;
+}
+function c1Nav(){
+  const W=C1_WEEKS[C1.w], d=C1.d;
+  $("#c1-weeks").innerHTML = C1_WEEKS.map((x,i)=>{const p=Math.round(100*[0,1,2,3,4,5,6].reduce((s,k)=>s+c1DayDone(i,k),0)/7);return `<button type="button" class="chip" data-cw="${i}" aria-pressed="${i===C1.w}">Tuần ${x.n}<span class="mini" style="margin-left:4px">${p}%</span></button>`}).join("");
+  $("#c1-days").innerHTML = C1_DAYNAMES.map((n,i)=>{const p=c1DayDone(C1.w,i);return `<button type="button" class="c1day ${p>=1?"full":p>0?"part":""}" data-cd="${i}" aria-pressed="${i===d}"><span>${n}</span><i style="width:${Math.round(p*100)}%"></i></button>`}).join("");
+  $$("[data-cw]").forEach(b=>b.onclick=()=>{C1.w=+b.dataset.cw;C1.d=0;lsSet("veilleuse.c1pos",[C1.w,C1.d]);renderC1()});
+  $$("[data-cd]").forEach(b=>b.onclick=()=>{C1.d=+b.dataset.cd;lsSet("veilleuse.c1pos",[C1.w,C1.d]);renderC1()});
+  $("#c1-head").innerHTML=`<div class="eyebrow">Tuần ${W.n} · ${C1_DAYNAMES[d]}</div><h3 class="c1title">${esc(W.theme)}</h3>
+    <div class="c1bar"><i style="width:${Math.round(c1DayDone(C1.w,d)*100)}%"></i></div>`;
+}
+function renderC1(){
+  const box=$("#c1-body"); if(!box) return;
+  const W=C1_WEEKS[C1.w], d=C1.d, r=c1Get(C1.w,d);
+  c1Nav();
+  let html="";
+  if(d<5){
+    const D=W.days[d];
+    html+=c1Block("warm","Khởi động: thẻ từ và dictée tốc độ thật",15,
+      `<p>Ôn 12 cụm của chủ đề tuần, rồi làm một bài dictée ở tốc độ 1×, chế độ Từng câu.</p>
+       <details><summary>Từ vựng tuần ${W.n}</summary><ul class="c1voc">${W.vocab.map(v=>`<li><b>${esc(v[0])}</b><span>${esc(v[1])}</span></li>`).join("")}</ul></details>
+       <div class="row"><button class="btn small" type="button" id="c1-dict">Mở một bài dictée ngẫu nhiên</button></div>`);
+    html+=c1Block("gram","Ngữ pháp và cấu trúc C1",20,
+      `<p>${esc(C1_GRAM[D.g])}</p><p class="mini">Học lý thuyết trong ${srcLink(C1_BOOKS[D.g])}, rồi làm bài Claude ra bên dưới.</p>
+       <div class="row"><button class="btn small" type="button" id="c1-gex">Claude ra 8 câu luyện</button></div><div id="c1-gout"></div>`);
+    html+=c1Block("co","Compréhension de l'oral",30,
+      `<p>Nguồn hôm nay: ${srcLink(D.co)}. Làm đủ năm bước: đọc câu hỏi, nghe toàn bài, nghe chi tiết, nghe kèm transcription, ghi từ mới.</p>
+       <div class="row"><label class="field c1score">Điểm tự chấm<input type="number" min="0" max="25" step="0.5" data-sc="co" value="${r.scores.co??""}"></label><span class="mini">/ 25</span></div>`);
+    html+=c1Block("ce","Compréhension des écrits",30,
+      `<p>Nguồn hôm nay: ${srcLink(D.ce)}. Đọc lướt, xác định chức năng và kiểu cấu trúc văn bản, trả lời theo thứ tự, trích dẫn ngắn cho câu Vrai/Faux.</p>
+       <details><summary>Nhờ Claude chấm phần trả lời tự luận</summary>
+       <label class="field">Dán câu hỏi, đoạn văn liên quan và câu trả lời của bà<textarea id="c1-ce-in" rows="6"></textarea></label>
+       <div class="row"><button class="btn small" type="button" id="c1-ce-ai">Chấm</button></div><div id="c1-ce-out"></div></details>
+       <div class="row"><label class="field c1score">Điểm tự chấm<input type="number" min="0" max="25" step="0.5" data-sc="ce" value="${r.scores.ce??""}"></label><span class="mini">/ 25</span></div>`);
+    const syn=D.pe.k==="syn";
+    html+=c1Block("pe",syn?"Production écrite: synthèse":"Production écrite: essai argumenté",45,
+      `<p class="c1task">${esc(D.pe.t)}</p>${D.pe.src?`<p class="mini">Dossier: ${srcLink(D.pe.src)}</p>`:""}
+       ${syn?`<details><summary>Dán hai văn bản nguồn để Claude chấm sát hơn (không bắt buộc)</summary><textarea id="c1-pe-src" rows="5">${esc(r.srcs||"")}</textarea></details>`:""}
+       <textarea id="c1-pe" class="writing" rows="10" placeholder="${syn?"Viết synthèse 200 đến 240 từ, có tiêu đề…":"Viết essai tối thiểu 250 từ…"}">${esc(r.pe||"")}</textarea>
+       <div class="row"><span class="wordcount" id="c1-wc"></span><button class="btn primary small" type="button" id="c1-pe-ai">Nộp cho Claude chấm theo lưới DALF</button></div>
+       <div id="c1-pe-out">${r.peEval?c1EvalHTML(r.peEval,syn):""}</div>`);
+    html+=c1Block("po","Production orale: exposé và trao đổi",30,
+      `<p class="c1task">${esc(D.po.t)}</p>${D.po.src?`<p class="mini">Dossier: ${srcLink(D.po.src)}</p>`:""}
+       <p class="mini">Bấm giờ chuẩn bị, viết dàn ý, nói to exposé 8 đến 10 phút (tự ghi âm bằng điện thoại), rồi chép lại những gì đã nói hoặc dán dàn ý để Claude nhận xét.</p>
+       <textarea id="c1-po" rows="8" placeholder="Introduction, problématique, annonce du plan, các phần, kết luận…">${esc(r.po||"")}</textarea>
+       <div class="row"><button class="btn small" type="button" id="c1-po-ai">Claude nhận xét dàn ý</button><button class="btn small" type="button" id="c1-deb">Bắt đầu trao đổi với giám khảo</button></div>
+       <div id="c1-po-out"></div><div id="c1-chat"></div>`);
+    html+=c1Block("mem","Ghi nhớ: từ mới và lỗi trong ngày",10,
+      `<div class="row"><button class="btn small" type="button" id="c1-savevoc">Lưu 12 cụm của tuần vào sổ</button><button class="btn small ghost" type="button" data-addsel="c1-pe">Lưu cụm đang bôi đen trong bài viết</button></div>
+       <label class="field">Lỗi cần nhớ hôm nay (Chủ Nhật sẽ hiện lại)<textarea id="c1-notes" rows="3">${esc(r.notes||"")}</textarea></label>`);
+  } else if(d===5){
+    const sat=W.sat; const ex=C1_SAT[sat];
+    const total=["co","ce","pe","po"].map(k=>+r.scores[k]||0).reduce((a,b)=>a+b,0);
+    const fail=["co","ce","pe","po"].some(k=>r.scores[k]!==undefined&&r.scores[k]!==""&&+r.scores[k]<5);
+    html+=`<div class="pane c1mock"><p><b>Thi thử cả buổi</b>: ${ex?srcLink(ex+".pdf","Đề "+ex+" (PDF)")+" và "+srcLink(ex+".mp3","file nghe "+ex):esc(sat)}. Làm đúng thời gian của ngày thi, không tra từ điển.</p>
+      <div class="c1tot"><span class="score">${total}<small>/100</small></span><span class="${total>=50&&!fail?"ok":"no"}">${total===0?"Nhập điểm từng phần sau khi chấm":total>=50&&!fail?"Đạt ngưỡng đỗ":"Chưa đạt ngưỡng (cần 50 điểm và mỗi phần từ 5 trở lên)"}</span></div></div>`;
+    [["mock_co","co","Compréhension de l'oral",40],["mock_ce","ce","Compréhension des écrits",50],["mock_pe","pe","Production écrite (synthèse và essai)",150],["mock_po","po","Production orale (60' chuẩn bị, 30' thi)",90]].forEach(([k,s,t,m])=>{
+      html+=c1Block(k,t,m,`<div class="row"><label class="field c1score">Điểm<input type="number" min="0" max="25" step="0.5" data-sc="${s}" value="${r.scores[s]??""}"></label><span class="mini">/ 25</span></div>
+        ${s==="pe"?`<p class="mini">Viết xong, dán bài vào ô Production écrite của một ngày bất kỳ trong tuần để Claude chấm theo lưới.</p>`:""}`);
+    });
+  } else {
+    const errs=[0,1,2,3,4].map(i=>({i,n:c1Get(C1.w,i).notes})).filter(x=>x.n&&x.n.trim());
+    const low=[0,1,2,3,4].map(i=>({i,e:c1Get(C1.w,i).peEval})).filter(x=>x.e&&typeof x.e.total==="number").sort((a,b)=>a.e.total-b.e.total)[0];
+    html+=c1Block("rev_err","Xem lại các lỗi đã ghi trong tuần",30, errs.length?`<ul class="c1errs">${errs.map(x=>`<li><b>${C1_DAYNAMES[x.i]}</b><span>${esc(x.n)}</span></li>`).join("")}</ul>`:`<p class="mini">Tuần này bà chưa ghi lỗi nào ở mục Ghi nhớ.</p>`);
+    html+=c1Block("rev_redo","Viết lại bài điểm thấp nhất",45, low?`<p>Bài ${C1_DAYNAMES[low.i]} được ${low.e.total}/12,5. Mở lại ngày đó, viết lại theo bản sửa của Claude rồi nộp chấm lần nữa.</p><button class="btn small" type="button" data-cd2="${low.i}">Mở lại ${C1_DAYNAMES[low.i]}</button>`:`<p class="mini">Chưa có bài viết nào được chấm trong tuần.</p>`);
+    html+=c1Block("rev_vocab","Ôn thẻ từ vựng của tuần",20,`<p>Lưu 12 cụm của tuần vào sổ rồi mở tab Sổ thuật ngữ, bấm Ôn thẻ.</p><div class="row"><button class="btn small" type="button" id="c1-savevoc">Lưu và mở sổ</button></div>`);
+  }
+  box.innerHTML=html; renderC1Timers(); bindAddSel(box);
+  $$("[data-tm]",box).forEach(b=>b.onclick=()=>c1Timer(b.dataset.tm,+b.dataset.min));
+  $$("[data-done]",box).forEach(c=>c.onchange=()=>{c1Save(C1.w,C1.d,{done:{[c.dataset.done]:c.checked}}); c.closest(".c1b").classList.toggle("is-done",c.checked); c1Nav(); if(c.checked&&c1DayDone(C1.w,C1.d)>=1) toast("Xong ngày hôm nay")});
+  $$("[data-sc]",box).forEach(i=>i.onchange=()=>c1Save(C1.w,C1.d,{scores:{[i.dataset.sc]:i.value===""?"":Math.max(0,Math.min(25,+i.value))}}));
+  $$("[data-cd2]",box).forEach(b=>b.onclick=()=>{C1.d=+b.dataset.cd2;renderC1()});
+  const dz=$("#c1-dict",box); if(dz) dz.onclick=()=>{location.hash="#dictee"; setTimeout(()=>{$("#d-rate").value="1";$("#d-rate").oninput();randomLesson("dictee")},50)};
+  const sv=$("#c1-savevoc",box); if(sv) sv.onclick=async()=>{const have=new Set(allTerms().map(t=>t.fr.toLowerCase())); let n=0; for(const v of W.vocab){ if(have.has(v[0].toLowerCase())) continue; await put({id:uid("tm_"),kind:"term",fr:v[0],vi:v[1],domain:W.dom,note:"DALF C1 · tuần "+W.n,created:Date.now()}); n++ } toast(n?`Đã lưu ${n} cụm`:"Các cụm này đã có trong sổ"); if(d===6) location.hash="#glossaire"};
+  const pe=$("#c1-pe",box); if(pe){ const upd=()=>{const n=wc(pe.value); const syn=W.days[d].pe.k==="syn"; const ok=syn?(n>=200&&n<=240):n>=250; $("#c1-wc").innerHTML=`<span style="color:${n===0?"var(--muted)":ok?"var(--meadow)":"var(--amber)"}">${n} từ</span> ${syn?"(200 đến 240)":"(tối thiểu 250)"}`}; upd(); let t; pe.oninput=()=>{upd();clearTimeout(t);t=setTimeout(()=>c1Save(C1.w,C1.d,{pe:pe.value}),600)} }
+  const ps=$("#c1-pe-src",box); if(ps){ let t; ps.oninput=()=>{clearTimeout(t);t=setTimeout(()=>c1Save(C1.w,C1.d,{srcs:ps.value}),600)} }
+  const po=$("#c1-po",box); if(po){ let t; po.oninput=()=>{clearTimeout(t);t=setTimeout(()=>c1Save(C1.w,C1.d,{po:po.value}),600)} }
+  const nt=$("#c1-notes",box); if(nt){ let t; nt.oninput=()=>{clearTimeout(t);t=setTimeout(()=>c1Save(C1.w,C1.d,{notes:nt.value}),600)} }
+  const ga=$("#c1-gex",box); if(ga) ga.onclick=()=>c1Gram(W.days[d]);
+  const pa=$("#c1-pe-ai",box); if(pa) pa.onclick=()=>c1GradePE(W.days[d]);
+  const ca=$("#c1-ce-ai",box); if(ca) ca.onclick=()=>c1GradeCE();
+  const oa=$("#c1-po-ai",box); if(oa) oa.onclick=()=>c1PlanPO(W.days[d]);
+  const db=$("#c1-deb",box); if(db) db.onclick=()=>{C1.chat=[]; c1Debate(W.days[d],null)};
+}
+function c1EvalHTML(e,syn){
+  const labels=syn?{consigne:"Respect de la consigne",analyse:"Analyse et synthèse",coherence:"Cohérence et cohésion",lexique:"Lexique",morpho:"Morphosyntaxe"}:{tache:"Réalisation de la tâche",coherence:"Cohérence et cohésion",socio:"Adéquation sociolinguistique",lexique:"Lexique",morpho:"Morphosyntaxe"};
+  const sc=e.scores||{};
+  const bold=s=>esc(s||"").replace(/\*\*(.+?)\*\*/g,"<b class=\"fix\">$1</b>");
+  return `<div class="c1eval"><div class="scoreline"><div class="score">${esc(e.total)}<small>/12,5</small></div><p style="margin:0;max-width:62ch">${esc(e.nhan_xet||"")}</p></div>
+    <div class="c1crit">${Object.entries(labels).map(([k,l])=>`<span class="tag"><b>${esc(sc[k]??"–")}</b>/2,5 ${l}</span>`).join("")}</div>
+    ${(e.loi||[]).length?`<div style="display:grid;gap:8px">${e.loi.map(x=>`<div class="fb-card"><span><span class="mine">${esc(x.goc)}</span> → <span class="fix">${esc(x.sua)}</span></span><span>${esc(x.giai_thich)}</span></div>`).join("")}</div>`:""}
+    ${e.ban_sua?`<details><summary>Bản đã sửa (từ sửa in đậm)</summary><p class="reveal" style="white-space:pre-wrap">${bold(e.ban_sua)}</p></details>`:""}</div>`;
+}
+async function c1GradePE(D){
+  const txt=$("#c1-pe").value.trim(); if(wc(txt)<80){toast("Bài còn ngắn quá, viết thêm đã");return}
+  c1Save(C1.w,C1.d,{pe:txt});
+  const syn=D.pe.k==="syn"; const out=$("#c1-pe-out"); out.innerHTML=`<span class="loading">Claude đang chấm…</span>`;
+  const srcs=($("#c1-pe-src")?.value||"").trim();
+  const grid=syn?`Lưới chấm synthèse, mỗi tiêu chí từ 0 đến 2,5 (bước 0,5): consigne (độ dài 200 đến 240 từ, có tiêu đề, không ý kiến cá nhân, không thêm thông tin, không chép câu), analyse (nhận diện đúng vấn đề chung, sắp xếp lại thông tin của hai văn bản thay vì tóm tắt nối đuôi), coherence, lexique, morpho.`:`Lưới chấm essai, mỗi tiêu chí từ 0 đến 2,5 (bước 0,5): tache (đúng vai, đúng thể loại, đủ 250 từ, lập luận có giải thích và ví dụ, có formule nếu là thư), coherence, socio (adéquation sociolinguistique, đúng ngữ vực), lexique, morpho.`;
+  const prompt=`Bạn là giám khảo DALF C1 giàu kinh nghiệm. Chấm bài ${syn?"synthèse":"essai argumenté"} của một sinh viên Việt Nam trình độ B2-C1. ${grid}
+Nhận xét bằng tiếng Việt, thẳng thắn, cụ thể, không dùng gạch ngang dài. Liệt kê tối đa 10 lỗi quan trọng nhất (ngữ pháp, từ vựng, lập luận, cấu trúc).
+ĐỀ BÀI: ${D.pe.t}
+${srcs?`VĂN BẢN NGUỒN:\n${srcs}\n`:""}BÀI LÀM (${wc(txt)} từ):
+${txt}
+Trả về JSON: {"scores":{${syn?'"consigne":0,"analyse":0,"coherence":0,"lexique":0,"morpho":0':'"tache":0,"coherence":0,"socio":0,"lexique":0,"morpho":0'}},"total":tổng (0 đến 12,5),"nhan_xet":"3 đến 5 câu","loi":[{"goc":"đoạn của sinh viên","sua":"cách sửa","giai_thich":"vì sao"}],"ban_sua":"bản đã sửa hoàn chỉnh khoảng ${syn?"220":"300"} từ bằng tiếng Pháp, đánh dấu từ sửa bằng **…**"}`;
+  const s=await getSample(); if(!s){noAI(out,prompt);return}
+  try{ const r=await s.json(prompt,{modelTier:"complex"}); c1Save(C1.w,C1.d,{peEval:r}); out.innerHTML=c1EvalHTML(r,syn) }
+  catch(e){ if(e&&e.code==="not_granted") noAI(out,prompt); else out.innerHTML=`<p class="warn">Chưa chấm được (${esc(e&&e.code||"lỗi")}).</p>` }
+}
+async function c1GradeCE(){
+  const txt=$("#c1-ce-in").value.trim(); if(!txt){toast("Dán câu hỏi và câu trả lời trước đã");return}
+  const out=$("#c1-ce-out"); out.innerHTML=`<span class="loading">Claude đang chấm…</span>`;
+  const prompt=`Bạn là giám khảo DALF C1. Chấm các câu trả lời đọc hiểu dưới đây: với mỗi câu, cho biết đạt, đạt một phần hay chưa đạt, giải thích ngắn bằng tiếng Việt (không dùng gạch ngang dài), và đưa một câu trả lời mẫu bằng tiếng Pháp diễn đạt lại bằng lời của mình, không chép nguyên văn.\n\n${txt}\n\nTrả về JSON: {"cau":[{"so":"số câu","ket_qua":"đạt | một phần | chưa đạt","giai_thich":"...","mau":"..."}]}`;
+  const s=await getSample(); if(!s){noAI(out,prompt);return}
+  try{ const r=await s.json(prompt,{modelTier:"default"}); out.innerHTML=(r.cau||[]).map(c=>`<div class="fb-card"><span><b>Câu ${esc(c.so)}</b> · ${esc(c.ket_qua)}</span><span>${esc(c.giai_thich)}</span><span class="fix">${esc(c.mau)}</span></div>`).join("") }
+  catch(e){ if(e&&e.code==="not_granted") noAI(out,prompt); else out.innerHTML=`<p class="warn">Chưa chấm được.</p>` }
+}
+async function c1Gram(D){
+  const out=$("#c1-gout"); out.innerHTML=`<span class="loading">Claude đang ra đề…</span>`;
+  const prompt=`Soạn 8 câu luyện ngữ pháp trình độ DALF C1 về: ${C1_GRAM[D.g]}. Ngữ cảnh câu lấy từ chủ đề "${C1_WEEKS[C1.w].theme}". Đa dạng dạng bài: điền khuyết, biến đổi câu, nối câu, sửa lỗi. Giải thích bằng tiếng Việt ngắn gọn, không dùng gạch ngang dài.\nTrả về JSON: {"cau":[{"de":"câu đề tiếng Pháp","dap_an":"đáp án","giai_thich":"..."}]}`;
+  const s=await getSample(); if(!s){noAI(out,prompt);return}
+  try{ const r=await s.json(prompt,{modelTier:"default"}); out.innerHTML=`<ol class="c1g">${(r.cau||[]).map(c=>`<li><p>${esc(c.de)}</p><details><summary>Đáp án</summary><p class="fix">${esc(c.dap_an)}</p><p class="mini">${esc(c.giai_thich)}</p></details></li>`).join("")}</ol>` }
+  catch(e){ if(e&&e.code==="not_granted") noAI(out,prompt); else out.innerHTML=`<p class="warn">Chưa ra đề được.</p>` }
+}
+async function c1PlanPO(D){
+  const txt=$("#c1-po").value.trim(); if(!txt){toast("Viết dàn ý trước đã");return}
+  c1Save(C1.w,C1.d,{po:txt});
+  const out=$("#c1-po-out"); out.innerHTML=`<span class="loading">Claude đang đọc dàn ý…</span>`;
+  const prompt=`Bạn là giám khảo DALF C1 phần Production orale. Nhận xét dàn ý hoặc bản ghi lại exposé dưới đây theo các tiêu chí: problématique có rõ và tự đặt lại không; annonce du plan; 3 đến 4 phần cân đối, có lập luận, giải thích, ví dụ cụ thể (khuyến khích ví dụ từ Việt Nam); chuyển ý; kết luận trả lời problématique và mở rộng; có biến thành bản tóm tắt tài liệu không. Nhận xét tiếng Việt, cụ thể, không dùng gạch ngang dài. Gợi ý 5 cụm từ C1 bằng tiếng Pháp nên dùng.\nSUJET: ${D.po.t}\nDÀN Ý: ${txt}\nTrả về JSON: {"diem_manh":["..."],"can_sua":["..."],"cum_tu":["..."],"problematique_goi_y":"câu tiếng Pháp"}`;
+  const s=await getSample(); if(!s){noAI(out,prompt);return}
+  try{ const r=await s.json(prompt,{modelTier:"default"});
+    out.innerHTML=`<div class="c1eval"><p><b style="color:var(--meadow)">Điểm mạnh</b></p><ul>${(r.diem_manh||[]).map(x=>`<li>${esc(x)}</li>`).join("")}</ul><p><b style="color:var(--amber)">Cần sửa</b></p><ul>${(r.can_sua||[]).map(x=>`<li>${esc(x)}</li>`).join("")}</ul>${r.problematique_goi_y?`<p class="reveal">${esc(r.problematique_goi_y)}</p>`:""}<p class="mini">${(r.cum_tu||[]).map(esc).join(" · ")}</p></div>` }
+  catch(e){ if(e&&e.code==="not_granted") noAI(out,prompt); else out.innerHTML=`<p class="warn">Chưa nhận xét được.</p>` }
+}
+async function c1Debate(D, answer){
+  const box=$("#c1-chat");
+  if(answer) C1.chat.push({role:"user",content:answer});
+  const msgs=C1.chat.map(m=>`<div class="c1msg ${m.role}"><b>${m.role==="user"?"Bà":"Giám khảo"}</b><p>${esc(m.content)}</p></div>`).join("");
+  box.innerHTML=msgs+`<span class="loading">Giám khảo đang suy nghĩ…</span>`;
+  const sys=`Tu es examinateur du DALF C1, épreuve de production orale, partie entretien. Le sujet de l'exposé était : « ${D.po.t} ». Le plan de la candidate : ${($("#c1-po").value||"non fourni").slice(0,1500)}. Pose UNE seule question à la fois, en français, courte, qui pousse la candidate à défendre, nuancer ou illustrer sa position (contre-argument, demande d'exemple, cas concret, comparaison avec le Vietnam). Après 6 échanges, termine par un bilan de 4 phrases en vietnamien (sans tiret long) sur l'aisance, l'argumentation et 2 erreurs de langue relevées, précédé de "BILAN:".`;
+  const input=[{role:"user",content:sys+"\n\nCommence l'entretien."}].concat(C1.chat);
+  const fixInput = input.reduce((a,m)=>{ if(a.length&&a[a.length-1].role===m.role){ a[a.length-1]={...a[a.length-1],content:a[a.length-1].content+"\n"+m.content} } else a.push(m); return a },[]);
+  if(fixInput[fixInput.length-1].role!=="user") fixInput.push({role:"user",content:"Continue."});
+  const s=await getSample(); if(!s){ noAI(box, sys); return }
+  try{
+    const r=await s(fixInput,{modelTier:"default",cache:false});
+    C1.chat.push({role:"assistant",content:r.text.trim()});
+    const done=/BILAN:/.test(r.text);
+    box.innerHTML=C1.chat.map(m=>`<div class="c1msg ${m.role}"><b>${m.role==="user"?"Bà":"Giám khảo"}</b><p>${esc(m.content)}</p></div>`).join("")+
+      (done?`<div class="row"><button class="btn small ghost" type="button" id="c1-deb2">Trao đổi lại từ đầu</button></div>`:`<div class="c1reply"><textarea id="c1-ans" rows="3" lang="fr" placeholder="Trả lời bằng tiếng Pháp… (Ctrl Enter để gửi)"></textarea><button class="btn small primary" type="button" id="c1-send">Gửi</button></div>`);
+    const send=()=>{const v=$("#c1-ans").value.trim(); if(v) c1Debate(D,v)};
+    const sb=$("#c1-send"); if(sb){ sb.onclick=send; $("#c1-ans").onkeydown=e=>{if(e.ctrlKey&&e.key==="Enter"){e.preventDefault();send()}}; $("#c1-ans").focus() }
+    const rb=$("#c1-deb2"); if(rb) rb.onclick=()=>{C1.chat=[];c1Debate(D,null)};
+  }catch(e){ box.innerHTML=msgs+`<p class="warn">Giám khảo chưa trả lời được (${esc(e&&e.code||"lỗi")}).</p>` }
+}
+function initC1(){
+  const saved=lsGet("veilleuse.c1pos",null);
+  [C1.w,C1.d]=saved||c1FirstOpen();
+  $("#c1-today").onclick=()=>{[C1.w,C1.d]=c1FirstOpen();renderC1()};
+  renderC1();
+}
+
 /* ---------- PHRASES (drills) ---------- */
 const P = { kind:"tr", dir:"all", domain:"all", order:[], pos:0, shown:false, picked:null, sess:{ok:0,no:0} };
 function drillPool(){
@@ -2566,7 +2953,7 @@ function initMethods(){
 }
 
 /* ---------- routing ---------- */
-const VIEWS=["dictee","traduction","phrases","glossaire","methode","ajouter"];
+const VIEWS=["dictee","traduction","phrases","c1","glossaire","methode","ajouter"];
 function route(){
   const v = VIEWS.includes(location.hash.slice(1)) ? location.hash.slice(1) : "dictee";
   VIEWS.forEach(x=>$("#v-"+x).hidden = x!==v);
@@ -2576,9 +2963,11 @@ function route(){
 window.addEventListener("hashchange",route);
 
 /* ---------- boot ---------- */
-initDictee(); initTrad(); initGloss(); initAdd(); initPhrases(); initMethods();
+METHODS.splice(METHODS.length-1,0,...C1_METHODS);
+C1_WEEKS.forEach(W=>W.vocab.forEach((v,i)=>BASE_TERMS.push({id:"c1w"+W.n+"_"+i,kind:"term",fr:v[0],vi:v[1],domain:W.dom,note:"DALF C1 · tuần "+W.n+" · "+W.theme,base:true,course:true,book:"c1"})));
+initDictee(); initTrad(); initGloss(); initAdd(); initPhrases(); initMethods(); initC1();
 store.listeners.push(()=>{ renderStats(); renderDRail(); renderTRail(); renderGloss(); renderAdd(); });
-let drillsSeeded=false; store.listeners.push(()=>{ if(!drillsSeeded && store.mode==="db"){ drillsSeeded=true; buildOrder(); renderDrill(); } });
+let drillsSeeded=false; store.listeners.push(()=>{ if(!drillsSeeded && store.mode==="db"){ drillsSeeded=true; buildOrder(); renderDrill(); if(!lsGet("veilleuse.c1pos",null)) [C1.w,C1.d]=c1FirstOpen(); renderC1(); } });
 route();
 $("#d-input").value = lsGet("veilleuse.ddraft."+D.lessonId,"");
 initStore();
