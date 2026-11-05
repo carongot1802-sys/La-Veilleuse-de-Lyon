@@ -283,6 +283,11 @@ audio{width:100%;height:38px}
 .c1days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
 .c1day{position:relative;overflow:hidden;border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:9px 6px 12px;cursor:pointer;font-size:13px;color:var(--ink-2);text-align:center}
 .c1day[aria-pressed="true"]{border-color:var(--lamp);color:var(--ink);background:var(--panel-2)}
+.c1day small{display:block;font-size:11px;color:var(--muted);margin-top:2px}
+.c1day[aria-pressed="true"] small{color:var(--lamp)}
+.c1calm{margin:0 0 4px;color:var(--ink-2);font-family:var(--f-display);font-style:italic;font-size:17px}
+.c1extra{margin-top:10px}
+.c1extra ul{margin:8px 0 0;padding-left:18px;display:grid;gap:6px;font-size:14px}
 .c1day i{position:absolute;left:0;bottom:0;height:3px;background:var(--meadow)}
 .c1day.full span::after{content:" ✓";color:var(--meadow)}
 @media (max-width:560px){.c1days{grid-template-columns:repeat(4,minmax(0,1fr))}}
@@ -572,7 +577,7 @@ b.fix{color:var(--meadow);font-weight:700}
   <div class="view-head">
     <div>
       <h2>Lộ trình <em>DALF C1</em>, mỗi ngày một buổi</h2>
-      <p>Tám tuần, mỗi ngày 2 đến 3 tiếng đủ bốn kỹ năng, bám theo dossier và đề thi trong Drive của bà. Thứ Bảy thi thử bấm giờ, Chủ Nhật xem lại lỗi. Trên claude.ai, nút Đọc tại đây mở thẳng bài đọc, câu hỏi và dossier từ Drive của bà ngay trong trang. Trên bản GitHub, tài liệu mở bằng đường dẫn tìm trong Drive.</p>
+      <p>Tám tuần, mỗi ngày chỉ một kỹ năng, khoảng một tiếng: Thứ Hai nghe, Thứ Ba đọc, Thứ Tư viết, Thứ Năm nói, Thứ Sáu ngữ pháp nhẹ. Thứ Bảy thi thử đúng một phần, Chủ Nhật ôn nhẹ. Ngày nào còn sức thì có bài làm thêm, không bắt buộc. Trên claude.ai, nút Đọc tại đây mở thẳng bài đọc, câu hỏi và dossier từ Drive của bà ngay trong trang. Trên bản GitHub, tài liệu mở bằng đường dẫn tìm trong Drive.</p>
     </div>
     <button class="btn primary" type="button" id="c1-today">Tới buổi học tiếp theo</button>
   </div>
@@ -2720,7 +2725,10 @@ async function c1Read(btn){
 function c1Key(w,d){ return "c1_"+(w+1)+"_"+(d+1) }
 function c1Get(w,d){ return store.items.get(c1Key(w,d)) || {id:c1Key(w,d), kind:"c1", done:{}, scores:{}, notes:"", pe:"", po:"", srcs:""} }
 function c1Save(w,d,patch){ const cur=c1Get(w,d); const nx={...cur,...patch, done:{...cur.done,...(patch.done||{})}, scores:{...cur.scores,...(patch.scores||{})}, at:Date.now()}; put(nx); return nx }
-function c1Blocks(w,d){ return d<5 ? ["warm","gram","co","ce","pe","po","mem"] : d===5 ? ["mock_co","mock_ce","mock_pe","mock_po"] : ["rev_err","rev_redo","rev_vocab"] }
+const C1_SKILL = ["co","ce","pe","po","gram","mock","rev"];
+const C1_SKNAME = {co:"Nghe",ce:"Đọc",pe:"Viết",po:"Nói",gram:"Ngữ pháp",mock:"Thi thử",rev:"Ôn nhẹ"};
+const C1_MOCKSK = w => ["co","ce","pe","po"][w%4];
+function c1Blocks(w,d){ return [["warm","co","mem"],["warm","ce","mem"],["pe","mem"],["po","mem"],["gram","dx","warm"],["mock_"+C1_MOCKSK(w)],["rev_err","rev_vocab"]][d] }
 function c1DayDone(w,d){ const r=c1Get(w,d); const b=c1Blocks(w,d); return b.filter(k=>r.done[k]).length/b.length }
 function c1FirstOpen(){ for(let w=0;w<C1_WEEKS.length;w++) for(let d=0;d<7;d++) if(c1DayDone(w,d)<1) return [w,d]; return [C1_WEEKS.length-1,6] }
 
@@ -2751,10 +2759,10 @@ function c1Block(key, title, mins, inner){
 function c1Nav(){
   const W=C1_WEEKS[C1.w], d=C1.d;
   $("#c1-weeks").innerHTML = C1_WEEKS.map((x,i)=>{const p=Math.round(100*[0,1,2,3,4,5,6].reduce((s,k)=>s+c1DayDone(i,k),0)/7);return `<button type="button" class="chip" data-cw="${i}" aria-pressed="${i===C1.w}">Tuần ${x.n}<span class="mini" style="margin-left:4px">${p}%</span></button>`}).join("");
-  $("#c1-days").innerHTML = C1_DAYNAMES.map((n,i)=>{const p=c1DayDone(C1.w,i);return `<button type="button" class="c1day ${p>=1?"full":p>0?"part":""}" data-cd="${i}" aria-pressed="${i===d}"><span>${n}</span><i style="width:${Math.round(p*100)}%"></i></button>`}).join("");
+  $("#c1-days").innerHTML = C1_DAYNAMES.map((n,i)=>{const p=c1DayDone(C1.w,i);return `<button type="button" class="c1day ${p>=1?"full":p>0?"part":""}" data-cd="${i}" aria-pressed="${i===d}"><span>${n}</span><small>${i===5?"Thi · "+C1_SKNAME[C1_MOCKSK(C1.w)]:C1_SKNAME[C1_SKILL[i]]}</small><i style="width:${Math.round(p*100)}%"></i></button>`}).join("");
   $$("[data-cw]").forEach(b=>b.onclick=()=>{C1.w=+b.dataset.cw;C1.d=0;lsSet("veilleuse.c1pos",[C1.w,C1.d]);renderC1()});
   $$("[data-cd]").forEach(b=>b.onclick=()=>{C1.d=+b.dataset.cd;lsSet("veilleuse.c1pos",[C1.w,C1.d]);renderC1()});
-  $("#c1-head").innerHTML=`<div class="eyebrow">Tuần ${W.n} · ${C1_DAYNAMES[d]}</div><h3 class="c1title">${esc(W.theme)}</h3>
+  $("#c1-head").innerHTML=`<div class="eyebrow">Tuần ${W.n} · ${C1_DAYNAMES[d]} · ${d===5?"Thi thử phần "+C1_SKNAME[C1_MOCKSK(C1.w)]:"Hôm nay chỉ "+C1_SKNAME[C1_SKILL[d]].toLowerCase()} · khoảng ${[60,60,d===2&&W.days[2].pe.k==="syn"?95:65,65,55,{co:40,ce:50,pe:150,po:90}[C1_MOCKSK(C1.w)],30][d]} phút</div><h3 class="c1title">${esc(W.theme)}</h3>
     <div class="c1bar"><i style="width:${Math.round(c1DayDone(C1.w,d)*100)}%"></i></div>`;
 }
 function renderC1(){
@@ -2762,56 +2770,75 @@ function renderC1(){
   const W=C1_WEEKS[C1.w], d=C1.d, r=c1Get(C1.w,d);
   c1Nav();
   let html="";
-  if(d<5){
-    const D=W.days[d];
-    html+=c1Block("warm","Khởi động: thẻ từ và dictée tốc độ thật",15,
-      `<p>Ôn 12 cụm của chủ đề tuần, rồi làm một bài dictée ở tốc độ 1×, chế độ Từng câu.</p>
+  const D=W.days[Math.min(d,4)];
+  const others=k=>W.days.map((x,i)=>({x,i})).filter(o=>o.i!==Math.min(d,4));
+  const warm=()=>c1Block("warm",d===4?"Ôn lại từ vựng tuần":"Khởi động nhẹ: từ vựng tuần",10,
+      `<p>Đọc lướt 12 cụm của chủ đề tuần${d===0?", rồi làm một bài dictée ở tốc độ 1× để làm nóng tai":""}.</p>
        <details><summary>Từ vựng tuần ${W.n}</summary><ul class="c1voc">${W.vocab.map(v=>`<li><b>${esc(v[0])}</b><span>${esc(v[1])}</span></li>`).join("")}</ul></details>
-       <div class="row"><button class="btn small" type="button" id="c1-dict">Mở một bài dictée ngẫu nhiên</button></div>`);
-    html+=c1Block("gram","Ngữ pháp và cấu trúc C1",20,
-      `<p>${esc(C1_GRAM[D.g])}</p><p class="mini">Học lý thuyết trong ${srcLink(C1_BOOKS[D.g])}, rồi làm bài Claude ra bên dưới.</p>
-       <div class="row"><button class="btn small" type="button" id="c1-gex">Claude ra 8 câu luyện</button></div><div id="c1-gout"></div>`);
-    html+=c1Block("co","Compréhension de l'oral",30,
+       ${d===0?`<div class="row"><button class="btn small" type="button" id="c1-dict">Mở một bài dictée ngẫu nhiên</button></div>`:""}`);
+  const mem=()=>c1Block("mem","Ghi lại lỗi và từ mới",5,
+      `<div class="row"><button class="btn small" type="button" id="c1-savevoc">Lưu 12 cụm của tuần vào sổ</button>${d===2?`<button class="btn small ghost" type="button" data-addsel="c1-pe">Lưu cụm đang bôi đen trong bài viết</button>`:""}</div>
+       <label class="field">Lỗi cần nhớ hôm nay (Chủ Nhật sẽ hiện lại)<textarea id="c1-notes" rows="3">${esc(r.notes||"")}</textarea></label>`);
+  const extra=(items)=>items.length?`<details class="c1extra"><summary>Còn sức thì làm thêm (không bắt buộc)</summary><ul>${items.join("")}</ul></details>`:"";
+  html+=`<p class="c1calm">${["Hôm nay chỉ nghe. Một bài, làm kỹ, xong là nghỉ.","Hôm nay chỉ đọc. Một văn bản, trả lời đủ câu hỏi là xong.","Hôm nay chỉ viết một bài. Không cần hoàn hảo, viết xong rồi nhờ Claude chấm.","Hôm nay chỉ nói. Chuẩn bị, nói to một lần, trao đổi với giám khảo ảo.","Hôm nay nhẹ nhàng: một điểm ngữ pháp và mười câu diễn đạt.","Thi thử đúng một phần, bấm giờ như ngày thi thật.","Không có bài mới. Xem lại lỗi trong tuần và ôn thẻ từ, nghỉ ngơi cho tuần sau."][d]}</p>`;
+  if(d===0){
+    html+=warm();
+    html+=c1Block("co","Compréhension de l'oral",40,
       `<p>Nguồn hôm nay: ${srcLink(D.co)}. Làm đủ năm bước: đọc câu hỏi, nghe toàn bài, nghe chi tiết, nghe kèm transcription, ghi từ mới.</p>
-       <div class="row"><label class="field c1score">Điểm tự chấm<input type="number" min="0" max="25" step="0.5" data-sc="co" value="${r.scores.co??""}"></label><span class="mini">/ 25</span></div>`);
-    html+=c1Block("ce","Compréhension des écrits",30,
+       <div class="row"><label class="field c1score">Điểm tự chấm<input type="number" min="0" max="25" step="0.5" data-sc="co" value="${r.scores.co??""}"></label><span class="mini">/ 25</span></div>
+       ${extra(others().map(o=>`<li>${srcLink(o.x.co)}</li>`))}`);
+    html+=mem();
+  } else if(d===1){
+    html+=warm();
+    html+=c1Block("ce","Compréhension des écrits",45,
       `<p>Nguồn hôm nay: ${srcLink(D.ce)}. Đọc lướt, xác định chức năng và kiểu cấu trúc văn bản, trả lời theo thứ tự, trích dẫn ngắn cho câu Vrai/Faux.</p>
        <details><summary>Nhờ Claude chấm phần trả lời tự luận</summary>
        <label class="field">Dán câu hỏi, đoạn văn liên quan và câu trả lời của bà<textarea id="c1-ce-in" rows="6"></textarea></label>
        <div class="row"><button class="btn small" type="button" id="c1-ce-ai">Chấm</button></div><div id="c1-ce-out"></div></details>
-       <div class="row"><label class="field c1score">Điểm tự chấm<input type="number" min="0" max="25" step="0.5" data-sc="ce" value="${r.scores.ce??""}"></label><span class="mini">/ 25</span></div>`);
+       <div class="row"><label class="field c1score">Điểm tự chấm<input type="number" min="0" max="25" step="0.5" data-sc="ce" value="${r.scores.ce??""}"></label><span class="mini">/ 25</span></div>
+       ${extra(others().map(o=>`<li>${srcLink(o.x.ce)}</li>`))}`);
+    html+=mem();
+  } else if(d===2){
     const syn=D.pe.k==="syn";
-    html+=c1Block("pe",syn?"Production écrite: synthèse":"Production écrite: essai argumenté",45,
+    html+=c1Block("pe",syn?"Production écrite: synthèse":"Production écrite: essai argumenté",syn?90:60,
       `<p class="c1task">${esc(D.pe.t)}</p>${D.pe.src?`<p class="mini">Dossier: ${srcLink(D.pe.src)}</p>`:""}
+       <p class="mini">${syn?"Chia giờ như thầy Vincent: 30 phút đọc, 30 phút phân tích và dán nhãn từng đoạn, 30 phút viết.":"Đọc kỹ đề: dạng văn bản, người đọc, mục tiêu. Lập dàn ý 15 phút rồi viết."}</p>
        ${syn?`<details><summary>Dán hai văn bản nguồn để Claude chấm sát hơn (không bắt buộc)</summary><textarea id="c1-pe-src" rows="5">${esc(r.srcs||"")}</textarea></details>`:""}
-       <textarea id="c1-pe" class="writing" rows="10" placeholder="${syn?"Viết synthèse 200 đến 240 từ, có tiêu đề…":"Viết essai tối thiểu 250 từ…"}">${esc(r.pe||"")}</textarea>
+       <textarea id="c1-pe" class="writing" rows="10" placeholder="${syn?"Viết synthèse 200 đến 240 từ…":"Viết essai tối thiểu 250 từ…"}">${esc(r.pe||"")}</textarea>
        <div class="row"><span class="wordcount" id="c1-wc"></span><button class="btn primary small" type="button" id="c1-pe-ai">Nộp cho Claude chấm theo lưới DALF</button></div>
-       <div id="c1-pe-out">${r.peEval?c1EvalHTML(r.peEval,syn):""}</div>`);
-    html+=c1Block("po","Production orale: exposé và trao đổi",30,
+       <div id="c1-pe-out">${r.peEval?c1EvalHTML(r.peEval,syn):""}</div>
+       ${extra(others().map(o=>`<li>${o.x.pe.k==="syn"?"Synthèse":"Essai"}: ${esc(o.x.pe.t)}${o.x.pe.src?" · "+srcLink(o.x.pe.src):""}</li>`))}`);
+    html+=mem();
+  } else if(d===3){
+    html+=c1Block("po","Production orale: exposé và trao đổi",60,
       `<p class="c1task">${esc(D.po.t)}</p>${D.po.src?`<p class="mini">Dossier: ${srcLink(D.po.src)}</p>`:""}
-       <p class="mini">Bấm giờ chuẩn bị, viết dàn ý, nói to exposé 8 đến 10 phút (tự ghi âm bằng điện thoại), rồi chép lại những gì đã nói hoặc dán dàn ý để Claude nhận xét.</p>
+       <p class="mini">30 phút chuẩn bị (tìm ý riêng trước, rồi mới đọc tài liệu), nói to exposé 8 đến 10 phút và tự ghi âm, rồi dán dàn ý để Claude nhận xét và trao đổi với giám khảo ảo.</p>
        <textarea id="c1-po" rows="8" placeholder="Introduction, problématique, annonce du plan, các phần, kết luận…">${esc(r.po||"")}</textarea>
        <div class="row"><button class="btn small" type="button" id="c1-po-ai">Claude nhận xét dàn ý</button><button class="btn small" type="button" id="c1-deb">Bắt đầu trao đổi với giám khảo</button></div>
-       <div id="c1-po-out"></div><div id="c1-chat"></div>`);
-    html+=c1Block("mem","Ghi nhớ: từ mới và lỗi trong ngày",10,
-      `<div class="row"><button class="btn small" type="button" id="c1-savevoc">Lưu 12 cụm của tuần vào sổ</button><button class="btn small ghost" type="button" data-addsel="c1-pe">Lưu cụm đang bôi đen trong bài viết</button></div>
-       <label class="field">Lỗi cần nhớ hôm nay (Chủ Nhật sẽ hiện lại)<textarea id="c1-notes" rows="3">${esc(r.notes||"")}</textarea></label>`);
+       <div id="c1-po-out"></div><div id="c1-chat"></div>
+       ${extra(others().map(o=>`<li>${esc(o.x.po.t)}${o.x.po.src?" · "+srcLink(o.x.po.src):""}</li>`))}`);
+    html+=mem();
+  } else if(d===4){
+    html+=c1Block("gram","Một điểm ngữ pháp C1",25,
+      `<p>${esc(C1_GRAM[D.g])}</p><p class="mini">Học lý thuyết trong ${srcLink(C1_BOOKS[D.g])}, rồi làm bài Claude ra bên dưới.</p>
+       <div class="row"><button class="btn small" type="button" id="c1-gex">Claude ra 8 câu luyện</button></div><div id="c1-gout"></div>`);
+    html+=c1Block("dx","Mười câu Diễn đạt C1",20,
+      `<p>Mở tab Luyện câu ở dạng Diễn đạt C1, làm mười câu: viết lại bằng liên từ nâng cao, dịch có cấu trúc C1, trắc nghiệm mẹo thi. Đọc thẻ bí kíp của thầy Vincent nếu quên.</p>
+       <div class="row"><button class="btn small" type="button" id="c1-dx">Mở Diễn đạt C1</button><a class="btn small ghost" href="#methode" id="c1-dxm">Đọc thẻ liên từ</a></div>`);
+    html+=warm();
   } else if(d===5){
-    const sat=W.sat; const ex=C1_SAT[sat];
-    const total=["co","ce","pe","po"].map(k=>+r.scores[k]||0).reduce((a,b)=>a+b,0);
-    const fail=["co","ce","pe","po"].some(k=>r.scores[k]!==undefined&&r.scores[k]!==""&&+r.scores[k]<5);
-    html+=`<div class="pane c1mock"><p><b>Thi thử cả buổi</b>: ${ex?srcLink(ex+".pdf","Đề "+ex+" (PDF)")+" và "+srcLink(ex+".mp3","file nghe "+ex):esc(sat)}. Làm đúng thời gian của ngày thi, không tra từ điển.</p>
-      <div class="c1tot"><span class="score">${total}<small>/100</small></span><span class="${total>=50&&!fail?"ok":"no"}">${total===0?"Nhập điểm từng phần sau khi chấm":total>=50&&!fail?"Đạt ngưỡng đỗ":"Chưa đạt ngưỡng (cần 50 điểm và mỗi phần từ 5 trở lên)"}</span></div></div>`;
-    [["mock_co","co","Compréhension de l'oral",40],["mock_ce","ce","Compréhension des écrits",50],["mock_pe","pe","Production écrite (synthèse và essai)",150],["mock_po","po","Production orale (60' chuẩn bị, 30' thi)",90]].forEach(([k,s,t,m])=>{
-      html+=c1Block(k,t,m,`<div class="row"><label class="field c1score">Điểm<input type="number" min="0" max="25" step="0.5" data-sc="${s}" value="${r.scores[s]??""}"></label><span class="mini">/ 25</span></div>
-        ${s==="pe"?`<p class="mini">Viết xong, dán bài vào ô Production écrite của một ngày bất kỳ trong tuần để Claude chấm theo lưới.</p>`:""}`);
-    });
+    const sk=C1_MOCKSK(C1.w); const ex=C1_SAT[W.sat];
+    const meta={co:["Compréhension de l'oral",40],ce:["Compréhension des écrits",50],pe:["Production écrite (synthèse và essai)",150],po:["Production orale (60' chuẩn bị, khoảng 30' nói)",90]}[sk];
+    const sc=r.scores[sk];
+    html+=c1Block("mock_"+sk,"Thi thử: "+meta[0],meta[1],
+      `<p>Đề: ${ex?srcLink(ex+".pdf","Đề "+ex+" (PDF)")+(sk==="co"?" và "+srcLink(ex+".mp3","file nghe "+ex):""):esc(W.sat)}. Chỉ làm phần ${C1_SKNAME[sk].toLowerCase()}, đúng thời gian, không tra từ điển. Mỗi tuần thi thử một phần khác nhau, xoay vòng nghe, đọc, viết, nói.</p>
+       <div class="row"><label class="field c1score">Điểm<input type="number" min="0" max="25" step="0.5" data-sc="${sk}" value="${sc??""}"></label><span class="mini">/ 25 · cần từ 5 trở lên, nhắm 12,5 để an toàn</span></div>
+       ${sk==="pe"?`<p class="mini">Viết xong, dán bài vào ô viết của Thứ Tư để Claude chấm theo lưới.</p>`:""}`);
   } else {
     const errs=[0,1,2,3,4].map(i=>({i,n:c1Get(C1.w,i).notes})).filter(x=>x.n&&x.n.trim());
-    const low=[0,1,2,3,4].map(i=>({i,e:c1Get(C1.w,i).peEval})).filter(x=>x.e&&typeof x.e.total==="number").sort((a,b)=>a.e.total-b.e.total)[0];
-    html+=c1Block("rev_err","Xem lại các lỗi đã ghi trong tuần",30, errs.length?`<ul class="c1errs">${errs.map(x=>`<li><b>${C1_DAYNAMES[x.i]}</b><span>${esc(x.n)}</span></li>`).join("")}</ul>`:`<p class="mini">Tuần này bà chưa ghi lỗi nào ở mục Ghi nhớ.</p>`);
-    html+=c1Block("rev_redo","Viết lại bài điểm thấp nhất",45, low?`<p>Bài ${C1_DAYNAMES[low.i]} được ${low.e.total}/12,5. Mở lại ngày đó, viết lại theo bản sửa của Claude rồi nộp chấm lần nữa.</p><button class="btn small" type="button" data-cd2="${low.i}">Mở lại ${C1_DAYNAMES[low.i]}</button>`:`<p class="mini">Chưa có bài viết nào được chấm trong tuần.</p>`);
-    html+=c1Block("rev_vocab","Ôn thẻ từ vựng của tuần",20,`<p>Lưu 12 cụm của tuần vào sổ rồi mở tab Sổ thuật ngữ, bấm Ôn thẻ.</p><div class="row"><button class="btn small" type="button" id="c1-savevoc">Lưu và mở sổ</button></div>`);
+    const low=c1Get(C1.w,2).peEval;
+    html+=c1Block("rev_err","Xem lại các lỗi đã ghi trong tuần",15, (errs.length?`<ul class="c1errs">${errs.map(x=>`<li><b>${C1_DAYNAMES[x.i]}</b><span>${esc(x.n)}</span></li>`).join("")}</ul>`:`<p class="mini">Tuần này bà chưa ghi lỗi nào.</p>`)+(low&&typeof low.total==="number"&&low.total<10?`<p class="mini">Bài viết Thứ Tư được ${low.total}/12,5. Nếu muốn, mở lại và viết lại theo bản sửa của Claude.</p><button class="btn small ghost" type="button" data-cd2="2">Mở lại Thứ Tư</button>`:""));
+    html+=c1Block("rev_vocab","Ôn thẻ từ vựng của tuần",15,`<p>Lưu 12 cụm của tuần vào sổ rồi mở tab Sổ thuật ngữ, bấm Ôn thẻ.</p><div class="row"><button class="btn small" type="button" id="c1-savevoc">Lưu và mở sổ</button></div>`);
   }
   box.innerHTML=html; renderC1Timers(); bindAddSel(box);
   $$("[data-read]",box).forEach(b=>b.onclick=()=>c1Read(b));
@@ -2821,15 +2848,17 @@ function renderC1(){
   $$("[data-cd2]",box).forEach(b=>b.onclick=()=>{C1.d=+b.dataset.cd2;renderC1()});
   const dz=$("#c1-dict",box); if(dz) dz.onclick=()=>{location.hash="#dictee"; setTimeout(()=>{$("#d-rate").value="1";$("#d-rate").oninput();randomLesson("dictee")},50)};
   const sv=$("#c1-savevoc",box); if(sv) sv.onclick=async()=>{const have=new Set(allTerms().map(t=>t.fr.toLowerCase())); let n=0; for(const v of W.vocab){ if(have.has(v[0].toLowerCase())) continue; await put({id:uid("tm_"),kind:"term",fr:v[0],vi:v[1],domain:W.dom,note:"DALF C1 · tuần "+W.n,created:Date.now()}); n++ } toast(n?`Đã lưu ${n} cụm`:"Các cụm này đã có trong sổ"); if(d===6) location.hash="#glossaire"};
-  const pe=$("#c1-pe",box); if(pe){ const upd=()=>{const n=wc(pe.value); const syn=W.days[d].pe.k==="syn"; const ok=syn?(n>=200&&n<=240):n>=250; $("#c1-wc").innerHTML=`<span style="color:${n===0?"var(--muted)":ok?"var(--meadow)":"var(--amber)"}">${n} từ</span> ${syn?"(200 đến 240)":"(tối thiểu 250)"}`}; upd(); let t; pe.oninput=()=>{upd();clearTimeout(t);t=setTimeout(()=>c1Save(C1.w,C1.d,{pe:pe.value}),600)} }
+  const pe=$("#c1-pe",box); if(pe){ const upd=()=>{const n=wc(pe.value); const syn=D.pe.k==="syn"; const ok=syn?(n>=200&&n<=240):n>=250; $("#c1-wc").innerHTML=`<span style="color:${n===0?"var(--muted)":ok?"var(--meadow)":"var(--amber)"}">${n} từ</span> ${syn?"(200 đến 240)":"(tối thiểu 250)"}`}; upd(); let t; pe.oninput=()=>{upd();clearTimeout(t);t=setTimeout(()=>c1Save(C1.w,C1.d,{pe:pe.value}),600)} }
   const ps=$("#c1-pe-src",box); if(ps){ let t; ps.oninput=()=>{clearTimeout(t);t=setTimeout(()=>c1Save(C1.w,C1.d,{srcs:ps.value}),600)} }
   const po=$("#c1-po",box); if(po){ let t; po.oninput=()=>{clearTimeout(t);t=setTimeout(()=>c1Save(C1.w,C1.d,{po:po.value}),600)} }
   const nt=$("#c1-notes",box); if(nt){ let t; nt.oninput=()=>{clearTimeout(t);t=setTimeout(()=>c1Save(C1.w,C1.d,{notes:nt.value}),600)} }
-  const ga=$("#c1-gex",box); if(ga) ga.onclick=()=>c1Gram(W.days[d]);
-  const pa=$("#c1-pe-ai",box); if(pa) pa.onclick=()=>c1GradePE(W.days[d]);
+  const dx=$("#c1-dx",box); if(dx) dx.onclick=()=>{location.hash="#phrases"; setTimeout(()=>$('[data-pk="c1"]').click(),50)};
+  const dxm=$("#c1-dxm",box); if(dxm) dxm.onclick=e=>{e.preventDefault(); location.hash="#methode"; setTimeout(()=>{const t=document.getElementById("fst-conn2"); if(t) t.scrollIntoView()},80)};
+  const ga=$("#c1-gex",box); if(ga) ga.onclick=()=>c1Gram(D);
+  const pa=$("#c1-pe-ai",box); if(pa) pa.onclick=()=>c1GradePE(D);
   const ca=$("#c1-ce-ai",box); if(ca) ca.onclick=()=>c1GradeCE();
-  const oa=$("#c1-po-ai",box); if(oa) oa.onclick=()=>c1PlanPO(W.days[d]);
-  const db=$("#c1-deb",box); if(db) db.onclick=()=>{C1.chat=[]; c1Debate(W.days[d],null)};
+  const oa=$("#c1-po-ai",box); if(oa) oa.onclick=()=>c1PlanPO(D);
+  const db=$("#c1-deb",box); if(db) db.onclick=()=>{C1.chat=[]; c1Debate(D,null)};
 }
 function c1EvalHTML(e,syn){
   const labels=syn?{consigne:"Respect de la consigne",analyse:"Analyse et synthèse",coherence:"Cohérence et cohésion",lexique:"Lexique",morpho:"Morphosyntaxe"}:{tache:"Réalisation de la tâche",coherence:"Cohérence et cohésion",socio:"Adéquation sociolinguistique",lexique:"Lexique",morpho:"Morphosyntaxe"};
