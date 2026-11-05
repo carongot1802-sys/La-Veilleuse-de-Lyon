@@ -273,6 +273,84 @@ audio{width:100%;height:38px}
 @media (max-width:860px){.bk{grid-template-columns:minmax(0,1fr)}.bk-toc{position:static;flex-direction:row;flex-wrap:wrap;max-height:none}.bk-toc a{border:1px solid var(--line);border-radius:999px;padding:4px 10px}.bk-toc a small{display:none}}
 
 /* C1 */
+/* EXAM MODE */
+.c1exam{display:none}
+.has-mcp .c1exam{display:inline-flex}
+html.x-open{overflow:hidden}
+.exam{position:fixed;inset:0;z-index:80;background:var(--sky);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px)}
+.xbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 16px;border-bottom:1px solid var(--line);background:var(--panel)}
+.xbar-t{display:flex;flex-direction:column;min-width:0}
+.xbar-t b{font-family:var(--f-display);font-weight:500;font-size:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.xbar-r{display:flex;gap:8px;flex-shrink:0}
+.xtabs{display:none;gap:6px;padding:8px 16px;border-bottom:1px solid var(--line)}
+.xtabs button{flex:1;border:1px solid var(--line);background:transparent;color:var(--ink-2);border-radius:999px;padding:7px;font:inherit;font-size:14px}
+.xtabs button[aria-pressed="true"]{background:var(--lamp);color:#1b1a14;border-color:var(--lamp)}
+.xbody{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
+.xpaper-wrap,.xsheet{overflow:auto;-webkit-overflow-scrolling:touch}
+.xpaper-wrap{padding:28px clamp(12px,3vw,40px);background:radial-gradient(ellipse at top,rgba(255,220,150,.06),transparent 60%)}
+.xpaper{--pp:#f7f2e6;--pi:#22201b;--pm:#6b6457;max-width:720px;margin:0 auto;background:var(--pp);color:var(--pi);border-radius:4px;padding:clamp(22px,4vw,48px);box-shadow:0 18px 50px rgba(0,0,0,.45),0 0 0 1px rgba(0,0,0,.08);font-family:Georgia,"Iowan Old Style","Times New Roman",serif;font-size:17px;line-height:1.72;hyphens:auto}
+.xpaper .kicker{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9a3b2f;border-bottom:2px solid var(--pi);padding-bottom:8px;margin:0 0 14px}
+.xpaper .kicker:not(:first-child){margin-top:34px}
+.xpaper h1{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,3.4vw,36px);line-height:1.15;margin:0 0 14px;color:var(--pi);text-wrap:balance}
+.xpaper h2{font-family:var(--f-display);font-weight:700;font-size:21px;margin:26px 0 8px;color:var(--pi)}
+.xpaper p{margin:0 0 14px;text-align:justify}
+.xpaper p.chapo{font-weight:700;font-size:18px;line-height:1.55;text-align:left;border-bottom:1px solid #d8cfbb;padding-bottom:16px}
+.xpaper h1 + p.chapo + p::first-letter{font-family:var(--f-display);font-size:3.3em;float:left;line-height:.85;padding:6px 8px 0 0;color:#9a3b2f}
+.xpaper ul{margin:0 0 14px;padding-left:20px}
+.xpaper .src{font-family:var(--f-mono);font-size:11px;color:var(--pm);text-align:right;margin-top:20px;border-top:1px solid #d8cfbb;padding-top:8px}
+.xpaper .mini{color:var(--pm)}
+.xpaper .btn{margin:6px 0;text-decoration:none}
+.xsteps{margin:16px 0;padding-left:22px;font-size:16px}
+.xsteps li{margin-bottom:6px}
+.xscript{margin-top:22px;border-top:1px solid #d8cfbb;padding-top:12px}
+.xscript summary{cursor:pointer;font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#9a3b2f}
+.xscript h1{font-size:22px}
+.xsheet{background:#fbfaf6;color:#1f1d1a;padding:0 0 30px;border-left:1px solid var(--line)}
+.xsheet .loading,.xsheet .warn{color:#5c564b}
+.xsheet-h{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 20px;background:#1f2a44;color:#f4efe2}
+.xsheet-h div:first-child{display:flex;flex-direction:column}
+.xsheet-h b{font-family:var(--f-display);font-size:19px;font-weight:500}
+.xsheet-h span{font-size:12px;opacity:.75}
+.xtot{font-family:var(--f-mono);font-size:14px;white-space:nowrap}
+.xtot b{font-size:22px;color:#ffd77a}
+.xq{padding:16px 20px;border-bottom:1px dashed #d9d3c4}
+.xq-h{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:start}
+.xq-h p{margin:0;font-size:15.5px;line-height:1.5;font-weight:600}
+.xn{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#1f2a44;color:#fff;font-family:var(--f-mono);font-size:12px}
+.xp{font-family:var(--f-mono);font-size:11.5px;color:#6b6457;border:1px solid #d9d3c4;border-radius:999px;padding:2px 8px;white-space:nowrap}
+.xp b{color:#1f2a44}
+.xopts{display:grid;gap:6px;margin:10px 0 0 36px}
+.xopts.row2{grid-template-columns:repeat(2,max-content);gap:10px}
+.xbox{display:flex;align-items:flex-start;gap:10px;text-align:left;background:#fff;border:1px solid #d9d3c4;border-radius:8px;padding:9px 12px;font:inherit;font-size:15px;line-height:1.45;color:#1f1d1a;cursor:pointer}
+.xbox:hover{border-color:#1f2a44}
+.xbox .sq{flex:none;width:18px;height:18px;margin-top:2px;border:2px solid #1f2a44;border-radius:3px;position:relative;background:#fff}
+.xbox.on{background:#eef1f8;border-color:#1f2a44}
+.xbox.on .sq{background:#1f2a44}
+.xbox.on .sq::after{content:"";position:absolute;left:4px;top:0;width:5px;height:10px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+.xjust{display:flex;align-items:baseline;gap:6px;margin:10px 0 0 36px;font-size:14.5px;color:#4a453c;font-style:italic}
+.xjust input{flex:1;min-width:0;border:0;border-bottom:1.5px dotted #8a8273;background:transparent;font:inherit;font-style:normal;color:#1f1d1a;padding:3px 2px}
+.xjust input:focus,.xlines:focus{outline:none;border-color:#1f2a44}
+.xlines{display:block;width:calc(100% - 36px);margin:10px 0 0 36px;border:0;resize:vertical;background:transparent repeating-linear-gradient(transparent 0 29px,#b9b09d 29px 30px);line-height:30px;font:inherit;font-size:15.5px;line-height:30px;color:#1f2a44;padding:0 2px;font-family:Georgia,serif}
+.xq.ok{background:#eef6ec}.xq.half{background:#fbf4e2}.xq.no{background:#fbecea}
+.xq.ok .xn{background:#3d7a4a}.xq.half .xn{background:#b07d1f}.xq.no .xn{background:#a84236}
+.xfb{display:grid;gap:4px;margin:10px 0 0 36px;font-size:14px;color:#4a453c}
+.xmodel{font-family:Georgia,serif;color:#1f2a44;border-left:3px solid #1f2a44;padding-left:10px}
+.xfoot{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:18px 20px}
+.xfoot .mini{color:#4a453c}
+@media (max-width:860px){
+  .xtabs{display:flex}
+  .xbody{grid-template-columns:1fr}
+  .exam[data-tab="paper"] .xsheet{display:none}
+  .exam[data-tab="sheet"] .xpaper-wrap{display:none}
+  .xsheet{border-left:0}
+  .xpaper-wrap{padding:14px 10px}
+  .xpaper{font-size:16.5px}
+  .xpaper p{text-align:left;hyphens:manual}
+  .xopts,.xjust,.xfb{margin-left:0}
+  .xlines{margin-left:0;width:100%}
+  .xbar-t b{font-size:15px}
+}
+
 .c1read{display:none;margin-left:6px;vertical-align:middle}
 .has-mcp .c1read{display:inline-flex}
 .c1doc{margin-top:8px;border:1px solid var(--line);border-radius:10px;background:var(--sky);display:flex;flex-direction:column}
@@ -2784,19 +2862,19 @@ function renderC1(){
   if(d===0){
     html+=warm();
     html+=c1Block("co","Compréhension de l'oral",40,
-      `<p>Nguồn hôm nay: ${srcLink(D.co)}. Làm đủ năm bước: đọc câu hỏi, nghe toàn bài, nghe chi tiết, nghe kèm transcription, ghi từ mới.</p>
+      `<div class="row"><button type="button" class="btn small c1exam" data-exam="co" data-et="${esc(D.co)}">Làm bài dạng đề thi</button></div><p>Nguồn hôm nay: ${srcLink(D.co)}. Làm đủ năm bước: đọc câu hỏi, nghe toàn bài, nghe chi tiết, nghe kèm transcription, ghi từ mới.</p>
        <div class="row"><label class="field c1score">Điểm tự chấm<input type="number" min="0" max="25" step="0.5" data-sc="co" value="${r.scores.co??""}"></label><span class="mini">/ 25</span></div>
-       ${extra(others().map(o=>`<li>${srcLink(o.x.co)}</li>`))}`);
+       ${extra(others().map(o=>`<li>${srcLink(o.x.co)} <button type="button" class="btn small c1exam" data-exam="co" data-et="${esc(o.x.co)}">Làm bài dạng đề thi</button></li>`))}`);
     html+=mem();
   } else if(d===1){
     html+=warm();
     html+=c1Block("ce","Compréhension des écrits",45,
-      `<p>Nguồn hôm nay: ${srcLink(D.ce)}. Đọc lướt, xác định chức năng và kiểu cấu trúc văn bản, trả lời theo thứ tự, trích dẫn ngắn cho câu Vrai/Faux.</p>
+      `<div class="row"><button type="button" class="btn small c1exam" data-exam="ce" data-et="${esc(D.ce)}">Làm bài dạng đề thi</button></div><p>Nguồn hôm nay: ${srcLink(D.ce)}. Đọc lướt, xác định chức năng và kiểu cấu trúc văn bản, trả lời theo thứ tự, trích dẫn ngắn cho câu Vrai/Faux.</p>
        <details><summary>Nhờ Claude chấm phần trả lời tự luận</summary>
        <label class="field">Dán câu hỏi, đoạn văn liên quan và câu trả lời của bà<textarea id="c1-ce-in" rows="6"></textarea></label>
        <div class="row"><button class="btn small" type="button" id="c1-ce-ai">Chấm</button></div><div id="c1-ce-out"></div></details>
        <div class="row"><label class="field c1score">Điểm tự chấm<input type="number" min="0" max="25" step="0.5" data-sc="ce" value="${r.scores.ce??""}"></label><span class="mini">/ 25</span></div>
-       ${extra(others().map(o=>`<li>${srcLink(o.x.ce)}</li>`))}`);
+       ${extra(others().map(o=>`<li>${srcLink(o.x.ce)} <button type="button" class="btn small c1exam" data-exam="ce" data-et="${esc(o.x.ce)}">Làm bài dạng đề thi</button></li>`))}`);
     html+=mem();
   } else if(d===2){
     const syn=D.pe.k==="syn";
@@ -2842,6 +2920,7 @@ function renderC1(){
   }
   box.innerHTML=html; renderC1Timers(); bindAddSel(box);
   $$("[data-read]",box).forEach(b=>b.onclick=()=>c1Read(b));
+  $$("[data-exam]",box).forEach(b=>b.onclick=()=>exOpen(b.dataset.et,b.dataset.exam,{w:C1.w,d:C1.d}));
   $$("[data-tm]",box).forEach(b=>b.onclick=()=>c1Timer(b.dataset.tm,+b.dataset.min));
   $$("[data-done]",box).forEach(c=>c.onchange=()=>{c1Save(C1.w,C1.d,{done:{[c.dataset.done]:c.checked}}); c.closest(".c1b").classList.toggle("is-done",c.checked); c1Nav(); if(c.checked&&c1DayDone(C1.w,C1.d)>=1) toast("Xong ngày hôm nay")});
   $$("[data-sc]",box).forEach(i=>i.onchange=()=>c1Save(C1.w,C1.d,{scores:{[i.dataset.sc]:i.value===""?"":Math.max(0,Math.min(25,+i.value))}}));
@@ -2936,6 +3015,180 @@ function initC1(){
   [C1.w,C1.d]=saved||c1FirstOpen();
   $("#c1-today").onclick=()=>{[C1.w,C1.d]=c1FirstOpen();renderC1()};
   renderC1();
+}
+
+/* ---------- EXAM MODE: bài đọc dạng trang báo + phiếu trả lời ---------- */
+const EX = { cur:null, ans:{}, res:null, tab:"paper" };
+const exSlug = t => "x"+[...String(t)].reduce((h,c)=>(h*31+c.charCodeAt(0))>>>0,7).toString(36);
+async function exSearch(q,size=10){
+  const r=await C1MCP.callTool("Google Drive","search_files",{query:q,pageSize:size,excludeContentSnippets:true},{cache:{staleTime:864e5,gcTime:6048e5}});
+  return (r.payload&&r.payload.files)||[];
+}
+async function exRead(id){
+  const r=await C1MCP.callTool("Google Drive","read_file_content",{fileId:id},{cache:{staleTime:864e5,gcTime:6048e5}});
+  const p=r.payload; return String((typeof p==="string"?p:(p&&(p.fileContent||p.content)))||"");
+}
+const exIsAudio = f => /audio|video/.test(f.mimeType||"");
+const exIsFolder = f => /folder/.test(f.mimeType||"");
+async function exLoad(title, kind){
+  if(!C1MCP) throw {code:"not_granted"};
+  const q="title contains '"+title.replace(/\\/g,"\\\\").replace(/'/g,"\\'")+"' and trashed = false";
+  let files=await exSearch(q);
+  if(!files.length) throw {code:"not_found"};
+  const low=title.toLowerCase();
+  const rank=f=>((f.title||"").toLowerCase().startsWith(low)?2:0)+(exIsFolder(f)&&kind==="co"?3:0);
+  files.sort((a,b)=>rank(b)-rank(a));
+  let docs=files.filter(f=>!exIsFolder(f)&&!exIsAudio(f)), audio=files.filter(exIsAudio);
+  const folder=kind==="co"?files.find(exIsFolder):null;
+  if(folder){ const ch=await exSearch("parentId = '"+folder.id+"' and trashed = false",30); docs=ch.filter(f=>!exIsFolder(f)&&!exIsAudio(f)); audio=ch.filter(exIsAudio).concat(audio) }
+  audio.sort((a,b)=>(/mpeg|mp3/.test(b.mimeType)?1:0)-(/mpeg|mp3/.test(a.mimeType)?1:0));
+  const isScript=f=>/script|transcri/i.test(f.title||"");
+  const qdoc=kind==="co"?docs.find(f=>!isScript(f)):docs[0];
+  const sdoc=kind==="co"?docs.find(isScript):null;
+  if(!qdoc&&!sdoc) throw {code:"not_found"};
+  const text=qdoc?await exRead(qdoc.id):"";
+  const script=sdoc?await exRead(sdoc.id):"";
+  return {kind,title,docTitle:(qdoc||sdoc).title,text,script,audio:audio[0]||null,url:(qdoc||sdoc).viewUrl||""};
+}
+async function exStructure(d){
+  const key="exq_"+exSlug(d.kind+d.title); const have=store.items.get(key); if(have&&have.qs&&have.qs.length) return have;
+  const s=await getSample(); if(!s) throw {code:"no_ai"};
+  const co=d.kind==="co";
+  const prompt=`Bạn chuẩn bị một bài ${co?"nghe hiểu (compréhension de l'oral)":"đọc hiểu (compréhension des écrits)"} DALF C1 để hiển thị trên web. ${co?"Dưới đây là FILE CÂU HỎI (có thể rỗng) và TRANSCRIPTION của bài nghe.":"Dưới đây là một tài liệu gồm bài báo, có thể kèm câu hỏi phía sau."}
+Nhiệm vụ:
+1. ${co?"Lấy các câu hỏi trong FILE CÂU HỎI.":"Xác định chỗ phần câu hỏi bắt đầu: chép NGUYÊN VĂN khoảng 6 đến 10 từ đầu tiên của phần câu hỏi vào trường \"tach\" (để trống nếu tài liệu không có câu hỏi). Lấy các câu hỏi."} Chép đề nguyên văn tiếng Pháp, đánh số lại liên tục từ 1 vì file gốc hay đánh số sai. Gộp các phương án A), B), C) vào đúng câu của chúng; bỏ các dòng ghi chú cho giáo viên.
+2. Phân loại mỗi câu: "qcm" (chọn một), "multi" (chọn nhiều), "vf" (vrai/faux), "vfj" (vrai/faux có justification), "ouverte" (tự luận).
+3. Nếu đề có điểm thì giữ, nếu không thì chia điểm sao cho tổng là 25 (câu tự luận nhiều điểm hơn).
+4. Nếu KHÔNG có câu hỏi nào, tự soạn 9 đến 11 câu đúng format DALF C1 dựa trên ${co?"transcription":"bài báo"}, theo thứ tự nội dung, trộn đủ loại, tổng 25 điểm, và đặt "tu_soan": true.
+Trả về JSON: {"tach":"","tieu_de":"tiêu đề bài","cau_hoi":[{"so":1,"loai":"qcm","de":"…","lua_chon":["…","…"],"diem":2,"dong":3}],"tu_soan":false}
+"dong" là số dòng kẻ cần cho câu tự luận (2 đến 5). "lua_chon" chỉ có với qcm và multi, không kèm chữ A) B) ở đầu.
+${co?`FILE CÂU HỎI:\n${d.text.slice(0,20000)}\n\nTRANSCRIPTION:\n${d.script.slice(0,25000)}`:`TÀI LIỆU:\n${d.text.slice(0,35000)}`}`;
+  const r=await s.json(prompt,{modelTier:"default"});
+  const qs=(r.cau_hoi||[]).filter(x=>x&&x.de).map((x,i)=>({n:i+1,t:["qcm","multi","vf","vfj","ouverte"].includes(x.loai)?x.loai:"ouverte",q:String(x.de),o:Array.isArray(x.lua_chon)?x.lua_chon.map(String):[],p:+x.diem||2,l:Math.max(2,Math.min(6,+x.dong||3))}));
+  if(!qs.length) throw {code:"no_questions"};
+  const item={id:key,kind:"examq",title:d.title,cut:String(r.tach||""),head:String(r.tieu_de||""),gen:!!r.tu_soan,qs,at:Date.now()};
+  await put(item); return item;
+}
+function exCut(text,cut){
+  const fall=()=>{ const m=text.search(/\n\s*(Questions?\b|QUESTIONS|Compréhension écrite\s*$|Exercices?\s*:?\s*$)/m); return m>200?text.slice(0,m):text };
+  if(!cut) return fall();
+  const w=cut.trim().split(/\s+/).slice(0,6).map(x=>x.replace(/[.*+?^${}()|[\]\\]/g,"\\$&"));
+  const m=new RegExp(w.join("\\s+"),"i").exec(text);
+  return m&&m.index>200?text.slice(0,m.index):fall();
+}
+function exPaperHTML(text){
+  const clean=text.replace(/\[([^\]]+)\]\((https?:[^)]+)\)/g,"$1").replace(/\\([\[\]\-\*_#.!()])/g,"$1");
+  let src=""; const lines=clean.split("\n"); const out=[]; let first=true, list=[];
+  const flush=()=>{ if(list.length){ out.push(`<ul>${list.map(x=>`<li>${x}</li>`).join("")}</ul>`); list=[] } };
+  const inl=t=>esc(t).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>");
+  for(const raw of lines){
+    const l=raw.trim(); if(!l){ flush(); continue }
+    const u=l.match(/^<?(https?:\/\/[^\s>]+)>?$/)||l.match(/^Source\s*:\s*<?(https?:\/\/[^\s>]+)>?/i); if(u){ src=u[1]; continue }
+    if(/^Sommaire$/i.test(l)) { flush(); continue }
+    let m;
+    if((m=l.match(/^#\s+(.+)/))){ flush(); out.push(`<h1>${inl(m[1])}</h1>`); first=false; continue }
+    if((m=l.match(/^#{2,4}\s+(.+)/))){ flush(); out.push(`<h2>${inl(m[1])}</h2>`); continue }
+    if((m=l.match(/^[-*•]\s+(.+)/))){ list.push(inl(m[1])); continue }
+    flush();
+    if(/^Document\s+\d+$/i.test(l)){ out.push(`<div class="kicker">${esc(l)}</div>`); first=true; continue }
+    if(first && l.length<140 && !/[.!?»]$/.test(l)){ out.push(`<h1>${inl(l)}</h1>`); first=false; continue }
+    const ch=out.length&&out[out.length-1].startsWith("<h1"); out.push(`<p${ch?' class="chapo"':""}>${inl(l)}</p>`); first=false;
+  }
+  flush();
+  return out.join("")+(src?`<p class="src">Source : ${esc(src.replace(/^https?:\/\/(www\.)?/,"").split("/")[0])}</p>`:"");
+}
+function exSheetHTML(Q){
+  const A=EX.ans, R=EX.res;
+  const total=Q.qs.reduce((a,q)=>a+q.p,0);
+  const box=(n,i,on,label,multi)=>`<button type="button" class="xbox ${on?"on":""}" data-xq="${n}" data-xi="${i}" data-xm="${multi?1:0}" aria-pressed="${on}"><span class="sq"></span><span>${label}</span></button>`;
+  const res=n=>R&&R.cau?R.cau.find(c=>+c.so===n):null;
+  return `<div class="xsheet-h"><div><b>Questionnaire</b><span>${Q.gen?"Câu hỏi do Claude soạn theo format DALF":"Câu hỏi từ tài liệu của bà"}</span></div><div class="xtot">${R?`<b>${esc(R.tong)}</b>`:"……"} / ${total} points</div></div>
+  ${Q.qs.map(q=>{ const a=A[q.n]; const r=res(q.n);
+    let body="";
+    if(q.t==="qcm"||q.t==="multi") body=`<div class="xopts">${q.o.map((o,i)=>box(q.n,i,q.t==="multi"?(Array.isArray(a)&&a.includes(i)):a===i,esc(o),q.t==="multi")).join("")}</div>`;
+    else if(q.t==="vf"||q.t==="vfj") body=`<div class="xopts row2">${box(q.n,"V",a&&a.v==="V","Vrai")}${box(q.n,"F",a&&a.v==="F","Faux")}</div>${q.t==="vfj"?`<label class="xjust">Justification : « <input type="text" data-xj="${q.n}" value="${esc(a&&a.j||"")}" placeholder="trích ngắn từ ${EX.cur.kind==="co"?"bài nghe":"văn bản"}"> »</label>`:""}`;
+    else body=`<textarea class="xlines" rows="${q.l}" data-xt="${q.n}" spellcheck="true" lang="fr">${esc(typeof a==="string"?a:"")}</textarea>`;
+    return `<section class="xq ${r?(r.diem>=q.p?"ok":r.diem>0?"half":"no"):""}"><div class="xq-h"><span class="xn">${q.n}</span><p>${esc(q.q)}</p><span class="xp">${r?`<b>${esc(r.diem)}</b>/`:""}${q.p} pt${q.p>1?"s":""}</span></div>${body}
+      ${r?`<div class="xfb"><span>${esc(r.nhan_xet||"")}</span>${r.dap_an?`<span class="xmodel">${esc(r.dap_an)}</span>`:""}</div>`:""}</section>`}).join("")}
+  <div class="xfoot"><button class="btn primary" type="button" id="x-submit">${R?"Chấm lại":"Nộp bài cho Claude chấm"}</button><button class="btn ghost small" type="button" id="x-clear">Làm lại từ đầu</button>${R&&R.nhan_xet_chung?`<p class="mini" style="flex-basis:100%;margin:6px 0 0">${esc(R.nhan_xet_chung)}</p>`:""}</div>`;
+}
+function exSave(){ const key="exa_"+exSlug(EX.cur.kind+EX.cur.title); clearTimeout(EX.st); EX.st=setTimeout(()=>put({id:key,kind:"examans",ans:EX.ans,res:EX.res,at:Date.now()}),500) }
+function exBindSheet(Q){
+  const sh=$("#x-sheet");
+  $$("[data-xq]",sh).forEach(b=>b.onclick=()=>{
+    const n=+b.dataset.xq, i=b.dataset.xi;
+    if(i==="V"||i==="F"){ EX.ans[n]={...(EX.ans[n]||{}),v:i} }
+    else if(b.dataset.xm==="1"){ const cur=Array.isArray(EX.ans[n])?EX.ans[n]:[]; const k=+i; EX.ans[n]=cur.includes(k)?cur.filter(x=>x!==k):cur.concat(k) }
+    else EX.ans[n]=+i;
+    exSave(); const y=sh.scrollTop; sh.innerHTML=exSheetHTML(Q); exBindSheet(Q); sh.scrollTop=y;
+  });
+  $$("[data-xj]",sh).forEach(i=>i.oninput=()=>{const n=+i.dataset.xj; EX.ans[n]={...(EX.ans[n]||{}),j:i.value}; exSave()});
+  $$("[data-xt]",sh).forEach(t=>t.oninput=()=>{EX.ans[+t.dataset.xt]=t.value; exSave()});
+  $("#x-submit").onclick=()=>exGrade(Q);
+  $("#x-clear").onclick=()=>{ if(!confirmSoft()) return; EX.ans={}; EX.res=null; exSave(); sh.innerHTML=exSheetHTML(Q); exBindSheet(Q) };
+}
+function confirmSoft(){ const b=$("#x-clear"); if(b.dataset.arm){ return true } b.dataset.arm=1; b.textContent="Bấm lần nữa để xóa hết"; setTimeout(()=>{ if(b.isConnected){ delete b.dataset.arm; b.textContent="Làm lại từ đầu" } },3000); return false }
+async function exGrade(Q){
+  const answered=Q.qs.filter(q=>EX.ans[q.n]!==undefined&&EX.ans[q.n]!=="").length;
+  if(!answered){ toast("Bà trả lời ít nhất một câu đã"); return }
+  const s=await getSample(); const btn=$("#x-submit");
+  const fmt=q=>{ const a=EX.ans[q.n]; if(a===undefined||a==="") return "(bỏ trống)";
+    if(q.t==="qcm") return q.o[a]??"(bỏ trống)"; if(q.t==="multi") return (a||[]).map(i=>q.o[i]).join(" | ")||"(bỏ trống)";
+    if(q.t==="vf"||q.t==="vfj") return (a.v==="V"?"Vrai":a.v==="F"?"Faux":"(chưa chọn)")+(q.t==="vfj"?" ; justification: "+(a.j||"(trống)"):""); return a };
+  const ref=EX.cur.kind==="co"?EX.cur.script:exCut(EX.cur.text,Q.cut);
+  const prompt=`Bạn là giám khảo DALF C1. Chấm bài ${EX.cur.kind==="co"?"nghe hiểu":"đọc hiểu"} của một sinh viên Việt Nam. Dựa vào ${EX.cur.kind==="co"?"transcription":"văn bản"} để xác định đáp án đúng. Câu Vrai/Faux có justification chỉ được trọn điểm khi cả lựa chọn và trích dẫn đều đúng. Câu tự luận chấm theo ý, chấp nhận diễn đạt lại; cho điểm lẻ 0,5. Nhận xét ngắn bằng tiếng Việt, không dùng gạch ngang dài. "dap_an" là đáp án đúng ngắn gọn bằng tiếng Pháp.
+${ref?`${EX.cur.kind==="co"?"TRANSCRIPTION":"VĂN BẢN"}:\n${ref.slice(0,30000)}\n`:""}
+CÂU HỎI VÀ TRẢ LỜI:
+${Q.qs.map(q=>`${q.n}. [${q.t}, ${q.p} điểm] ${q.q}${q.o.length?"\n   Lựa chọn: "+q.o.join(" | "):""}\n   Trả lời: ${fmt(q)}`).join("\n")}
+Trả về JSON: {"cau":[{"so":1,"diem":0,"nhan_xet":"1 câu","dap_an":"…"}],"tong":0,"nhan_xet_chung":"2 câu"}`;
+  if(!s){ const sh=$("#x-sheet"); const div=document.createElement("div"); sh.appendChild(div); noAI(div,prompt); return }
+  btn.disabled=true; btn.innerHTML=`<span class="loading">Claude đang chấm…</span>`;
+  try{
+    const r=await s.json(prompt,{modelTier:"default"});
+    r.tong=Math.round((+r.tong||(r.cau||[]).reduce((a,c)=>a+(+c.diem||0),0))*2)/2;
+    EX.res=r; exSave();
+    if(EX.from) { c1Save(EX.from.w,EX.from.d,{scores:{[EX.cur.kind]:Math.min(25,r.tong)}}); }
+    const sh=$("#x-sheet"); sh.innerHTML=exSheetHTML(Q); exBindSheet(Q); sh.scrollTop=0;
+    toast(`Được ${r.tong} điểm`);
+  }catch(e){ btn.disabled=false; btn.textContent="Nộp bài cho Claude chấm"; toast("Chưa chấm được ("+(e&&e.code||"lỗi")+")") }
+}
+function exClose(){ const o=$("#exam"); if(o) o.remove(); document.documentElement.classList.remove("x-open"); if(C1.tKey==="exam"){clearInterval(C1.timer);C1.tKey=""} if(EX.from) renderC1() }
+async function exOpen(title, kind, from){
+  EX.from=from||null; EX.res=null; EX.ans={}; EX.tab="paper";
+  let o=$("#exam"); if(o) o.remove();
+  o=document.createElement("div"); o.id="exam"; o.className="exam"; o.setAttribute("role","dialog"); o.setAttribute("aria-modal","true");
+  const mins=kind==="co"?40:50;
+  o.innerHTML=`<header class="xbar"><div class="xbar-t"><span class="eyebrow">DALF C1 · ${kind==="co"?"Compréhension de l'oral":"Compréhension des écrits"}</span><b>${esc(title)}</b></div>
+    <div class="xbar-r"><button type="button" class="btn small ghost" data-tm="exam" data-min="${mins}">Bấm giờ ${mins}'</button><button type="button" class="btn small" id="x-close">Đóng</button></div></header>
+    <div class="xtabs"><button type="button" data-xtab="paper" aria-pressed="true">${kind==="co"?"Bài nghe":"Bài đọc"}</button><button type="button" data-xtab="sheet" aria-pressed="false">Phiếu trả lời</button></div>
+    <div class="xbody"><div class="xpaper-wrap" id="x-paper"><div class="loading" style="padding:30px">Đang mở tài liệu từ Drive…</div></div><div class="xsheet" id="x-sheet"></div></div>`;
+  document.body.appendChild(o); document.documentElement.classList.add("x-open");
+  $("#x-close").onclick=exClose;
+  o.addEventListener("keydown",e=>{ if(e.key==="Escape") exClose() });
+  $$("[data-xtab]",o).forEach(b=>b.onclick=()=>{ o.dataset.tab=b.dataset.xtab; setPressed($$("[data-xtab]",o),x=>x===b) });
+  o.dataset.tab="paper";
+  $$("[data-tm]",o).forEach(b=>b.onclick=()=>c1Timer("exam",+b.dataset.min)); renderC1Timers();
+  try{
+    const d=await exLoad(title,kind); EX.cur=d;
+    $("#x-sheet").innerHTML=`<div class="loading" style="padding:24px">${store.items.get("exq_"+exSlug(kind+title))?"Đang mở phiếu trả lời…":"Lần đầu mở bài này, Claude đang dựng phiếu trả lời (khoảng nửa phút, lần sau mở ngay)…"}</div>`;
+    if(kind==="co"){
+      $("#x-paper").innerHTML=`<article class="xpaper xco"><div class="kicker">Document sonore</div><h1>${esc(d.title)}</h1>
+        <p class="chapo">Đọc câu hỏi trước trong phiếu trả lời, rồi nghe. Bài dài ở DALF được nghe hai lần, có khoảng nghỉ giữa hai lần nghe để trả lời.</p>
+        ${d.audio?`<a class="btn primary" href="https://drive.google.com/file/d/${encodeURIComponent(d.audio.id)}/view" target="_blank" rel="noopener">Mở file nghe trong Drive</a><p class="mini">${esc(d.audio.title)}</p>`:`<p class="mini">Không thấy file nghe trong thư mục này. ${srcLink(title,"Tìm trong Drive")}</p>`}
+        <ol class="xsteps"><li>3 phút đọc câu hỏi, gạch chân từ khóa.</li><li>Nghe lần 1, chỉ nắm ý chính, ai nói, quan điểm gì.</li><li>3 phút điền những gì đã chắc.</li><li>Nghe lần 2, bổ sung chi tiết, số liệu.</li><li>Nộp bài, rồi đọc transcription để học từ.</li></ol>
+        ${d.script?`<details class="xscript"><summary>Transcription (mở sau khi nộp bài)</summary><div>${exPaperHTML(d.script)}</div></details>`:""}</article>`;
+    } else {
+      $("#x-paper").innerHTML=`<article class="xpaper"><div class="kicker">Document · Compréhension des écrits</div><div class="xart"><p class="loading">Đang dàn trang…</p></div></article>`;
+    }
+    const Q=await exStructure(d);
+    if(kind==="ce") $(".xart").innerHTML=exPaperHTML(exCut(d.text,Q.cut));
+    const saved=store.items.get("exa_"+exSlug(kind+title)); if(saved){ EX.ans=saved.ans||{}; EX.res=saved.res||null }
+    $("#x-sheet").innerHTML=exSheetHTML(Q); exBindSheet(Q);
+  }catch(e){
+    const msg=e&&e.code==="not_found"?"Không tìm thấy tài liệu này trong Drive của bà.":e&&e.code==="no_ai"?"Phần dựng phiếu trả lời cần Claude, chỉ chạy trên bản claude.ai.":e&&e.code==="no_questions"?"Claude chưa tách được câu hỏi từ tài liệu này. Bà mở trong Drive giúp tui nhé.":e&&(e.code==="not_in_manifest"||e.code==="consent_required"||e.code==="not_granted")?"Trang chưa được phép đọc Drive. Bấm lại để claude.ai hỏi quyền.":e&&e.code==="server_not_connected"?"Google Drive chưa được kết nối trong claude.ai.":"Chưa mở được ("+esc(e&&e.code||"lỗi")+").";
+    $("#x-sheet").innerHTML=`<p class="warn" style="margin:20px">${msg}</p>`;
+    if(!$(".xpaper")) $("#x-paper").innerHTML=`<p class="warn" style="margin:20px">${msg}</p>`;
+  }
 }
 
 /* ---------- PHRASES (drills) ---------- */
