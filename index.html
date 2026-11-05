@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>La Veilleuse de Lyon</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Be+Vietnam+Pro:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Be+Vietnam+Pro:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap">
 <style>
 /* Layout: a night panorama of Lyon over a meadow opens the page; below it, a sticky tab bar and one working desk per tab (listen | write, source | translate). Single dark world by choice. */
 :root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
@@ -274,6 +274,12 @@ audio{width:100%;height:38px}
 
 /* C1 */
 /* C1 v2 */
+.xpaper .c1doc{background:#fff;border-color:#d9d3c4;color:#1f1d1a}
+.xpaper .c1doc .c1doct{font-size:15.5px}
+.xpaper .c1doc .c1doct .c1h{color:#9a3b2f}
+.xpaper .warn{background:#fbecea;color:#8a2f25;border-color:#e6c4bf}
+.xpaper a.drv{color:#1f4f8a}
+.xpaper .c1read{color:#1f2a44;border-color:#1f2a44}
 .c1grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:6px}
 .c1card{display:flex;flex-direction:column;gap:8px;text-decoration:none;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 14px 12px;border-top:4px solid var(--skc,var(--line));transition:transform .15s,border-color .15s}
 .c1card:hover{transform:translateY(-2px);border-color:var(--skc,var(--lamp))}
@@ -339,7 +345,7 @@ html.x-open{overflow:hidden}
 .xbody{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
 .xpaper-wrap,.xsheet{overflow:auto;-webkit-overflow-scrolling:touch}
 .xpaper-wrap{padding:28px clamp(12px,3vw,40px);background:radial-gradient(ellipse at top,rgba(255,220,150,.06),transparent 60%)}
-.xpaper{--pp:#f7f2e6;--pi:#22201b;--pm:#6b6457;max-width:720px;margin:0 auto;background:var(--pp);color:var(--pi);border-radius:4px;padding:clamp(22px,4vw,48px);box-shadow:0 18px 50px rgba(0,0,0,.45),0 0 0 1px rgba(0,0,0,.08);font-family:Georgia,"Iowan Old Style","Times New Roman",serif;font-size:17px;line-height:1.72;hyphens:auto}
+.xpaper{--pp:#f7f2e6;--pi:#22201b;--pm:#6b6457;max-width:720px;margin:0 auto;background:var(--pp);color:var(--pi);border-radius:4px;padding:clamp(22px,4vw,48px);box-shadow:0 18px 50px rgba(0,0,0,.45),0 0 0 1px rgba(0,0,0,.08);font-family:"Noto Serif",Georgia,serif;font-size:17px;line-height:1.72;hyphens:auto}
 .xpaper .kicker{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9a3b2f;border-bottom:2px solid var(--pi);padding-bottom:8px;margin:0 0 14px}
 .xpaper .kicker:not(:first-child){margin-top:34px}
 .xpaper h1{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,3.4vw,36px);line-height:1.15;margin:0 0 14px;color:var(--pi);text-wrap:balance}
@@ -381,11 +387,11 @@ html.x-open{overflow:hidden}
 .xjust{display:flex;align-items:baseline;gap:6px;margin:10px 0 0 36px;font-size:14.5px;color:#4a453c;font-style:italic}
 .xjust input{flex:1;min-width:0;border:0;border-bottom:1.5px dotted #8a8273;background:transparent;font:inherit;font-style:normal;color:#1f1d1a;padding:3px 2px}
 .xjust input:focus,.xlines:focus{outline:none;border-color:#1f2a44}
-.xlines{display:block;width:calc(100% - 36px);margin:10px 0 0 36px;border:0;resize:vertical;background:transparent repeating-linear-gradient(transparent 0 29px,#b9b09d 29px 30px);line-height:30px;font:inherit;font-size:15.5px;line-height:30px;color:#1f2a44;padding:0 2px;font-family:Georgia,serif}
+.xlines{display:block;width:calc(100% - 36px);margin:10px 0 0 36px;border:0;resize:vertical;background:transparent repeating-linear-gradient(transparent 0 29px,#b9b09d 29px 30px);line-height:30px;font:inherit;font-size:15.5px;line-height:30px;color:#1f2a44;padding:0 2px;font-family:"Noto Serif",Georgia,serif}
 .xq.ok{background:#eef6ec}.xq.half{background:#fbf4e2}.xq.no{background:#fbecea}
 .xq.ok .xn{background:#3d7a4a}.xq.half .xn{background:#b07d1f}.xq.no .xn{background:#a84236}
 .xfb{display:grid;gap:4px;margin:10px 0 0 36px;font-size:14px;color:#4a453c}
-.xmodel{font-family:Georgia,serif;color:#1f2a44;border-left:3px solid #1f2a44;padding-left:10px}
+.xmodel{font-family:"Noto Serif",Georgia,serif;color:#1f2a44;border-left:3px solid #1f2a44;padding-left:10px}
 .xfoot{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:18px 20px}
 .xfoot .mini{color:#4a453c}
 @media (max-width:860px){
@@ -2759,7 +2765,7 @@ const C1_WEEKS = [
  {n:7, theme:"Révision croisée I", dom:"politique",
   vocab:[["d'ores et déjà","ngay từ bây giờ"],["force est de constater que","phải thừa nhận rằng"],["il n'en demeure pas moins que","dù vậy vẫn phải nói rằng"],["à plus forte raison","càng có lý do hơn"],["sous prétexte que","với cớ là"],["quand bien même","dù cho (+ conditionnel)"],["en l'occurrence","trong trường hợp này"],["somme toute","xét cho cùng"],["prendre du recul","nhìn nhận khách quan"],["une piste de réflexion","hướng suy nghĩ"],["mettre l'accent sur","nhấn mạnh"],["à l'aune de","dưới góc nhìn"]],
   days:[
-   {ce:"Frenchpill C1 (CE) - Manuel", co:"Frenchpill C1 CO - Manuel", g:"conn", pe:{k:"syn", src:"Les mots pour convaincre", t:"Synthèse bấm giờ 1h30 trên một dossier bà chưa làm trong sách Objectif DALF C1."}, po:{t:"Exposé bấm giờ 1h préparation: sujet tiré au sort dans Production orale DALF C1 (Wattier)."}},
+   {ce:"Frenchpill C1 (CE) - Manuel", co:"Frenchpill C1 CO - Manuel", g:"conn", pe:{k:"syn", src:"MPC", t:"Synthèse bấm giờ 1h30 trên một dossier bà chưa làm trong sách Objectif DALF C1."}, po:{t:"Exposé bấm giờ 1h préparation: sujet tiré au sort dans Production orale DALF C1 (Wattier)."}},
    {ce:"100 - Textes authentiques - DALF C1", co:"REUSSIR LE NOUVEAU DALF C1 EDITIONS TEGOS", g:"subj", pe:{k:"ess", t:"Essai bấm giờ 1h: chủ đề tự chọn trong Production écrite DALF C1 (Wattier)."}, po:{t:"Débat: rejouer le sujet d'exposé raté nhất trong tuần trước."}},
    {ce:"Frenchpill C1 (CE) - Manuel", co:"Frenchpill C1 CO - Manuel", g:"hyp", pe:{k:"syn", t:"Viết lại bài synthèse điểm thấp nhất từ đầu lộ trình, so sánh với bản cũ."}, po:{t:"Exposé: sujet de Préparer le DALF C1 et C2 (Debeuckelaere)."}},
    {ce:"100 - Textes authentiques - DALF C1", co:"REUSSIR LE NOUVEAU DALF C1 EDITIONS TEGOS", g:"relief", pe:{k:"ess", t:"Viết lại bài essai điểm thấp nhất, áp dụng các lỗi Claude đã chỉ."}, po:{t:"Débat libre với Claude, 15 phút."}},
@@ -2776,8 +2782,10 @@ const C1_WEEKS = [
   ], sat:"Examen blanc final: sujet complet bấm giờ đúng như ngày thi"}
 ];
 
+const C1_BOOKSRC = {GPF:["grammaire-progressive-du-franais-niveau-perfectionnement","Grammaire progressive du français, niveau perfectionnement"], MPC:["Les mots pour convaincre","Les mots pour convaincre"]};
+const c1BookLink = k => { const b=C1_BOOKSRC[C1_BOOKS[k]]; return b?`<a class="drv" href="${driveLink(b[0])}" target="_blank" rel="noopener">${esc(b[1])}</a>`:"" };
 const C1_BOOKS = {
- conn:"Grammaire progressive du français, niveau perfectionnement", nomi:"Grammaire progressive du français, niveau perfectionnement", rel:"Grammaire progressive du français, niveau perfectionnement", subj:"Grammaire progressive du français, niveau perfectionnement", conc:"Grammaire progressive du français, niveau perfectionnement", relief:"Grammaire progressive du français, niveau perfectionnement", pass:"Grammaire progressive du français, niveau perfectionnement", hyp:"Grammaire progressive du français, niveau perfectionnement", modal:"Les mots pour convaincre", part:"Grammaire progressive du français, niveau perfectionnement", ppa:"Grammaire progressive du français, niveau perfectionnement", reg:"Vocabulaire progressif du français, niveau perfectionnement", fig:"Les mots pour convaincre", neg:"Grammaire progressive du français, niveau perfectionnement"
+ conn:"GPF", nomi:"GPF", rel:"GPF", subj:"GPF", conc:"GPF", relief:"GPF", pass:"GPF", hyp:"GPF", modal:"MPC", part:"GPF", ppa:"GPF", reg:null, fig:"MPC", neg:"GPF"
 };
 
 const C1_SAT = {EXAM1:"EXAM1", EXAM2:"EXAM2", EXAM3:"EXAM3"};
@@ -3207,7 +3215,7 @@ function renderC1Lesson(S){
         <div class="row"><button class="btn small" type="button" id="c1-po-ai">Claude nhận xét dàn ý</button><button class="btn small primary" type="button" id="c1-deb">Bắt đầu trao đổi với giám khảo</button></div>
         <div id="c1-po-out"></div><div id="c1-chat"></div></section>`;
   } else if(S.sk==="gram"){
-    inner=paper("Grammaire · Niveau C1",esc(S.title),`<p>${esc(C1_GRAM[S.key])}</p><p class="mini">Lý thuyết: ${srcLink(C1_BOOKS[S.key])}</p>`)+
+    inner=paper("Grammaire · Niveau C1",esc(S.title),`<p>${esc(C1_GRAM[S.key])}</p>${c1BookLink(S.key)?`<p class="mini">Lý thuyết: ${c1BookLink(S.key)} (mở bản PDF trong Drive, tìm chương theo tên điểm ngữ pháp)</p>`:`<p class="mini">Điểm này không có trong sách của bà. Claude sẽ giải thích ngắn kèm bài luyện bên dưới.</p>`}`)+
       `<section class="c1write"><div class="row"><button class="btn primary" type="button" id="c1-gex">Claude ra 8 câu luyện</button><button class="btn small ghost" type="button" id="c1-dx">10 câu Diễn đạt C1</button></div><div id="c1-gout"></div></section>`;
   } else if(S.sk==="mock"){
     const ex=C1_SAT[S.ex]; const k=S.part;
