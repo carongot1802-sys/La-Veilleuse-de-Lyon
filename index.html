@@ -273,6 +273,20 @@ audio{width:100%;height:38px}
 @media (max-width:860px){.bk{grid-template-columns:minmax(0,1fr)}.bk-toc{position:static;flex-direction:row;flex-wrap:wrap;max-height:none}.bk-toc a{border:1px solid var(--line);border-radius:999px;padding:4px 10px}.bk-toc a small{display:none}}
 
 /* C1 */
+/* KIẾN THỨC */
+.kt-tools{display:grid;gap:10px;margin:0 0 16px}
+.lysec header .pill{justify-self:start}
+.kt-tools .chip .mini{color:var(--muted)}
+.ktpaper h4:first-child{margin-top:0}
+.ktso li{font-variant-numeric:tabular-nums}
+.ktkn{display:grid;grid-template-columns:minmax(0,1fr);gap:2px 0;margin:0 0 6px}
+.ktkn dt{font-family:"Noto Serif","Times New Roman",serif;font-style:italic;font-weight:600;color:#1f2a44;margin-top:8px}
+.ktkn dd{margin:0 0 0 14px;color:#3b362d}
+.ktpaper .ktmini,.ktsrc .mini{color:#6b6457;font-size:13px}
+.ktsrc{background:#efe7d3;border:1px solid #d8cfbb;border-radius:10px;padding:12px 16px;margin-top:22px;font-size:14.5px;line-height:1.6}
+.ktsrc h4{margin:0 0 6px!important;font-size:16px!important}
+.ktsrc p{margin:0 0 6px}
+.ktsrc a{color:#7a2e22}
 /* LÝ THUYẾT + ĐỌC BÁO */
 .lyprog{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:4px 0 18px}
 .lyprog .c1bar{flex:1 1 220px;margin:0}
@@ -572,6 +586,7 @@ b.fix{color:var(--meadow);font-weight:700}
     <a href="#c1" data-tab="c1">Luyện DALF C1<small>C1</small></a>
     <a href="#bao" data-tab="bao">Đọc báo<small>Presse</small></a>
     <a href="#ly" data-tab="ly">Lý thuyết<small>Théorie</small></a>
+    <a href="#kt" data-tab="kt">Kiến thức<small>Savoirs</small></a>
     <a href="#glossaire" data-tab="glossaire">Sổ thuật ngữ<small>Glossaire</small></a>
     <a href="#methode" data-tab="methode">Bí kíp<small>Méthode</small></a>
     <a href="#ajouter" data-tab="ajouter">Thêm bài<small>Ajouter</small></a>
@@ -820,6 +835,13 @@ b.fix{color:var(--meadow);font-weight:700}
     <p>Gom từ ghi chép 26 buổi của cô, Guide Objectif DALF C1, sách Wattier, Les mots pour convaincre, hướng dẫn mở bài, Fiche de lecture và 11 video thầy Vincent. Mỗi bài một trang, cuối bài có câu hỏi kiểm tra, trả lời đúng hết là hoàn thành.</p>
   </div></div></div>
   <div id="ly-body"></div>
+</section>
+<section class="view" id="v-kt" hidden>
+  <div id="kt-top"><div class="view-head"><div>
+    <h2>Kiến thức <em>mọi lĩnh vực</em>, đọc bằng tiếng Việt</h2>
+    <p>Tóm tắt tiếng Việt từ 94 bài báo trong «100 articles de journaux», giáo trình Affaires étrangères, các file khóa dịch, ghi chép ôn văn minh Pháp và tài liệu C1. Chia theo lĩnh vực, mỗi mục một trang, có ý chính, con số, khái niệm tiếng Pháp và nguồn ghi rõ đến số trang.</p>
+  </div></div></div>
+  <div id="kt-body"></div>
 </section>
 <section class="view" id="v-methode" hidden>
   <div class="view-head">
@@ -3695,12 +3717,79 @@ function initMethods(){
   $$("#bk-toc a").forEach(a=>a.onclick=e=>{e.preventDefault();const t=document.getElementById(a.dataset.go);if(t)t.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"})});
 }
 
+
+/* ---------- KIẾN THỨC ---------- */
+const KT = { data:null, err:null, open:null, q:"", cat:"all" };
+const ktGet = id => store.items.get("kt_"+id) || {id:"kt_"+id, kind:"kt", done:false};
+const ktNorm = s => (s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/đ/g,"d").replace(/Đ/g,"D").toLowerCase();
+const KT_COL = {ngoaigiao:"#f3c56b",truyenthong:"#93b8ff",luat:"#c8a8ff",kinhte:"#f2b05a",xahoi:"#f4a9cf",giaoduc:"#7fd3c4",laodong:"#ffa476",giadinh:"#ff9d9d",vanhoa:"#c3a6ff",dulich:"#7fb3ff",moitruong:"#9fcd92",amthuc:"#f2c66d",yte:"#9fd88f",khonggian:"#b4b5d8"};
+async function ktLoad(){
+  if(KT.data||KT.err) return;
+  try{ const r=await fetch("kienthuc.json",{cache:"no-cache"}); if(!r.ok) throw 0; KT.data=await r.json() }catch{ KT.err=true }
+}
+function ktShort(e){
+  const s=e.src;
+  if(s.k==="bao") return s.out||"báo Pháp";
+  if(s.k==="ae") return "Affaires étrangères · "+s.u;
+  return s.f;
+}
+function ktCite(e){
+  const s=e.src;
+  if(s.k==="bao") return `<p><b>Bài gốc:</b> «${esc(s.fr)}», ${esc(s.out||"không ghi nguồn")}${s.by?", "+esc(s.by):""}.</p><p><b>Trích trong:</b> sách «100 articles de journaux», Coin Français (file «100 textes authentiques» bà gửi), tr. ${s.p}.</p>`;
+  if(s.k==="ae") return `<p><b>Sách:</b> «Affaires étrangères. Le français des relations internationales», N. Calvet, B. Couloumies-Friscic, A. Daoulas, H. Nguyen Gateff, CLE International, ${esc(s.u)}, tr. ${s.p.join(", ")}.</p><p><b>Tư liệu gốc sách trích:</b> ${esc(s.orig)}.</p>`;
+  return `<p><b>Tài liệu khóa học:</b> «${esc(s.f)}», ${esc(s.sec)}.</p><p><b>Nguồn gốc:</b> ${esc(s.orig)}.</p>${(s.web||[]).length?`<p><b>Đối chiếu thêm:</b> ${s.web.map(w=>`<a href="${esc(w[1])}" target="_blank" rel="noopener">${esc(w[0])}</a>`).join("; ")}</p>`:""}`;
+}
+function ktMatch(e,q){
+  const hay=ktNorm([e.vi,e.tt,...e.y,...e.so,...e.kn.flat(),ktShort(e),e.src.fr||""].join(" "));
+  return ktNorm(q).split(/\s+/).filter(Boolean).every(w=>hay.includes(w));
+}
+function ktRow(e){
+  const r=ktGet(e.id);
+  return `<li class="${r.done?"done":""}"><a href="#kt/${e.id}"><span class="lyck">${r.done?"✓":""}</span><span class="lyt">${esc(e.vi)}</span><span class="mini">${esc(ktShort(e))}</span></a></li>`;
+}
+async function renderKt(){
+  const box=$("#kt-body"); if(!box) return;
+  await ktLoad();
+  $("#kt-top").hidden = KT.open!==null;
+  if(KT.err||!KT.data){ box.innerHTML=`<p class="warn">Chưa tải được dữ liệu kiến thức. Bà tải lại trang thử nhé.</p>`; return }
+  const {cats,items}=KT.data; const cname=Object.fromEntries(cats.map(c=>[c.id,c]));
+  if(KT.open===null){
+    const done=items.filter(e=>ktGet(e.id).done).length;
+    const next=items.find(e=>!ktGet(e.id).done);
+    const list=items.filter(e=>(KT.cat==="all"||e.c===KT.cat)&&(!KT.q||ktMatch(e,KT.q)));
+    const shown=cats.filter(c=>list.some(e=>e.c===c.id));
+    box.innerHTML=`<div class="lyprog"><div class="c1bar"><i style="width:${Math.round(100*done/items.length)}%"></i></div><span>${done} / ${items.length} mục đã đọc</span>${next?`<a class="btn primary small" href="#kt/${next.id}">Đọc tiếp: ${esc(next.vi)}</a>`:""}<button type="button" class="btn ghost small" id="kt-rand">Một mục bất kỳ</button></div>
+    <div class="kt-tools"><input type="search" id="kt-q" placeholder="Tìm: Hessel, bitcoin, laïcité, hưu trí..." value="${esc(KT.q)}">
+    <div class="chips" id="kt-cats"><button type="button" class="chip" data-kc="all" aria-pressed="${KT.cat==="all"}">Tất cả <span class="mini">${items.length}</span></button>${cats.map(c=>`<button type="button" class="chip" data-kc="${c.id}" aria-pressed="${KT.cat===c.id}"><span class="dot" style="background:${KT_COL[c.id]}"></span>${esc(c.vi)} <span class="mini">${items.filter(e=>e.c===c.id).length}</span></button>`).join("")}</div></div>
+    ${list.length?`<div class="lysecs">${shown.map(c=>{ const L=list.filter(e=>e.c===c.id); const d=L.filter(e=>ktGet(e.id).done).length; return `<section class="lysec" style="--skc:${KT_COL[c.id]}"><header><span class="pill" style="--skc:${KT_COL[c.id]}">${esc(c.fr)}</span><h3>${esc(c.vi)}</h3><span class="mini">${d}/${L.length} mục đã đọc</span></header><ol>${L.map(ktRow).join("")}</ol></section>` }).join("")}</div>`:`<p class="mini">Không có mục nào khớp «${esc(KT.q)}».</p>`}`;
+    const qi=$("#kt-q"); qi.oninput=e=>{ KT.q=e.target.value; const pos=e.target.selectionStart; renderKt().then(()=>{ const n=$("#kt-q"); n.focus(); try{n.setSelectionRange(pos,pos)}catch{} }) };
+    $$("[data-kc]",box).forEach(b=>b.onclick=()=>{ KT.cat=b.dataset.kc; renderKt() });
+    $("#kt-rand").onclick=()=>{ const pool=items.filter(e=>!ktGet(e.id).done); const P=pool.length?pool:items; location.hash="kt/"+P[Math.floor(Math.random()*P.length)].id };
+    return;
+  }
+  const i=items.findIndex(e=>e.id===KT.open); if(i<0){ box.innerHTML=`<p class="warn">Không tìm thấy mục này.</p><p><a href="#kt">← Kiến thức</a></p>`; return }
+  const e=items[i], r=ktGet(e.id), c=cname[e.c];
+  const same=items.filter(x=>x.c===e.c), k=same.indexOf(e), prev=same[k-1], nxt=same[k+1];
+  box.innerHTML=`<nav class="c1crumb"><a href="#kt">← Kiến thức</a><span>${esc(c.vi)} · mục ${k+1}/${same.length}</span></nav>
+  <header class="c1lh" style="--skc:${KT_COL[e.c]}"><div class="c1pills"><span class="pill" style="--skc:${KT_COL[e.c]}">${esc(c.vi)}</span><span class="pill ghost">${esc(ktShort(e))}</span>${r.done?`<span class="pill ghost">✓ đã đọc</span>`:""}</div><h2>${esc(e.vi)}</h2><p class="c1lead">${esc(e.tt)}</p></header>
+  <div class="c1lesson"><article class="lypaper ktpaper">
+    <h4>Ý chính</h4><ul>${e.y.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
+    ${e.so.length?`<h4>Con số đáng nhớ</h4><ul class="ktso">${e.so.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:""}
+    ${e.kn.length?`<h4>Khái niệm tiếng Pháp</h4><dl class="ktkn">${e.kn.map(x=>`<dt lang="fr">${esc(x[0])}</dt><dd>${esc(x[1])}</dd>`).join("")}</dl><p class="mini ktmini">Bôi đen một khái niệm để thêm vào Từ điển.</p>`:""}
+    <section class="ktsrc"><h4>Nguồn</h4>${ktCite(e)}<p class="mini">Phần trên là bản tóm tắt bằng tiếng Việt, không phải bản dịch nguyên văn.</p></section>
+  </article></div>
+  <section class="c1end"><div class="row c1endrow">${prev?`<a class="btn ghost small" href="#kt/${prev.id}">← ${esc(prev.vi)}</a>`:"<span></span>"}<button type="button" class="btn ${r.done?"":"primary"}" id="kt-done">${r.done?"✓ Đã đọc, bấm để bỏ":"Đánh dấu đã đọc"}</button>${nxt?`<a class="btn small" href="#kt/${nxt.id}">${esc(nxt.vi)} →</a>`:"<span></span>"}</div></section>`;
+  $("#kt-done").onclick=()=>{ const cur=ktGet(e.id); put({...cur,done:!cur.done,at:Date.now()}); if(!cur.done&&nxt){ toast("Đã đọc. Sang mục tiếp"); location.hash="kt/"+nxt.id } else renderKt() };
+  bindAddSel(box);
+}
+
 /* ---------- routing ---------- */
-const VIEWS=["dictee","traduction","phrases","c1","bao","ly","glossaire","methode","ajouter"];
+const VIEWS=["dictee","traduction","phrases","c1","bao","ly","kt","glossaire","methode","ajouter"];
 function route(){
   const [h0,h1] = location.hash.slice(1).split("/");
   const v = VIEWS.includes(h0) ? h0 : "dictee";
   if(v==="ly"){ const o=h1?h1:null; LYD.open=o; renderLy(); window.scrollTo(0,0) }
+  if(v==="kt"){ const o=h1?h1:null; const was=KT.open; KT.open=o; renderKt(); if(o!==null||was!==null) window.scrollTo(0,0) }
   if(v==="bao"){ const o=h1!==undefined&&h1!==""?h1:null; BAO.open=o; renderBao(); window.scrollTo(0,0) }
   if(v==="c1"){ const o=h1===undefined||h1===""?null:h1; if(o!==C1.open||o===null){ C1.open=o; renderC1(); if(o!==null) window.scrollTo(0,0) } }
   VIEWS.forEach(x=>$("#v-"+x).hidden = x!==v);
@@ -3715,6 +3804,7 @@ BASE_TERMS.push(...FST_TERMS);
 C1_WEEKS.forEach(W=>W.vocab.forEach((v,i)=>BASE_TERMS.push({id:"c1w"+W.n+"_"+i,kind:"term",fr:v[0],vi:v[1],domain:W.dom,note:"DALF C1 · tuần "+W.n+" · "+W.theme,base:true,course:true,book:"c1"})));
 initDictee(); initTrad(); initGloss(); initAdd(); initPhrases(); initMethods(); initC1();
 store.listeners.push(()=>{ renderStats(); renderDRail(); renderTRail(); renderGloss(); renderAdd(); });
+store.listeners.push(()=>{ const v=$("#v-kt"); if(v&&!v.hidden&&KT.data&&document.activeElement?.id!=="kt-q") renderKt() });
 let drillsSeeded=false; store.listeners.push(()=>{ if(!drillsSeeded && store.mode==="db"){ drillsSeeded=true; buildOrder(); renderDrill(); renderC1(); } });
 route();
 $("#d-input").value = lsGet("veilleuse.ddraft."+D.lessonId,"");
