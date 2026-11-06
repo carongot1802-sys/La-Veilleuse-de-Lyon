@@ -264,6 +264,8 @@ audio{width:100%;height:38px}
 .bk-toc a:hover{color:var(--ink);border-color:var(--lamp)}
 .bk-toc a small{display:block;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .bk-body{display:flex;flex-direction:column;min-width:0}
+.method.bkone{max-width:760px;margin:0 auto;border-top:0;padding-top:0}
+.method.bkone p{max-width:none}
 .method{padding:22px 0;border-top:1px solid var(--line);scroll-margin-top:70px}
 .method:first-child{border-top:0;padding-top:0}
 .method h3{font-family:var(--f-display);font-weight:500;font-size:clamp(20px,2.4vw,25px);line-height:1.25;margin:4px 0 10px;text-wrap:balance}
@@ -851,16 +853,13 @@ b.fix{color:var(--meadow);font-weight:700}
   <div id="kt-body"></div>
 </section>
 <section class="view" id="v-methode" hidden>
-  <div class="view-head">
+  <div id="bk-top"><div class="view-head">
     <div>
       <h2>Bí kíp <em>dịch</em> rút từ giáo trình</h2>
-      <p>Phương pháp, khung câu và bẫy từ gom từ các học phần dịch xuôi, dịch ngược và văn minh Pháp. Nên đọc trước khi luyện câu, rồi quay lại tra khi Claude chỉ ra lỗi.</p>
+      <p>Phương pháp, khung câu và bẫy từ gom từ các học phần dịch xuôi, dịch ngược, văn minh Pháp, sách Affaires étrangères và DALF C1. Mỗi mục một trang riêng. Nên đọc trước khi luyện câu, rồi quay lại tra khi Claude chỉ ra lỗi.</p>
     </div>
-  </div>
-  <div class="bk">
-    <nav class="bk-toc" id="bk-toc" aria-label="Mục lục bí kíp"></nav>
-    <div class="bk-body" id="bk-body"></div>
-  </div>
+  </div></div>
+  <div id="bk-body"></div>
 </section>
 
 <!-- AJOUTER -->
@@ -3718,10 +3717,35 @@ function initPhrases(){
 }
 
 /* ---------- METHODE ---------- */
-function initMethods(){
-  $("#bk-toc").innerHTML=METHODS.map(m=>`<a href="#methode" data-go="${m.id}"><small>${esc(m.tag)}</small>${esc(m.title)}</a>`).join("");
-  $("#bk-body").innerHTML=METHODS.map(m=>`<article class="method" id="${m.id}"><div class="eyebrow">${esc(m.tag)}</div><h3>${esc(m.title)}</h3>${m.body}</article>`).join("");
-  $$("#bk-toc a").forEach(a=>a.onclick=e=>{e.preventDefault();const t=document.getElementById(a.dataset.go);if(t)t.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"})});
+const BK = { open:null };
+const BK_GROUPS = [
+  {id:"m", vi:"Kỹ thuật dịch", fr:"Traduction", col:"#f3c56b", test:m=>m.id.startsWith("m-")},
+  {id:"ae", vi:"Affaires étrangères", fr:"Relations internationales", col:"#93b8ff", test:m=>m.id.startsWith("ae-")},
+  {id:"c1", vi:"DALF C1, phương pháp", fr:"Méthodologie", col:"#f29ab5", test:m=>m.id.startsWith("c1-")},
+  {id:"fst", vi:"DALF C1, thầy Vincent", fr:"Cours en vidéo", col:"#9fd88f", test:m=>m.id.startsWith("fst-")}
+];
+const bkGroup = m => BK_GROUPS.find(g=>g.test(m)) || BK_GROUPS[0];
+const bkGet = id => store.items.get("bk_"+id) || {id:"bk_"+id, kind:"bk", done:false};
+const bkMin = m => Math.max(2, Math.round(m.body.replace(/<[^>]+>/g," ").split(/\s+/).length/180));
+function initMethods(){ renderBk() }
+function renderBk(){
+  const box=$("#bk-body"); if(!box) return;
+  $("#bk-top").hidden = BK.open!==null;
+  const all=BK_GROUPS.flatMap(g=>METHODS.filter(m=>bkGroup(m)===g));
+  if(BK.open===null){
+    const done=all.filter(m=>bkGet(m.id).done).length, next=all.find(m=>!bkGet(m.id).done);
+    box.innerHTML=`<div class="lyprog"><div class="c1bar"><i style="width:${Math.round(100*done/all.length)}%"></i></div><span>${done} / ${all.length} mục đã đọc</span>${next?`<a class="btn primary small" href="#methode/${next.id}">Đọc tiếp: ${esc(next.title)}</a>`:""}</div>
+    <div class="lysecs">${BK_GROUPS.map(g=>{ const L=all.filter(m=>bkGroup(m)===g); if(!L.length) return ""; const d=L.filter(m=>bkGet(m.id).done).length; return `<section class="lysec" style="--skc:${g.col}"><header><span class="pill" style="--skc:${g.col}">${esc(g.fr)}</span><h3>${esc(g.vi)}</h3><span class="mini">${d}/${L.length} mục đã đọc</span></header><ol>${L.map(m=>{const r=bkGet(m.id);return `<li class="${r.done?"done":""}"><a href="#methode/${m.id}"><span class="lyck">${r.done?"✓":""}</span><span class="lyt">${esc(m.title)}</span><span class="mini">${bkMin(m)}'</span></a></li>`}).join("")}</ol></section>` }).join("")}</div>`;
+    return;
+  }
+  const i=all.findIndex(m=>m.id===BK.open); if(i<0){ box.innerHTML=`<p class="warn">Không tìm thấy mục này.</p><p><a href="#methode">← Bí kíp</a></p>`; return }
+  const m=all[i], g=bkGroup(m), r=bkGet(m.id), same=all.filter(x=>bkGroup(x)===g), k=same.indexOf(m), prev=all[i-1], nxt=all[i+1];
+  box.innerHTML=`<nav class="c1crumb"><a href="#methode">← Bí kíp</a><span>${esc(g.vi)} · mục ${k+1}/${same.length}</span></nav>
+  <header class="c1lh" style="--skc:${g.col}"><div class="c1pills"><span class="pill" style="--skc:${g.col}">${esc(m.tag)}</span><span class="pill ghost">${bkMin(m)} phút</span>${r.done?`<span class="pill ghost">✓ đã đọc</span>`:""}</div><h2>${esc(m.title)}</h2></header>
+  <article class="method bkone">${m.body}</article>
+  <section class="c1end"><div class="row c1endrow">${prev?`<a class="btn ghost small" href="#methode/${prev.id}">← ${esc(prev.title)}</a>`:"<span></span>"}<button type="button" class="btn ${r.done?"":"primary"}" id="bk-done">${r.done?"✓ Đã đọc, bấm để bỏ":"Đánh dấu đã đọc"}</button>${nxt?`<a class="btn small" href="#methode/${nxt.id}">${esc(nxt.title)} →</a>`:"<span></span>"}</div></section>`;
+  $("#bk-done").onclick=()=>{ const cur=bkGet(m.id); put({...cur,done:!cur.done,at:Date.now()}); if(!cur.done&&nxt){ toast("Đã đọc. Sang mục tiếp"); location.hash="methode/"+nxt.id } else renderBk() };
+  bindAddSel(box);
 }
 
 
@@ -3804,6 +3828,7 @@ function route(){
   const [h0,h1] = location.hash.slice(1).split("/");
   const v = VIEWS.includes(h0) ? h0 : "dictee";
   if(v==="ly"){ const o=h1?h1:null; LYD.open=o; renderLy(); window.scrollTo(0,0) }
+  if(v==="methode"){ const o=h1?h1:null; const was=BK.open; BK.open=o; renderBk(); if(o!==null||was!==null) window.scrollTo(0,0) }
   if(v==="kt"){ const o=h1?h1:null; const was=KT.open; KT.open=o; renderKt(); if(o!==null||was!==null) window.scrollTo(0,0) }
   if(v==="bao"){ const o=h1!==undefined&&h1!==""?h1:null; BAO.open=o; renderBao(); window.scrollTo(0,0) }
   if(v==="c1"){ const o=h1===undefined||h1===""?null:h1; if(o!==C1.open||o===null){ C1.open=o; renderC1(); if(o!==null) window.scrollTo(0,0) } }
@@ -3819,6 +3844,7 @@ BASE_TERMS.push(...FST_TERMS);
 C1_WEEKS.forEach(W=>W.vocab.forEach((v,i)=>BASE_TERMS.push({id:"c1w"+W.n+"_"+i,kind:"term",fr:v[0],vi:v[1],domain:W.dom,note:"DALF C1 · tuần "+W.n+" · "+W.theme,base:true,course:true,book:"c1"})));
 initDictee(); initTrad(); initGloss(); initAdd(); initPhrases(); initMethods(); initC1();
 store.listeners.push(()=>{ renderStats(); renderDRail(); renderTRail(); renderGloss(); renderAdd(); });
+store.listeners.push(()=>{ const v=$("#v-methode"); if(v&&!v.hidden) renderBk() });
 store.listeners.push(()=>{ const v=$("#v-kt"); if(v&&!v.hidden&&KT.data&&document.activeElement?.id!=="kt-q") renderKt() });
 let drillsSeeded=false; store.listeners.push(()=>{ if(!drillsSeeded && store.mode==="db"){ drillsSeeded=true; buildOrder(); renderDrill(); renderC1(); } });
 route();
