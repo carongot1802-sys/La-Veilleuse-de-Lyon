@@ -1,6 +1,84 @@
 {
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "lessons": [
+    {
+      "id": "2026-11-07-ttxvn-afp-hop-tac",
+      "date": "2026-11-07",
+      "type": "vi-fr",
+      "domain": "medias",
+      "title": "TTXVN và AFP tăng cường hợp tác",
+      "text": "Chiều 5/11 tại Hà Nội, Phó Tổng Giám đốc Thông tấn xã Việt Nam (TTXVN) Đoàn Thị Tuyết Nhung đã tiếp và làm việc với đoàn Hãng Thông tấn Pháp (AFP) do ông Fabrice Fries, Chủ tịch kiêm Tổng Giám đốc AFP, dẫn đầu. Hai bên trao đổi về việc tăng cường hợp tác trong sản xuất và phân phối nội dung đa phương tiện, ứng dụng trí tuệ nhân tạo, quản trị dữ liệu, kiểm chứng thông tin và bảo vệ bản quyền. TTXVN hiện có 34 cơ quan thường trú trong nước và 30 cơ quan thường trú ở nước ngoài. Phía AFP bày tỏ mong muốn chia sẻ kinh nghiệm về kiểm chứng thông tin với TTXVN.",
+      "ref": "Le 5 novembre après-midi à Hanoï, la directrice générale adjointe de l'Agence vietnamienne d'information (VNA), Doàn Thi Tuyêt Nhung, a reçu une délégation de l'Agence France-Presse (AFP) conduite par son président-directeur général, Fabrice Fries. Les deux parties ont discuté du renforcement de leur coopération dans la production et la diffusion de contenus multimédias, l'intelligence artificielle, la gestion des données, la vérification des faits et la protection du droit d'auteur. La VNA compte 34 bureaux dans le pays et 30 à l'étranger. L'AFP s'est dite intéressée par un partage d'expérience avec la VNA en matière de fact-checking.",
+      "notes": [
+        [
+          "đã tiếp và làm việc với",
+          "Báo Việt dùng cặp động từ đôi; Le Courrier du Vietnam chỉ viết a reçu (hoặc s'est entretenu avec). Không dịch thành a reçu et a travaillé avec."
+        ],
+        [
+          "đoàn ... do X dẫn đầu",
+          "Une délégation conduite par X (hoặc emmenée par X). Phân từ conduite hòa hợp với délégation."
+        ],
+        [
+          "Chủ tịch kiêm Tổng Giám đốc",
+          "Président-directeur général (PDG), một chức danh duy nhất trong doanh nghiệp Pháp, không dịch là président et directeur général."
+        ],
+        [
+          "kiểm chứng thông tin",
+          "La vérification des faits; báo Pháp dùng cả anglicisme le fact-checking. Dùng xen kẽ để tránh lặp như bản dịch tham khảo."
+        ],
+        [
+          "cơ quan thường trú",
+          "Với hãng thông tấn, tiếng Pháp chỉ nói un bureau (bureau à l'étranger); không dịch là agence résidente."
+        ]
+      ],
+      "srcname": "VietnamPlus, Le Courrier du Vietnam",
+      "url": "https://www.vietnamplus.vn/tang-cuong-hop-tac-giua-thong-tan-xa-viet-nam-va-hang-thong-tan-phap-afp-post1146437.vnp"
+    },
+    {
+      "id": "2026-11-07-vietnam-algerie-partenariat-concret",
+      "date": "2026-11-07",
+      "type": "fr-vi",
+      "domain": "diplomatie",
+      "title": "Vietnam-Algérie : concrétiser le partenariat stratégique",
+      "text": "Dans un entretien accordé le 5 novembre au quotidien algérien La Patrie News, l'ambassadeur du Vietnam en Algérie, Vu Duy Long, a appelé à traduire le partenariat stratégique en projets concrets. Élevées à ce rang en novembre 2025, les relations bilatérales reposent sur une confiance politique solide. Les échanges commerciaux ont atteint environ 550 millions de dollars en 2025, soit une hausse de 170 % par rapport à 2024, et quelque 390 millions de dollars sur les huit premiers mois de 2026. Selon le diplomate, les deux pays devraient s'entendre rapidement sur un programme d'action à l'horizon 2030, notamment dans l'énergie, l'agriculture et les sciences et technologies.",
+      "ref": "Trả lời phỏng vấn nhật báo La Patrie News của Algeria ngày 5/11, Đại sứ Việt Nam tại Algeria Vũ Duy Long nhấn mạnh cần cụ thể hóa quan hệ Đối tác chiến lược bằng các chương trình, dự án có kết quả thiết thực. Kể từ khi được nâng cấp vào tháng 11/2025, quan hệ hai nước dựa trên nền tảng tin cậy chính trị vững chắc. Kim ngạch thương mại song phương năm 2025 đạt khoảng 550 triệu USD, tăng 170% so với năm 2024; 8 tháng đầu năm 2026 đạt khoảng 390 triệu USD. Theo Đại sứ, hai bên cần sớm thống nhất Chương trình hành động thực hiện quan hệ Đối tác chiến lược đến năm 2030, nhất là trong các lĩnh vực năng lượng, nông nghiệp và khoa học công nghệ.",
+      "notes": [
+        [
+          "Dans un entretien accordé à",
+          "Báo Việt mở đầu bằng Trả lời phỏng vấn...; không dịch sát là Trong một cuộc phỏng vấn dành cho."
+        ],
+        [
+          "traduire ... en projets concrets",
+          "VietnamPlus tiếng Việt viết cụ thể hóa ... bằng các chương trình, dự án có kết quả thiết thực; bản tiếng Pháp dùng traduire/concrétiser."
+        ],
+        [
+          "Élevées à ce rang en novembre 2025",
+          "Phân từ quá khứ đặt đầu câu, hòa hợp với relations. Tiếng Việt chuyển thành mệnh đề thời gian: Kể từ khi được nâng cấp..."
+        ],
+        [
+          "soit une hausse de 170 % par rapport à",
+          "Tiếng Việt gọn: tăng 170% so với. Chú ý tiếng Pháp có khoảng trắng trước %, tiếng Việt thì không."
+        ],
+        [
+          "le diplomate / devraient",
+          "Le diplomate là cách tránh lặp tên, tiếng Việt quay lại Đại sứ. Conditionnel devraient ở đây là khuyến nghị, dịch là cần sớm."
+        ]
+      ],
+      "srcname": "VietnamPlus (tiếng Pháp và tiếng Việt)",
+      "url": "https://fr.vietnamplus.vn/vietnam-algerie-une-amitie-historique-appelee-a-se-traduire-en-cooperation-concrete-post270777.vnp"
+    },
+    {
+      "id": "2026-11-07-leon-xiv-uruguay",
+      "date": "2026-11-07",
+      "type": "dictee",
+      "domain": "religion",
+      "title": "Léon XIV entame sa tournée latino-américaine",
+      "text": "Le pape Léon XIV est arrivé vendredi 6 novembre à Montevideo, première étape d'un voyage apostolique de douze jours qui le conduira ensuite en Argentine puis au Pérou. Parti le matin même de l'aéroport de Rome-Fiumicino, le Souverain pontife a été accueilli par le président uruguayen, Yamandú Orsi, lors d'une cérémonie de bienvenue sur la place de l'Indépendance. Il s'agit de son sixième voyage international. Léon XIV est le deuxième pape à se rendre en Uruguay, après Jean-Paul II en 1987 et 1988. Pendant le vol, il a adressé des télégrammes de salutations à plusieurs chefs d'État, dont le président algérien Abdelmadjid Tebboune. La tournée doit s'achever le 17 novembre.",
+      "ref": "",
+      "notes": [],
+      "srcname": "Vatican News",
+      "url": "https://www.vaticannews.va/fr/pape/news/2026-11/pape-amerique-latine-voyage-apostolique-uruguay-perou-argentine.html"
+    },
     {
       "id": "2026-11-06-vn-fr-partenariat",
       "date": "2026-11-06",
@@ -75,6 +153,111 @@
     }
   ],
   "terms": [
+    {
+      "fr": "le président-directeur général (PDG)",
+      "vi": "Chủ tịch kiêm Tổng Giám đốc",
+      "domain": "medias",
+      "note": "Chức danh lãnh đạo AFP (Fabrice Fries). Một chức danh duy nhất, không tách thành hai.",
+      "date": "2026-11-07"
+    },
+    {
+      "fr": "la directrice générale adjointe de la VNA",
+      "vi": "Phó Tổng Giám đốc Thông tấn xã Việt Nam",
+      "domain": "medias",
+      "note": "Le Courrier dùng directeur/directrice général(e) adjoint(e) cho Phó Tổng Giám đốc TTXVN.",
+      "date": "2026-11-07"
+    },
+    {
+      "fr": "l'Agence vietnamienne d'information (VNA)",
+      "vi": "Thông tấn xã Việt Nam (TTXVN)",
+      "domain": "medias",
+      "note": "Viết tắt tiếng Pháp/Anh là VNA, không phải TTXVN.",
+      "date": "2026-11-07"
+    },
+    {
+      "fr": "l'Agence France-Presse (AFP)",
+      "vi": "Hãng Thông tấn Pháp (AFP)",
+      "domain": "medias",
+      "note": "Trong văn bản tiếng Pháp thường chỉ cần l'AFP.",
+      "date": "2026-11-07"
+    },
+    {
+      "fr": "la vérification des faits, le fact-checking",
+      "vi": "kiểm chứng thông tin",
+      "domain": "medias",
+      "note": "Báo Pháp dùng cả hai, xen kẽ để tránh lặp.",
+      "date": "2026-11-07"
+    },
+    {
+      "fr": "un bureau à l'étranger",
+      "vi": "cơ quan thường trú ở nước ngoài",
+      "domain": "medias",
+      "note": "Dùng cho hãng thông tấn, đài, báo; bureau dans le pays là cơ quan thường trú trong nước.",
+      "date": "2026-11-07"
+    },
+    {
+      "fr": "l'ambassadeur du Vietnam en Algérie",
+      "vi": "Đại sứ Việt Nam tại Algeria",
+      "domain": "diplomatie",
+      "note": "en Algérie theo nước sở tại; auprès de dùng khi nói đại diện bên cạnh một tổ chức (auprès de l'ONU).",
+      "date": "2026-11-07"
+    },
+    {
+      "fr": "élever les relations au rang de partenariat stratégique",
+      "vi": "nâng cấp quan hệ lên Đối tác chiến lược",
+      "domain": "diplomatie",
+      "note": "Danh từ: l'élévation des relations au rang de... Việt Nam và Algeria nâng cấp tháng 11/2025.",
+      "date": "2026-11-07"
+    },
+    {
+      "fr": "les échanges commerciaux bilatéraux",
+      "vi": "kim ngạch thương mại song phương",
+      "domain": "economie",
+      "note": "Kim ngạch không dịch là chiffre; báo Pháp nói les échanges commerciaux ont atteint...",
+      "date": "2026-11-07"
+    },
+    {
+      "fr": "le Souverain pontife",
+      "vi": "Đức Giáo hoàng",
+      "domain": "religion",
+      "note": "Hoán dụ tránh lặp le pape; báo Công giáo Việt Nam thường viết Đức Thánh Cha.",
+      "date": "2026-11-07"
+    },
+    {
+      "fr": "un voyage apostolique",
+      "vi": "chuyến tông du",
+      "domain": "religion",
+      "note": "Chuyến công du nước ngoài của Giáo hoàng; báo Việt phổ thông có khi viết chuyến thăm.",
+      "date": "2026-11-07"
+    },
+    {
+      "fr": "X a reçu une délégation de Y conduite par Z",
+      "vi": "X đã tiếp và làm việc với đoàn Y do Z dẫn đầu",
+      "domain": "diplomatie",
+      "note": "Mẫu câu: tin tiếp đoàn khách; thấy ở Le Courrier du Vietnam và VietnamPlus (tin TTXVN tiếp AFP). Tiếng Pháp chỉ dùng một động từ recevoir.",
+      "date": "2026-11-07"
+    },
+    {
+      "fr": "Dans un entretien accordé à X, Y a appelé à…",
+      "vi": "Trả lời phỏng vấn X, Y nhấn mạnh cần…",
+      "domain": "diplomatie",
+      "note": "Mẫu câu: mở đầu tin phỏng vấn đại sứ, quan chức; thấy ở VietnamPlus tiếng Pháp và VietnamPlus tiếng Việt (phỏng vấn Đại sứ Vũ Duy Long).",
+      "date": "2026-11-07"
+    },
+    {
+      "fr": "X a atteint environ N, soit une hausse de P % par rapport à Y",
+      "vi": "X đạt khoảng N, tăng P% so với Y",
+      "domain": "economie",
+      "note": "Mẫu câu: trình bày số liệu thương mại; thấy ở VietnamPlus tiếng Pháp và VietnamPlus tiếng Việt (kim ngạch Việt Nam - Algeria).",
+      "date": "2026-11-07"
+    },
+    {
+      "fr": "traduire X en projets concrets",
+      "vi": "cụ thể hóa X bằng các chương trình, dự án có kết quả thiết thực",
+      "domain": "diplomatie",
+      "note": "Mẫu câu: kêu gọi hiện thực hóa khuôn khổ quan hệ; thấy ở VietnamPlus tiếng Pháp và Le Courrier du Vietnam, bản Việt trên VietnamPlus.",
+      "date": "2026-11-07"
+    },
     {
       "fr": "le ministre délégué auprès du ministre de la Défense nationale",
       "vi": "Bộ trưởng ủy nhiệm bên cạnh Bộ trưởng Quốc phòng",
