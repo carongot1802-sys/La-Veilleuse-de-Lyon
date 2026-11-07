@@ -1,6 +1,84 @@
 {
-  "updated": "2026-11-07",
+  "updated": "2026-11-08",
   "lessons": [
+    {
+      "id": "2026-11-08-viet-nam-phap-hop-tac-phap-luat",
+      "date": "2026-11-08",
+      "type": "vi-fr",
+      "domain": "droit",
+      "title": "Việt Nam và Pháp ký kế hoạch hợp tác pháp luật 2027-2028",
+      "text": "Ngày 3/11, tại trụ sở Bộ Tư pháp, Thứ trưởng Tư pháp Nguyễn Thanh Tịnh đã tiếp Đại sứ đặc mệnh toàn quyền Cộng hòa Pháp tại Việt Nam Didier Le Bret nhân dịp Tuần lễ Pháp luật Pháp lần thứ hai. Hai bên đã ký Kế hoạch hợp tác giai đoạn 2027-2028, trên cơ sở Hiệp định hợp tác pháp luật và tư pháp năm 1993. Kế hoạch tập trung vào cải cách thủ tục hành chính, ứng dụng trí tuệ nhân tạo trong xây dựng pháp luật và hoàn thiện pháp luật về dân sự, hôn nhân và gia đình. Cũng tại buổi lễ, Trường Đại học Luật Hà Nội và Quỹ Luật lục địa Pháp đã ký biên bản ghi nhớ về việc thành lập Trung tâm Pháp luật Pháp.",
+      "ref": "Le 3 novembre, au siège du ministère de la Justice à Hanoï, le vice-ministre de la Justice Nguyen Thanh Tinh a reçu l'ambassadeur de France au Vietnam, Didier Le Bret, à l'occasion de la deuxième Semaine du droit français au Vietnam. Les deux parties ont signé un plan de coopération pour la période 2027-2028, fondé sur l'Accord de coopération juridique et judiciaire de 1993. Ce plan met l'accent sur la réforme des procédures administratives, le recours à l'intelligence artificielle dans l'élaboration des textes et le droit civil, du mariage et de la famille. Lors de la cérémonie, l'Université de droit de Hanoï et la Fondation pour le droit continental ont signé un mémorandum d'entente portant création d'un Centre de droit français.",
+      "notes": [
+        [
+          "Đại sứ đặc mệnh toàn quyền Cộng hòa Pháp tại Việt Nam",
+          "Nhân Dân và SGGP dùng đủ chức danh này; Le Courrier du Vietnam chỉ viết l'ambassadeur de France au Vietnam. Trong tin, báo Pháp hiếm khi viết ambassadeur extraordinaire et plénipotentiaire."
+        ],
+        [
+          "Thứ trưởng Tư pháp",
+          "le vice-ministre de la Justice (Justice viết hoa vì là tên bộ). Chức này là của Việt Nam; Chính phủ Pháp không có thứ trưởng mà có ministre délégué hoặc secrétaire d'État."
+        ],
+        [
+          "trên cơ sở Hiệp định...",
+          "fondé sur hoặc sur la base de; Le Courrier dùng fondé sur, hòa hợp với plan."
+        ],
+        [
+          "xây dựng pháp luật",
+          "l'élaboration des lois, des textes; không dịch construire la loi. Hoàn thiện pháp luật về... thường thành le cadre juridique de... hoặc chỉ cần nêu lĩnh vực."
+        ],
+        [
+          "biên bản ghi nhớ về việc thành lập",
+          "un mémorandum d'entente portant création de; portant là công thức hành chính rất hay gặp (décret portant nomination, loi portant réforme)."
+        ]
+      ],
+      "srcname": "Le Courrier du Vietnam, Báo Nhân Dân, Báo SGGP",
+      "url": "https://lecourrier.vn/le-vietnam-et-la-france-consolidant-leur-partenariat-juridique-et-judiciaire/1358672.html"
+    },
+    {
+      "id": "2026-11-08-vietnam-19-5-millions-visiteurs",
+      "date": "2026-11-08",
+      "type": "fr-vi",
+      "domain": "economie",
+      "title": "Le Vietnam accueille 19,5 millions de visiteurs en dix mois",
+      "text": "Le Vietnam a accueilli 19,5 millions de visiteurs internationaux au cours des dix premiers mois de 2026, soit une hausse de 13,8 % par rapport à la même période de l'année précédente, selon l'Autorité nationale du tourisme. Ce chiffre représente 78 % de l'objectif annuel, fixé à 25 millions. L'Asie reste le premier bassin émetteur avec 14,6 millions d'arrivées, dont près de 4,4 millions en provenance de Chine. C'est toutefois l'Europe qui affiche la plus forte progression : 3,22 millions de visiteurs, en hausse de 51,5 %. Les deux derniers mois de l'année devraient être déterminants pour atteindre la cible.",
+      "ref": "Theo Cục Du lịch Quốc gia Việt Nam, 10 tháng năm 2026, Việt Nam đón 19,5 triệu lượt khách quốc tế, tăng 13,8% so với cùng kỳ năm 2025, đạt khoảng 78% mục tiêu 25 triệu lượt khách của cả năm. Châu Á tiếp tục là thị trường nguồn lớn nhất với 14,6 triệu lượt, trong đó Trung Quốc đạt gần 4,4 triệu lượt. Tuy nhiên, châu Âu mới là thị trường tăng trưởng nhanh nhất, đạt 3,22 triệu lượt, tăng 51,5%. Hai tháng cuối năm được xem là giai đoạn quyết định để hoàn thành mục tiêu.",
+      "notes": [
+        [
+          "visiteurs internationaux, arrivées",
+          "Báo Việt luôn đếm bằng lượt: 19,5 triệu lượt khách quốc tế (VietnamPlus, Tuổi Trẻ). Bản tiếng Pháp không có từ tương đương lượt."
+        ],
+        [
+          "au cours des dix premiers mois de 2026",
+          "VietnamPlus đặt tít 10 tháng năm 2026, Tuổi Trẻ viết 10 tháng đầu năm; cả hai đưa cụm thời gian lên đầu câu."
+        ],
+        [
+          "par rapport à la même période de l'année précédente",
+          "Gọn lại thành so với cùng kỳ (năm 2025). Không dịch sát cùng giai đoạn của năm trước."
+        ],
+        [
+          "premier bassin émetteur",
+          "thị trường nguồn lớn nhất; Tuổi Trẻ dùng họ từ này qua cụm đa dạng hóa nguồn khách. Émetteur là nơi khách xuất phát, réceptif là nơi đón khách."
+        ],
+        [
+          "C'est toutefois l'Europe qui affiche...",
+          "Câu nhấn mạnh c'est... qui; tiếng Việt dùng Tuy nhiên, ... mới là... thay vì Chính là châu Âu."
+        ]
+      ],
+      "srcname": "VietnamPlus (tiếng Pháp và tiếng Việt), Tuổi Trẻ",
+      "url": "https://fr.vietnamplus.vn/le-vietnam-accueille-195-millions-de-visiteurs-internationaux-en-dix-mois-post270637.vnp"
+    },
+    {
+      "id": "2026-11-08-hcr-refugies-nigeria-niger-benin",
+      "date": "2026-11-08",
+      "type": "dictee",
+      "domain": "securite",
+      "title": "Nigeria : le HCR lance un appel pour les réfugiés",
+      "text": "Face à l'intensification des violences dans le nord du Nigeria, le Haut-Commissariat des Nations unies pour les réfugiés (HCR) vient de lancer un appel de 2 millions de dollars. Depuis janvier, plus de 66 000 Nigérians ont trouvé refuge au Niger et au Bénin, soit trois fois plus qu'à la même période l'an dernier. La plupart sont arrivés dans les régions nigériennes de Tahoua et de Diffa. Faute de financements suffisants, plus de 34 000 nouveaux arrivants n'ont pas encore été enregistrés. Au Sahel central, près de 4 millions de personnes ont été déplacées de force, dont quelque 820 000 réfugiés et demandeurs d'asile.",
+      "ref": "",
+      "notes": [],
+      "srcname": "ONU Info",
+      "url": "https://news.un.org/fr/story/2026/11/1159790"
+    },
     {
       "id": "2026-11-07-ttxvn-afp-hop-tac",
       "date": "2026-11-07",
@@ -153,6 +231,125 @@
     }
   ],
   "terms": [
+    {
+      "fr": "le vice-ministre de la Justice",
+      "vi": "Thứ trưởng Bộ Tư pháp (báo Việt hay viết gọn Thứ trưởng Tư pháp)",
+      "domain": "droit",
+      "note": "Chức danh của Việt Nam. Chính phủ Pháp không có thứ trưởng; cấp dưới bộ trưởng là ministre délégué hoặc secrétaire d'État.",
+      "date": "2026-11-08"
+    },
+    {
+      "fr": "l'ambassadeur extraordinaire et plénipotentiaire",
+      "vi": "Đại sứ đặc mệnh toàn quyền",
+      "domain": "diplomatie",
+      "note": "Báo Việt dùng đủ chức danh; báo Pháp trong tin thường chỉ viết l'ambassadeur de France au Vietnam.",
+      "date": "2026-11-08"
+    },
+    {
+      "fr": "le vice-Premier ministre",
+      "vi": "Phó Thủ tướng",
+      "domain": "politique",
+      "note": "VietnamPlus tiếng Pháp viết vice-Premier ministre (Hồ Quốc Dũng, 5/11/2026). Không nhầm với Premier ministre délégué.",
+      "date": "2026-11-08"
+    },
+    {
+      "fr": "le directeur général adjoint, chargé des opérations",
+      "vi": "Phó Tổng Giám đốc phụ trách vận hành",
+      "domain": "economie",
+      "note": "Chức danh của Pierre Barnabé tại Dassault Systèmes; chargé de = phụ trách.",
+      "date": "2026-11-08"
+    },
+    {
+      "fr": "l'Autorité nationale du tourisme du Vietnam",
+      "vi": "Cục Du lịch Quốc gia Việt Nam",
+      "domain": "economie",
+      "note": "Cách gọi của VietnamPlus tiếng Pháp; Cục ở đây không dịch là département.",
+      "date": "2026-11-08"
+    },
+    {
+      "fr": "le Haut-Commissariat des Nations unies pour les réfugiés (HCR)",
+      "vi": "Cao ủy Liên hợp quốc về người tị nạn (UNHCR)",
+      "domain": "securite",
+      "note": "Tiếng Pháp viết tắt HCR, tiếng Anh UNHCR; báo Việt thường dùng UNHCR.",
+      "date": "2026-11-08"
+    },
+    {
+      "fr": "un demandeur d'asile",
+      "vi": "người xin tị nạn",
+      "domain": "securite",
+      "note": "Phân biệt với réfugié (người đã được công nhận tị nạn).",
+      "date": "2026-11-08"
+    },
+    {
+      "fr": "les personnes déplacées de force",
+      "vi": "những người buộc phải rời bỏ nơi ở, người bị di dời cưỡng bức",
+      "domain": "securite",
+      "note": "déplacés internes là người di tản trong nước, khác với réfugiés đã vượt biên giới.",
+      "date": "2026-11-08"
+    },
+    {
+      "fr": "l'Accord de coopération juridique et judiciaire",
+      "vi": "Hiệp định hợp tác pháp luật và tư pháp",
+      "domain": "droit",
+      "note": "Việt Nam và Pháp ký ngày 10/2/1993; juridique = pháp luật, judiciaire = tư pháp.",
+      "date": "2026-11-08"
+    },
+    {
+      "fr": "la Fondation pour le droit continental",
+      "vi": "Quỹ Luật lục địa Pháp",
+      "domain": "droit",
+      "note": "Đối tác của Trường Đại học Luật Hà Nội trong dự án Trung tâm Pháp luật Pháp (Centre de droit français).",
+      "date": "2026-11-08"
+    },
+    {
+      "fr": "le Conseil supérieur du notariat",
+      "vi": "Hội đồng Công chứng tối cao Pháp",
+      "domain": "droit",
+      "note": "Đối tác của Hiệp hội Công chứng viên Việt Nam (Association des notaires du Vietnam).",
+      "date": "2026-11-08"
+    },
+    {
+      "fr": "un jumeau numérique",
+      "vi": "bản sao số, song sinh số (digital twin)",
+      "domain": "economie",
+      "note": "Thường đi với l'intelligence artificielle; un centre d'excellence (CoE) = trung tâm xuất sắc.",
+      "date": "2026-11-08"
+    },
+    {
+      "fr": "le bassin émetteur, le marché émetteur",
+      "vi": "thị trường nguồn khách",
+      "domain": "economie",
+      "note": "Đối lập với destination réceptive (điểm đến).",
+      "date": "2026-11-08"
+    },
+    {
+      "fr": "À l'occasion de X, Y a reçu Z au siège de W",
+      "vi": "Nhân dịp X, tại trụ sở W, Y đã tiếp Z",
+      "domain": "diplomatie",
+      "note": "Mẫu câu: mở tin tiếp khách chính thức. Le Courrier du Vietnam và Báo Nhân Dân cùng mở tin Tuần lễ Pháp luật Pháp (3/11/2026) bằng khung này.",
+      "date": "2026-11-08"
+    },
+    {
+      "fr": "X a atteint N au cours des dix premiers mois, soit P % de l'objectif annuel",
+      "vi": "10 tháng năm..., X đạt N, đạt khoảng P% mục tiêu cả năm",
+      "domain": "economie",
+      "note": "Mẫu câu: báo cáo số liệu lũy kế so với kế hoạch. Gặp ở VietnamPlus tiếng Pháp và Tuổi Trẻ (tin du lịch 3/11/2026).",
+      "date": "2026-11-08"
+    },
+    {
+      "fr": "C'est toutefois X qui affiche la plus forte progression",
+      "vi": "Tuy nhiên, X mới là ... có mức tăng trưởng nhanh nhất",
+      "domain": "economie",
+      "note": "Mẫu câu: nhấn mạnh yếu tố nổi bật sau một số liệu tổng. VietnamPlus tiếng Pháp và Tuổi Trẻ đều nêu châu Âu tăng nhanh nhất theo cách này.",
+      "date": "2026-11-08"
+    },
+    {
+      "fr": "Faute de X, Y",
+      "vi": "Do thiếu X, Y",
+      "domain": "securite",
+      "note": "Cấu trúc nguyên nhân trang trọng, ONU Info dùng: faute de financements suffisants (do thiếu kinh phí).",
+      "date": "2026-11-08"
+    },
     {
       "fr": "le président-directeur général (PDG)",
       "vi": "Chủ tịch kiêm Tổng Giám đốc",
