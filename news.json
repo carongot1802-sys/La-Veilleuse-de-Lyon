@@ -1,6 +1,84 @@
 {
-  "updated": "2026-11-08",
+  "updated": "2026-11-09",
   "lessons": [
+    {
+      "id": "2026-11-09-franconomics-2026-hanoi",
+      "date": "2026-11-09",
+      "type": "vi-fr",
+      "domain": "societe",
+      "title": "Franconomics 2026: con người ở trung tâm chuyển đổi công nghệ",
+      "text": "Ngày 5/11, Diễn đàn quốc tế Franconomics 2026 đã khai mạc tại Hà Nội với chủ đề \"Vốn con người, bình đẳng và chuyển đổi xã hội trong kỷ nguyên công nghệ mới\". Diễn đàn do Trường Quốc tế, Đại học Quốc gia Hà Nội phối hợp với Tổ chức Quốc tế Pháp ngữ (OIF), Viện Pháp ngữ quốc tế thuộc Đại học Jean Moulin Lyon 3 và Trường Đại học VinUni tổ chức, với sự đồng hành của Tổ chức Đại học Pháp ngữ (AUF). Sự kiện quy tụ chuyên gia, nhà nghiên cứu đến từ 40 trường đại học và viện nghiên cứu của hơn 10 quốc gia và vùng lãnh thổ. Ban tổ chức nhận được 106 bài tham luận, trong đó 12 bài được lựa chọn trình bày tại ba phiên chuyên đề. Diễn đàn năm 2027 dự kiến diễn ra tại Lyon (Pháp).",
+      "ref": "Le Forum international Franconomics 2026 s'est ouvert le 5 novembre à Hanoï sur le thème « Capital humain, égalité et transformation sociale à l'ère des nouvelles technologies ». Il est co-organisé par l'École internationale de l'Université nationale du Vietnam à Hanoï, l'Organisation internationale de la Francophonie (OIF), l'Institut international de la Francophonie (2IF) de l'Université Jean Moulin Lyon 3 et l'Université VinUni, avec le soutien de l'Agence universitaire de la Francophonie (AUF). L'événement réunit des experts et chercheurs issus de 40 universités et instituts de recherche de plus de dix pays et territoires. Sur les 106 contributions reçues, 12 ont été retenues et présentées lors de trois sessions thématiques. La prochaine édition devrait se tenir à Lyon, en 2027.",
+      "notes": [
+        [
+          "khai mạc tại Hà Nội với chủ đề",
+          "Le Courrier du Vietnam viết \"s'est ouvert le 5 novembre à Hanoï\": báo Pháp để chính sự kiện làm chủ ngữ với động từ s'ouvrir, rồi nối chủ đề bằng \"sur le thème\", không dùng \"avec le thème\"."
+        ],
+        [
+          "do X phối hợp với Y, Z tổ chức",
+          "Gộp lại thành \"est co-organisé par X, Y et Z\". Dịch sát \"organisé par X en coordination avec Y\" vừa dài vừa làm lệch vai trò ngang hàng giữa các đơn vị đồng tổ chức."
+        ],
+        [
+          "với sự đồng hành của",
+          "Báo Việt rất chuộng chữ đồng hành (TTXVN, trang Trường Quốc tế). Tiếng Pháp dùng \"avec le soutien de\" hoặc \"en partenariat avec\"; \"avec l'accompagnement de\" nghe như văn dịch."
+        ],
+        [
+          "106 bài tham luận, trong đó 12 bài được lựa chọn",
+          "Khung \"Sur les 106 contributions reçues, 12 ont été retenues\": retenir là chọn giữ lại sau xét duyệt. \"Tham luận\" ở hội thảo khoa học là communication hoặc contribution, không phải discours."
+        ],
+        [
+          "dự kiến diễn ra",
+          "Dùng \"devrait se tenir\" (conditionnel của devoir) cho dự báo, hoặc \"se tiendra\" nếu đã chốt. Tránh \"est prévu d'avoir lieu\" (sai cấu trúc)."
+        ]
+      ],
+      "srcname": "Le Courrier du Vietnam, TTXVN (Chính sách và Cuộc sống), Trường Quốc tế ĐHQGHN",
+      "url": "https://chinhsachcuocsong.vnanet.vn/dien-dan-quoc-te-franconomics-2026-gan-doi-moi-cong-nghe-voi-phat-trien-con-nguoi-va-binh-dang-xa-hoi/100775.html"
+    },
+    {
+      "id": "2026-11-09-abyei-fisnua-conseil-securite",
+      "date": "2026-11-09",
+      "type": "fr-vi",
+      "domain": "diplomatie",
+      "title": "Abyei : la guerre au Soudan menace un territoire disputé",
+      "text": "La guerre au Soudan menace d'embraser Abyei, territoire disputé entre le Soudan et le Soudan du Sud, a averti jeudi l'ONU devant le Conseil de sécurité. Le 19 octobre, des frappes de drones sur le marché d'Amiet ont fait au moins 30 morts et 59 blessés, selon un bilan provisoire. L'envoyé spécial du secrétaire général pour la Corne de l'Afrique, Guang Cong, a réclamé une enquête rapide et indépendante. Il est vrai que la Force intérimaire de sécurité des Nations unies pour Abyei (FISNUA) a recensé 191 incidents entre avril et octobre, soit une baisse de 32 % sur un an. Son mandat expire cependant le 15 novembre, et le Conseil doit se prononcer sur sa reconduction.",
+      "ref": "Ngày 5/11, Liên hợp quốc cảnh báo tại Hội đồng Bảo an rằng cuộc chiến ở Sudan có nguy cơ lan sang Abyei, vùng lãnh thổ tranh chấp giữa Sudan và Nam Sudan. Ngày 19/10, các cuộc tập kích bằng máy bay không người lái nhằm vào chợ Amiet đã khiến ít nhất 30 người thiệt mạng và 59 người bị thương, theo số liệu ban đầu. Đặc phái viên của Tổng Thư ký Liên hợp quốc về khu vực Sừng châu Phi Guang Cong kêu gọi tiến hành điều tra nhanh chóng và độc lập. Dù phái bộ An ninh lâm thời Liên hợp quốc tại Abyei (UNISFA) ghi nhận 191 vụ việc từ tháng 4 đến tháng 10, giảm 32% so với cùng kỳ năm trước, nhiệm vụ của phái bộ sẽ hết hạn vào ngày 15/11 và Hội đồng Bảo an phải quyết định có gia hạn hay không.",
+      "notes": [
+        [
+          "menace d'embraser Abyei",
+          "Embraser nghĩa đen là đốt cháy; trong tin xung đột nên dịch là \"có nguy cơ lan sang\" hoặc \"đẩy... vào vòng xung đột\". Chú ý đảo ngữ \"a averti jeudi l'ONU\": báo Pháp đưa động từ tường thuật ra sau nội dung, tiếng Việt đưa chủ thể và thời gian lên đầu câu."
+        ],
+        [
+          "FISNUA",
+          "Báo Pháp và ONU Info dùng viết tắt tiếng Pháp FISNUA; báo Việt (Tuổi Trẻ) dùng viết tắt tiếng Anh UNISFA và gọi là \"phái bộ An ninh lâm thời Liên hợp quốc\". Đội Công binh số 5 của Việt Nam đang làm nhiệm vụ tại đây, nên tên này xuất hiện thường xuyên trên báo Việt."
+        ],
+        [
+          "ont fait au moins 30 morts et 59 blessés, selon un bilan provisoire",
+          "Không dịch \"đã làm 30 người chết\". Báo Việt viết \"khiến ít nhất 30 người thiệt mạng và 59 người bị thương\"; bilan provisoire là \"số liệu ban đầu\" hoặc \"thống kê sơ bộ\"."
+        ],
+        [
+          "Il est vrai que… cependant…",
+          "Khung nhượng bộ phản bác của tiếng Pháp chuyển thành \"Dù…, nhưng…\" hoặc \"Mặc dù…, song…\". Không dịch \"Đúng là… tuy nhiên\" vì mang giọng nói."
+        ],
+        [
+          "se prononcer sur sa reconduction",
+          "Reconduction (du mandat) là gia hạn nhiệm vụ của phái bộ; se prononcer là ra quyết định, biểu quyết. Mandat ở đây là nhiệm vụ do Hội đồng Bảo an giao, không dịch là nhiệm kỳ."
+        ]
+      ],
+      "srcname": "ONU Info, Tuổi Trẻ",
+      "url": "https://news.un.org/fr/story/2026/11/1159794"
+    },
+    {
+      "id": "2026-11-09-guterres-sommet-iberoamericain-culture",
+      "date": "2026-11-09",
+      "type": "dictee",
+      "domain": "arts",
+      "title": "À Madrid, Guterres plaide pour la culture",
+      "text": "Pour son dernier sommet ibéro-américain en tant que secrétaire général de l'ONU, António Guterres a plaidé jeudi à Madrid pour la culture comme rempart contre les divisions. À l'ouverture de cette 30e édition, il a qualifié l'Ibéro-Amérique de « superpuissance culturelle », façonnée par des héritages autochtones, africains et européens. Après avoir rappelé que la communauté était née il y a 35 ans à Guadalajara, il a appelé à reconnaître la culture comme un bien public mondial et à défendre la liberté des artistes, même lorsque leurs œuvres dérangent. Il s'est par ailleurs inquiété de voir l'intelligence artificielle placer entre les mains de quelques entreprises le contrôle de ce que l'on voit, lit et croit.",
+      "ref": "",
+      "notes": [],
+      "srcname": "ONU Info",
+      "url": "https://news.un.org/fr/story/2026/11/1159796"
+    },
     {
       "id": "2026-11-08-viet-nam-phap-hop-tac-phap-luat",
       "date": "2026-11-08",
@@ -231,6 +309,111 @@
     }
   ],
   "terms": [
+    {
+      "fr": "l'envoyé spécial du secrétaire général pour la Corne de l'Afrique",
+      "vi": "Đặc phái viên của Tổng Thư ký Liên hợp quốc về khu vực Sừng châu Phi",
+      "domain": "diplomatie",
+      "note": "Envoyé spécial là đặc phái viên (thường lo hòa giải chính trị); représentant spécial là Đại diện đặc biệt, thường đứng đầu một phái bộ. Đừng dịch lẫn hai chức danh.",
+      "date": "2026-11-09"
+    },
+    {
+      "fr": "le secrétaire général adjoint aux opérations de paix",
+      "vi": "Phó Tổng Thư ký Liên hợp quốc phụ trách các hoạt động hòa bình",
+      "domain": "diplomatie",
+      "note": "Ông Jean-Pierre Lacroix; ONU Info gọi gọn là \"chef des opérations de maintien de la paix de l'ONU\". Adjoint ở cấp LHQ là Phó Tổng Thư ký (Under-Secretary-General).",
+      "date": "2026-11-09"
+    },
+    {
+      "fr": "la Force intérimaire de sécurité des Nations unies pour Abyei (FISNUA)",
+      "vi": "Lực lượng An ninh lâm thời Liên hợp quốc tại Abyei (UNISFA)",
+      "domain": "securite",
+      "note": "Báo Pháp viết tắt FISNUA, báo Việt dùng UNISFA và hay gọi \"phái bộ An ninh lâm thời LHQ\" (Tuổi Trẻ). Việt Nam có Đội Công binh số 5 tại đây.",
+      "date": "2026-11-09"
+    },
+    {
+      "fr": "les Casques bleus",
+      "vi": "lực lượng gìn giữ hòa bình, lính mũ nồi xanh",
+      "domain": "securite",
+      "note": "Báo Việt (Tuổi Trẻ) dùng \"lính mũ nồi xanh Việt Nam\"; viết hoa Casques bleus trong tiếng Pháp.",
+      "date": "2026-11-09"
+    },
+    {
+      "fr": "la reconduction du mandat",
+      "vi": "việc gia hạn nhiệm vụ (của phái bộ)",
+      "domain": "diplomatie",
+      "note": "Mandat ở đây là nhiệm vụ do Hội đồng Bảo an giao, không phải nhiệm kỳ. Đi với động từ se prononcer sur, voter.",
+      "date": "2026-11-09"
+    },
+    {
+      "fr": "un territoire disputé",
+      "vi": "vùng lãnh thổ tranh chấp",
+      "domain": "droit",
+      "note": "Abyei là territoire disputé giữa Sudan và Nam Sudan; disputé ở đây không phải \"bị tranh cãi\".",
+      "date": "2026-11-09"
+    },
+    {
+      "fr": "un bilan provisoire",
+      "vi": "số liệu thương vong ban đầu, thống kê sơ bộ",
+      "domain": "securite",
+      "note": "Đi với faire N morts et P blessés; bilan définitif là con số cuối cùng.",
+      "date": "2026-11-09"
+    },
+    {
+      "fr": "l'Organisation internationale de la Francophonie (OIF)",
+      "vi": "Tổ chức Quốc tế Pháp ngữ (OIF)",
+      "domain": "diplomatie",
+      "note": "Tổ chức liên chính phủ; phân biệt với AUF là mạng lưới các trường đại học.",
+      "date": "2026-11-09"
+    },
+    {
+      "fr": "l'Agence universitaire de la Francophonie (AUF)",
+      "vi": "Tổ chức Đại học Pháp ngữ (AUF)",
+      "domain": "societe",
+      "note": "Agence ở đây không dịch là \"cơ quan\"; tên gọi chính thức tiếng Việt là Tổ chức Đại học Pháp ngữ.",
+      "date": "2026-11-09"
+    },
+    {
+      "fr": "le directeur de l'École internationale de l'Université nationale du Vietnam à Hanoï (VNU-IS)",
+      "vi": "Hiệu trưởng Trường Quốc tế, Đại học Quốc gia Hà Nội",
+      "domain": "societe",
+      "note": "Ở Việt Nam là Hiệu trưởng; ở Pháp người đứng đầu đại học là président d'université, còn recteur là chức danh quản lý giáo dục cấp vùng (recteur d'académie). Đừng dịch Hiệu trưởng là recteur.",
+      "date": "2026-11-09"
+    },
+    {
+      "fr": "le capital humain",
+      "vi": "vốn con người, nguồn vốn nhân lực",
+      "domain": "economie",
+      "note": "Chủ đề Franconomics 2026: capital humain, égalité et transformation sociale.",
+      "date": "2026-11-09"
+    },
+    {
+      "fr": "un bien public mondial",
+      "vi": "hàng hóa công toàn cầu",
+      "domain": "arts",
+      "note": "Guterres kêu gọi công nhận văn hóa là bien public mondial (ONU Info). Bien ở đây là hàng hóa, của chung, không phải \"điều tốt\".",
+      "date": "2026-11-09"
+    },
+    {
+      "fr": "X s'est ouvert le [date] à [lieu] sur le thème « Y »",
+      "vi": "Ngày..., X đã khai mạc tại... với chủ đề \"Y\"",
+      "domain": "medias",
+      "note": "Mẫu câu: mở đầu tin hội nghị, diễn đàn. Thấy trên Le Courrier du Vietnam (Franconomics 2026) và TTXVN Chính sách và Cuộc sống. Tiếng Pháp lấy sự kiện làm chủ ngữ, tiếng Việt đưa thời gian lên đầu câu.",
+      "date": "2026-11-09"
+    },
+    {
+      "fr": "X a fait au moins N morts et P blessés, selon un bilan provisoire",
+      "vi": "X khiến ít nhất N người thiệt mạng và P người bị thương, theo số liệu ban đầu",
+      "domain": "securite",
+      "note": "Mẫu câu: tin tấn công, thiên tai. Thấy trên ONU Info (vụ chợ Amiet); dạng tiếng Việt \"khiến ít nhất... người thiệt mạng\" là cách đặt tít quen thuộc của bản tin tiếng Việt về cùng vụ việc. Không dịch faire là \"làm\".",
+      "date": "2026-11-09"
+    },
+    {
+      "fr": "Après avoir rappelé que X, Y a appelé à Z",
+      "vi": "Sau khi nhắc lại X, Y kêu gọi Z",
+      "domain": "diplomatie",
+      "note": "Mẫu câu: tường thuật diễn văn bằng infinitif passé, tránh chuỗi \"Il a dit… il a dit\". Thấy trên ONU Info (diễn văn của Guterres tại Madrid); báo Việt (TTXVN) hay dùng \"Phát biểu tại..., X nhấn mạnh/kêu gọi...\".",
+      "date": "2026-11-09"
+    },
     {
       "fr": "le vice-ministre de la Justice",
       "vi": "Thứ trưởng Bộ Tư pháp (báo Việt hay viết gọn Thứ trưởng Tư pháp)",
