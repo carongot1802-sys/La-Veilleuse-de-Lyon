@@ -1,6 +1,84 @@
 {
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "lessons": [
+    {
+      "id": "2026-11-10-to-lam-ceremonie-accueil-tokyo",
+      "date": "2026-11-10",
+      "type": "vi-fr",
+      "domain": "diplomatie",
+      "title": "Lễ đón trọng thể Tổng Bí thư, Chủ tịch nước Tô Lâm tại Tokyo",
+      "text": "Chiều tối 9/11 (theo giờ địa phương), tại Nhà khách quốc gia Akasaka, thủ đô Tokyo, Thủ tướng Nhật Bản Takaichi Sanae đã chủ trì Lễ đón trọng thể Tổng Bí thư, Chủ tịch nước Tô Lâm và Phu nhân thăm chính thức Nhật Bản từ ngày 8 đến 11/11. Quân nhạc cử Quốc thiều hai nước, sau đó hai nhà lãnh đạo duyệt Đội danh dự, rồi tiến hành hội đàm và chứng kiến Lễ trao các văn kiện hợp tác. Nhật Bản hiện là đối tác hàng đầu của Việt Nam về ODA và hợp tác lao động, nhà đầu tư lớn thứ ba và đối tác thương mại lớn thứ tư. Theo Đại sứ Nhật Bản, kim ngạch thương mại song phương 9 tháng đầu năm 2026 đạt 43,7 tỷ USD, tăng 15% so với cùng kỳ năm trước.",
+      "ref": "Dans l'après-midi du 9 novembre (heure locale), la Première ministre japonaise, Takaichi Sanae, a présidé au palais d'Akasaka, Maison des hôtes d'État à Tokyo, la cérémonie d'accueil officielle du secrétaire général du Parti communiste du Vietnam et président vietnamien, Tô Lâm, et de son épouse. Ce dernier effectue une visite officielle au Japon du 8 au 11 novembre. Après l'exécution des hymnes nationaux des deux pays, les deux dirigeants ont passé en revue la garde d'honneur, avant de s'entretenir et d'assister à l'échange de documents de coopération. Le Japon est le premier fournisseur d'aide publique au développement (APD) du Vietnam et son premier partenaire en matière de main-d'œuvre, ainsi que son troisième investisseur et son quatrième partenaire commercial. Selon l'ambassadeur du Japon, les échanges bilatéraux ont atteint 43,7 milliards de dollars au cours des neuf premiers mois de 2026, soit une hausse de 15 % par rapport à la même période de l'année précédente.",
+      "notes": [
+        [
+          "Thủ tướng Nhật Bản Takaichi Sanae",
+          "Tiếng Việt không đánh dấu giống, tiếng Pháp phải viết \"la Première ministre japonaise\" (VietnamPlus tiếng Pháp viết đúng như vậy). Khi xưng hô trực tiếp: \"Madame la Première ministre\"."
+        ],
+        [
+          "Lễ đón trọng thể",
+          "Báo Việt (Nhân Dân, VOV) dùng \"Lễ đón trọng thể\" hoặc \"Lễ đón chính thức\"; báo tiếng Pháp của Việt Nam (VietnamPlus, Nhân Dân tiếng Pháp) thống nhất dùng \"la cérémonie d'accueil officielle\". Không dịch \"trọng thể\" thành \"somptueuse\"."
+        ],
+        [
+          "Quân nhạc cử Quốc thiều hai nước, ... duyệt Đội danh dự",
+          "Khung nghi lễ cố định: \"l'exécution des hymnes nationaux\" (danh từ hóa, gọn hơn \"la musique militaire a joué\") và \"passer en revue la garde d'honneur\". VnExpress viết \"duyệt đội danh dự\", VietnamPlus tiếng Pháp viết \"ont passé en revue la garde d'honneur\"."
+        ],
+        [
+          "Tổng Bí thư, Chủ tịch nước Tô Lâm",
+          "Lần đầu ghi đủ chức danh \"secrétaire général du Parti communiste du Vietnam et président vietnamien\". Lần sau tránh lặp bằng \"ce dernier\" hoặc cách gọi gọn của báo tiếng Pháp Việt Nam: \"le dirigeant Tô Lâm\" (Le Courrier du Vietnam), \"le SG du Parti et président\" (VietnamPlus)."
+        ],
+        [
+          "ODA; tăng 15% so với cùng kỳ năm trước",
+          "ODA trong văn bản tiếng Pháp chuẩn là \"l'aide publique au développement (APD)\". \"So với cùng kỳ\" dịch bằng khung \"soit une hausse de 15 % par rapport à la même période de l'année précédente\"; nhớ khoảng trắng trước dấu % và dấu phẩy thập phân 43,7."
+        ]
+      ],
+      "srcname": "Báo Nhân Dân; đối chiếu VnExpress, VietnamPlus tiếng Pháp",
+      "url": "https://nhandan.vn/thu-tuong-nhat-ban-chu-tri-le-don-trong-the-tong-bi-thu-chu-tich-nuoc-to-lam-post1001312.html"
+    },
+    {
+      "id": "2026-11-10-robotique-vietnam-france-ue-cnrs",
+      "date": "2026-11-10",
+      "type": "fr-vi",
+      "domain": "economie",
+      "title": "Robotique : le Vietnam mise sur la France et l'UE",
+      "text": "Le Vietnam pourrait bâtir sa propre industrie robotique en s'appuyant sur la France et l'UE, estime Nguyen Dinh Vinh Thanh, chercheur au Centre national de la recherche scientifique (CNRS), interrogé à Paris par la VNA. Si les États-Unis dominent les modèles d'IA et la Chine les capacités de production, la France et l'UE se distinguent par la profondeur de leur recherche et leurs normes de sécurité. Le chercheur propose de lancer un projet de recherche international (IRP), de bâtir des infrastructures d'essai communes à Hoa Lac, puis de créer à terme un laboratoire de recherche international (IRL). Signé le 26 mai 2025, l'accord franco-vietnamien de coopération scientifique, technologique et d'innovation en fournirait le cadre.",
+      "ref": "Theo Tiến sĩ Nguyễn Đình Vĩnh Thanh, nhà nghiên cứu tại Trung tâm Nghiên cứu Khoa học Quốc gia Pháp (CNRS), Việt Nam hoàn toàn có thể xây dựng ngành công nghiệp robot của riêng mình nếu tranh thủ được hợp tác với Pháp và EU. Trả lời phỏng vấn phóng viên TTXVN tại Paris, ông cho rằng nếu Mỹ mạnh về mô hình AI, Trung Quốc có lợi thế về năng lực sản xuất thì Pháp và EU nổi bật ở chiều sâu nghiên cứu và tiêu chuẩn an toàn. Ông đề xuất triển khai dự án nghiên cứu quốc tế (IRP), xây dựng hạ tầng thử nghiệm dùng chung tại Khu Công nghệ cao Hòa Lạc, và khi đủ điều kiện thì thành lập phòng thí nghiệm nghiên cứu quốc tế (IRL). Hiệp định hợp tác khoa học, công nghệ và đổi mới sáng tạo Pháp - Việt ký ngày 26/5/2025 sẽ là khung pháp lý phù hợp.",
+      "notes": [
+        [
+          "..., estime Nguyen Dinh Vinh Thanh",
+          "Báo Pháp đặt nội dung lên trước, động từ tường thuật đảo ra sau (estime, affirme, souligne). Tiếng Việt đưa nguồn lên đầu: \"Theo Tiến sĩ...\" hoặc \"... cho rằng\". Bản tiếng Việt của VietnamPlus mở bài bằng nhận định, rồi mới nêu người trả lời phỏng vấn."
+        ],
+        [
+          "Si les États-Unis dominent..., la France et l'UE se distinguent par...",
+          "\"Si\" ở đây là si đối lập, không phải điều kiện. Báo Việt diễn đạt bằng \"nếu... thì...\" hoặc liệt kê \"Mỹ mạnh về..., Trung Quốc có lợi thế..., còn Pháp và EU nổi bật ở...\"."
+        ],
+        [
+          "pourrait bâtir; en fournirait le cadre",
+          "Conditionnel thể hiện khả năng, đề xuất của chuyên gia, không được bỏ: dịch \"có thể\", \"sẽ là\". \"En\" thay cho \"de cette feuille de route\", tiếng Việt phải nói rõ hoặc diễn lại thành \"khung pháp lý phù hợp\"."
+        ],
+        [
+          "interrogé à Paris par la VNA",
+          "Báo Pháp nói gọn bằng phân từ quá khứ; báo Việt quen viết \"Trả lời phỏng vấn phóng viên TTXVN thường trú tại Paris\". VNA (Agence vietnamienne d'information) chính là TTXVN."
+        ],
+        [
+          "la profondeur de leur recherche",
+          "VietnamPlus tiếng Việt dùng đúng cụm \"chiều sâu nghiên cứu\". Tránh dịch sát \"độ sâu của nghiên cứu\"."
+        ]
+      ],
+      "srcname": "VietnamPlus (tiếng Pháp và tiếng Việt)",
+      "url": "https://fr.vietnamplus.vn/le-vietnam-peut-developper-sa-propre-industrie-robotique-grace-a-la-cooperation-avec-la-france-et-lue-post270593.vnp"
+    },
+    {
+      "id": "2026-11-10-pasec-mathematiques-afrique-francophone",
+      "date": "2026-11-10",
+      "type": "dictee",
+      "domain": "societe",
+      "title": "Afrique francophone : l'école peine à enseigner les mathématiques",
+      "text": "Trois élèves sur quatre quittent l'école primaire sans maîtriser les bases des mathématiques en Afrique francophone, selon le Programme d'analyse des systèmes éducatifs (PASEC) de la Conférence des ministres de l'Éducation des États et gouvernements de la Francophonie (CONFEMEN). Ce dernier évalue tous les cinq ans les acquis des élèves dans plusieurs pays. Il est vrai que la scolarisation a nettement progressé ; cependant, l'école ne transmet pas toujours les compétences fondamentales. Classes surchargées, manque de manuels, enseignants insuffisamment formés et barrières linguistiques expliqueraient ces résultats. La presse congolaise plaide pour juger les systèmes éducatifs à ce que l'enfant sait réellement faire, et non plus au nombre d'écoles construites.",
+      "ref": "",
+      "notes": [],
+      "srcname": "Les Dépêches de Brazzaville (ADIAC)",
+      "url": "https://www.adiac-congo.com/content/education-en-afrique-trois-eleves-sur-quatre-quittent-le-primaire-sans-maitriser-les-0"
+    },
     {
       "id": "2026-11-09-franconomics-2026-hanoi",
       "date": "2026-11-09",
@@ -309,6 +387,111 @@
     }
   ],
   "terms": [
+    {
+      "fr": "la Première ministre japonaise",
+      "vi": "nữ Thủ tướng Nhật Bản (báo Việt chỉ viết \"Thủ tướng Nhật Bản\")",
+      "domain": "diplomatie",
+      "note": "Tiếng Pháp bắt buộc giống cái: la Première ministre, Madame la Première ministre. VietnamPlus tiếng Pháp: \"la Première ministre japonaise, Takaichi Sanae\". Thủ tướng Nhật Bản là người đứng đầu chính phủ, khác Nhật hoàng (l'empereur).",
+      "date": "2026-11-10"
+    },
+    {
+      "fr": "le secrétaire général du Parti communiste du Vietnam (PCV) et président vietnamien",
+      "vi": "Tổng Bí thư, Chủ tịch nước",
+      "domain": "politique",
+      "note": "Báo tiếng Pháp của Việt Nam hay rút gọn: \"le SG du Parti et président\" (VietnamPlus), \"le dirigeant Tô Lâm\", \"le haut dirigeant\" (Le Courrier du Vietnam). Không viết \"le président du Vietnam\" khi cần ghi đủ chức danh.",
+      "date": "2026-11-10"
+    },
+    {
+      "fr": "le président de la Chambre des représentants (Japon)",
+      "vi": "Chủ tịch Hạ viện Nhật Bản",
+      "domain": "politique",
+      "note": "Quốc hội Nhật (la Diète) gồm Chambre des représentants (Hạ viện) và Chambre des conseillers (Thượng viện, Chủ tịch là le président de la Chambre des conseillers). Không dùng \"Sénat\" và \"Assemblée nationale\" như ở Pháp.",
+      "date": "2026-11-10"
+    },
+    {
+      "fr": "le vice-ministre des Affaires étrangères",
+      "vi": "Thứ trưởng Bộ Ngoại giao",
+      "domain": "diplomatie",
+      "note": "Ví dụ Thứ trưởng Nguyễn Minh Vũ (VnExpress). Ở Pháp không có chức vice-ministre; tương đương gần nhất là ministre délégué hoặc secrétaire d'État.",
+      "date": "2026-11-10"
+    },
+    {
+      "fr": "le palais d'Akasaka, Maison des hôtes d'État",
+      "vi": "Nhà khách quốc gia Akasaka",
+      "domain": "diplomatie",
+      "note": "Nơi Nhật Bản tổ chức lễ đón chính thức nguyên thủ nước ngoài. Báo Việt viết \"Nhà khách quốc gia Akasaka, thủ đô Tokyo\".",
+      "date": "2026-11-10"
+    },
+    {
+      "fr": "l'aide publique au développement (APD)",
+      "vi": "viện trợ phát triển chính thức (ODA)",
+      "domain": "economie",
+      "note": "Tiếng Pháp chuẩn là APD; báo tiếng Pháp của Việt Nam đôi khi giữ viết tắt tiếng Anh ODA. Nhật Bản là \"le premier fournisseur d'APD du Vietnam\" (nhà tài trợ ODA lớn nhất).",
+      "date": "2026-11-10"
+    },
+    {
+      "fr": "le Centre national de la recherche scientifique (CNRS)",
+      "vi": "Trung tâm Nghiên cứu Khoa học Quốc gia Pháp (CNRS)",
+      "domain": "economie",
+      "note": "Cơ quan nghiên cứu công lớn nhất của Pháp. Chức danh: \"chercheur au CNRS\" là nhà nghiên cứu tại CNRS; \"directeur de recherche au CNRS\" là một ngạch nghiên cứu viên cao cấp, không phải \"giám đốc\".",
+      "date": "2026-11-10"
+    },
+    {
+      "fr": "un projet de recherche international (IRP) ; un laboratoire de recherche international (IRL)",
+      "vi": "dự án nghiên cứu quốc tế (IRP); phòng thí nghiệm nghiên cứu quốc tế (IRL)",
+      "domain": "economie",
+      "note": "Hai mô hình hợp tác của CNRS: IRP thường kéo dài 5 năm; IRL có chương trình, đội ngũ và hạ tầng chung, đã áp dụng ở Nhật Bản, Singapore.",
+      "date": "2026-11-10"
+    },
+    {
+      "fr": "l'accord de coopération scientifique, technologique et d'innovation",
+      "vi": "Hiệp định hợp tác khoa học, công nghệ và đổi mới sáng tạo",
+      "domain": "droit",
+      "note": "Pháp và Việt Nam ký ngày 26/5/2025. \"Innovation\" trong văn kiện Việt Nam dịch là \"đổi mới sáng tạo\", không chỉ \"đổi mới\".",
+      "date": "2026-11-10"
+    },
+    {
+      "fr": "la Conférence des ministres de l'Éducation des États et gouvernements de la Francophonie (CONFEMEN)",
+      "vi": "Hội nghị Bộ trưởng Giáo dục các nước sử dụng tiếng Pháp (CONFEMEN)",
+      "domain": "societe",
+      "note": "CONFEMEN điều hành chương trình PASEC (Programme d'analyse des systèmes éducatifs), đánh giá kết quả học tập của học sinh 5 năm một lần. Chú ý \"États et gouvernements\": Francophonie có cả chính phủ thành viên không phải quốc gia (Québec, Fédération Wallonie-Bruxelles).",
+      "date": "2026-11-10"
+    },
+    {
+      "fr": "X a présidé la cérémonie d'accueil officielle de Y",
+      "vi": "X chủ trì Lễ đón trọng thể Y",
+      "domain": "diplomatie",
+      "note": "Mẫu câu: mở đầu tin về chuyến thăm chính thức. Thấy trên VietnamPlus tiếng Pháp (\"a présidé la cérémonie d'accueil officielle\") và Báo Nhân Dân (\"chủ trì Lễ đón trọng thể\"). Tiếng Việt thường đưa thời gian, địa điểm lên đầu câu.",
+      "date": "2026-11-10"
+    },
+    {
+      "fr": "Après l'exécution des hymnes nationaux, X et Y ont passé en revue la garde d'honneur",
+      "vi": "Quân nhạc cử Quốc thiều hai nước, X và Y duyệt Đội danh dự",
+      "domain": "diplomatie",
+      "note": "Mẫu câu: mô tả nghi lễ đón. VietnamPlus tiếng Pháp dùng \"passer en revue la garde d'honneur\", VnExpress viết \"duyệt đội danh dự\" và \"quân nhạc cử quốc thiều\".",
+      "date": "2026-11-10"
+    },
+    {
+      "fr": "X a assisté à l'échange de documents de coopération entre A et B",
+      "vi": "X chứng kiến Lễ trao các văn kiện hợp tác giữa A và B",
+      "domain": "diplomatie",
+      "note": "Mẫu câu: sau hội đàm cấp cao. Báo Việt (VnExpress, Nhân Dân) phân biệt \"chứng kiến lễ ký\" (la signature) và \"chứng kiến trao văn kiện\" (l'échange); VietnamPlus tiếng Pháp giữ đúng sự phân biệt đó.",
+      "date": "2026-11-10"
+    },
+    {
+      "fr": "X pourrait Y en s'appuyant sur Z, estime W",
+      "vi": "W cho rằng X hoàn toàn có thể Y nếu tranh thủ được Z",
+      "domain": "economie",
+      "note": "Mẫu câu: đưa tin nhận định của chuyên gia. VietnamPlus tiếng Pháp đảo \"estime\" ra sau và dùng conditionnel; VietnamPlus tiếng Việt dùng \"hoàn toàn có thể\" và đưa nguồn lên đầu câu.",
+      "date": "2026-11-10"
+    },
+    {
+      "fr": "Si X domine A, Y se distingue par B",
+      "vi": "Nếu X mạnh về A thì Y nổi bật ở B",
+      "domain": "economie",
+      "note": "Mẫu câu: so sánh vị thế các bên (si đối lập). Thấy trong bài phỏng vấn nhà nghiên cứu CNRS trên VietnamPlus bản tiếng Pháp và bản tiếng Việt (\"Pháp và EU nổi bật về chiều sâu nghiên cứu\").",
+      "date": "2026-11-10"
+    },
     {
       "fr": "l'envoyé spécial du secrétaire général pour la Corne de l'Afrique",
       "vi": "Đặc phái viên của Tổng Thư ký Liên hợp quốc về khu vực Sừng châu Phi",
