@@ -1,6 +1,84 @@
 {
-  "updated": "2026-11-10",
+  "updated": "2026-11-11",
   "lessons": [
+    {
+      "id": "2026-11-11-kien-truc-phap-tai-lieu-luu-tru",
+      "date": "2026-11-11",
+      "type": "vi-fr",
+      "domain": "arts",
+      "title": "Triển lãm \"Phong cách kiến trúc Pháp tại Việt Nam 1858-1945\"",
+      "text": "Nhân Ngày Di sản văn hóa Việt Nam (23/11) và hưởng ứng Ngày Văn hóa Việt Nam (24/11), Cục Văn thư và Lưu trữ nhà nước (Bộ Nội vụ) phối hợp với Đại sứ quán Pháp tại Việt Nam tổ chức triển lãm \"Phong cách kiến trúc Pháp tại Việt Nam 1858-1945\". Dự kiến mở cửa từ sáng 23/11 tại số 12 Đào Tấn, Hà Nội, triển lãm giới thiệu bản vẽ, hồ sơ thiết kế, quy hoạch và hình ảnh gốc về các công trình ở Hà Nội, Hải Phòng, Huế, Đà Lạt và Thành phố Hồ Chí Minh, hiện được lưu giữ tại các Trung tâm Lưu trữ quốc gia và Lưu trữ quốc gia hải ngoại Pháp. Sự kiện là bước đi hướng tới mục tiêu UNESCO ghi danh khối tài liệu vào Danh mục Ký ức thế giới.",
+      "ref": "À l'occasion de la Journée du patrimoine culturel vietnamien (23 novembre) et de la Journée de la culture vietnamienne (24 novembre), les Archives nationales du Vietnam, relevant du ministère de l'Intérieur, organisent, en collaboration avec l'ambassade de France au Vietnam, l'exposition « Les styles architecturaux français au Vietnam (1858-1945) ». Ouverte au public à partir du 23 novembre au matin, au 12, rue Dao Tan, à Hanoï, elle présente plans, dossiers de conception et d'urbanisme ainsi que photographies originales d'édifices de Hanoï, Hai Phong, Hue, Da Lat et Hô Chi Minh-Ville, conservés dans les Centres des archives nationales du Vietnam et aux Archives nationales d'outre-mer (ANOM). L'exposition constitue une étape importante vers l'inscription de ces documents au registre Mémoire du monde de l'UNESCO.",
+      "notes": [
+        [
+          "Cục Văn thư và Lưu trữ nhà nước (Bộ Nội vụ)",
+          "Nhân Dân tiếng Pháp rút gọn thành \"les Archives nationales du Vietnam, relevant du ministère de l'Intérieur\". Lưu ý: Bộ Nội vụ của Việt Nam là \"ministère de l'Intérieur\", còn Bộ Công an là \"ministère de la Sécurité publique\"; không dịch Bộ Nội vụ là \"ministère des Affaires intérieures\"."
+        ],
+        [
+          "Nhân Ngày..., hưởng ứng Ngày...",
+          "Báo Việt xếp hai mốc ngày bằng \"nhân... và hưởng ứng...\". Tiếng Pháp gộp lại trong một khung \"À l'occasion de... et de...\", không cần tìm động từ riêng cho \"hưởng ứng\"."
+        ],
+        [
+          "Dự kiến mở cửa từ sáng 23/11",
+          "SGGP và Đại biểu Nhân dân đều viết \"dự kiến\". Tiếng Pháp hay dùng phân từ đặt đầu câu: \"Ouverte au public à partir du 23 novembre au matin\". Địa chỉ kiểu Pháp: số nhà, dấu phẩy, rồi \"rue\": \"au 12, rue Dao Tan\"."
+        ],
+        [
+          "Lưu trữ quốc gia hải ngoại Pháp",
+          "Tên chính thức là \"les Archives nationales d'outre-mer (ANOM)\", đặt tại Aix-en-Provence. \"Outre-mer\" ở đây là các vùng thuộc địa cũ, không dịch là \"étranger\"."
+        ],
+        [
+          "là bước đi hướng tới mục tiêu UNESCO ghi danh...",
+          "Đại biểu Nhân dân dùng \"hướng tới mục tiêu ghi danh Ký ức thế giới của UNESCO\", Nhân Dân tiếng Pháp dùng \"une étape importante vers\" + danh từ hóa \"l'inscription... au registre Mémoire du monde\". Tiếng Pháp danh từ hóa cả động từ \"ghi danh\"."
+        ]
+      ],
+      "srcname": "Nhân Dân tiếng Pháp; SGGP; Đại biểu Nhân dân",
+      "url": "https://fr.nhandan.vn/larchitecture-francaise-au-vietnam-a-travers-les-documents-darchives-post122339.html"
+    },
+    {
+      "id": "2026-11-11-teddy-riner-candidature-presidentielle",
+      "date": "2026-11-11",
+      "type": "fr-vi",
+      "domain": "politique",
+      "title": "Présidentielle 2027 : Teddy Riner se lance dans la course à l'Élysée",
+      "text": "Le judoka Teddy Riner, 37 ans, triple champion olympique en individuel, a annoncé lundi 9 novembre sa candidature à l'élection présidentielle de 2027, dans un entretien au Parisien couplé à une vidéo publiée sur les réseaux sociaux. Se disant ni de gauche ni de droite, l'icône du sport français entend rassembler au-delà des clivages partisans, sous le slogan « La France qu'on veut ». Il s'appuie sur un noyau dur d'une vingtaine de personnes, issues notamment de la société civile et de la fonction publique. Comme tout prétendant à l'Élysée, il devra cependant recueillir 500 parrainages d'élus pour figurer sur la liste officielle établie par le Conseil constitutionnel.",
+      "ref": "Ngày 9/11, võ sĩ judo Teddy Riner, 37 tuổi, ba lần giành huy chương vàng Olympic nội dung cá nhân, tuyên bố tranh cử Tổng thống Pháp năm 2027 trong cuộc phỏng vấn với tờ Le Parisien và một video đăng trên mạng xã hội. Tự nhận không thuộc cánh tả hay cánh hữu, biểu tượng của thể thao Pháp muốn quy tụ cử tri vượt qua ranh giới đảng phái, với khẩu hiệu \"Nước Pháp mà chúng ta mong muốn\". Đội ngũ nòng cốt của ông gồm khoảng 20 người, chủ yếu đến từ xã hội dân sự và khu vực công. Tuy nhiên, như mọi ứng viên khác, ông phải có ít nhất 500 chữ ký giới thiệu của các đại biểu dân cử để có tên trong danh sách chính thức do Hội đồng Hiến pháp công bố.",
+      "notes": [
+        [
+          "un entretien au Parisien couplé à une vidéo",
+          "\"au Parisien\" là à + le Parisien (tên báo có mạo từ). \"Couplé à\" nghĩa là \"kèm theo\", tiếng Việt chỉ cần nối bằng \"và\". VietnamPlus viết \"trong cuộc phỏng vấn với tờ Le Parisien và video đăng trên mạng xã hội\"."
+        ],
+        [
+          "la course à l'Élysée; prétendant à l'Élysée",
+          "Hoán dụ: l'Élysée là dinh Tổng thống, nên \"course à l'Élysée\" là cuộc đua vào ghế Tổng thống. Báo Việt không giữ hoán dụ này, viết thẳng \"tranh cử Tổng thống Pháp\"."
+        ],
+        [
+          "« La France qu'on veut »",
+          "\"On\" trong khẩu hiệu mang nghĩa \"chúng ta\". VietnamPlus dịch \"Nước Pháp mà chúng ta mong muốn\", thêm \"mong muốn\" cho tự nhiên thay vì \"muốn\" khô cứng."
+        ],
+        [
+          "un noyau dur d'une vingtaine de personnes",
+          "\"Noyau dur\" là \"nhóm nòng cốt\", không dịch \"hạt nhân cứng\". \"Une vingtaine\" là \"khoảng 20\", không phải đúng 20."
+        ],
+        [
+          "500 parrainages d'élus; le Conseil constitutionnel",
+          "\"Parrainage\" ở đây là chữ ký bảo trợ, giới thiệu ứng viên của nghị sĩ, thị trưởng... VietnamPlus viết \"chữ ký ủng hộ/giới thiệu của các quan chức dân cử\". Conseil constitutionnel là Hội đồng Hiến pháp, không phải \"Tòa án Hiến pháp\"."
+        ]
+      ],
+      "srcname": "LCP; VietnamPlus (TTXVN)",
+      "url": "https://lcp.fr/actualites/le-judoka-teddy-riner-annonce-sa-candidature-a-l-election-presidentielle-de-2027-444920"
+    },
+    {
+      "id": "2026-11-11-onudc-connect-alger-sahel",
+      "date": "2026-11-11",
+      "type": "dictee",
+      "domain": "securite",
+      "title": "Terrorisme et crime organisé : l'ONUDC lance CONNECT Sahel à Alger",
+      "text": "L'Office des Nations unies contre la drogue et le crime (ONUDC) a lancé mardi à Alger la branche Afrique de l'Ouest et Sahel de son cadre stratégique CONNECT, consacré aux liens entre le terrorisme et le crime organisé transfrontalier. Adopté par le Groupe des pays africains à Vienne en novembre 2024, puis présenté à New York en juillet dernier, ce dispositif entre ainsi dans sa phase opérationnelle. Les participants ont salué l'expérience de l'Algérie en la matière. Pendant deux jours, délégations ministérielles, experts et bailleurs de fonds devraient examiner la relance des plateformes opérationnelles multilatérales, chargées de partager l'information en temps réel entre polices, douanes et juridictions.",
+      "ref": "",
+      "notes": [],
+      "srcname": "Algerie360; APS; Algérie Brèves News",
+      "url": "https://www.algerie360.com/alger-onudc-connect-terrorisme-sahel/"
+    },
     {
       "id": "2026-11-10-to-lam-ceremonie-accueil-tokyo",
       "date": "2026-11-10",
@@ -387,6 +465,111 @@
     }
   ],
   "terms": [
+    {
+      "fr": "la directrice générale des relations multilatérales (ministère algérien des Affaires étrangères)",
+      "vi": "Tổng Vụ trưởng phụ trách quan hệ đa phương, Bộ Ngoại giao Algeria",
+      "domain": "diplomatie",
+      "note": "Bộ Ngoại giao Algeria chia thành các \"directions générales\"; đây là cấp tương đương Vụ trưởng ở Việt Nam, báo Việt có thể dịch \"Vụ trưởng Vụ Các vấn đề đa phương\". Không nhầm với \"directeur général\" của doanh nghiệp (Tổng Giám đốc). Algerie360 dùng cho bà Baya Bensmaïl.",
+      "date": "2026-11-11"
+    },
+    {
+      "fr": "la représentante régionale adjointe du Bureau de l'ONUDC pour le Moyen-Orient et l'Afrique",
+      "vi": "Phó Đại diện khu vực, Văn phòng UNODC khu vực Trung Đông và châu Phi",
+      "domain": "securite",
+      "note": "\"Adjoint(e)\" đặt sau chức danh là \"Phó\": représentant régional adjoint = Phó Đại diện khu vực. Algerie360 dùng cho bà Mirna Bouhabib.",
+      "date": "2026-11-11"
+    },
+    {
+      "fr": "l'ambassadrice, représentante permanente du Burkina Faso auprès des organisations internationales à Vienne",
+      "vi": "Đại sứ, Trưởng Phái đoàn thường trực Burkina Faso bên cạnh các tổ chức quốc tế tại Vienna",
+      "domain": "diplomatie",
+      "note": "\"Représentant permanent auprès de\" = Trưởng Phái đoàn (đại diện) thường trực bên cạnh/tại. Báo Việt quen viết \"Đại sứ, Trưởng Phái đoàn đại diện thường trực Việt Nam tại Liên hợp quốc\". Tiếng Pháp viết Vienne, tiếng Việt viết Vienna (Viên).",
+      "date": "2026-11-11"
+    },
+    {
+      "fr": "la directrice par intérim de la Division des affaires des traités de l'ONUDC",
+      "vi": "Quyền Giám đốc Ban Các vấn đề điều ước của UNODC",
+      "domain": "droit",
+      "note": "\"Par intérim\" = quyền (quyền Giám đốc, quyền Bộ trưởng), khác \"adjoint\" (phó). Algerie360 dùng cho bà Brigitte Strobel-Shaw.",
+      "date": "2026-11-11"
+    },
+    {
+      "fr": "l'Office des Nations unies contre la drogue et le crime (ONUDC)",
+      "vi": "Văn phòng Liên hợp quốc về Ma túy và Tội phạm (UNODC)",
+      "domain": "securite",
+      "note": "Tiếng Pháp viết tắt ONUDC, báo Việt giữ viết tắt tiếng Anh UNODC. Trụ sở tại Vienna.",
+      "date": "2026-11-11"
+    },
+    {
+      "fr": "le crime organisé transfrontalier",
+      "vi": "tội phạm có tổ chức xuyên quốc gia",
+      "domain": "securite",
+      "note": "Báo Algeria dùng \"transfrontalier\" (xuyên biên giới), văn kiện LHQ dùng \"transnational\". Báo Việt hầu như luôn viết \"xuyên quốc gia\". Đi kèm: la traite des êtres humains (mua bán người), les enlèvements contre rançon (bắt cóc tống tiền).",
+      "date": "2026-11-11"
+    },
+    {
+      "fr": "la primauté du droit",
+      "vi": "thượng tôn pháp luật; pháp quyền",
+      "domain": "droit",
+      "note": "Đồng nghĩa với \"l'État de droit\" trong nhiều văn cảnh. Báo Việt dịp Ngày Pháp luật 9/11 dùng \"văn hóa thượng tôn pháp luật\" = \"la culture du respect de la loi\".",
+      "date": "2026-11-11"
+    },
+    {
+      "fr": "les bailleurs de fonds",
+      "vi": "các nhà tài trợ",
+      "domain": "economie",
+      "note": "Dùng cho nhà tài trợ quốc tế, ODA. Algerie360 viết tắt \"bailleurs internationaux\". Báo Việt hay ghép \"các đối tác kỹ thuật và tài chính\" = \"les partenaires techniques et financiers\".",
+      "date": "2026-11-11"
+    },
+    {
+      "fr": "les Archives nationales d'outre-mer (ANOM)",
+      "vi": "Lưu trữ quốc gia hải ngoại Pháp",
+      "domain": "arts",
+      "note": "Đặt tại Aix-en-Provence, lưu tài liệu thời thuộc địa. Báo Việt (SGGP) không ghi viết tắt ANOM.",
+      "date": "2026-11-11"
+    },
+    {
+      "fr": "le registre Mémoire du monde de l'UNESCO ; inscrire au registre",
+      "vi": "Danh mục Ký ức thế giới của UNESCO; ghi danh",
+      "domain": "arts",
+      "note": "Phân biệt với \"la Liste du patrimoine mondial\" (Danh sách Di sản thế giới) và \"le patrimoine culturel immatériel\" (di sản văn hóa phi vật thể). Danh từ hóa: l'inscription au registre = việc ghi danh.",
+      "date": "2026-11-11"
+    },
+    {
+      "fr": "les parrainages d'élus",
+      "vi": "chữ ký giới thiệu (bảo trợ) của các đại biểu dân cử",
+      "domain": "politique",
+      "note": "Muốn ra tranh cử Tổng thống Pháp cần 500 chữ ký của nghị sĩ, thị trưởng... Danh sách ứng viên do le Conseil constitutionnel (Hội đồng Hiến pháp) công bố, không nhầm với \"Tòa án Hiến pháp\".",
+      "date": "2026-11-11"
+    },
+    {
+      "fr": "À l'occasion de X, Y organise, en collaboration avec Z, W",
+      "vi": "Nhân dịp X, Y phối hợp với Z tổ chức W",
+      "domain": "arts",
+      "note": "Mẫu câu: mở đầu tin sự kiện văn hóa, ngoại giao. Thấy ở Nhân Dân tiếng Pháp (\"en collaboration avec l'ambassade de France\") và SGGP, Đại biểu Nhân dân (\"phối hợp với Đại sứ quán Pháp\"). Tiếng Việt dùng động từ \"phối hợp\", tiếng Pháp dùng cụm giới từ.",
+      "date": "2026-11-11"
+    },
+    {
+      "fr": "X constitue une étape importante vers Y (danh từ hóa)",
+      "vi": "X là bước đi hướng tới mục tiêu Y",
+      "domain": "arts",
+      "note": "Mẫu câu: nêu ý nghĩa của sự kiện. Nhân Dân tiếng Pháp: \"une étape importante vers la reconnaissance...\"; Đại biểu Nhân dân: \"hướng tới mục tiêu ghi danh Ký ức thế giới\". Tiếng Pháp chuộng danh từ, tiếng Việt chuộng động từ.",
+      "date": "2026-11-11"
+    },
+    {
+      "fr": "X, N ans, a annoncé sa candidature à Y dans un entretien à Z",
+      "vi": "Trong cuộc phỏng vấn với tờ Z, X (N tuổi) tuyên bố tranh cử Y",
+      "domain": "politique",
+      "note": "Mẫu câu: đưa tin ứng viên ra tranh cử. Thấy ở LCP và VietnamPlus. Tiếng Pháp chèn tuổi bằng dấu phẩy ngay sau tên, không cần \"âgé de\"; báo Việt đưa nguồn (cuộc phỏng vấn) lên đầu.",
+      "date": "2026-11-11"
+    },
+    {
+      "fr": "Pour figurer sur la liste officielle, X devra recueillir N parrainages",
+      "vi": "Để có tên trong danh sách chính thức, X cần có ít nhất N chữ ký giới thiệu",
+      "domain": "politique",
+      "note": "Mẫu câu: nêu điều kiện bắt buộc. VietnamPlus và LCP cùng nhắc ngưỡng 500 chữ ký. \"Devra\" (futur của devoir) chuyển thành \"phải/cần\"; \"recueillir\" là thu thập, giành được.",
+      "date": "2026-11-11"
+    },
     {
       "fr": "la Première ministre japonaise",
       "vi": "nữ Thủ tướng Nhật Bản (báo Việt chỉ viết \"Thủ tướng Nhật Bản\")",
