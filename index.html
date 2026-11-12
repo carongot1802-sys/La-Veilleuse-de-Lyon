@@ -769,7 +769,7 @@ b.fix{color:var(--meadow);font-weight:700}
   <div class="view-head">
     <div>
       <h2>Sổ <em>thuật ngữ</em></h2>
-      <p>Cụm từ có sẵn theo từng mảng, bảng thuật ngữ biểu diễn và sự kiện (bấm nút Biểu diễn &amp; sự kiện để lọc theo phân mục), cộng với những gì bà tự lưu khi luyện. Ôn bằng thẻ lật, cụm nào chưa nhớ sẽ quay lại sớm hơn.</p>
+      <p>Cụm từ có sẵn theo bốn mảng, cộng với những gì bà tự lưu khi luyện. Ôn bằng thẻ lật, cụm nào chưa nhớ sẽ quay lại sớm hơn.</p>
     </div>
     <div class="row">
       <button class="btn" type="button" id="g-copy">Chép ra dạng bảng</button>
@@ -785,9 +785,7 @@ b.fix{color:var(--meadow);font-weight:700}
       <button type="button" data-gs="mine" aria-pressed="false">Của tui</button>
       <button type="button" data-gs="news" aria-pressed="false">Từ tin mới</button>
       <button type="button" data-gs="base" aria-pressed="false">Có sẵn</button>
-      <button type="button" data-gs="sk" aria-pressed="false">Biểu diễn &amp; sự kiện</button>
     </div>
-    <div class="chips" id="g-cats" hidden></div>
   </div>
   <div class="flash" id="g-flash" hidden></div>
   <div class="gl-list" id="g-list"></div>
@@ -2197,15 +2195,6 @@ let NEWS_LESSONS=[], NEWS_UPDATED=null;
 function allLessons(){ return NEWS_LESSONS.concat(itemsOf("lesson").sort((a,b)=>(b.created||0)-(a.created||0)), BASE_LESSONS) }
 function fmtDate(iso){ try{ const d=new Date(iso+"T00:00:00"); return `${String(d.getDate()).padStart(2,"0")}/${String(d.getMonth()+1).padStart(2,"0")}` }catch{ return iso } }
 function isFresh(l){ if(!l.date) return false; return (Date.now()-new Date(l.date+"T00:00:00").getTime()) < 3*864e5 }
-let SK_CATS=[];
-async function loadSK(){
-  try{
-    const r=await fetch("bieudien.json",{cache:"no-cache"}); if(!r.ok) return;
-    const j=await r.json(); SK_CATS=j.cats||[];
-    (j.terms||[]).forEach((t,i)=>{ if(t&&t.fr&&t.vi) BASE_TERMS.push({id:"sk"+i+"_"+t.fr.slice(0,12),kind:"term",fr:t.fr,vi:t.vi,domain:DOMAINS[t.domain]?t.domain:"arts",cat:t.cat||"",note:t.note||"",base:true,course:true,book:"sk"}) });
-    changed();
-  }catch{}
-}
 async function loadNews(){
   try{
     const r=await fetch("news.json",{cache:"no-store"}); if(!r.ok) return;
@@ -2619,19 +2608,17 @@ function initTrad(){
 }
 
 /* ---------- glossary ---------- */
-const G = { q:"", domain:"all", src:"all", cat:"all", reviewing:false, dir:"fr", queue:[], cur:0, flipped:false };
+const G = { q:"", domain:"all", src:"all", reviewing:false, dir:"fr", queue:[], cur:0, flipped:false };
 function allTerms(){ return BASE_TERMS.concat(itemsOf("term").sort((a,b)=>(b.created||0)-(a.created||0))) }
 function filteredTerms(){
   const q=strip(G.q.toLowerCase());
-  return allTerms().filter(t=>(G.domain==="all"||t.domain===G.domain)&&(G.src==="all"||(G.src==="mine"?!t.base:G.src==="news"?!!t.news:G.src==="sk"?(t.book==="sk"&&(G.cat==="all"||t.cat===G.cat)):t.base))&&(!q||strip((t.fr+" "+t.vi+" "+(t.note||"")).toLowerCase()).includes(q)));
+  return allTerms().filter(t=>(G.domain==="all"||t.domain===G.domain)&&(G.src==="all"||(G.src==="mine"?!t.base:G.src==="news"?!!t.news:t.base))&&(!q||strip((t.fr+" "+t.vi+" "+(t.note||"")).toLowerCase()).includes(q)));
 }
 function renderGloss(){
   domainChips($("#g-domains"), G.domain, v=>{G.domain=v;renderGloss()});
-  const gc=$("#g-cats"); gc.hidden=G.src!=="sk"||!SK_CATS.length;
-  if(!gc.hidden){ gc.innerHTML=[["all","Tất cả phân mục"]].concat(SK_CATS.map(c=>[c.id,c.vi])).map(([k,l])=>`<button type="button" class="chip" data-v="${k}" aria-pressed="${k===G.cat}">${esc(l)}${k!=="all"?` <small style="opacity:.6">${allTerms().filter(t=>t.book==="sk"&&t.cat===k).length}</small>`:""}</button>`).join(""); $$(".chip",gc).forEach(b=>b.onclick=()=>{G.cat=b.dataset.v;renderGloss()}); }
   const ts=filteredTerms();
   $("#g-list").innerHTML = ts.length ? ts.map(t=>`<div class="gl-row"><span class="dot d-${t.domain}" title="${DOMAINS[t.domain]?.vi||""}"></span>
-    <span class="fr">${esc(t.fr)}${t.news?`<span class="crs" style="color:var(--teal)">tin ${esc(fmtDate(t.date||""))}</span>`:t.book==="c1"?`<span class="crs" style="color:var(--pink)">DALF C1</span>`:t.book==="ae"?`<span class="crs" style="color:var(--violet)">Affaires étr.</span>`:t.book==="sk"?`<span class="crs" style="color:var(--coral)">${esc((SK_CATS.find(c=>c.id===t.cat)||{}).vi||"Biểu diễn")}</span>`:t.course?`<span class="crs">giáo trình</span>`:t.base?"":`<span class="own">của bà</span>`}</span><span class="vi">${esc(t.vi)}</span><span class="nt">${esc(t.note||"")}</span>
+    <span class="fr">${esc(t.fr)}${t.news?`<span class="crs" style="color:var(--teal)">tin ${esc(fmtDate(t.date||""))}</span>`:t.book==="c1"?`<span class="crs" style="color:var(--pink)">DALF C1</span>`:t.book==="ae"?`<span class="crs" style="color:var(--violet)">Affaires étr.</span>`:t.course?`<span class="crs">giáo trình</span>`:t.base?"":`<span class="own">của bà</span>`}</span><span class="vi">${esc(t.vi)}</span><span class="nt">${esc(t.note||"")}</span>
     <span class="act">${t.base?"":`<button class="icon-btn" type="button" data-del="${t.id}" title="Xóa">Xóa</button>`}</span></div>`).join("")
     : `<div class="empty-note" style="border:0">Không có cụm nào khớp. ${G.src==="mine"?"Bà lưu cụm từ khi luyện dịch hoặc bấm Thêm cụm từ.":""}</div>`;
   $$("[data-del]").forEach(b=>b.onclick=()=>{ if(b.dataset.confirm){del(b.dataset.del)} else {b.dataset.confirm="1";b.textContent="Chắc chưa?";setTimeout(()=>{if(b.isConnected){delete b.dataset.confirm;b.textContent="Xóa"}},2500)} });
@@ -3863,7 +3850,7 @@ let drillsSeeded=false; store.listeners.push(()=>{ if(!drillsSeeded && store.mod
 route();
 $("#d-input").value = lsGet("veilleuse.ddraft."+D.lessonId,"");
 initStore();
-loadNews(); loadSK();
+loadNews();
 loadAudioIndex();
 
 /* ---------- night sky over Lyon and the meadow ---------- */
