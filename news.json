@@ -1,6 +1,84 @@
 {
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "lessons": [
+    {
+      "id": "2026-11-13-vendemiaire-hai-phong",
+      "date": "2026-11-13",
+      "type": "vi-fr",
+      "domain": "diplomatie",
+      "title": "Tàu Vendémiaire của Hải quân Pháp thăm Hải Phòng",
+      "text": "Sáng 12/11, tàu Vendémiaire của Hải quân Pháp cùng 93 sĩ quan, thủy thủ đã cập cảng Green Port, thành phố Hải Phòng, bắt đầu chuyến thăm xã giao kéo dài đến ngày 16/11. Thượng tá Phạm Đức Ninh, Phó Tham mưu trưởng Vùng 1 Hải quân, dẫn đầu đoàn Hải quân nhân dân Việt Nam đón tàu. Trong thời gian ở Hải Phòng, đoàn sẽ chào xã giao lãnh đạo thành phố, trao đổi chuyên môn về phòng cháy, chữa cháy trên tàu và luyện tập tìm kiếm cứu nạn chung với Cảnh sát biển Việt Nam. Đại sứ Pháp Didier Le Bret cho rằng hợp tác quốc phòng là một phần quan trọng trong quan hệ Đối tác chiến lược toàn diện giữa hai nước.",
+      "ref": "Le 12 novembre au matin, la frégate de surveillance Vendémiaire de la Marine nationale, avec à son bord 93 officiers et marins, a accosté au port Green Port de Hai Phong pour une visite de courtoisie qui se poursuivra jusqu'au 16 novembre. Elle a été accueillie par une délégation de la Marine populaire du Vietnam conduite par Pham Duc Ninh, chef d'état-major adjoint de la Région navale 1. Au programme : visites de courtoisie aux autorités municipales, échanges techniques sur la lutte contre l'incendie à bord et entraînement conjoint de recherche et de sauvetage avec les garde-côtes vietnamiens. L'ambassadeur de France, Didier Le Bret, a souligné que la coopération de défense constituait un volet important du partenariat stratégique global entre les deux pays.",
+      "notes": [
+        [
+          "tàu tuần dương Vendémiaire",
+          "Nhân Dân gọi là \"tàu tuần dương\", nhưng tuần dương hạm là \"croiseur\". VietnamPlus tiếng Pháp gọi đúng loại tàu: \"la frégate de surveillance de la Marine nationale française Vendémiaire\". Tuổi Trẻ dùng \"tàu hộ vệ\" cho frégate. Dịch ngược theo chữ sẽ sai loại tàu."
+        ],
+        [
+          "cập cảng ; chuyến thăm xã giao",
+          "Báo Pháp ngữ dùng \"accoster au port de\" hoặc gọn hơn \"faire escale à\" (Le Courrier: \"La frégate Prairial fait escale à Hai Phong\"). \"Chuyến thăm xã giao\" là \"une visite de courtoisie\", không phải \"visite amicale\"."
+        ],
+        [
+          "Cảnh sát biển Việt Nam",
+          "Là lực lượng tuần duyên, tiếng Pháp gọi \"les garde-côtes vietnamiens\" (VietnamPlus tiếng Pháp), không dịch \"police maritime\". \"Bộ Tư lệnh Vùng Cảnh sát biển 1\" là \"le commandement de la Région 1 des garde-côtes\"."
+        ],
+        [
+          "Thượng tá Phạm Đức Ninh",
+          "Việt Nam có bốn cấp tá (Thiếu tá, Trung tá, Thượng tá, Đại tá), Hải quân Pháp chỉ có ba cấp tương ứng (capitaine de corvette, de frégate, de vaisseau) nên Thượng tá không có tương đương chính xác. Khi không chắc, nêu chức vụ (chef d'état-major adjoint) thay vì đoán cấp bậc."
+        ],
+        [
+          "Đối tác chiến lược toàn diện",
+          "Văn bản song phương Việt Nam và Pháp dùng \"le partenariat stratégique global\", không phải \"intégral\" hay \"complet\". Câu tiếng Việt \"là một phần quan trọng trong\" chuyển tự nhiên thành \"constituer un volet important de\"."
+        ]
+      ],
+      "srcname": "VietnamPlus, Báo Nhân Dân, Tuổi Trẻ; đối chiếu VietnamPlus tiếng Pháp",
+      "url": "https://www.vietnamplus.vn/tau-hai-quan-phap-tham-hai-phong-thuc-day-hop-tac-quoc-phong-post1147905.vnp"
+    },
+    {
+      "id": "2026-11-13-finul-depart-liban-sud",
+      "date": "2026-11-13",
+      "type": "fr-vi",
+      "domain": "securite",
+      "title": "Liban : la FINUL se prépare à quitter le Sud",
+      "text": "Près de 48 ans après son déploiement, la Force intérimaire des Nations unies au Liban (FINUL) vit ses dernières semaines. En août 2025, le Conseil de sécurité avait décidé à l'unanimité de ne pas renouveler son mandat au-delà de la fin de 2026 ; les préparatifs du retrait devraient commencer en janvier 2027. Il est vrai que les hostilités ont nettement reculé depuis l'accord de juin. Cependant, l'inquiétude reste vive : la mission fait toujours état de violations quotidiennes le long de la Ligne bleue. Selon les Nations unies, près d'un million de déplacés sont rentrés chez eux, soit une hausse de 13 % depuis septembre, mais quelque 304 500 personnes restent déplacées.",
+      "ref": "Sau gần 48 năm hiện diện, Lực lượng lâm thời Liên hợp quốc tại Liban (UNIFIL) đang bước vào những tuần cuối cùng. Tháng 8/2025, Hội đồng Bảo an đã nhất trí không gia hạn nhiệm vụ của lực lượng này sau cuối năm 2026; công tác chuẩn bị rút quân dự kiến bắt đầu từ tháng 1/2027. Kể từ thỏa thuận hồi tháng 6, giao tranh đã giảm rõ rệt. Dù vậy, lo ngại vẫn rất lớn: phái bộ cho biết các vụ vi phạm dọc Đường Xanh vẫn diễn ra hằng ngày. Theo Liên hợp quốc, gần 1 triệu người sơ tán đã trở về nhà, tăng 13% so với tháng 9, song vẫn còn khoảng 304.500 người chưa thể trở về nơi ở cũ.",
+      "notes": [
+        [
+          "la FINUL ; le Liban",
+          "Báo Việt dùng viết tắt tiếng Anh UNIFIL. Báo Quốc tế viết \"Lực lượng lâm thời LHQ tại Lebanon\" (tên nước theo tiếng Anh), còn TTXVN, Nhân Dân thường viết \"Liban\". Chọn một cách và giữ nhất quán trong bài."
+        ],
+        [
+          "ne pas renouveler son mandat",
+          "\"Mandat\" ở đây là \"nhiệm vụ\" do Hội đồng Bảo an giao (Báo Quốc tế: \"gia hạn nhiệm vụ của UNIFIL\"), không phải \"nhiệm kỳ\". Lưu ý plus-que-parfait \"avait décidé\": quyết định có trước, tiếng Việt chỉ cần mốc \"Tháng 8/2025\"."
+        ],
+        [
+          "Il est vrai que…, Cependant…",
+          "Khung nhượng bộ phản bác của báo Pháp. Dịch \"Đúng là… Tuy nhiên…\" nghe như văn nói; báo Việt thường nêu thẳng sự việc rồi chuyển ý bằng \"Dù vậy\" hoặc \"Song\"."
+        ],
+        [
+          "les déplacés ; la Ligne bleue",
+          "\"Déplacés\" là người phải rời bỏ nhà cửa (Báo Quốc tế: \"hơn một triệu người phải rời bỏ nhà cửa\"), khác \"réfugiés\" (người tị nạn, đã vượt biên giới). \"La Ligne bleue\" là \"Đường Xanh\", nên chú thích lần đầu vì độc giả Việt ít biết."
+        ],
+        [
+          "soit une hausse de 13 % ; 304 500",
+          "Tiếng Pháp có khoảng trắng trước % và khoảng trắng phân nghìn; tiếng Việt viết \"13%\" và \"304.500\". \"Soit une hausse de\" dịch \"tăng\" là đủ, không cần \"tức là\"."
+        ]
+      ],
+      "srcname": "ONU Info; đối chiếu Báo Quốc tế",
+      "url": "https://news.un.org/fr/story/2026/11/1159829"
+    },
+    {
+      "id": "2026-11-13-cop31-villes-premiere-ligne",
+      "date": "2026-11-13",
+      "type": "dictee",
+      "domain": "environnement",
+      "title": "COP31 : les villes en première ligne",
+      "text": "À Antalya, où se tient la COP31, les villes se sont imposées au cœur des débats. Selon ONU-Habitat, près de 3 milliards de personnes ne disposent pas d'un logement adéquat, dont plus d'un milliard vivent dans des sites informels. Désormais, 80 % des plans climatiques nationaux intègrent des mesures urbaines, contre 50 % auparavant. Pourtant, le compte n'y est pas : les besoins des villes atteindraient quelque 4 500 milliards de dollars par an jusqu'en 2030, alors que les financements actuels n'en couvrent qu'un cinquième. Pour la directrice exécutive d'ONU-Habitat, Anacláudia Rossbach, le logement relève à part entière de l'action climatique.",
+      "ref": "",
+      "notes": [],
+      "srcname": "ONU Info (couverture spéciale COP31)",
+      "url": "https://news.un.org/fr/story/2026/11/1159834"
+    },
     {
       "id": "2026-11-12-hoi-nguoi-viet-nam-tai-phap-50-nam",
       "date": "2026-11-12",
@@ -543,6 +621,118 @@
     }
   ],
   "terms": [
+    {
+      "fr": "le capitaine de frégate, commandant du Vendémiaire",
+      "vi": "Trung tá Hải quân, Thuyền trưởng kiêm Chỉ huy tàu Vendémiaire",
+      "domain": "securite",
+      "note": "Chức danh của Jean-Christophe Dherbecourt (tháng 11/2026) theo Báo Nhân Dân. Trong Hải quân Pháp, người chỉ huy tàu gọi là \"le commandant\" dù cấp bậc là capitaine de frégate.",
+      "date": "2026-11-13"
+    },
+    {
+      "fr": "le chef d'état-major adjoint de la Région navale 1",
+      "vi": "Phó Tham mưu trưởng Vùng 1 Hải quân",
+      "domain": "securite",
+      "note": "Chức danh của Thượng tá Phạm Đức Ninh. Tên đơn vị: \"Bộ Tư lệnh Vùng 1 Hải quân\" là \"le commandement de la Région navale 1\".",
+      "date": "2026-11-13"
+    },
+    {
+      "fr": "la Marine nationale ; la Marine populaire du Vietnam",
+      "vi": "Hải quân Pháp ; Hải quân nhân dân Việt Nam",
+      "domain": "securite",
+      "note": "Tên chính thức của Hải quân Pháp là \"Marine nationale\"; báo Việt dịch là Hải quân Pháp. Phân biệt với \"la marine marchande\" (hàng hải thương mại).",
+      "date": "2026-11-13"
+    },
+    {
+      "fr": "une frégate de surveillance",
+      "vi": "tàu hộ vệ giám sát (báo Việt hay gọi là tàu tuần dương)",
+      "domain": "securite",
+      "note": "Croiseur mới là tuần dương hạm. Tuổi Trẻ dùng \"tàu hộ vệ\" cho frégate khi nói Pháp đề xuất giúp Việt Nam tự đóng tàu hộ vệ.",
+      "date": "2026-11-13"
+    },
+    {
+      "fr": "une visite de courtoisie ; faire escale à",
+      "vi": "chuyến thăm xã giao ; cập cảng, ghé thăm cảng",
+      "domain": "diplomatie",
+      "note": "\"Chào xã giao\" lãnh đạo địa phương là \"rendre une visite de courtoisie à\".",
+      "date": "2026-11-13"
+    },
+    {
+      "fr": "les garde-côtes vietnamiens ; la Région 1 des garde-côtes",
+      "vi": "Cảnh sát biển Việt Nam ; Vùng Cảnh sát biển 1",
+      "domain": "securite",
+      "note": "Không dịch \"police maritime\". VietnamPlus tiếng Pháp dùng \"le commandement de la Région 2 des garde-côtes vietnamiens\" cho Bộ Tư lệnh Vùng Cảnh sát biển 2.",
+      "date": "2026-11-13"
+    },
+    {
+      "fr": "un entraînement conjoint de recherche et de sauvetage",
+      "vi": "luyện tập (diễn tập) tìm kiếm cứu nạn chung",
+      "domain": "securite",
+      "note": "\"Recherche et sauvetage\" tương ứng tiếng Anh SAR. \"Lutte contre l'incendie à bord\" là phòng cháy, chữa cháy trên tàu.",
+      "date": "2026-11-13"
+    },
+    {
+      "fr": "la Force intérimaire des Nations unies au Liban (FINUL)",
+      "vi": "Lực lượng lâm thời Liên hợp quốc tại Liban (UNIFIL)",
+      "domain": "securite",
+      "note": "Thành lập ngày 19/3/1978. Mandat chấm dứt cuối năm 2026, rút quân từ tháng 1/2027. Báo Việt dùng viết tắt tiếng Anh UNIFIL.",
+      "date": "2026-11-13"
+    },
+    {
+      "fr": "la Ligne bleue",
+      "vi": "Đường Xanh",
+      "domain": "securite",
+      "note": "Ranh giới do Liên hợp quốc vạch năm 2000 để xác nhận việc Israel rút khỏi Liban; không phải đường biên giới chính thức.",
+      "date": "2026-11-13"
+    },
+    {
+      "fr": "un vide sécuritaire",
+      "vi": "khoảng trống an ninh",
+      "domain": "securite",
+      "note": "ONU Info dùng khi nói lo ngại sau khi UNIFIL rút; Báo Quốc tế có cách nói \"khoảng trống UNIFIL\".",
+      "date": "2026-11-13"
+    },
+    {
+      "fr": "la porte-parole de la FINUL",
+      "vi": "Người phát ngôn UNIFIL",
+      "domain": "securite",
+      "note": "Kandice Ardiel (tháng 11/2026). Giống cái: \"la porte-parole\", danh từ không đổi hình thức.",
+      "date": "2026-11-13"
+    },
+    {
+      "fr": "la directrice exécutive d'ONU-Habitat",
+      "vi": "Giám đốc điều hành Chương trình Định cư con người Liên hợp quốc (UN-Habitat)",
+      "domain": "environnement",
+      "note": "Anacláudia Rossbach (tháng 11/2026). Báo Việt thường giữ tên tiếng Anh UN-Habitat.",
+      "date": "2026-11-13"
+    },
+    {
+      "fr": "un logement adéquat ; les sites informels",
+      "vi": "nhà ở phù hợp (đầy đủ) ; khu định cư phi chính thức",
+      "domain": "environnement",
+      "note": "ONU Info: gần 3 tỷ người thiếu nhà ở phù hợp, hơn 1 tỷ sống tại khu định cư phi chính thức. Tránh dịch \"bidonville\" là \"khu ổ chuột\" khi văn bản gốc dùng từ trung tính \"sites informels\".",
+      "date": "2026-11-13"
+    },
+    {
+      "fr": "X a accosté au port de Y pour une visite de courtoisie du [date] au [date]",
+      "vi": "Sáng [ngày], tàu X đã cập cảng Y, bắt đầu chuyến thăm xã giao kéo dài đến ngày [ngày]",
+      "domain": "diplomatie",
+      "note": "Mẫu câu: mở đầu tin tàu nước ngoài thăm cảng. Thấy ở VietnamPlus và Báo Nhân Dân (tiếng Việt); phía Pháp ngữ, Le Courrier du Vietnam và VietnamPlus tiếng Pháp dùng \"X fait escale à Y\".",
+      "date": "2026-11-13"
+    },
+    {
+      "fr": "En [date], le Conseil de sécurité avait décidé à l'unanimité de ne pas renouveler le mandat de X au-delà de Y",
+      "vi": "Tháng [..], Hội đồng Bảo an đã nhất trí không gia hạn nhiệm vụ của X sau Y",
+      "domain": "droit",
+      "note": "Mẫu câu: nhắc lại nghị quyết làm bối cảnh (plus-que-parfait). Thấy ở ONU Info; Báo Quốc tế và VietnamPlus dùng \"gia hạn nhiệm vụ\", \"gia hạn lần cuối\".",
+      "date": "2026-11-13"
+    },
+    {
+      "fr": "X fait état de violations quotidiennes de Y",
+      "vi": "X cho biết các vụ vi phạm Y vẫn diễn ra hằng ngày",
+      "domain": "securite",
+      "note": "Mẫu câu: tường thuật báo cáo của phái bộ mà không tự khẳng định. Thấy ở ONU Info (\"fait état de\"); Báo Quốc tế thường diễn đạt bằng \"cho biết\" hoặc \"tiếp tục\" + hành động.",
+      "date": "2026-11-13"
+    },
     {
       "fr": "l'Union générale des Vietnamiens de France (UGVF)",
       "vi": "Hội người Việt Nam tại Pháp",
