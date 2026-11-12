@@ -1,0 +1,3816 @@
+{
+ "title": "Thuật ngữ biểu diễn và sự kiện",
+ "cats": [
+  {
+   "id": "institution",
+   "vi": "Thể chế, cơ quan văn hóa",
+   "fr": "Institutions"
+  },
+  {
+   "id": "projet",
+   "vi": "Dự án, tài trợ, ngân sách",
+   "fr": "Projets et financement"
+  },
+  {
+   "id": "scene",
+   "vi": "Sân khấu, kịch nghệ",
+   "fr": "Théâtre et arts de la scène"
+  },
+  {
+   "id": "musique",
+   "vi": "Âm nhạc",
+   "fr": "Musique"
+  },
+  {
+   "id": "danse",
+   "vi": "Múa, xiếc",
+   "fr": "Danse et cirque"
+  },
+  {
+   "id": "cinema",
+   "vi": "Điện ảnh, nghe nhìn",
+   "fr": "Cinéma et audiovisuel"
+  },
+  {
+   "id": "visuel",
+   "vi": "Nghệ thuật thị giác, triển lãm",
+   "fr": "Arts visuels et expositions"
+  },
+  {
+   "id": "technique",
+   "vi": "Kỹ thuật sân khấu",
+   "fr": "Technique"
+  },
+  {
+   "id": "evenement",
+   "vi": "Tổ chức sự kiện, lễ tân",
+   "fr": "Événementiel"
+  },
+  {
+   "id": "contrat",
+   "vi": "Hợp đồng, pháp lý, quyền",
+   "fr": "Contrats et droits"
+  },
+  {
+   "id": "com",
+   "vi": "Truyền thông, quan hệ công chúng",
+   "fr": "Communication"
+  },
+  {
+   "id": "public",
+   "vi": "Khán giả, tiếp cận công chúng",
+   "fr": "Publics et médiation"
+  },
+  {
+   "id": "phrases",
+   "vi": "Mẫu câu",
+   "fr": "Phrases types"
+  }
+ ],
+ "terms": [
+  {
+   "fr": "l'Institut français du Vietnam (IFV)",
+   "vi": "Viện Pháp tại Việt Nam",
+   "cat": "institution",
+   "note": "Thuộc mạng lưới Institut français ở nước ngoài, gắn với Đại sứ quán Pháp."
+  },
+  {
+   "fr": "l'Institut français (Paris)",
+   "vi": "Viện Pháp (cơ quan trung ương tại Paris)",
+   "cat": "institution",
+   "note": "Cơ quan thực thi chính sách văn hóa đối ngoại của Bộ Châu Âu và Ngoại giao Pháp. Phân biệt với các Institut français đặt ở từng nước."
+  },
+  {
+   "fr": "le réseau culturel français à l'étranger",
+   "vi": "mạng lưới văn hóa Pháp ở nước ngoài",
+   "cat": "institution",
+   "note": "Gồm các Institut français, Alliance française, trường Pháp, trung tâm nghiên cứu."
+  },
+  {
+   "fr": "l'Alliance française",
+   "vi": "Liên minh Pháp (Alliance française)",
+   "cat": "institution",
+   "note": "Hiệp hội theo luật nước sở tại, chủ yếu dạy tiếng Pháp; khác Institut français là cơ quan nhà nước Pháp."
+  },
+  {
+   "fr": "le Service de coopération et d'action culturelle (SCAC)",
+   "vi": "Phòng Hợp tác và Hoạt động văn hóa (Đại sứ quán Pháp)",
+   "cat": "institution",
+   "note": "Ở nhiều nước, SCAC đã sáp nhập với Institut français."
+  },
+  {
+   "fr": "le conseiller de coopération et d'action culturelle (COCAC)",
+   "vi": "Tham tán Hợp tác và Hoạt động văn hóa",
+   "cat": "institution",
+   "note": "Thường kiêm Giám đốc Viện Pháp tại nước sở tại."
+  },
+  {
+   "fr": "le directeur / la directrice de l'Institut français",
+   "vi": "Giám đốc Viện Pháp",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "le directeur délégué / la directrice déléguée",
+   "vi": "Phó Giám đốc phụ trách, Giám đốc chi nhánh",
+   "cat": "institution",
+   "note": "Ví dụ: directeur délégué de l'Institut français à Hô Chi Minh-Ville."
+  },
+  {
+   "fr": "l'attaché(e) culturel(le)",
+   "vi": "Tùy viên văn hóa",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "l'attaché(e) audiovisuel(le)",
+   "vi": "Tùy viên nghe nhìn (phụ trách điện ảnh, truyền hình)",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "l'attaché(e) de coopération éducative",
+   "vi": "Tùy viên hợp tác giáo dục",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "le pôle culturel ; le pôle arts et culture",
+   "vi": "bộ phận văn hóa ; mảng nghệ thuật và văn hóa",
+   "cat": "institution",
+   "note": "\"Pôle\" là bộ phận, mảng phụ trách, không dịch \"cực\"."
+  },
+  {
+   "fr": "le service culturel",
+   "vi": "phòng văn hóa",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "le/la chargé(e) de programmation culturelle",
+   "vi": "chuyên viên phụ trách chương trình văn hóa",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "le/la chargé(e) de mission arts de la scène",
+   "vi": "chuyên viên phụ trách nghệ thuật biểu diễn",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "le/la chargé(e) de mission arts visuels",
+   "vi": "chuyên viên phụ trách nghệ thuật thị giác",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "le/la chargé(e) de projets culturels",
+   "vi": "cán bộ dự án văn hóa",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "le/la chargé(e) de coopération culturelle",
+   "vi": "chuyên viên hợp tác văn hóa",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "l'assistant(e) de programmation",
+   "vi": "trợ lý chương trình",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "le/la volontaire international(e) (VI)",
+   "vi": "tình nguyện viên quốc tế (chế độ VIA/VIE của Pháp)",
+   "cat": "institution",
+   "note": "Hình thức tuyển người trẻ làm việc tại cơ quan Pháp ở nước ngoài."
+  },
+  {
+   "fr": "le ministère de l'Europe et des Affaires étrangères (MEAE)",
+   "vi": "Bộ Châu Âu và Ngoại giao Pháp",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "la diplomatie culturelle ; la diplomatie d'influence",
+   "vi": "ngoại giao văn hóa ; ngoại giao gây ảnh hưởng",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "l'action culturelle extérieure",
+   "vi": "hoạt động văn hóa đối ngoại",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "le rayonnement culturel de la France",
+   "vi": "sự lan tỏa văn hóa Pháp",
+   "cat": "institution",
+   "note": "Collocation rất hay gặp; tránh dịch \"bức xạ\"."
+  },
+  {
+   "fr": "le soft power ; la puissance douce",
+   "vi": "quyền lực mềm",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "le ministère de la Culture (France)",
+   "vi": "Bộ Văn hóa Pháp",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "la Direction régionale des affaires culturelles (DRAC)",
+   "vi": "Sở Văn hóa vùng (cơ quan đại diện Bộ Văn hóa Pháp tại vùng)",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "le ministère de la Culture, des Sports et du Tourisme (Vietnam)",
+   "vi": "Bộ Văn hóa, Thể thao và Du lịch",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "le Département des arts du spectacle",
+   "vi": "Cục Nghệ thuật biểu diễn",
+   "cat": "institution",
+   "note": "Thuộc Bộ VHTTDL."
+  },
+  {
+   "fr": "le Département des beaux-arts, de la photographie et des expositions",
+   "vi": "Cục Mỹ thuật, Nhiếp ảnh và Triển lãm",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "le Département du cinéma",
+   "vi": "Cục Điện ảnh",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "le Département de la coopération internationale",
+   "vi": "Cục Hợp tác quốc tế",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "le Département du patrimoine culturel",
+   "vi": "Cục Di sản văn hóa",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "le Service de la Culture et des Sports de Hanoi",
+   "vi": "Sở Văn hóa và Thể thao Hà Nội",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "le Comité populaire de la ville",
+   "vi": "Ủy ban nhân dân thành phố",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "le Centre national du cinéma et de l'image animée (CNC)",
+   "vi": "Trung tâm Điện ảnh và Hình ảnh động Quốc gia Pháp",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "le Centre national de la musique (CNM)",
+   "vi": "Trung tâm Âm nhạc Quốc gia Pháp",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "le Centre national des arts plastiques (CNAP)",
+   "vi": "Trung tâm Mỹ thuật Quốc gia Pháp",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "une scène nationale",
+   "vi": "nhà hát quốc gia (mạng lưới sân khấu được nhà nước Pháp công nhận)",
+   "cat": "institution",
+   "note": "Nhãn hiệu (label) chứ không phải một nhà hát duy nhất."
+  },
+  {
+   "fr": "un Centre dramatique national (CDN)",
+   "vi": "Trung tâm kịch nghệ quốc gia",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "un Centre chorégraphique national (CCN)",
+   "vi": "Trung tâm biên đạo múa quốc gia",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "un Fonds régional d'art contemporain (FRAC)",
+   "vi": "Quỹ nghệ thuật đương đại vùng",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "un label ; être labellisé(e)",
+   "vi": "danh hiệu công nhận ; được gắn nhãn, được công nhận",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "Unifrance",
+   "vi": "Unifrance (cơ quan quảng bá điện ảnh Pháp ra nước ngoài)",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "l'Organisation internationale de la Francophonie (OIF)",
+   "vi": "Tổ chức Quốc tế Pháp ngữ",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "l'UNESCO ; le patrimoine culturel immatériel",
+   "vi": "UNESCO ; di sản văn hóa phi vật thể",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "l'Opéra de Hanoi",
+   "vi": "Nhà hát Lớn Hà Nội",
+   "cat": "institution",
+   "note": "Báo Pháp ngữ Việt Nam dùng \"l'Opéra de Hanoi\"; không dịch \"Grand Théâtre\" trừ khi văn bản chính thức dùng."
+  },
+  {
+   "fr": "l'Opéra de Hô Chi Minh-Ville",
+   "vi": "Nhà hát Thành phố Hồ Chí Minh",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "l'Orchestre symphonique du Vietnam (VNSO)",
+   "vi": "Dàn nhạc Giao hưởng Việt Nam",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "le Musée des beaux-arts du Vietnam",
+   "vi": "Bảo tàng Mỹ thuật Việt Nam",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "l'Académie nationale de musique du Vietnam",
+   "vi": "Học viện Âm nhạc Quốc gia Việt Nam",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "l'Université de théâtre et de cinéma de Hanoi",
+   "vi": "Trường Đại học Sân khấu - Điện ảnh Hà Nội",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "le Théâtre de marionnettes sur l'eau Thăng Long",
+   "vi": "Nhà hát Múa rối Thăng Long",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "la Saison croisée ; l'Année croisée",
+   "vi": "Mùa giao lưu văn hóa chéo ; Năm văn hóa chéo",
+   "cat": "institution",
+   "note": "Mỗi nước tổ chức chuỗi sự kiện văn hóa ở nước kia."
+  },
+  {
+   "fr": "un accord de coopération culturelle",
+   "vi": "hiệp định hợp tác văn hóa",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "un programme d'échanges culturels",
+   "vi": "chương trình giao lưu văn hóa",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "une lettre d'intention",
+   "vi": "thư bày tỏ ý định hợp tác (LOI)",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "un protocole d'accord ; un mémorandum d'entente",
+   "vi": "bản ghi nhớ (MOU)",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "une convention de partenariat",
+   "vi": "thỏa thuận đối tác",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "les industries culturelles et créatives (ICC)",
+   "vi": "các ngành công nghiệp văn hóa và sáng tạo",
+   "cat": "institution",
+   "note": "Việt Nam gọi \"các ngành công nghiệp văn hóa\"."
+  },
+  {
+   "fr": "l'économie créative",
+   "vi": "kinh tế sáng tạo",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "la diversité culturelle ; l'exception culturelle",
+   "vi": "đa dạng văn hóa ; ngoại lệ văn hóa",
+   "cat": "institution",
+   "note": "\"Exception culturelle\": nguyên tắc văn hóa không phải hàng hóa thông thường trong đàm phán thương mại."
+  },
+  {
+   "fr": "le service public de la culture",
+   "vi": "dịch vụ công về văn hóa",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "la politique culturelle",
+   "vi": "chính sách văn hóa",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "la démocratisation culturelle",
+   "vi": "dân chủ hóa văn hóa (đưa văn hóa đến mọi tầng lớp)",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "les droits culturels",
+   "vi": "quyền văn hóa",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "un lieu culturel ; un équipement culturel",
+   "vi": "thiết chế văn hóa, địa điểm văn hóa",
+   "cat": "institution",
+   "note": "\"Équipement culturel\" là \"thiết chế văn hóa\" (nhà hát, thư viện), không dịch \"thiết bị\"."
+  },
+  {
+   "fr": "un tiers-lieu",
+   "vi": "không gian thứ ba (không gian sáng tạo, cộng đồng)",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "une friche culturelle",
+   "vi": "khu xưởng cũ cải tạo thành không gian văn hóa",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "une médiathèque",
+   "vi": "thư viện đa phương tiện",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "Campus France",
+   "vi": "Campus France (cơ quan quảng bá du học Pháp)",
+   "cat": "institution",
+   "note": ""
+  },
+  {
+   "fr": "un appel à projets",
+   "vi": "lời mời nộp đề xuất dự án, kêu gọi dự án",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "un appel à candidatures",
+   "vi": "thông báo tuyển chọn, mời ứng tuyển",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "un dossier de candidature",
+   "vi": "hồ sơ ứng tuyển",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "la date limite de dépôt",
+   "vi": "hạn chót nộp hồ sơ",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "le règlement de l'appel à projets",
+   "vi": "thể lệ chương trình",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "les critères d'éligibilité ; être éligible à",
+   "vi": "tiêu chí hợp lệ ; đủ điều kiện nhận",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "les critères de sélection",
+   "vi": "tiêu chí lựa chọn",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "le comité de sélection ; le jury",
+   "vi": "hội đồng tuyển chọn ; ban giám khảo",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "les lauréats ; être retenu(e)",
+   "vi": "những người, dự án được chọn ; được chọn",
+   "cat": "projet",
+   "note": "\"Lauréat\" trong tài trợ là \"được chọn\", không nhất thiết \"đoạt giải\"."
+  },
+  {
+   "fr": "une note d'intention",
+   "vi": "bản trình bày ý tưởng, ý đồ nghệ thuật",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "une note de présentation ; un dossier artistique",
+   "vi": "bản giới thiệu dự án ; hồ sơ nghệ thuật",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "le porteur de projet",
+   "vi": "đơn vị chủ trì dự án, người khởi xướng",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "un partenaire local",
+   "vi": "đối tác sở tại",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "une subvention ; subventionner",
+   "vi": "khoản tài trợ (của nhà nước) ; tài trợ",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "une aide à la création",
+   "vi": "hỗ trợ sáng tác",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "une aide à la diffusion",
+   "vi": "hỗ trợ phổ biến, lưu diễn",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "une aide à la mobilité",
+   "vi": "hỗ trợ đi lại, di chuyển (cho nghệ sĩ)",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "une bourse ; un(e) boursier/boursière",
+   "vi": "học bổng, khoản trợ cấp ; người nhận học bổng",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "le cofinancement ; cofinancer",
+   "vi": "đồng tài trợ ; cùng đóng góp kinh phí",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "un financement croisé",
+   "vi": "tài trợ từ nhiều nguồn",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "le mécénat ; un mécène",
+   "vi": "hoạt động bảo trợ (tài trợ phi thương mại) ; nhà bảo trợ",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "le mécénat d'entreprise",
+   "vi": "tài trợ của doanh nghiệp (phi thương mại)",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "le parrainage ; le sponsoring",
+   "vi": "tài trợ (đổi lấy quảng bá thương hiệu)",
+   "cat": "projet",
+   "note": "Khác \"mécénat\": sponsoring có đối ứng quảng cáo."
+  },
+  {
+   "fr": "un sponsor ; un partenaire officiel",
+   "vi": "nhà tài trợ ; đối tác chính thức",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "une contrepartie",
+   "vi": "quyền lợi đối ứng (cho nhà tài trợ)",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "un partenariat en nature ; un apport en nature",
+   "vi": "tài trợ bằng hiện vật, dịch vụ",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "le financement participatif",
+   "vi": "gây quỹ cộng đồng (crowdfunding)",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "le budget prévisionnel",
+   "vi": "dự toán ngân sách",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "le budget réalisé",
+   "vi": "ngân sách thực chi",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "un budget équilibré",
+   "vi": "ngân sách cân đối thu chi",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "les postes de dépenses",
+   "vi": "các khoản mục chi",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "les recettes propres",
+   "vi": "nguồn thu tự có",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "les frais de déplacement ; les per diem",
+   "vi": "chi phí đi lại ; phụ cấp công tác theo ngày",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "les frais d'hébergement",
+   "vi": "chi phí lưu trú",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "les défraiements",
+   "vi": "khoản chi trả chi phí (ăn ở, đi lại)",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "les frais de transport de fret",
+   "vi": "chi phí vận chuyển hàng hóa (đạo cụ, tác phẩm)",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "un devis ; établir un devis",
+   "vi": "bảng báo giá ; lập báo giá",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "un bon de commande",
+   "vi": "đơn đặt hàng",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "une facture ; facturer",
+   "vi": "hóa đơn ; lập hóa đơn",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "le paiement à réception de facture",
+   "vi": "thanh toán khi nhận hóa đơn",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "un acompte ; le solde",
+   "vi": "khoản tạm ứng, đặt cọc ; khoản còn lại",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "hors taxes (HT) ; toutes taxes comprises (TTC)",
+   "vi": "chưa thuế ; đã gồm thuế",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "le rétroplanning",
+   "vi": "lịch ngược (lập từ ngày sự kiện lùi về)",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "le calendrier prévisionnel",
+   "vi": "lịch dự kiến",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "le chronogramme",
+   "vi": "bảng tiến độ",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "les livrables",
+   "vi": "sản phẩm đầu ra cần bàn giao",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "les indicateurs ; les résultats attendus",
+   "vi": "chỉ số ; kết quả mong đợi",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "le suivi et l'évaluation",
+   "vi": "theo dõi và đánh giá",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "le bilan ; le rapport final",
+   "vi": "báo cáo tổng kết ; báo cáo cuối kỳ",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "le bilan financier ; les justificatifs",
+   "vi": "báo cáo tài chính ; chứng từ",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "le compte rendu",
+   "vi": "biên bản, báo cáo tóm tắt (cuộc họp)",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "une réunion de lancement",
+   "vi": "cuộc họp khởi động dự án (kick-off)",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "un point d'étape",
+   "vi": "cuộc họp, báo cáo cập nhật tiến độ",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "le cahier des charges",
+   "vi": "bản yêu cầu kỹ thuật, điều khoản tham chiếu (TOR)",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "un prestataire ; une prestation",
+   "vi": "nhà cung cấp dịch vụ ; dịch vụ",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "un appel d'offres",
+   "vi": "mời thầu",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "une consultation de prestataires",
+   "vi": "lấy báo giá từ nhiều nhà cung cấp",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "la faisabilité ; une étude de faisabilité",
+   "vi": "tính khả thi ; nghiên cứu khả thi",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "la pérennité d'un projet",
+   "vi": "tính bền vững của dự án",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "le renforcement des capacités",
+   "vi": "nâng cao năng lực",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "la professionnalisation du secteur",
+   "vi": "chuyên nghiệp hóa ngành",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "monter un projet",
+   "vi": "xây dựng, dựng một dự án",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "piloter, coordonner un projet",
+   "vi": "điều phối, chỉ đạo dự án",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "mettre en œuvre ; la mise en œuvre",
+   "vi": "triển khai ; việc triển khai",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "mobiliser des fonds",
+   "vi": "huy động vốn, kinh phí",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "lever des fonds",
+   "vi": "gây quỹ",
+   "cat": "projet",
+   "note": ""
+  },
+  {
+   "fr": "le spectacle vivant ; les arts de la scène",
+   "vi": "nghệ thuật biểu diễn",
+   "cat": "scene",
+   "note": "\"Spectacle vivant\" là thuật ngữ hành chính Pháp, gồm kịch, múa, nhạc, xiếc, nghệ thuật đường phố."
+  },
+  {
+   "fr": "un spectacle",
+   "vi": "buổi diễn, vở diễn, chương trình biểu diễn",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "une pièce (de théâtre)",
+   "vi": "vở kịch",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "la création ; une création",
+   "vi": "việc sáng tạo, dàn dựng mới ; tác phẩm mới dàn dựng",
+   "cat": "scene",
+   "note": "\"Création mondiale\": công diễn lần đầu trên thế giới."
+  },
+  {
+   "fr": "une reprise",
+   "vi": "dựng lại, diễn lại (vở cũ)",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "une adaptation ; adapter",
+   "vi": "chuyển thể ; chuyển thể từ",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "le répertoire",
+   "vi": "vốn tiết mục, kịch mục",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "la mise en scène ; mettre en scène",
+   "vi": "dàn dựng ; dàn dựng",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "le metteur / la metteuse en scène",
+   "vi": "đạo diễn sân khấu",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "le/la dramaturge",
+   "vi": "cố vấn kịch bản, cố vấn dàn dựng (dramaturg)",
+   "cat": "scene",
+   "note": "Bẫy: không phải \"tác giả kịch\" (auteur dramatique). Trong sân khấu Pháp đương đại, dramaturge làm việc cùng đạo diễn về văn bản và ý đồ."
+  },
+  {
+   "fr": "l'auteur / l'autrice dramatique",
+   "vi": "tác giả kịch",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "le texte ; la dramaturgie",
+   "vi": "kịch bản ; nghệ thuật kịch",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "un comédien / une comédienne",
+   "vi": "diễn viên (sân khấu)",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "la distribution ; le casting",
+   "vi": "dàn diễn viên ; tuyển vai",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "le rôle-titre",
+   "vi": "vai chính (trùng tên vở)",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "un second rôle",
+   "vi": "vai phụ",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "une compagnie (de théâtre)",
+   "vi": "đoàn kịch, nhóm nghệ thuật độc lập",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "une troupe",
+   "vi": "đoàn nghệ thuật",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "une compagnie conventionnée",
+   "vi": "đoàn được nhà nước ký hợp đồng hỗ trợ dài hạn",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "une répétition ; répéter",
+   "vi": "buổi tập ; tập",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "la répétition générale ; la générale",
+   "vi": "buổi tổng duyệt",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "la couturière",
+   "vi": "buổi tập có trang phục trước tổng duyệt",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "une avant-première",
+   "vi": "buổi diễn, chiếu ra mắt trước",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "la première",
+   "vi": "đêm công diễn đầu tiên",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "la dernière",
+   "vi": "đêm diễn cuối",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "une représentation",
+   "vi": "suất diễn",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "une tournée ; partir en tournée",
+   "vi": "chuyến lưu diễn ; đi lưu diễn",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "une date de tournée",
+   "vi": "một điểm diễn, một suất trong lịch lưu diễn",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "la diffusion",
+   "vi": "phổ biến, phát hành (đưa tác phẩm đến các nơi diễn)",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "la saison (théâtrale)",
+   "vi": "mùa diễn",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "la programmation ; programmer",
+   "vi": "chương trình biểu diễn ; đưa vào chương trình",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "un programmateur / une programmatrice",
+   "vi": "người phụ trách chọn chương trình",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "une résidence (de création)",
+   "vi": "chương trình lưu trú sáng tác",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "un artiste en résidence",
+   "vi": "nghệ sĩ lưu trú",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "une sortie de résidence",
+   "vi": "buổi trình bày kết quả lưu trú",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "une lecture ; une mise en espace",
+   "vi": "buổi đọc kịch ; đọc kịch có dàn dựng đơn giản",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "une étape de travail",
+   "vi": "buổi trình diễn thử (tác phẩm đang thực hiện)",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "le théâtre de marionnettes ; le marionnettiste",
+   "vi": "múa rối ; nghệ sĩ múa rối",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "les marionnettes sur l'eau",
+   "vi": "múa rối nước",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "le théâtre d'objets",
+   "vi": "kịch đồ vật",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "le théâtre d'ombres",
+   "vi": "kịch bóng",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "le théâtre musical ; la comédie musicale",
+   "vi": "kịch âm nhạc ; nhạc kịch",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "le théâtre jeune public",
+   "vi": "sân khấu thiếu nhi",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "le théâtre classique / contemporain",
+   "vi": "kịch cổ điển / đương đại",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "le chèo ; le tuồng ; le cải lương",
+   "vi": "chèo ; tuồng ; cải lương",
+   "cat": "scene",
+   "note": "Báo Pháp thường giữ tên Việt kèm giải thích: théâtre populaire chèo, opéra classique tuồng, théâtre rénové cải lương."
+  },
+  {
+   "fr": "la scène ; monter sur scène",
+   "vi": "sân khấu ; lên sân khấu",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "l'avant-scène ; le fond de scène",
+   "vi": "phần trước sân khấu ; hậu cảnh",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "les coulisses",
+   "vi": "cánh gà, hậu trường",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "côté cour / côté jardin",
+   "vi": "bên phải / bên trái sân khấu (nhìn từ khán giả)",
+   "cat": "scene",
+   "note": "Mẹo nhớ: Jardin à gauche, Cour à droite (J.-C.) khi nhìn từ phía khán giả."
+  },
+  {
+   "fr": "le rideau ; le lever de rideau",
+   "vi": "màn sân khấu ; mở màn",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "le salut ; les rappels",
+   "vi": "chào khán giả cuối buổi ; vỗ tay mời ra chào lại",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "l'entracte",
+   "vi": "giờ nghỉ giữa buổi",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "une salle de spectacle",
+   "vi": "phòng diễn, nhà hát",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "le plateau",
+   "vi": "sàn diễn",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "la loge",
+   "vi": "phòng hóa trang",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "le trac",
+   "vi": "hồi hộp, run trước giờ diễn",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "faire salle comble ; afficher complet",
+   "vi": "kín rạp ; hết vé",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "la critique ; être salué(e) par la critique",
+   "vi": "giới phê bình ; được giới phê bình ca ngợi",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "un succès public et critique",
+   "vi": "thành công cả về khán giả lẫn phê bình",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "les arts de la rue",
+   "vi": "nghệ thuật đường phố",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "le spectacle en plein air",
+   "vi": "biểu diễn ngoài trời",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "le spectacle in situ",
+   "vi": "biểu diễn tại chỗ, gắn với địa điểm cụ thể",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "la performance",
+   "vi": "trình diễn (nghệ thuật trình diễn)",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "le conte ; un conteur",
+   "vi": "kể chuyện ; người kể chuyện",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "le stand-up ; le one-man-show",
+   "vi": "hài độc thoại",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "surtitré(e) ; le surtitrage",
+   "vi": "có phụ đề trên sân khấu ; phụ đề sân khấu",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "en version originale surtitrée",
+   "vi": "bằng ngôn ngữ gốc có phụ đề",
+   "cat": "scene",
+   "note": ""
+  },
+  {
+   "fr": "un concert ; donner un concert",
+   "vi": "buổi hòa nhạc ; biểu diễn hòa nhạc",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "un récital",
+   "vi": "buổi độc tấu, độc diễn",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "un orchestre symphonique",
+   "vi": "dàn nhạc giao hưởng",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "un orchestre de chambre ; la musique de chambre",
+   "vi": "dàn nhạc thính phòng ; nhạc thính phòng",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "le chef d'orchestre ; diriger un orchestre",
+   "vi": "nhạc trưởng ; chỉ huy dàn nhạc",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "sous la direction de",
+   "vi": "dưới sự chỉ huy của",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "le premier violon ; le violon solo",
+   "vi": "bè violon thứ nhất ; violon trưởng (concertmaster)",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "un soliste",
+   "vi": "nghệ sĩ độc tấu",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "un pupitre",
+   "vi": "bè (nhạc cụ trong dàn nhạc)",
+   "cat": "musique",
+   "note": "Không dịch \"giá nhạc\" trong ngữ cảnh dàn nhạc."
+  },
+  {
+   "fr": "les cordes ; les vents ; les cuivres ; les percussions",
+   "vi": "bộ dây ; bộ hơi ; bộ đồng ; bộ gõ",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "un quatuor à cordes",
+   "vi": "tứ tấu đàn dây",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "un chœur ; une chorale ; un choriste",
+   "vi": "dàn hợp xướng ; đội hợp xướng ; thành viên hợp xướng",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "un compositeur / une compositrice",
+   "vi": "nhà soạn nhạc",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "une œuvre ; une partition",
+   "vi": "tác phẩm ; tổng phổ, bản nhạc",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "une commande (musicale)",
+   "vi": "tác phẩm đặt hàng sáng tác",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "la création mondiale",
+   "vi": "công diễn lần đầu trên thế giới",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "l'opéra ; un livret",
+   "vi": "opera ; kịch bản opera",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "un(e) chanteur/chanteuse lyrique",
+   "vi": "ca sĩ opera, ca sĩ thính phòng",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "la musique classique ; la musique contemporaine",
+   "vi": "nhạc cổ điển ; nhạc đương đại",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "les musiques actuelles",
+   "vi": "âm nhạc đương đại đại chúng (pop, rock, rap, electro...)",
+   "cat": "musique",
+   "note": "Thuật ngữ hành chính Pháp, khác \"musique contemporaine\" (nhạc hàn lâm đương đại)."
+  },
+  {
+   "fr": "les musiques du monde",
+   "vi": "âm nhạc thế giới (world music)",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "la musique traditionnelle",
+   "vi": "âm nhạc truyền thống, nhạc cổ truyền",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "le jazz ; une jam session",
+   "vi": "jazz ; buổi ngẫu hứng",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "les musiques électroniques ; un DJ set",
+   "vi": "nhạc điện tử ; phần trình diễn của DJ",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "un groupe ; un(e) artiste",
+   "vi": "ban nhạc ; nghệ sĩ",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "la tête d'affiche",
+   "vi": "nghệ sĩ chính, nghệ sĩ hút khách",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "la première partie",
+   "vi": "phần mở màn (nghệ sĩ diễn trước)",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "une scène ouverte",
+   "vi": "sân khấu mở (ai cũng có thể lên diễn)",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "un festival de musique",
+   "vi": "lễ hội âm nhạc",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "la Fête de la musique (21 juin)",
+   "vi": "Lễ hội Âm nhạc, Ngày hội âm nhạc (21/6)",
+   "cat": "musique",
+   "note": "Khởi xướng ở Pháp năm 1982, Viện Pháp tổ chức tại nhiều nước."
+  },
+  {
+   "fr": "un ciné-concert",
+   "vi": "chiếu phim kèm hòa nhạc trực tiếp",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "un album ; un single ; sortir un album",
+   "vi": "album ; đĩa đơn ; phát hành album",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "un label (de musique)",
+   "vi": "hãng đĩa",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "un tourneur ; un producteur de spectacles",
+   "vi": "đơn vị tổ chức lưu diễn ; nhà sản xuất biểu diễn",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "les droits d'auteur (SACEM)",
+   "vi": "tiền tác quyền (SACEM: hội tác giả, nhà soạn nhạc Pháp)",
+   "cat": "musique",
+   "note": "Ở Việt Nam: Trung tâm Bảo vệ quyền tác giả âm nhạc Việt Nam (VCPMC)."
+  },
+  {
+   "fr": "le Centre pour la protection des droits d'auteur musicaux du Vietnam (VCPMC)",
+   "vi": "Trung tâm Bảo vệ quyền tác giả âm nhạc Việt Nam",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "la balance ; faire la balance",
+   "vi": "chỉnh âm thanh trước giờ diễn (soundcheck)",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "un instrument traditionnel ; le đàn bầu",
+   "vi": "nhạc cụ truyền thống ; đàn bầu",
+   "cat": "musique",
+   "note": "\"Monocorde\" là cách báo Pháp giải thích đàn bầu."
+  },
+  {
+   "fr": "le ca trù ; le quan họ ; la musique de cour de Huế",
+   "vi": "ca trù ; quan họ ; nhã nhạc cung đình Huế",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "un conservatoire",
+   "vi": "nhạc viện",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "une masterclass ; un atelier de musique",
+   "vi": "lớp học bậc thầy ; xưởng âm nhạc",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "en tournée asiatique",
+   "vi": "trong chuyến lưu diễn châu Á",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "à guichets fermés",
+   "vi": "bán hết vé",
+   "cat": "musique",
+   "note": ""
+  },
+  {
+   "fr": "la danse contemporaine",
+   "vi": "múa đương đại",
+   "cat": "danse",
+   "note": ""
+  },
+  {
+   "fr": "la danse classique ; le ballet",
+   "vi": "múa cổ điển ; ballet",
+   "cat": "danse",
+   "note": ""
+  },
+  {
+   "fr": "le hip-hop ; le breakdance (breaking)",
+   "vi": "hip-hop ; breakdance",
+   "cat": "danse",
+   "note": ""
+  },
+  {
+   "fr": "un chorégraphe ; une chorégraphie",
+   "vi": "biên đạo múa ; tác phẩm múa, biên đạo",
+   "cat": "danse",
+   "note": ""
+  },
+  {
+   "fr": "chorégraphier une pièce",
+   "vi": "biên đạo một tác phẩm",
+   "cat": "danse",
+   "note": ""
+  },
+  {
+   "fr": "un danseur / une danseuse ; un(e) interprète",
+   "vi": "diễn viên múa ; người trình diễn",
+   "cat": "danse",
+   "note": ""
+  },
+  {
+   "fr": "une pièce chorégraphique",
+   "vi": "tác phẩm múa",
+   "cat": "danse",
+   "note": ""
+  },
+  {
+   "fr": "un solo ; un duo ; une pièce de groupe",
+   "vi": "múa đơn ; múa đôi ; múa tập thể",
+   "cat": "danse",
+   "note": ""
+  },
+  {
+   "fr": "un corps de ballet",
+   "vi": "đoàn múa ballet (vũ đoàn)",
+   "cat": "danse",
+   "note": ""
+  },
+  {
+   "fr": "la scénographie",
+   "vi": "thiết kế không gian sân khấu",
+   "cat": "danse",
+   "note": ""
+  },
+  {
+   "fr": "une création en commun ; une co-création",
+   "vi": "tác phẩm đồng sáng tác",
+   "cat": "danse",
+   "note": ""
+  },
+  {
+   "fr": "une compagnie de danse",
+   "vi": "đoàn múa",
+   "cat": "danse",
+   "note": ""
+  },
+  {
+   "fr": "le Ballet de l'Opéra national de Paris",
+   "vi": "Đoàn Ballet Nhà hát Opera Quốc gia Paris",
+   "cat": "danse",
+   "note": ""
+  },
+  {
+   "fr": "le Théâtre national de l'Opéra et du Ballet du Vietnam",
+   "vi": "Nhà hát Nhạc Vũ Kịch Việt Nam",
+   "cat": "danse",
+   "note": ""
+  },
+  {
+   "fr": "un atelier de danse ; un stage",
+   "vi": "lớp múa ; khóa tập huấn ngắn",
+   "cat": "danse",
+   "note": ""
+  },
+  {
+   "fr": "le cirque contemporain ; le nouveau cirque",
+   "vi": "xiếc đương đại ; xiếc mới",
+   "cat": "danse",
+   "note": ""
+  },
+  {
+   "fr": "un circassien / une circassienne",
+   "vi": "nghệ sĩ xiếc",
+   "cat": "danse",
+   "note": "Từ chuyên ngành; báo chí cũng dùng \"artiste de cirque\"."
+  },
+  {
+   "fr": "les arts du cirque",
+   "vi": "nghệ thuật xiếc",
+   "cat": "danse",
+   "note": ""
+  },
+  {
+   "fr": "un acrobate ; un jongleur ; un trapéziste",
+   "vi": "diễn viên nhào lộn ; tung hứng ; đu dây",
+   "cat": "danse",
+   "note": ""
+  },
+  {
+   "fr": "le chapiteau",
+   "vi": "lều xiếc",
+   "cat": "danse",
+   "note": ""
+  },
+  {
+   "fr": "le cirque de bambou",
+   "vi": "xiếc tre",
+   "cat": "danse",
+   "note": "Ví dụ các vở À Ố Làng Phố, Làng Tôi của Lune Production."
+  },
+  {
+   "fr": "la Fédération du cirque du Vietnam",
+   "vi": "Liên đoàn Xiếc Việt Nam",
+   "cat": "danse",
+   "note": ""
+  },
+  {
+   "fr": "l'improvisation ; improviser",
+   "vi": "ngẫu hứng ; ứng tác",
+   "cat": "danse",
+   "note": ""
+  },
+  {
+   "fr": "le mime",
+   "vi": "kịch câm",
+   "cat": "danse",
+   "note": ""
+  },
+  {
+   "fr": "un long métrage ; un court métrage",
+   "vi": "phim truyện dài ; phim ngắn",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "un documentaire ; un film d'animation",
+   "vi": "phim tài liệu ; phim hoạt hình",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "un réalisateur / une réalisatrice ; réaliser un film",
+   "vi": "đạo diễn ; đạo diễn một bộ phim",
+   "cat": "cinema",
+   "note": "Trong điện ảnh dùng \"réalisateur\", không dùng \"metteur en scène\"."
+  },
+  {
+   "fr": "un producteur ; une société de production",
+   "vi": "nhà sản xuất ; công ty sản xuất",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "une coproduction ; coproduire",
+   "vi": "hợp tác sản xuất ; đồng sản xuất",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "un distributeur ; la distribution",
+   "vi": "nhà phát hành ; phát hành",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "le scénario ; un scénariste",
+   "vi": "kịch bản ; biên kịch",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "le tournage ; tourner un film",
+   "vi": "việc quay phim ; quay phim",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "un lieu de tournage",
+   "vi": "bối cảnh, địa điểm quay",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "la post-production ; le montage",
+   "vi": "hậu kỳ ; dựng phim",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "le sous-titrage ; sous-titré en vietnamien",
+   "vi": "phụ đề ; có phụ đề tiếng Việt",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "en version originale (VO / VOST)",
+   "vi": "bản gốc (có phụ đề)",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "le doublage",
+   "vi": "lồng tiếng",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "une projection ; projeter",
+   "vi": "buổi chiếu ; chiếu",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "une projection-débat ; une projection suivie d'un échange",
+   "vi": "buổi chiếu kèm giao lưu",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "une rétrospective (cinéma)",
+   "vi": "chương trình chiếu tổng hợp phim của một đạo diễn",
+   "cat": "cinema",
+   "note": "Trong mỹ thuật: triển lãm hồi cố."
+  },
+  {
+   "fr": "un cycle de films",
+   "vi": "chuỗi chiếu phim theo chủ đề",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "un festival de cinéma ; une sélection officielle",
+   "vi": "liên hoan phim ; tuyển chọn chính thức",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "en compétition ; hors compétition",
+   "vi": "tranh giải ; không tranh giải",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "la Palme d'or ; le Grand Prix",
+   "vi": "Cành cọ vàng ; Giải Grand Prix",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "être primé(e) ; un film primé",
+   "vi": "đoạt giải ; phim đoạt giải",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "la sortie en salles",
+   "vi": "ra rạp",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "le box-office ; les entrées",
+   "vi": "doanh thu phòng vé ; lượt khán giả",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "une salle de cinéma ; un cinéma d'art et d'essai",
+   "vi": "rạp chiếu phim ; rạp phim nghệ thuật",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "la cinémathèque",
+   "vi": "thư viện phim, kho lưu trữ phim",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "le Festival du film français",
+   "vi": "Liên hoan phim Pháp",
+   "cat": "cinema",
+   "note": "Tên sự kiện thường niên của Viện Pháp tại một số nước."
+  },
+  {
+   "fr": "le Festival international du film de Hanoi (HANIFF)",
+   "vi": "Liên hoan phim Quốc tế Hà Nội",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "les droits de diffusion ; une licence de projection",
+   "vi": "quyền phát sóng ; giấy phép chiếu",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "une autorisation de diffusion",
+   "vi": "giấy phép phổ biến phim",
+   "cat": "cinema",
+   "note": "Ở Việt Nam do Cục Điện ảnh cấp."
+  },
+  {
+   "fr": "l'image animée ; les arts numériques",
+   "vi": "hình ảnh động ; nghệ thuật số",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "la réalité virtuelle (RV) ; immersif(ve)",
+   "vi": "thực tế ảo (VR) ; nhập vai, tương tác",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "le jeu vidéo",
+   "vi": "trò chơi điện tử",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "une bande-annonce",
+   "vi": "đoạn giới thiệu phim (trailer)",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "le générique",
+   "vi": "phần danh đề",
+   "cat": "cinema",
+   "note": ""
+  },
+  {
+   "fr": "les arts visuels ; les arts plastiques",
+   "vi": "nghệ thuật thị giác ; mỹ thuật tạo hình",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "les beaux-arts",
+   "vi": "mỹ thuật",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "l'art contemporain",
+   "vi": "nghệ thuật đương đại",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "une exposition ; exposer",
+   "vi": "triển lãm ; trưng bày",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "une exposition temporaire / permanente",
+   "vi": "triển lãm có thời hạn / trưng bày thường xuyên",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "une exposition personnelle / collective",
+   "vi": "triển lãm cá nhân / triển lãm nhóm",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "une exposition itinérante",
+   "vi": "triển lãm lưu động",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "une rétrospective",
+   "vi": "triển lãm hồi cố",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "une biennale ; une triennale",
+   "vi": "biennale (hai năm một lần) ; triennale",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "le/la commissaire d'exposition",
+   "vi": "giám tuyển",
+   "cat": "visuel",
+   "note": "Tiếng Anh: curator. Không dịch \"ủy viên\"."
+  },
+  {
+   "fr": "le commissariat ; assurer le commissariat de",
+   "vi": "công tác giám tuyển ; đảm nhận giám tuyển",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "un(e) co-commissaire",
+   "vi": "đồng giám tuyển",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "le vernissage",
+   "vi": "buổi khai mạc triển lãm",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "le finissage",
+   "vi": "buổi bế mạc triển lãm",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "l'accrochage ; accrocher",
+   "vi": "treo tranh, sắp đặt tác phẩm ; treo",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "le décrochage",
+   "vi": "tháo dỡ tác phẩm sau triển lãm",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "le montage / démontage de l'exposition",
+   "vi": "lắp dựng / tháo dỡ triển lãm",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "la scénographie d'exposition",
+   "vi": "thiết kế trưng bày",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "le parcours (de visite)",
+   "vi": "lộ trình tham quan",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "un cartel",
+   "vi": "nhãn thông tin tác phẩm",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "un texte de salle",
+   "vi": "văn bản giới thiệu trong phòng trưng bày",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "le catalogue d'exposition",
+   "vi": "catalogue triển lãm",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "une œuvre ; une œuvre d'art",
+   "vi": "tác phẩm ; tác phẩm nghệ thuật",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "une installation ; une installation vidéo",
+   "vi": "tác phẩm sắp đặt ; sắp đặt video",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "la peinture ; la peinture sur laque",
+   "vi": "hội họa ; tranh sơn mài",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "la peinture sur soie",
+   "vi": "tranh lụa",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "l'estampe ; la gravure sur bois",
+   "vi": "tranh in ; khắc gỗ",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "les estampes populaires de Đông Hồ",
+   "vi": "tranh dân gian Đông Hồ",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "la sculpture ; un sculpteur",
+   "vi": "điêu khắc ; nhà điêu khắc",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "la photographie ; un(e) photographe",
+   "vi": "nhiếp ảnh ; nhiếp ảnh gia",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "un tirage ; un tirage limité",
+   "vi": "bản in (ảnh) ; bản in số lượng có hạn",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "le dessin ; la bande dessinée (BD)",
+   "vi": "vẽ ; truyện tranh",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "l'illustration ; un(e) illustrateur/illustratrice",
+   "vi": "minh họa ; họa sĩ minh họa",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "le street art ; une fresque murale",
+   "vi": "nghệ thuật đường phố ; tranh tường",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "le design ; le design graphique",
+   "vi": "thiết kế ; thiết kế đồ họa",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "les arts décoratifs ; l'artisanat d'art",
+   "vi": "nghệ thuật trang trí ; thủ công mỹ nghệ",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "l'architecture",
+   "vi": "kiến trúc",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "un musée ; une galerie ; un centre d'art",
+   "vi": "bảo tàng ; phòng tranh ; trung tâm nghệ thuật",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "un galeriste",
+   "vi": "chủ phòng tranh",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "un collectionneur ; une collection",
+   "vi": "nhà sưu tập ; bộ sưu tập",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "le prêt d'œuvres ; un prêteur",
+   "vi": "việc cho mượn tác phẩm ; bên cho mượn",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "une convention de prêt",
+   "vi": "hợp đồng mượn tác phẩm",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "le constat d'état",
+   "vi": "biên bản tình trạng tác phẩm (condition report)",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "le convoiement ; un convoyeur",
+   "vi": "áp tải tác phẩm ; người áp tải",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "le transport d'œuvres d'art ; la caisse",
+   "vi": "vận chuyển tác phẩm ; thùng chuyên dụng",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "l'assurance clou à clou",
+   "vi": "bảo hiểm \"từ đinh đến đinh\" (từ lúc tháo đến lúc treo lại)",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "la valeur d'assurance",
+   "vi": "giá trị bảo hiểm",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "la conservation ; un(e) conservateur/conservatrice",
+   "vi": "bảo quản ; chuyên viên bảo tàng, quản lý sưu tập",
+   "cat": "visuel",
+   "note": "\"Conservateur\" ở bảo tàng là chức danh chuyên môn, khác \"commissaire\"."
+  },
+  {
+   "fr": "la restauration ; un(e) restaurateur/restauratrice",
+   "vi": "phục chế ; chuyên gia phục chế",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "le marché de l'art ; une vente aux enchères",
+   "vi": "thị trường nghệ thuật ; đấu giá",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "une foire d'art",
+   "vi": "hội chợ nghệ thuật",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "une visite guidée ; un(e) guide-conférencier/ère",
+   "vi": "tham quan có hướng dẫn ; hướng dẫn viên thuyết minh",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "une visite commentée par l'artiste",
+   "vi": "buổi tham quan cùng nghệ sĩ",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "le droit de reproduction ; le crédit photo",
+   "vi": "quyền sao chép ; ghi nguồn ảnh",
+   "cat": "visuel",
+   "note": "Viết \"© Tên tác giả\"."
+  },
+  {
+   "fr": "un(e) artiste émergent(e)",
+   "vi": "nghệ sĩ trẻ, mới nổi",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "un(e) artiste plasticien(ne)",
+   "vi": "nghệ sĩ tạo hình",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "la scène artistique vietnamienne",
+   "vi": "giới nghệ thuật Việt Nam",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "le patrimoine ; la valorisation du patrimoine",
+   "vi": "di sản ; phát huy giá trị di sản",
+   "cat": "visuel",
+   "note": ""
+  },
+  {
+   "fr": "la fiche technique",
+   "vi": "bảng yêu cầu kỹ thuật (tech rider)",
+   "cat": "technique",
+   "note": "Đoàn gửi cho nơi đăng cai: kích thước sân khấu, âm thanh, ánh sáng."
+  },
+  {
+   "fr": "la fiche technique accueil",
+   "vi": "bảng thông số kỹ thuật của nhà hát",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "le rider ; les conditions d'accueil",
+   "vi": "yêu cầu hậu cần của nghệ sĩ (hospitality rider)",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "la régie ; la régie générale",
+   "vi": "bộ phận điều hành kỹ thuật ; điều hành kỹ thuật chung",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "le régisseur général / la régisseuse générale",
+   "vi": "trưởng kỹ thuật, quản lý sân khấu",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "le régisseur son / lumière / plateau",
+   "vi": "kỹ thuật viên âm thanh / ánh sáng / sàn diễn",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "le directeur technique",
+   "vi": "giám đốc kỹ thuật",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "un technicien ; l'équipe technique",
+   "vi": "kỹ thuật viên ; ê-kíp kỹ thuật",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "le machiniste",
+   "vi": "thợ máy sân khấu",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "le créateur lumière ; la création lumière",
+   "vi": "nhà thiết kế ánh sáng ; thiết kế ánh sáng",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "le plan de feu",
+   "vi": "sơ đồ bố trí đèn",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "un projecteur ; une poursuite",
+   "vi": "đèn chiếu ; đèn dõi",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "la console son / lumière",
+   "vi": "bàn trộn âm thanh / bàn điều khiển ánh sáng",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "la sonorisation ; la sono",
+   "vi": "hệ thống âm thanh",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "les retours",
+   "vi": "loa kiểm âm (monitor) trên sân khấu",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "la façade",
+   "vi": "loa chính hướng ra khán giả",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "un micro HF ; un micro-casque",
+   "vi": "micro không dây ; micro đeo tai",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "la vidéoprojection ; un vidéoprojecteur",
+   "vi": "trình chiếu video ; máy chiếu",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "l'écran LED ; le mur d'images",
+   "vi": "màn hình LED ; tường hình ảnh",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "les décors ; un décorateur",
+   "vi": "cảnh trí ; họa sĩ thiết kế cảnh trí",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "les accessoires",
+   "vi": "đạo cụ",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "les costumes ; un(e) costumier/costumière",
+   "vi": "trang phục ; người phụ trách phục trang",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "le maquillage ; un(e) maquilleur/maquilleuse",
+   "vi": "hóa trang ; chuyên viên hóa trang",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "le montage ; le démontage",
+   "vi": "lắp dựng ; tháo dỡ",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "le temps de montage ; un service (de 4 heures)",
+   "vi": "thời gian lắp đặt ; một ca kỹ thuật (4 giờ)",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "le filage ; le filage technique",
+   "vi": "chạy toàn bộ chương trình ; chạy kỹ thuật",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "le tableau de conduite ; la conduite",
+   "vi": "kịch bản kỹ thuật (cue sheet)",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "un top ; donner le top",
+   "vi": "hiệu lệnh ; ra hiệu lệnh",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "le noir ; le noir salle",
+   "vi": "tắt đèn sân khấu ; tắt đèn khán phòng",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "la boîte noire",
+   "vi": "sân khấu hộp đen",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "le pendrillon ; la frise",
+   "vi": "màn hông (cánh gà) ; diềm màn trên",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "le cyclorama",
+   "vi": "phông nền chiếu sáng (cyclorama)",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "le tapis de danse",
+   "vi": "thảm múa",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "les dimensions du plateau ; l'ouverture de scène",
+   "vi": "kích thước sàn diễn ; độ mở sân khấu",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "la hauteur sous perches",
+   "vi": "chiều cao tới dàn treo",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "une perche ; un pont lumière",
+   "vi": "thanh treo ; giàn đèn",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "le matériel ; la location de matériel",
+   "vi": "thiết bị ; thuê thiết bị",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "le groupe électrogène",
+   "vi": "máy phát điện",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "la puissance électrique",
+   "vi": "công suất điện",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "les normes de sécurité ; un ERP",
+   "vi": "tiêu chuẩn an toàn ; cơ sở đón tiếp công chúng",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "la sortie de secours",
+   "vi": "lối thoát hiểm",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "le fret ; le transport des décors",
+   "vi": "hàng hóa vận chuyển ; vận chuyển cảnh trí",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "le passage en douane ; le carnet ATA",
+   "vi": "làm thủ tục hải quan ; sổ tạm nhập tái xuất ATA",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "l'admission temporaire",
+   "vi": "tạm nhập tái xuất",
+   "cat": "technique",
+   "note": ""
+  },
+  {
+   "fr": "l'événementiel",
+   "vi": "ngành tổ chức sự kiện",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "organiser un événement",
+   "vi": "tổ chức sự kiện",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "un événement grand public",
+   "vi": "sự kiện dành cho đông đảo công chúng",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "un événement sur invitation",
+   "vi": "sự kiện theo giấy mời",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "un événement en entrée libre ; l'entrée est libre et gratuite",
+   "vi": "sự kiện vào cửa tự do ; vào cửa tự do, miễn phí",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "sur réservation ; dans la limite des places disponibles",
+   "vi": "cần đăng ký trước ; trong phạm vi số chỗ có hạn",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "la jauge ; une jauge de 500 places",
+   "vi": "sức chứa ; sức chứa 500 chỗ",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "la fréquentation ; le nombre de visiteurs",
+   "vi": "lượng khách ; số lượt khách",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "un lieu ; trouver un lieu",
+   "vi": "địa điểm ; tìm địa điểm",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "une salle de conférence ; un auditorium",
+   "vi": "hội trường ; khán phòng",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "le repérage ; faire un repérage",
+   "vi": "khảo sát địa điểm",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "la logistique",
+   "vi": "hậu cần",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "la feuille de route",
+   "vi": "bảng lộ trình, kế hoạch chi tiết (cho đoàn)",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "le déroulé ; le conducteur",
+   "vi": "kịch bản chương trình chi tiết theo phút",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "le programme",
+   "vi": "chương trình",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "l'ouverture officielle ; la cérémonie d'ouverture",
+   "vi": "lễ khai mạc",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "la cérémonie de clôture",
+   "vi": "lễ bế mạc",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "l'inauguration ; inaugurer",
+   "vi": "lễ khánh thành ; khánh thành",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "couper le ruban",
+   "vi": "cắt băng khánh thành",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "un cocktail ; un cocktail dînatoire",
+   "vi": "tiệc đứng ; tiệc đứng thay bữa tối",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "une réception ; offrir une réception",
+   "vi": "chiêu đãi ; mở tiệc chiêu đãi",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "un dîner officiel ; un dîner de gala",
+   "vi": "tiệc chiêu đãi chính thức ; dạ tiệc",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "une soirée de gala",
+   "vi": "đêm dạ hội",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "un carton d'invitation",
+   "vi": "thiếp mời",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "RSVP ; merci de confirmer votre présence",
+   "vi": "vui lòng hồi âm ; xin vui lòng xác nhận tham dự",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "la liste des invités",
+   "vi": "danh sách khách mời",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "les invités d'honneur ; les personnalités",
+   "vi": "khách mời danh dự ; quan khách",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "les officiels ; les autorités locales",
+   "vi": "đại biểu chính thức ; chính quyền sở tại",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "l'accueil ; un(e) hôte/hôtesse d'accueil",
+   "vi": "đón tiếp ; nhân viên lễ tân",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "le protocole ; le plan de table",
+   "vi": "lễ tân ; sơ đồ chỗ ngồi",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "l'ordre de préséance",
+   "vi": "thứ tự ưu tiên lễ tân",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "le maître / la maîtresse de cérémonie",
+   "vi": "người dẫn chương trình (MC)",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "prononcer un discours ; une allocution",
+   "vi": "đọc diễn văn ; bài phát biểu ngắn",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "un mot de bienvenue",
+   "vi": "lời chào mừng",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "une conférence ; une table ronde",
+   "vi": "hội thảo, buổi nói chuyện ; tọa đàm",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "un colloque ; un séminaire",
+   "vi": "hội thảo khoa học ; hội thảo chuyên đề",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "un modérateur ; modérer un débat",
+   "vi": "người điều phối ; điều phối thảo luận",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "un intervenant ; un panéliste",
+   "vi": "diễn giả ; thành viên tọa đàm",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "une rencontre ; une rencontre avec l'artiste",
+   "vi": "buổi gặp gỡ ; giao lưu với nghệ sĩ",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "un atelier",
+   "vi": "lớp thực hành, workshop",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "une interprétation simultanée / consécutive",
+   "vi": "phiên dịch song song (cabin) / phiên dịch đuổi",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "une cabine d'interprétation",
+   "vi": "cabin phiên dịch",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "la traduction chuchotée",
+   "vi": "dịch thì thầm",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "un salon ; une foire",
+   "vi": "triển lãm thương mại ; hội chợ",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "un stand ; un exposant",
+   "vi": "gian hàng ; đơn vị trưng bày",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "un festival ; une édition",
+   "vi": "lễ hội, liên hoan ; kỳ, lần tổ chức",
+   "cat": "evenement",
+   "note": "\"La 10e édition\": lần thứ 10."
+  },
+  {
+   "fr": "une manifestation culturelle",
+   "vi": "sự kiện văn hóa",
+   "cat": "evenement",
+   "note": "\"Manifestation\" ở đây là sự kiện, không phải biểu tình."
+  },
+  {
+   "fr": "une programmation hors les murs",
+   "vi": "chương trình tổ chức bên ngoài trụ sở",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "une nuit blanche",
+   "vi": "đêm văn hóa thâu đêm",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "les Journées européennes du patrimoine",
+   "vi": "Những ngày Di sản châu Âu",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "le Mois de la Francophonie",
+   "vi": "Tháng Pháp ngữ (tháng 3)",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "la Nuit des idées",
+   "vi": "Đêm của những ý tưởng",
+   "cat": "evenement",
+   "note": "Sự kiện tranh luận do Institut français khởi xướng năm 2016; tên Việt có thể thay đổi theo năm tổ chức."
+  },
+  {
+   "fr": "la Fête nationale (14 juillet)",
+   "vi": "Quốc khánh Pháp (14/7)",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "la billetterie ; un billet",
+   "vi": "bán vé, quầy vé ; vé",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "un tarif plein / réduit",
+   "vi": "giá vé thường / giá ưu đãi",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "une invitation ; une exonération",
+   "vi": "vé mời ; miễn phí",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "le contrôle d'accès",
+   "vi": "kiểm soát ra vào",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "un badge ; une accréditation",
+   "vi": "thẻ đeo ; thẻ tác nghiệp",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "le service d'ordre ; la sécurité",
+   "vi": "lực lượng giữ trật tự ; an ninh",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "le plan de prévention",
+   "vi": "phương án phòng ngừa rủi ro",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "un plan B ; en cas d'intempéries",
+   "vi": "phương án dự phòng ; trong trường hợp thời tiết xấu",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "le report ; l'annulation",
+   "vi": "hoãn ; hủy",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "un(e) bénévole",
+   "vi": "tình nguyện viên",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "le transfert aéroport",
+   "vi": "đưa đón sân bay",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "l'hébergement ; la réservation d'hôtel",
+   "vi": "lưu trú ; đặt phòng khách sạn",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "la restauration ; un traiteur",
+   "vi": "ăn uống ; đơn vị cung cấp đồ ăn",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "la signalétique",
+   "vi": "hệ thống biển chỉ dẫn",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "un kakemono ; un roll-up",
+   "vi": "standee, băng rôn đứng",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "une banderole",
+   "vi": "băng rôn",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "le photographe officiel",
+   "vi": "nhiếp ảnh gia chính thức của sự kiện",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "une captation ; une retransmission en direct",
+   "vi": "ghi hình ; phát trực tiếp",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "le débriefing ; le retour d'expérience",
+   "vi": "họp rút kinh nghiệm ; bài học kinh nghiệm",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "une enquête de satisfaction",
+   "vi": "khảo sát mức độ hài lòng",
+   "cat": "evenement",
+   "note": ""
+  },
+  {
+   "fr": "un contrat de cession (du droit d'exploitation d'un spectacle)",
+   "vi": "hợp đồng mua suất diễn (bán quyền khai thác một buổi diễn)",
+   "cat": "contrat",
+   "note": "Loại hợp đồng phổ biến nhất giữa đoàn và nơi đăng cai: bên tổ chức trả một khoản trọn gói."
+  },
+  {
+   "fr": "le prix de cession",
+   "vi": "giá bán suất diễn (phí trọn gói)",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "un contrat de coréalisation",
+   "vi": "hợp đồng đồng tổ chức (chia doanh thu)",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "un contrat de coproduction",
+   "vi": "hợp đồng đồng sản xuất",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "un contrat d'engagement",
+   "vi": "hợp đồng thuê nghệ sĩ",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "un contrat de résidence",
+   "vi": "hợp đồng lưu trú sáng tác",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "le producteur délégué",
+   "vi": "nhà sản xuất chính (chịu trách nhiệm pháp lý)",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "l'organisateur ; le diffuseur",
+   "vi": "đơn vị tổ chức ; đơn vị đăng cai",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "les parties ; les deux parties",
+   "vi": "các bên ; hai bên",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "le présent contrat ; ci-après dénommé(e)",
+   "vi": "hợp đồng này ; sau đây gọi là",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "les clauses ; une clause d'annulation",
+   "vi": "điều khoản ; điều khoản hủy",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "la force majeure",
+   "vi": "bất khả kháng",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "les obligations de l'organisateur",
+   "vi": "nghĩa vụ của bên tổ chức",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "signer en deux exemplaires originaux",
+   "vi": "ký thành hai bản gốc",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "un avenant",
+   "vi": "phụ lục hợp đồng (sửa đổi, bổ sung)",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "résilier un contrat ; la résiliation",
+   "vi": "chấm dứt hợp đồng ; việc chấm dứt",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "l'exclusivité ; une clause d'exclusivité",
+   "vi": "độc quyền ; điều khoản độc quyền",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "les droits d'auteur",
+   "vi": "quyền tác giả, tiền tác quyền",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "les droits voisins",
+   "vi": "quyền liên quan",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "la propriété intellectuelle",
+   "vi": "sở hữu trí tuệ",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "céder les droits ; une cession de droits",
+   "vi": "chuyển nhượng quyền ; việc chuyển nhượng quyền",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "le droit à l'image",
+   "vi": "quyền hình ảnh",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "une autorisation de captation",
+   "vi": "giấy phép ghi hình",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "les droits de représentation",
+   "vi": "quyền biểu diễn (trả cho tác giả)",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "la SACD",
+   "vi": "Hội tác giả và nhà soạn nhạc kịch (Pháp)",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "une licence d'entrepreneur de spectacles",
+   "vi": "giấy phép kinh doanh biểu diễn (Pháp)",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "l'intermittent(e) du spectacle ; le régime de l'intermittence",
+   "vi": "người lao động biểu diễn theo thời vụ ; chế độ bảo hiểm thất nghiệp đặc thù",
+   "cat": "contrat",
+   "note": "Chế độ riêng của Pháp, không có tương đương ở Việt Nam."
+  },
+  {
+   "fr": "le cachet",
+   "vi": "thù lao biểu diễn (theo buổi)",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "la rémunération ; les honoraires",
+   "vi": "thù lao ; thù lao dịch vụ (nghề tự do)",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "la retenue à la source",
+   "vi": "khấu trừ thuế tại nguồn",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "une convention de double imposition",
+   "vi": "hiệp định tránh đánh thuế hai lần",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "un visa ; un visa de travail ; une lettre d'invitation",
+   "vi": "thị thực ; thị thực lao động ; thư mời",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "un permis de travail",
+   "vi": "giấy phép lao động",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "une autorisation de spectacle ; une licence de représentation",
+   "vi": "giấy phép biểu diễn",
+   "cat": "contrat",
+   "note": "Ở Việt Nam: thủ tục \"cấp phép biểu diễn\" hoặc \"thông báo tổ chức biểu diễn\" theo Nghị định về nghệ thuật biểu diễn."
+  },
+  {
+   "fr": "le décret sur les arts du spectacle",
+   "vi": "Nghị định quy định về hoạt động nghệ thuật biểu diễn",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "une demande d'autorisation ; déposer un dossier",
+   "vi": "đơn xin cấp phép ; nộp hồ sơ",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "l'approbation du contenu",
+   "vi": "việc thẩm định nội dung",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "une assurance responsabilité civile",
+   "vi": "bảo hiểm trách nhiệm dân sự",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "une attestation",
+   "vi": "giấy xác nhận",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "un bon de livraison",
+   "vi": "phiếu giao hàng",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "le RGPD ; les données personnelles",
+   "vi": "quy định bảo vệ dữ liệu châu Âu (GDPR) ; dữ liệu cá nhân",
+   "cat": "contrat",
+   "note": ""
+  },
+  {
+   "fr": "le plan de communication",
+   "vi": "kế hoạch truyền thông",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "la stratégie de communication",
+   "vi": "chiến lược truyền thông",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "un communiqué de presse",
+   "vi": "thông cáo báo chí",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "un dossier de presse",
+   "vi": "bộ tài liệu báo chí (press kit)",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "une conférence de presse ; un point presse",
+   "vi": "họp báo ; buổi gặp báo chí ngắn",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "les relations presse ; un(e) attaché(e) de presse",
+   "vi": "quan hệ báo chí ; chuyên viên báo chí",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "une revue de presse ; les retombées presse",
+   "vi": "điểm báo ; hiệu quả truyền thông (số bài báo đã đăng)",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "sous embargo jusqu'au",
+   "vi": "cấm đăng trước ngày",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "une interview ; accorder une interview",
+   "vi": "phỏng vấn ; trả lời phỏng vấn",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "la couverture médiatique ; couvrir un événement",
+   "vi": "mức độ đưa tin ; đưa tin về sự kiện",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "un partenaire média",
+   "vi": "đối tác truyền thông",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "l'affiche ; une campagne d'affichage",
+   "vi": "áp phích, poster ; chiến dịch áp phích",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "un flyer ; un dépliant ; une brochure",
+   "vi": "tờ rơi ; tờ gấp ; tập sách giới thiệu",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "le programme de saison",
+   "vi": "tập chương trình mùa diễn",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "l'agenda culturel",
+   "vi": "lịch sự kiện văn hóa",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "la charte graphique ; le logo",
+   "vi": "bộ nhận diện ; logo",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "les logos des partenaires ; le bandeau de logos",
+   "vi": "logo các đối tác ; dải logo",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "l'identité visuelle",
+   "vi": "nhận diện hình ảnh",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "un visuel",
+   "vi": "hình ảnh truyền thông (key visual)",
+   "cat": "com",
+   "note": "\"Visuel\" là danh từ: ảnh, thiết kế chính của sự kiện."
+  },
+  {
+   "fr": "un bon à tirer (BAT)",
+   "vi": "bản duyệt in cuối cùng",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "les réseaux sociaux ; une publication",
+   "vi": "mạng xã hội ; bài đăng",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "un community manager",
+   "vi": "người quản lý cộng đồng mạng",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "la portée ; l'engagement",
+   "vi": "lượt tiếp cận ; mức độ tương tác",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "une newsletter ; une infolettre",
+   "vi": "bản tin điện tử",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "un teaser ; une bande-annonce",
+   "vi": "đoạn giới thiệu ngắn ; trailer",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "un live ; diffuser en direct",
+   "vi": "phát trực tiếp",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "un événement Facebook",
+   "vi": "sự kiện trên Facebook",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "relayer une information",
+   "vi": "chia sẻ, lan truyền thông tin",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "la notoriété ; la visibilité",
+   "vi": "mức độ nhận biết ; độ phủ",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "un ambassadeur / une ambassadrice de l'événement",
+   "vi": "đại sứ sự kiện",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "un influenceur / une influenceuse",
+   "vi": "người có ảnh hưởng (KOL)",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "un éditorial ; l'édito du directeur",
+   "vi": "lời ngỏ ; lời ngỏ của giám đốc",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "une biographie ; une bio courte",
+   "vi": "tiểu sử ; tiểu sử ngắn",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "une note de programme",
+   "vi": "ghi chú chương trình (giới thiệu tác phẩm)",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "le synopsis",
+   "vi": "tóm tắt nội dung",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "un portfolio",
+   "vi": "hồ sơ năng lực, tập tác phẩm",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "la médiation numérique",
+   "vi": "giới thiệu, hướng dẫn công chúng qua kênh số",
+   "cat": "com",
+   "note": ""
+  },
+  {
+   "fr": "le public ; les publics",
+   "vi": "khán giả, công chúng ; các nhóm công chúng",
+   "cat": "public",
+   "note": "Số nhiều \"les publics\" là thuật ngữ chuyên ngành: các nhóm đối tượng khác nhau."
+  },
+  {
+   "fr": "le jeune public ; le tout public",
+   "vi": "khán giả nhỏ tuổi ; mọi lứa tuổi",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "le public scolaire",
+   "vi": "học sinh (khán giả từ trường học)",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "les publics éloignés ; les publics empêchés",
+   "vi": "công chúng ít có điều kiện tiếp cận ; công chúng bị hạn chế (bệnh viện, trại giam...)",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "le public francophone ; le public local",
+   "vi": "khán giả Pháp ngữ ; khán giả sở tại",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "la médiation culturelle ; un(e) médiateur/médiatrice",
+   "vi": "hoạt động kết nối công chúng với tác phẩm ; người làm công tác này",
+   "cat": "public",
+   "note": "Không dịch \"hòa giải\"."
+  },
+  {
+   "fr": "le développement des publics",
+   "vi": "phát triển khán giả",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "la fidélisation du public",
+   "vi": "giữ chân khán giả",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "l'éducation artistique et culturelle (EAC)",
+   "vi": "giáo dục nghệ thuật và văn hóa",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "une action culturelle",
+   "vi": "hoạt động văn hóa (đi kèm chương trình)",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "un atelier pédagogique",
+   "vi": "lớp học trải nghiệm",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "un dossier pédagogique",
+   "vi": "tài liệu hướng dẫn cho giáo viên",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "un bord de scène ; une rencontre après le spectacle",
+   "vi": "giao lưu sau buổi diễn",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "l'accessibilité ; un spectacle accessible",
+   "vi": "khả năng tiếp cận ; buổi diễn dành cho người khuyết tật",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "l'audiodescription ; la langue des signes",
+   "vi": "mô tả âm thanh ; ngôn ngữ ký hiệu",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "la participation ; un projet participatif",
+   "vi": "sự tham gia ; dự án có sự tham gia của cộng đồng",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "les amateurs ; la pratique amateur",
+   "vi": "người chơi nghiệp dư ; hoạt động nghệ thuật nghiệp dư",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "la pratique artistique",
+   "vi": "thực hành nghệ thuật",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "le dialogue interculturel",
+   "vi": "đối thoại liên văn hóa",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "les échanges entre artistes",
+   "vi": "giao lưu giữa các nghệ sĩ",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "la mobilité des artistes",
+   "vi": "sự dịch chuyển, giao lưu của nghệ sĩ",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "la scène émergente",
+   "vi": "giới nghệ sĩ trẻ mới nổi",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "la jeune création",
+   "vi": "sáng tác trẻ",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "l'égalité femmes-hommes dans la culture",
+   "vi": "bình đẳng giới trong lĩnh vực văn hóa",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "le développement durable ; un événement écoresponsable",
+   "vi": "phát triển bền vững ; sự kiện thân thiện môi trường",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "l'empreinte carbone d'une tournée",
+   "vi": "lượng phát thải carbon của chuyến lưu diễn",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "le taux de remplissage",
+   "vi": "tỷ lệ lấp đầy khán phòng",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "les retours du public",
+   "vi": "phản hồi của khán giả",
+   "cat": "public",
+   "note": ""
+  },
+  {
+   "fr": "L'Institut français du Vietnam a le plaisir de vous inviter à X, le [date] à [heure], à [lieu].",
+   "vi": "Viện Pháp tại Việt Nam trân trọng kính mời Quý vị tới dự X, vào lúc [giờ] ngày [ngày], tại [địa điểm].",
+   "cat": "phrases",
+   "note": "Mẫu câu: thiếp mời. Tiếng Việt đặt giờ trước ngày, tiếng Pháp đặt ngày trước giờ."
+  },
+  {
+   "fr": "X a l'honneur de vous convier à Y",
+   "vi": "X trân trọng kính mời Quý vị tới dự Y",
+   "cat": "phrases",
+   "note": "Mẫu câu: thiếp mời trang trọng (cấp Đại sứ)."
+  },
+  {
+   "fr": "Dans le cadre de X, l'Institut français présente Y",
+   "vi": "Trong khuôn khổ X, Viện Pháp giới thiệu Y",
+   "cat": "phrases",
+   "note": "Mẫu câu: mở đầu thông cáo, bài giới thiệu chương trình."
+  },
+  {
+   "fr": "À l'occasion de X, Y organise, en partenariat avec Z, W",
+   "vi": "Nhân dịp X, Y phối hợp với Z tổ chức W",
+   "cat": "phrases",
+   "note": "Mẫu câu: thông cáo sự kiện; tiếng Việt đưa \"phối hợp với\" lên trước động từ."
+  },
+  {
+   "fr": "Avec le soutien de X ; en partenariat avec Y",
+   "vi": "Với sự hỗ trợ của X ; phối hợp với Y",
+   "cat": "phrases",
+   "note": "Mẫu câu: dòng ghi đơn vị tài trợ, đối tác trên áp phích."
+  },
+  {
+   "fr": "Organisé par X, en coopération avec Y",
+   "vi": "Do X tổ chức, với sự hợp tác của Y",
+   "cat": "phrases",
+   "note": "Mẫu câu: dòng ghi đơn vị tổ chức."
+  },
+  {
+   "fr": "Entrée libre dans la limite des places disponibles",
+   "vi": "Vào cửa tự do, số chỗ có hạn",
+   "cat": "phrases",
+   "note": "Mẫu câu: thông tin vé trên áp phích."
+  },
+  {
+   "fr": "Réservation obligatoire via le lien ci-dessous",
+   "vi": "Vui lòng đăng ký trước qua đường link dưới đây",
+   "cat": "phrases",
+   "note": "Mẫu câu: bài đăng mạng xã hội."
+  },
+  {
+   "fr": "Spectacle surtitré en vietnamien ; durée : 1 h 20",
+   "vi": "Biểu diễn có phụ đề tiếng Việt ; thời lượng: 80 phút",
+   "cat": "phrases",
+   "note": "Mẫu câu: thông tin thực tế; chú ý cách viết giờ \"1 h 20\" kiểu Pháp."
+  },
+  {
+   "fr": "Après X, le spectacle part en tournée à Y et Z",
+   "vi": "Sau X, vở diễn sẽ lưu diễn tại Y và Z",
+   "cat": "phrases",
+   "note": "Mẫu câu: thông cáo lưu diễn."
+  },
+  {
+   "fr": "X signe la mise en scène de Y",
+   "vi": "X dàn dựng Y ; Y do X dàn dựng",
+   "cat": "phrases",
+   "note": "Mẫu câu: báo Pháp hay dùng \"signer\" cho đạo diễn, biên đạo; tiếng Việt chuyển bị động."
+  },
+  {
+   "fr": "Sur une chorégraphie de X ; sur une musique de Y",
+   "vi": "Biên đạo: X ; âm nhạc: Y",
+   "cat": "phrases",
+   "note": "Mẫu câu: ghi ê-kíp sáng tạo."
+  },
+  {
+   "fr": "Une exposition placée sous le commissariat de X",
+   "vi": "Triển lãm do X giám tuyển",
+   "cat": "phrases",
+   "note": "Mẫu câu: giới thiệu triển lãm."
+  },
+  {
+   "fr": "X réunit une trentaine d'œuvres de Y",
+   "vi": "X quy tụ khoảng 30 tác phẩm của Y",
+   "cat": "phrases",
+   "note": "Mẫu câu: mô tả triển lãm; \"une trentaine\" là \"khoảng 30\"."
+  },
+  {
+   "fr": "Le vernissage aura lieu le [date] en présence de l'artiste",
+   "vi": "Lễ khai mạc diễn ra ngày [ngày] với sự có mặt của nghệ sĩ",
+   "cat": "phrases",
+   "note": "Mẫu câu: thông cáo triển lãm."
+  },
+  {
+   "fr": "J'ai l'honneur de déclarer ouvert(e) X",
+   "vi": "Tôi xin trân trọng tuyên bố khai mạc X",
+   "cat": "phrases",
+   "note": "Mẫu câu: diễn văn khai mạc."
+  },
+  {
+   "fr": "Permettez-moi tout d'abord de remercier chaleureusement X pour Y",
+   "vi": "Trước hết, cho phép tôi gửi lời cảm ơn chân thành tới X vì Y",
+   "cat": "phrases",
+   "note": "Mẫu câu: diễn văn."
+  },
+  {
+   "fr": "Cet événement n'aurait pas été possible sans le soutien de X",
+   "vi": "Sự kiện này sẽ không thể thành công nếu không có sự hỗ trợ của X",
+   "cat": "phrases",
+   "note": "Mẫu câu: diễn văn, lời cảm ơn; conditionnel passé."
+  },
+  {
+   "fr": "Cette édition témoigne de la vitalité de la coopération culturelle entre X et Y",
+   "vi": "Kỳ lần này là minh chứng cho sức sống của hợp tác văn hóa giữa X và Y",
+   "cat": "phrases",
+   "note": "Mẫu câu: diễn văn, báo chí đối ngoại."
+  },
+  {
+   "fr": "Je vous souhaite à toutes et à tous une excellente soirée",
+   "vi": "Chúc Quý vị một buổi tối thật vui vẻ",
+   "cat": "phrases",
+   "note": "Mẫu câu: kết diễn văn."
+  },
+  {
+   "fr": "Suite à notre échange téléphonique, je me permets de vous adresser X",
+   "vi": "Tiếp theo cuộc trao đổi qua điện thoại, tôi xin gửi tới anh/chị X",
+   "cat": "phrases",
+   "note": "Mẫu câu: email công việc."
+  },
+  {
+   "fr": "Je reviens vers vous concernant X",
+   "vi": "Tôi xin liên hệ lại với anh/chị về X",
+   "cat": "phrases",
+   "note": "Mẫu câu: email nhắc, theo dõi."
+  },
+  {
+   "fr": "Pourriez-vous nous faire parvenir la fiche technique d'ici le [date] ?",
+   "vi": "Anh/chị vui lòng gửi cho chúng tôi bảng yêu cầu kỹ thuật trước ngày [ngày] được không?",
+   "cat": "phrases",
+   "note": "Mẫu câu: email với đoàn nghệ thuật."
+  },
+  {
+   "fr": "Vous trouverez ci-joint le contrat de cession en deux exemplaires",
+   "vi": "Xin gửi kèm theo đây hai bản hợp đồng",
+   "cat": "phrases",
+   "note": "Mẫu câu: email gửi hợp đồng."
+  },
+  {
+   "fr": "Nous vous saurions gré de bien vouloir X",
+   "vi": "Chúng tôi rất cảm ơn nếu anh/chị có thể X",
+   "cat": "phrases",
+   "note": "Mẫu câu: đề nghị lịch sự trong thư công vụ."
+  },
+  {
+   "fr": "Sous réserve de l'obtention des autorisations nécessaires",
+   "vi": "Với điều kiện được cấp các giấy phép cần thiết",
+   "cat": "phrases",
+   "note": "Mẫu câu: thư, hợp đồng với đối tác nước ngoài khi chưa có giấy phép biểu diễn."
+  },
+  {
+   "fr": "Nous restons à votre disposition pour tout complément d'information",
+   "vi": "Chúng tôi sẵn sàng cung cấp thêm thông tin nếu anh/chị cần",
+   "cat": "phrases",
+   "note": "Mẫu câu: kết email."
+  },
+  {
+   "fr": "Dans l'attente de votre retour, je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées",
+   "vi": "Rất mong nhận được phản hồi của anh/chị. Trân trọng.",
+   "cat": "phrases",
+   "note": "Mẫu câu: kết thư trang trọng; tiếng Việt rút gọn nhiều."
+  },
+  {
+   "fr": "Bien cordialement ; Bien à vous",
+   "vi": "Trân trọng",
+   "cat": "phrases",
+   "note": "Mẫu câu: kết email thân mật hơn."
+  },
+  {
+   "fr": "Le spectacle a été accueilli avec enthousiasme par un public nombreux",
+   "vi": "Vở diễn được đông đảo khán giả đón nhận nồng nhiệt",
+   "cat": "phrases",
+   "note": "Mẫu câu: báo cáo, thông cáo sau sự kiện."
+  },
+  {
+   "fr": "L'événement a attiré plus de X visiteurs, soit une hausse de Y % par rapport à l'édition précédente",
+   "vi": "Sự kiện thu hút hơn X lượt khách, tăng Y% so với lần tổ chức trước",
+   "cat": "phrases",
+   "note": "Mẫu câu: báo cáo tổng kết."
+  },
+  {
+   "fr": "Je souhaite mettre mes compétences en X au service de Y",
+   "vi": "Tôi mong muốn đóng góp năng lực về X cho Y",
+   "cat": "phrases",
+   "note": "Mẫu câu: thư xin việc, phỏng vấn."
+  },
+  {
+   "fr": "Fort(e) d'une expérience de X au sein de Y, je…",
+   "vi": "Với kinh nghiệm X tại Y, tôi…",
+   "cat": "phrases",
+   "note": "Mẫu câu: thư xin việc; \"fort de\" là cấu trúc giới thiệu kinh nghiệm rất hay dùng."
+  },
+  {
+   "fr": "J'ai été chargé(e) de X, ce qui m'a permis de Y",
+   "vi": "Tôi được giao phụ trách X, nhờ đó tôi có thể Y",
+   "cat": "phrases",
+   "note": "Mẫu câu: phỏng vấn, kể kinh nghiệm."
+  },
+  {
+   "fr": "J'ai participé à l'organisation de X, de la conception à la réalisation",
+   "vi": "Tôi tham gia tổ chức X, từ khâu lên ý tưởng đến triển khai",
+   "cat": "phrases",
+   "note": "Mẫu câu: CV, phỏng vấn."
+  },
+  {
+   "fr": "Je suis particulièrement sensible à X",
+   "vi": "Tôi đặc biệt quan tâm tới X",
+   "cat": "phrases",
+   "note": "Mẫu câu: thư xin việc; \"sensible à\" không phải \"nhạy cảm\"."
+  },
+  {
+   "fr": "Votre offre a retenu toute mon attention",
+   "vi": "Tôi rất quan tâm đến vị trí quý cơ quan đang tuyển",
+   "cat": "phrases",
+   "note": "Mẫu câu: câu mở đầu thư xin việc kinh điển."
+  },
+  {
+   "fr": "Je me tiens à votre disposition pour un entretien",
+   "vi": "Tôi rất mong có cơ hội được phỏng vấn",
+   "cat": "phrases",
+   "note": "Mẫu câu: kết thư xin việc."
+  }
+ ]
+}
