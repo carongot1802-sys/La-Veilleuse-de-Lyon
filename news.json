@@ -1,6 +1,84 @@
 {
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "lessons": [
+    {
+      "id": "2026-11-14-blocus-lyceens-gouvernement-durcit-le-ton",
+      "date": "2026-11-14",
+      "type": "dictee",
+      "domain": "societe",
+      "title": "Blocus lycéens : le gouvernement durcit le ton",
+      "text": "Face aux violences commises en marge des blocus lycéens, le gouvernement a décidé de durcir le ton. Dans un communiqué publié jeudi, il a annoncé la judiciarisation des actes délictueux visant les personnels de l'Éducation nationale, qu'ils soient commis aux abords des établissements, à l'intérieur de ceux-ci ou sur les réseaux sociaux. Leurs auteurs seront interpellés et présentés à la justice, tandis que des procédures disciplinaires seront engagées contre les fauteurs de troubles. Il est vrai que le mouvement ne concerne plus qu'un nombre résiduel de lycées. Le bilan n'en reste pas moins lourd : 609 blessés, dont 364 élèves et 245 personnels. En Île-de-France, la Région estime les dégâts à 10 millions d'euros.",
+      "ref": "",
+      "notes": [],
+      "srcname": "Public Sénat",
+      "url": "https://www.publicsenat.fr/actualites/education/violences-en-marge-des-blocus-lyceens-le-gouvernement-durcit-le-ton"
+    },
+    {
+      "id": "2026-11-14-paris-saisit-bruxelles-algerie-commerce",
+      "date": "2026-11-14",
+      "type": "fr-vi",
+      "domain": "economie",
+      "title": "Commerce : Paris saisit Bruxelles sur l'Algérie",
+      "text": "La France a annoncé vendredi qu'elle allait saisir la Commission européenne du non-respect, par l'Algérie, de l'accord d'association qui lie cette dernière à l'Union européenne. Le porte-parole du Quai d'Orsay, Pascal Confavreux, a demandé à Bruxelles d'examiner les conditions d'activation de « mesures appropriées », sans préciser lesquelles. Une source diplomatique française évoque un « embargo de fait » sur les produits français, qu'Alger n'a jamais annoncé officiellement. Les chiffres témoignent toutefois d'un net recul : les exportations françaises vers l'Algérie sont tombées à 466 millions d'euros en août-septembre, contre 707 millions un an plus tôt, soit une baisse de 34 %. De son côté, Alger réclame une révision de l'accord, entré en vigueur en 2005.",
+      "ref": "Hôm thứ Sáu (13/11), Pháp tuyên bố sẽ đề nghị Ủy ban châu Âu xem xét việc Algeria không tuân thủ Hiệp định liên kết giữa nước này với Liên minh châu Âu (EU). Người phát ngôn Bộ Ngoại giao Pháp Pascal Confavreux đề nghị Ủy ban châu Âu xem xét các điều kiện để kích hoạt \"những biện pháp thích hợp\", song không nói rõ đó là biện pháp gì. Một nguồn tin ngoại giao Pháp cho rằng hàng hóa Pháp đang bị \"cấm vận trên thực tế\", dù phía Algeria chưa từng công bố chính thức biện pháp nào. Tuy vậy, số liệu cho thấy xuất khẩu của Pháp sang Algeria giảm mạnh: trong tháng 8 và tháng 9, kim ngạch chỉ còn 466 triệu euro, so với 707 triệu euro cùng kỳ năm trước, tức giảm 34%. Về phần mình, Algeria lâu nay vẫn đề nghị sửa đổi hiệp định có hiệu lực từ năm 2005 này.",
+      "notes": [
+        [
+          "saisir la Commission européenne de X",
+          "\"Saisir\" một cơ quan là chính thức đưa vụ việc lên để cơ quan đó xem xét, không phải \"nắm lấy\" hay \"tịch thu\". TSA viết \"saisir la Commission européenne\", Algérie Eco viết gọn \"saisir Bruxelles\". Tiếng Việt: \"đề nghị Ủy ban châu Âu xem xét\" hoặc \"đưa vụ việc lên Ủy ban châu Âu\"."
+        ],
+        [
+          "le Quai d'Orsay ; Bruxelles ; Alger ; Paris",
+          "Hoán dụ quen thuộc của báo Pháp để tránh lặp: Quai d'Orsay là Bộ Ngoại giao Pháp, Bruxelles là các thiết chế EU (ở đây là Ủy ban châu Âu), Alger và Paris là chính phủ hai nước. Báo Việt hiếm khi giữ hoán dụ, nên dịch ra tên cơ quan hoặc \"phía Algeria\", \"phía Pháp\"."
+        ],
+        [
+          "l'accord d'association qui lie cette dernière à l'UE",
+          "\"Cette dernière\" chỉ danh từ giống cái được nhắc gần nhất (l'Algérie). Tiếng Việt chỉ cần \"nước này\". \"Accord d'association\" là \"Hiệp định liên kết\", khác \"accord de libre-échange\" (hiệp định thương mại tự do)."
+        ],
+        [
+          "un « embargo de fait »",
+          "\"De fait\" (trên thực tế) đối lập với \"de droit\" (về mặt pháp lý): không có văn bản nào ban hành nhưng hệ quả giống cấm vận. Giữ ngoặc kép vì đây là lời của nguồn tin, Algerie360 cũng đặt cụm này trong ngoặc."
+        ],
+        [
+          "tombées à 466 millions d'euros, contre 707 millions un an plus tôt, soit une baisse de 34 %",
+          "Khung số liệu kiểu Pháp: \"contre\" = \"so với\", \"un an plus tôt\" = \"cùng kỳ năm trước\", \"soit\" = \"tức là\". Lưu ý báo Pháp để khoảng trắng trước % (34 %), báo Việt viết liền (34%)."
+        ]
+      ],
+      "srcname": "Algerie360 ; TSA",
+      "url": "https://www.algerie360.com/produits-francais-algerie-exportations-chutent-commission-europeenne/"
+    },
+    {
+      "id": "2026-11-14-viet-nam-thuong-dinh-phap-ngu-phnom-penh",
+      "date": "2026-11-14",
+      "type": "vi-fr",
+      "domain": "diplomatie",
+      "title": "Việt Nam tại Hội nghị Thượng đỉnh Pháp ngữ lần thứ 20",
+      "text": "Hội nghị Thượng đỉnh Pháp ngữ lần thứ 20 diễn ra tại thủ đô Phnom Penh, Campuchia, trong hai ngày 15 và 16/11 với chủ đề \"Tái đầu tư cho hòa bình vì một nền thịnh vượng chung và sự ổn định bền vững\". Tổng Bí thư, Chủ tịch nước Tô Lâm dẫn đầu Đoàn đại biểu cấp cao Việt Nam tham dự hội nghị. Sau gần 30 năm, kể từ Hội nghị Thượng đỉnh Hà Nội năm 1997, lần đầu tiên tổ chức tại châu Á - Thái Bình Dương, sự kiện này trở lại khu vực. Theo Đại sứ Nguyễn Thị Vân Anh, Trưởng Phái đoàn thường trực Việt Nam bên cạnh UNESCO, từ năm 2020, Tổ chức Quốc tế Pháp ngữ (OIF) đã triển khai hơn 100 hoạt động, dự án hỗ trợ Việt Nam, với tổng trị giá khoảng 2,7 triệu euro. Việt Nam đang ứng cử vị trí Phó Chủ tịch Ủy ban Kinh tế nhiệm kỳ 2027-2029.",
+      "ref": "Le XXe Sommet de la Francophonie se tient les 15 et 16 novembre à Phnom Penh, au Cambodge, sur le thème « Réinvestir dans la paix pour une prospérité partagée et une stabilité durable ». Le secrétaire général du Parti communiste du Vietnam et président de la République, Tô Lâm, y conduit une délégation vietnamienne de haut niveau. Près de trente ans après le Sommet de Hanoï de 1997, le premier organisé en Asie-Pacifique, l'événement fait ainsi son retour dans la région. Selon l'ambassadrice Nguyên Thi Vân Anh, représentante permanente du Vietnam auprès de l'UNESCO, l'OIF a mené depuis 2020 plus de 100 activités et projets au profit du Vietnam, pour un montant d'environ 2,7 millions d'euros. Le Vietnam brigue par ailleurs la vice-présidence de la Commission économique pour la période 2027-2029.",
+      "notes": [
+        [
+          "Hội nghị Thượng đỉnh Pháp ngữ lần thứ 20",
+          "Báo Pháp viết \"le XXe Sommet de la Francophonie\" (số La Mã, Financial Afrik và OIF đều dùng), tên đầy đủ là Conférence des chefs d'État et de gouvernement des pays ayant le français en partage. Báo Việt dùng cả \"Hội nghị Thượng đỉnh\" (VietnamPlus) lẫn \"Hội nghị cấp cao\" Pháp ngữ (Nhân Dân), đều dịch là \"Sommet\"."
+        ],
+        [
+          "dẫn đầu Đoàn đại biểu cấp cao Việt Nam",
+          "Khung chuẩn: \"conduire une délégation de haut niveau\" (fr.vietnamplus), không dùng \"diriger\". Chức danh kép viết đủ: \"le secrétaire général du Parti communiste du Vietnam et président de la République\"."
+        ],
+        [
+          "Trưởng Phái đoàn thường trực Việt Nam bên cạnh UNESCO",
+          "Tiếng Pháp chỉ cần \"représentante permanente du Vietnam auprès de l'UNESCO\", giới từ bắt buộc là \"auprès de\". Bà Vân Anh còn là \"Đại diện cá nhân của Chủ tịch nước tại Hội đồng thường trực Pháp ngữ\" (représentante personnelle du chef de l'État auprès du CPF)."
+        ],
+        [
+          "Sau gần 30 năm… sự kiện này trở lại khu vực",
+          "Báo Việt hay mở bằng mốc thời gian; báo Pháp dùng \"Près de trente ans après X, Y fait son retour\". Số tròn dưới 100 trong văn báo Pháp thường viết bằng chữ (trente ans)."
+        ],
+        [
+          "ứng cử vị trí Phó Chủ tịch",
+          "\"Briguer un poste\" là động từ báo chí điển hình cho \"ứng cử, nhắm tới một vị trí\", tự nhiên hơn \"se porter candidat à\" trong câu ngắn."
+        ]
+      ],
+      "srcname": "VietnamPlus ; fr.vietnamplus",
+      "url": "https://www.vietnamplus.vn/viet-nam-khang-dinh-vai-tro-tich-cuc-trong-cong-dong-phap-ngu-post1148187.vnp"
+    },
     {
       "id": "2026-11-13-vendemiaire-hai-phong",
       "date": "2026-11-13",
@@ -621,6 +699,132 @@
     }
   ],
   "terms": [
+    {
+      "fr": "le porte-parole du ministère de l'Europe et des Affaires étrangères",
+      "vi": "Người phát ngôn Bộ Châu Âu và Ngoại giao Pháp",
+      "domain": "diplomatie",
+      "note": "Chức danh của Pascal Confavreux (11/2026). Tên chính thức của Bộ Ngoại giao Pháp có chữ \"l'Europe\"; báo Việt thường viết gọn \"Bộ Ngoại giao Pháp\". Hoán dụ: le Quai d'Orsay.",
+      "date": "2026-11-14"
+    },
+    {
+      "fr": "la représentante personnelle du chef de l'État auprès du Conseil permanent de la Francophonie (CPF)",
+      "vi": "Đại diện cá nhân của Chủ tịch nước tại Hội đồng thường trực Pháp ngữ",
+      "domain": "diplomatie",
+      "note": "Chức danh kiêm nhiệm của Đại sứ Nguyễn Thị Vân Anh (VietnamPlus, 13/11/2026). Mỗi nguyên thủ thành viên OIF có một \"représentant personnel\" tại CPF.",
+      "date": "2026-11-14"
+    },
+    {
+      "fr": "l'ambassadrice, représentante permanente du Vietnam auprès de l'UNESCO",
+      "vi": "Đại sứ, Trưởng Phái đoàn thường trực Việt Nam bên cạnh UNESCO",
+      "domain": "diplomatie",
+      "note": "Báo Việt thêm \"Trưởng Phái đoàn\", tiếng Pháp chỉ ghi \"représentant(e) permanent(e)\". Giới từ \"auprès de\" dịch là \"bên cạnh\" hoặc \"tại\".",
+      "date": "2026-11-14"
+    },
+    {
+      "fr": "le ministre de l'Éducation nationale",
+      "vi": "Bộ trưởng Giáo dục quốc gia (Pháp)",
+      "domain": "societe",
+      "note": "Chức danh của Édouard Geffray (11/2026). Không dịch thành \"Bộ trưởng Giáo dục và Đào tạo\": đó là tên bộ của Việt Nam. Bộ của Pháp còn được gọi gọn là \"la Rue de Grenelle\".",
+      "date": "2026-11-14"
+    },
+    {
+      "fr": "la présidente de la Région Île-de-France",
+      "vi": "Chủ tịch vùng Île-de-France (Chủ tịch Hội đồng vùng)",
+      "domain": "politique",
+      "note": "Chức danh của Valérie Pécresse (LR). Vùng (région) là cấp hành chính trên tỉnh (département); Hội đồng vùng phụ trách xây dựng, bảo trì các trường lycée.",
+      "date": "2026-11-14"
+    },
+    {
+      "fr": "la Conférence ministérielle de la Francophonie (CMF) ; la Secrétaire générale sortante",
+      "vi": "Hội nghị Bộ trưởng Pháp ngữ (CMF) ; Tổng Thư ký mãn nhiệm (đương nhiệm sắp hết nhiệm kỳ)",
+      "domain": "diplomatie",
+      "note": "Phiên CMF lần thứ 48 họp ngày 14/11/2026 trước Hội nghị Thượng đỉnh Phnom Penh. \"Sortant(e)\" là người đang giữ chức và sắp mãn nhiệm, ví dụ Louise Mushikiwabo (Financial Afrik).",
+      "date": "2026-11-14"
+    },
+    {
+      "fr": "les membres de plein droit, les membres associés et les observateurs",
+      "vi": "thành viên chính thức, thành viên liên kết và quan sát viên",
+      "domain": "diplomatie",
+      "note": "OIF có 90 quốc gia và chính phủ: 53 thành viên chính thức, 5 thành viên liên kết, 32 quan sát viên (Financial Afrik, 11/2026).",
+      "date": "2026-11-14"
+    },
+    {
+      "fr": "l'accord d'association UE-Algérie ; le Conseil d'association",
+      "vi": "Hiệp định liên kết EU-Algeria ; Hội đồng liên kết",
+      "domain": "droit",
+      "note": "Ký năm 2002, có hiệu lực năm 2005. Hội đồng liên kết là cơ chế song phương theo dõi thực thi hiệp định. Khác \"accord de libre-échange\" (FTA).",
+      "date": "2026-11-14"
+    },
+    {
+      "fr": "saisir (une juridiction, la Commission européenne)",
+      "vi": "đưa vụ việc lên, đề nghị (cơ quan) xem xét",
+      "domain": "droit",
+      "note": "\"Saisir\" là động từ pháp lý, hành chính; danh từ là \"la saisine\". \"Saisir Bruxelles\" là hoán dụ cho việc đưa vụ việc lên Ủy ban châu Âu.",
+      "date": "2026-11-14"
+    },
+    {
+      "fr": "un embargo de fait",
+      "vi": "lệnh cấm vận trên thực tế",
+      "domain": "economie",
+      "note": "\"De fait\" đối lập với \"de droit\": không có văn bản chính thức nhưng hệ quả giống cấm vận. Algerie360 dẫn lời một nguồn tin ngoại giao Pháp.",
+      "date": "2026-11-14"
+    },
+    {
+      "fr": "le programme prévisionnel d'importation (PPI)",
+      "vi": "chương trình nhập khẩu dự kiến (Algeria)",
+      "domain": "economie",
+      "note": "Thủ tục do Bộ Ngoại thương Algeria cấp phép, áp dụng theo nghị định tháng 7/2025 (Maghreb Émergent).",
+      "date": "2026-11-14"
+    },
+    {
+      "fr": "la judiciarisation des actes délictueux ; présenter à la justice",
+      "vi": "việc đưa các hành vi vi phạm pháp luật ra xử lý tư pháp ; giao cho cơ quan tư pháp",
+      "domain": "droit",
+      "note": "\"Délictueux\" chỉ hành vi cấu thành tội (délit), mức nhẹ hơn \"crime\". Báo Pháp dùng cho phản ứng của chính phủ trước bạo lực quanh các cuộc blocus lycéens (Public Sénat, 12/11/2026).",
+      "date": "2026-11-14"
+    },
+    {
+      "fr": "un blocus lycéen ; les fauteurs de troubles",
+      "vi": "cuộc chặn cổng, phong tỏa trường trung học ; những kẻ gây rối",
+      "domain": "societe",
+      "note": "\"Blocus\" ở đây không phải phong tỏa quân sự mà là học sinh chặn lối vào trường để phản đối. \"Fauteur de troubles\" là cách nói báo chí trang trọng.",
+      "date": "2026-11-14"
+    },
+    {
+      "fr": "briguer un poste, un mandat",
+      "vi": "ứng cử, nhắm tới một vị trí",
+      "domain": "politique",
+      "note": "Ví dụ: \"Le Vietnam brigue la vice-présidence de la Commission économique pour 2027-2029\" (Việt Nam ứng cử Phó Chủ tịch Ủy ban Kinh tế OIF).",
+      "date": "2026-11-14"
+    },
+    {
+      "fr": "X conduit une délégation de haut niveau de Y au Z",
+      "vi": "X dẫn đầu Đoàn đại biểu cấp cao Y tham dự Z",
+      "domain": "diplomatie",
+      "note": "Mẫu câu: thông báo lãnh đạo dự hội nghị đa phương. Thấy trên fr.vietnamplus (\"conduira une délégation de haut niveau\") và VietnamPlus tiếng Việt (\"dẫn đầu Đoàn đại biểu cấp cao Việt Nam\") về Thượng đỉnh Pháp ngữ Phnom Penh.",
+      "date": "2026-11-14"
+    },
+    {
+      "fr": "La participation de X témoigne de l'engagement de Y au plus haut niveau en faveur de Z",
+      "vi": "Sự tham dự của X thể hiện cam kết ở cấp cao nhất của Y đối với Z",
+      "domain": "diplomatie",
+      "note": "Mẫu câu: bình luận ý nghĩa chuyến đi của lãnh đạo. fr.vietnamplus dùng \"témoigne de l'engagement… au plus haut niveau\"; VietnamPlus và Nhân Dân tiếng Việt dùng \"thể hiện cam kết\", \"khẳng định vai trò tích cực, có trách nhiệm\".",
+      "date": "2026-11-14"
+    },
+    {
+      "fr": "Les exportations de X vers Y sont tombées à N, contre P un an plus tôt, soit une baisse de Q %",
+      "vi": "Xuất khẩu của X sang Y giảm xuống còn N, so với P cùng kỳ năm trước, tức giảm Q%",
+      "domain": "economie",
+      "note": "Mẫu câu: trình bày số liệu sụt giảm thương mại. Thấy trên Algerie360 và TSA (tiếng Pháp); bên Việt, VietnamPlus và VnExpress dùng khung \"giảm xuống còn…, so với cùng kỳ năm trước\".",
+      "date": "2026-11-14"
+    },
+    {
+      "fr": "X a annoncé qu'il allait saisir Y du non-respect, par Z, de W",
+      "vi": "X tuyên bố sẽ đề nghị Y xem xét việc Z không tuân thủ W",
+      "domain": "droit",
+      "note": "Mẫu câu: đưa tranh chấp lên một thiết chế. Thấy trên TSA (\"la France va saisir la Commission européenne\") và Algérie Eco (\"saisir Bruxelles\"); báo Việt (Báo Quốc tế, TTXVN) thường viết \"đề nghị… xem xét\" hoặc \"đệ trình lên\".",
+      "date": "2026-11-14"
+    },
     {
       "fr": "le capitaine de frégate, commandant du Vendémiaire",
       "vi": "Trung tá Hải quân, Thuyền trưởng kiêm Chỉ huy tàu Vendémiaire",
